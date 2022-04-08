@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_icons8_error.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\drawable\\ic_icons8_error.xml"
-    },
-    {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_inv_form.xml.flat",
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\activity_inv_form.xml"
+    },
+    {
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_icons8_error.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\drawable\\ic_icons8_error.xml"
     },
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_password.xml.flat",
