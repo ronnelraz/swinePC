@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2415" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/buttoncheckbox.xml" value="0.2585" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/custom_eye.xml" value="0.246" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/ic_icons8_chevron_right.xml" value="0.35" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2415" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/ic_password.xml" value="0.246" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/ic_username.xml" value="0.246" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/drawable/radius_border.xml" value="0.246" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_farm_categories.xml" value="0.33" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_integration_submenu.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_inv_form.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_tab_from.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_confirmation.xml" value="0.18125" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_dialog.xml" value="0.17637732857709076" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_loading.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_toast.xml" value="0.2172017439556084" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_breeder.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_checklist.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_contract.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_feed.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_med.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/item_farm.xml" value="0.5" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/item_header.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

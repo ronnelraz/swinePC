@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="gone"
+        android:layout_marginBottom="-50px"
+        android:layout_marginRight="-100px"
+        android:layout_alignParentRight="true"
+        app:lottie_cacheComposition="true"
+        app:lottie_enableMergePathsForKitKatAndAbove="true"
+        android:layout_alignParentBottom="true"
+        app:lottie_renderMode="automatic"
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="800px"
+        app:lottie_rawRes="@raw/farm"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"/>
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/logo"
+        android:transitionName="logo"
+        android:gravity="center">
+        <!--Logo-->
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:src="@drawable/fattening"/>
+
+
+        <!--Title App-->
+        <TextView
+            android:layout_marginTop="-120px"
+            android:layout_marginBottom="10px"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cpf_imm_sook_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"/>
+
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_marginTop="70px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/purple_200"
+            app:hideAnimationBehavior="inward"
+            app:trackThickness="10px"
+            app:trackCornerRadius="10px"
+            app:trackColor="#FAF7F7"
+            app:indicatorSize="100px"/>
+    </LinearLayout>
+
+
+
+
+
+<TextView
+    android:paddingLeft="10px"
+    android:fontFamily="@font/cpf_imm_sook_semibold"
+    android:id="@+id/status"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:text="status: checking network status..."/>
+
+</RelativeLayout>

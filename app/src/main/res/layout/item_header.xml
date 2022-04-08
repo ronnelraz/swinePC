@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:id="@+id/header_title"
+        android:gravity="center"
+        android:textColor="@color/bgEdit"
+        android:textSize="50px"
+        tools:text="{Company Name}"
+        android:fontFamily="@font/cpf_imm_sook_bold"
+        android:background="#44B6F4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</RelativeLayout>
