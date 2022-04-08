@@ -26,4 +26,12 @@ public interface APIInterface {
     );
 
 
+    //checklist
+    @FormUrlEncoded
+    @POST("swineChecklist.php")
+    Call<Object> checkList(
+            @Field("buType") String buType
+    );
+
+
 }

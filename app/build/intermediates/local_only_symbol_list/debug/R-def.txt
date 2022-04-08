@@ -96,6 +96,8 @@ layout fragment_feed
 layout fragment_med
 layout item_farm
 layout item_header
+layout list_checklist_header
+layout list_checklist_items
 mipmap ic_launcher
 mipmap ic_launcher_adaptive_back
 mipmap ic_launcher_adaptive_fore

@@ -45,7 +45,7 @@ public class tab_from extends AppCompatActivity {
         headerDetails[3].setText(str_farmcode);
         headerDetails[4].setText(str_farmname);
 
-        tabs.addTab(tabs.newTab().setText("Contract"));
+        tabs.addTab(tabs.newTab().setText("Contact"));
         tabs.addTab(tabs.newTab().setText("Checklist"));
         tabs.addTab(tabs.newTab().setText("Breeder"));
         tabs.addTab(tabs.newTab().setText("Feed"));

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textColor="@color/black"
+    android:fontFamily="@font/cpf_imm_sook_regular"
+    android:id="@+id/sub_details_header"
+    android:layout_marginLeft="10dp"
+    tools:text="A. COMPLIANCE TO REGULATORY AUTHORITY\r\n   Permits are displayed in an easy to see area of the business premises." />

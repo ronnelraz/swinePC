@@ -3287,6 +3287,8 @@ int layout fragment_feed 0x7f0c0039
 int layout fragment_med 0x7f0c003a
 int layout item_farm 0x7f0c003b
 int layout item_header 0x7f0c003c
+int layout list_checklist_header 0x7f0c0084
+int layout list_checklist_items 0x7f0c0085
 int layout m3_alert_dialog 0x7f0c003d
 int layout m3_alert_dialog_actions 0x7f0c003e
 int layout m3_alert_dialog_title 0x7f0c003f

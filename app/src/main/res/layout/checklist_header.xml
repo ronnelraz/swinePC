@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_height="60dp">
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="GUIDE CHECKLIST"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="YES"
+        android:textColor="@color/purple_500"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="NO"
+        android:textColor="@color/error"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="N/A"
+        android:textColor="@color/main_disabled_stroke_color"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_marginRight="10dp"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="REMARKS"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:textSize="18sp"/>
+
+
+
+
+</LinearLayout>

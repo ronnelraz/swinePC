@@ -45,7 +45,7 @@
                  android:layout_weight="1"
                  android:text="Org Code : "
                  android:fontFamily="@font/cpf_imm_sook_semibold"
-                 android:textColor="@color/white"/>
+                 android:textColor="#FBC02D"/>
 
              <TextView
                  android:textAlignment="textStart"
@@ -75,7 +75,7 @@
                     android:layout_weight="1"
                     android:text="Farm Code : "
                     android:fontFamily="@font/cpf_imm_sook_semibold"
-                    android:textColor="@color/white"/>
+                    android:textColor="#FBC02D"/>
 
                 <TextView
                     android:textAlignment="textStart"
@@ -114,7 +114,7 @@
                     android:layout_weight="1"
                     android:text="Org Name : "
                     android:fontFamily="@font/cpf_imm_sook_semibold"
-                    android:textColor="@color/white"/>
+                    android:textColor="#FBC02D"/>
 
                 <TextView
                     android:textAlignment="textStart"
@@ -145,7 +145,7 @@
                     android:layout_weight="1"
                     android:text="Farm Name : "
                     android:fontFamily="@font/cpf_imm_sook_semibold"
-                    android:textColor="@color/white"/>
+                    android:textColor="#FBC02D"/>
 
                 <TextView
                     android:textAlignment="textStart"
@@ -171,17 +171,17 @@
 
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_below="@+id/custom_header"
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabGravity="fill"
-        app:tabMode="fixed"
+        android:layout_below="@+id/custom_header"
         app:tabBackground="@color/white"
+        app:tabGravity="fill"
         app:tabIndicatorColor="@color/purple_700"
-        app:tabTextColor="@color/gray_btn_bg_pressed_color"
+        app:tabMode="fixed"
         app:tabSelectedTextColor="@color/purple_500"
-        app:tabTextAppearance="@style/tab_text"/>
+        app:tabTextAppearance="@style/tab_text"
+        app:tabTextColor="@color/gray_btn_bg_pressed_color" />
 
 
     <androidx.viewpager.widget.ViewPager

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.4"
+        android:textSize="20sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemDetails"
+            android:fontFamily="@font/cpf_imm_sook_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="ASk fro BIR Receipts signage"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:orientation="vertical">
+
+      <RadioGroup
+          android:id="@+id/item_group_button"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <RadioButton
+              android:id="@+id/item_yes"
+              android:buttonTint="@color/purple_500"
+              android:layout_width="30dp"
+              android:layout_height="30dp"/>
+
+          <RadioButton
+              android:id="@+id/item_no"
+              android:buttonTint="@color/error"
+              android:layout_width="30dp"
+              android:layout_height="30dp"/>
+          <RadioButton
+              android:id="@+id/item_na"
+              android:buttonTint="@color/main_disabled_stroke_color"
+              android:layout_width="30dp"
+              android:layout_height="30dp"/>
+      </RadioGroup>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.1"
+        android:textSize="20sp"
+        android:orientation="vertical">
+
+
+
+       <EditText
+           android:id="@+id/item_remarks"
+           android:textSize="12sp"
+           android:fontFamily="@font/cpf_imm_sook_regular"
+           android:gravity="top"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
