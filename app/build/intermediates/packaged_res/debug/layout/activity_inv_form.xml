@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="50px"
+    tools:context=".inv_form">
+
+
+        <TextView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textSize="40sp"
+            android:fontFamily="@font/cpf_imm_sook_bold" />
+
+
+        <GridLayout
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/menu"
+            android:background="@drawable/radius_border"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:onClick="create"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="#BEF1EC"
+                app:iconTint="@color/black"
+                app:icon="@drawable/create"
+                app:iconGravity="textTop"
+                app:elevation="10dp"
+                app:iconSize="70sp"
+                android:textColor="#365471"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Create" />
+
+            <com.google.android.material.button.MaterialButton
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="#BEF1EC"
+                app:iconTint="@color/black"
+                app:elevation="10dp"
+                app:icon="@drawable/edit"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:textSize="20sp"
+                android:textColor="#365471"
+                android:textStyle="bold"
+                android:text="Edit" />
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="fill_horizontal"-->
+<!--                android:background="@drawable/radius_border"-->
+<!--                android:backgroundTint="#BFD9F4"-->
+<!--                android:text="Tile3" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="fill_horizontal"-->
+<!--                android:background="@drawable/radius_border"-->
+<!--                android:backgroundTint="#BFD9F4"-->
+<!--                android:text="Tile4" />-->
+
+        </GridLayout>
+
+
+
+
+</RelativeLayout>

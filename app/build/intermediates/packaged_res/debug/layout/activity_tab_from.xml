@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tab_from">
+
+    <LinearLayout
+        android:id="@+id/custom_header"
+        android:background="@color/purple_700"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company Type : "
+            android:fontFamily="@font/cpf_imm_sook_bold"
+            android:textSize="25sp"
+            android:textColor="@color/white"/>
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_weight="1">
+
+             <TextView
+                 android:textAlignment="textStart"
+                 android:textSize="19sp"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:text="Org Code : "
+                 android:fontFamily="@font/cpf_imm_sook_semibold"
+                 android:textColor="@color/white"/>
+
+             <TextView
+                 android:textAlignment="textStart"
+                 android:id="@+id/orgcode"
+                 android:textSize="18sp"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2"
+                 android:text="Org Name"
+                 android:fontFamily="@font/cpf_imm_sook_bold"
+                 android:textColor="@color/white"/>
+
+         </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:textSize="19sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Org Code : "
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:id="@+id/orgname"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Org Name"
+                    android:fontFamily="@font/cpf_imm_sook_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:textSize="19sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Farm Code : "
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:id="@+id/farmcode"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Org Name"
+                    android:fontFamily="@font/cpf_imm_sook_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:textSize="19sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Farm Name : "
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:id="@+id/farmname"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Org Name"
+                    android:fontFamily="@font/cpf_imm_sook_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@+id/custom_header"
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabBackground="@color/white"
+        app:tabIndicatorColor="@color/purple_700"
+        app:tabTextColor="@color/gray_btn_bg_pressed_color"
+        app:tabSelectedTextColor="@color/purple_500"
+        app:tabTextAppearance="@style/tab_text"/>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottompanel"
+        android:layout_below="@+id/tabs"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:labelFor="@+id/bottompanel" />
+
+    <LinearLayout
+        android:id="@+id/bottompanel"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginRight="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/purple_500"
+            app:iconGravity="textStart"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_icons8_done"
+            android:text="Save"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/error"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_icons8_multiply"
+            app:cornerRadius="20dp"
+            android:text="Close"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

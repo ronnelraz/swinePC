@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Integration_submenu">
+
+    <RelativeLayout
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_700">
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:onClick="backtocategory"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Integration"
+                android:id="@+id/breadcrumb_header"
+                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+            <ImageView
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="center"
+                android:layout_width="20dp"
+                android:background="@drawable/ic_icons8_chevron_right"
+                android:layout_weight="1"
+                android:layout_height="20dp" />
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="orgname"
+                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:textSize="18sp"
+                android:textColor="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="INTEG - nueva"
+                    android:id="@+id/breadcrumb_orgname"
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:layout_gravity="left|center"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="orgname"
+                    android:id="@+id/breadcrumb_orgcode"
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/farmlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/custom_toolbar"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_farm" />
+
+
+
+</RelativeLayout>

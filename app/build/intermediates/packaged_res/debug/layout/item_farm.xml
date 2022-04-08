@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="30px"
+    app:cardCornerRadius="15px"
+    android:id="@+id/card"
+    app:cardElevation="30px"
+    app:cardMaxElevation="30px"
+    app:cardBackgroundColor="@color/cardColor"
+    android:foreground="?attr/selectableItemBackground">
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="230px"
+        android:orientation="vertical">
+
+        <TextView
+            android:singleLine="false"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="40px"
+            android:textSize="20sp"
+            android:fontFamily="@font/cpf_imm_sook_regular"
+            android:id="@+id/org_code"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="org_code"/>
+
+
+        <TextView
+            android:singleLine="false"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="40px"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_bold"
+            android:id="@+id/org_name"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Hernal-angeles\nagricultoral and poultyr\nsupply"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

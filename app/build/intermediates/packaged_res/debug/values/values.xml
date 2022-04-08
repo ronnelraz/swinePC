@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="bgEdit">#EEEFF1</color>
+    <color name="black">#34495e</color>
+    <color name="cardColor">#DAEFED</color>
+    <color name="error">#e74c3c</color>
+    <color name="purple_200">#3498db</color>
+    <color name="purple_500">#16a085</color>
+    <color name="purple_700">#1abc9c</color>
+    <color name="tabBackgroundColor">#3E9ED3</color>
+    <color name="teal_200">#2980b9</color>
+    <color name="teal_700">#3498db</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Swine Physical Counting</string>
+    <string name="title_login">Please, login into your account</string>
+    <style name="Theme.Physical_counting" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/cpf_imm_sook_semibold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
