@@ -47,6 +47,7 @@ public class Tab_checklist extends Fragment {
     RecyclerView.Adapter adapter;
     private ArrayList<ListItem_Checklist> items =  new ArrayList<>();
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_checklist,parent,false);
@@ -60,13 +61,6 @@ public class Tab_checklist extends Fragment {
         adapter = new Adapter_Checklist(items);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        linearLayoutManager.setOrientation(linearLayoutManager.VERTICAL);
-//        gd.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-//            @Override
-//            public int getSpanSize(int position) {
-//                return adapter.getItemViewType(position) == ListItem.TYPE_HEADER ? 2 : 1;
-//            }
-//        });
         recyclerView.setLayoutManager(linearLayoutManager);
         LoadFarmlist();
 
@@ -76,7 +70,7 @@ public class Tab_checklist extends Fragment {
     private void LoadFarmlist() {
         data.Preloader(getActivity(),"Please wait...");
         items.clear();
-        API_.getClient().farmAPI().enqueue(new Callback<Object>() {
+        API_.getClient().checkList("SWCOM_1").enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

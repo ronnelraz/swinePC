@@ -2546,6 +2546,7 @@ drawable design_snackbar_background
 drawable dialog_background
 drawable dialog_background_dark
 drawable edit
+drawable edit_text_dot
 drawable error_center_x
 drawable error_circle
 drawable fattening
@@ -2756,6 +2757,7 @@ id chain2
 id chains
 id checkbox
 id checked
+id checlist_data
 id chip
 id chip1
 id chip2
@@ -2880,7 +2882,13 @@ id item1
 id item2
 id item3
 id item4
+id itemDetails
+id item_group_button
+id item_na
+id item_no
+id item_remarks
 id item_touch_helper_previous_elevation
+id item_yes
 id jumpToEnd
 id jumpToStart
 id keepme
@@ -2899,6 +2907,7 @@ id login
 id logo
 id logout
 id lottie_layer_name
+id maintopic
 id mask_left
 id mask_right
 id masked
@@ -3083,6 +3092,7 @@ id staticPostLayout
 id status
 id stop
 id stretch
+id sub_details_header
 id submenuarrow
 id submit_area
 id success_frame
@@ -3262,6 +3272,7 @@ layout activity_login
 layout activity_main
 layout activity_tab_from
 layout alert_dialog
+layout checklist_header
 layout custom_confirmation
 layout custom_dialog
 layout custom_loading
@@ -3288,11 +3299,11 @@ layout fragment_feed
 layout fragment_med
 layout item_farm
 layout item_header
-layout list_checklist_header
 layout list_checklist_items
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
+layout main_topic
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -3345,6 +3356,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout sub_details_main_header
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius

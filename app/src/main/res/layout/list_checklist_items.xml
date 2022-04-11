@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:gravity="center"
@@ -7,26 +9,20 @@
     android:layout_height="wrap_content">
 
 
-    <LinearLayout
+
+    <TextView
+        android:layout_marginTop="3dp"
+        android:id="@+id/itemDetails"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
         android:layout_marginLeft="5dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2.4"
-        android:textSize="20sp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/itemDetails"
-            android:fontFamily="@font/cpf_imm_sook_regular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:text="ASk fro BIR Receipts signage"/>
-
-
-    </LinearLayout>
+        android:textSize="18sp"
+        android:text="asasasasasasaasas"/>
 
     <LinearLayout
+        android:layout_gravity="bottom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -63,6 +59,7 @@
 
 
     <LinearLayout
+        android:layout_gravity="bottom"
         android:layout_marginRight="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -73,12 +70,14 @@
 
 
        <EditText
+           android:isScrollContainer="true"
+           android:background="@drawable/edit_text_dot"
            android:id="@+id/item_remarks"
-           android:textSize="12sp"
+           android:textSize="18sp"
            android:fontFamily="@font/cpf_imm_sook_regular"
-           android:gravity="top"
+           android:gravity="bottom"
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"/>
+           android:layout_height="40dp"/>
 
     </LinearLayout>
 

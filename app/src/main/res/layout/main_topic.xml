@@ -6,15 +6,16 @@
     android:layout_height="wrap_content">
 
 
-
     <TextView
+        android:background="#EDEBEB"
         android:id="@+id/maintopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cpf_imm_sook_regular"
         android:gravity="center|left"
         android:textColor="@color/black"
-        android:textSize="50px"
+        android:padding="5dp"
         tools:text="{Company Name}"
-        android:fontFamily="@font/cpf_imm_sook_regular"
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:textSize="18sp"/>
 
 </RelativeLayout>

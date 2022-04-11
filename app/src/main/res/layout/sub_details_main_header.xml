@@ -4,7 +4,9 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:textColor="@color/black"
-    android:fontFamily="@font/cpf_imm_sook_regular"
+    android:fontFamily="@font/cpf_imm_sook_bold"
     android:id="@+id/sub_details_header"
-    android:layout_marginLeft="10dp"
+    android:paddingLeft="5dp"
+    android:textSize="18sp"
+    android:paddingTop="10dp"
     tools:text="A. COMPLIANCE TO REGULATORY AUTHORITY\r\n   Permits are displayed in an easy to see area of the business premises." />
