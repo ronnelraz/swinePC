@@ -33,5 +33,13 @@ public interface APIInterface {
             @Field("buType") String buType
     );
 
+    //physical count breeder
+    @FormUrlEncoded
+    @POST("swineBreederCount.php")
+    Call<Object> Breeder(
+            @Field("orgCode") String orgCode,
+            @Field("farmCode") String farmCode
+    );
+
 
 }

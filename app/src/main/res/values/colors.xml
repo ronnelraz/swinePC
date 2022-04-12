@@ -14,4 +14,7 @@
     <color name="cardColor">#DAEFED</color>
 
     <color name="tabBackgroundColor">#3E9ED3</color>
+
+    <color name="odd">#f5f6fa</color>
+    <color name="even">#CDE8E8EC</color>
 </resources>

@@ -15,6 +15,7 @@ import com.github.hariprasanths.bounceview.BounceView;
 import com.ronnelrazo.physical_counting.Integration_submenu;
 import com.ronnelrazo.physical_counting.ListItem;
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.fragment.Tab_checklist;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.inv_form;
 import com.ronnelrazo.physical_counting.model.model_farm;
@@ -62,6 +63,7 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 if(orgData.getCompanyType().equals("0")){
                     Globalfunction.getInstance(v.getContext()).intent(tab_from.class,v.getContext());
                     tab_from.str_types = "Company Farm";
+                    Tab_checklist.str_bu_Type = "SWCOM_1";
                     tab_from.str_orgcode = orgData.getOrgcode();
                     tab_from.str_orgname = orgData.getOrgname();
                     tab_from.str_farmcode = orgData.getOrgcode();

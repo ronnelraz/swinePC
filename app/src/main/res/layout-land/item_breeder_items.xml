@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:id="@+id/container"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/location"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"
+            android:layout_gravity="center|left"
+            android:paddingLeft="20dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:id="@+id/farmorg"
+                android:textSize="18sp"
+                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:singleLine="false"
+                android:text="xxxx-xx-xxx" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:id="@+id/farm"
+                android:textSize="18sp"
+                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:singleLine="false"
+                android:text="xxxx-xx-xxx" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/female"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:text="9999"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:gravity="center|right"/>
+
+        <TextView
+            android:id="@+id/male"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:text="9999"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:gravity="center|right"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:text="9999"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center"
+            android:gravity="center|right"/>
+
+        <EditText
+            android:id="@+id/counting"
+            android:inputType="number"
+            android:background="@drawable/edit_text_dot"
+            android:textSize="16sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:isScrollContainer="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="7dp"
+            android:hint="0"
+            />
+
+        <EditText
+            android:id="@+id/remark"
+            android:background="@drawable/edit_text_dot"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:isScrollContainer="true"
+            android:gravity="bottom|left"
+            android:layout_height="40dp"
+            android:layout_weight="1.7"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:background="#1734495E"/>
+
+</LinearLayout>

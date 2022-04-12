@@ -14,6 +14,8 @@ import com.ronnelrazo.physical_counting.fragment.Tab_feed;
 import com.ronnelrazo.physical_counting.fragment.Tab_med;
 
 public class TabLayoutAdapter extends FragmentPagerAdapter {
+
+
     Context mContext;
     int mTotalTabs;
 

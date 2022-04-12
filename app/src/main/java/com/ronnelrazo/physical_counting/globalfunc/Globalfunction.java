@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.text.Editable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.LeadingMarginSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -196,6 +198,13 @@ public class Globalfunction {
         ConfirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         BounceView.addAnimTo(ConfirmDialog);
         ConfirmDialog.show();
+    }
+
+    //textview indent
+    public static SpannableString createIndentedText(String text, int marginFirstLine, int marginNextLines) {
+        SpannableString result=new SpannableString(text);
+        result.setSpan(new LeadingMarginSpan.Standard(marginFirstLine, marginNextLines),0,text.length(),0);
+        return result;
     }
 
 

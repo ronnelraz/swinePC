@@ -11,6 +11,7 @@
 
 
     <TextView
+        android:singleLine="false"
         android:layout_marginTop="3dp"
         android:id="@+id/itemDetails"
         android:fontFamily="@font/cpf_imm_sook_semibold"
@@ -19,7 +20,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="2.4"
         android:textSize="18sp"
-        android:text="asasasasasasaasas"/>
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true"
+        android:lineSpacingMultiplier="1"
+        android:text="1. Are production records updated until cut-off date?"/>
 
     <LinearLayout
         android:layout_gravity="bottom"
@@ -37,17 +43,23 @@
           android:layout_height="wrap_content">
 
           <RadioButton
+              android:scaleX="0.9"
+              android:scaleY="0.9"
               android:id="@+id/item_yes"
               android:buttonTint="@color/purple_500"
               android:layout_width="30dp"
               android:layout_height="30dp"/>
 
           <RadioButton
+              android:scaleX="0.9"
+              android:scaleY="0.9"
               android:id="@+id/item_no"
               android:buttonTint="@color/error"
               android:layout_width="30dp"
               android:layout_height="30dp"/>
           <RadioButton
+              android:scaleX="0.9"
+              android:scaleY="0.9"
               android:id="@+id/item_na"
               android:buttonTint="@color/main_disabled_stroke_color"
               android:layout_width="30dp"

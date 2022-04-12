@@ -1319,6 +1319,7 @@ color error
 color error_color_material_dark
 color error_color_material_light
 color error_stroke_color
+color even
 color float_transparent
 color foreground_material_dark
 color foreground_material_light
@@ -1813,6 +1814,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color odd
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2742,6 +2744,7 @@ id bounceStart
 id breadcrumb_header
 id breadcrumb_orgcode
 id breadcrumb_orgname
+id breeder_data
 id buttonPanel
 id buttons_container
 id cache_measures
@@ -2783,6 +2786,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id counting
 id currentState
 id custom
 id customPanel
@@ -2836,9 +2840,12 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id farm
 id farmcode
 id farmlist
 id farmname
+id farmorg
+id female
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2903,11 +2910,13 @@ id linear
 id listMode
 id list_item
 id loading
+id location
 id login
 id logo
 id logout
 id lottie_layer_name
 id maintopic
+id male
 id mask_left
 id mask_right
 id masked
@@ -3023,6 +3032,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id remark
 id restart
 id reverse
 id reverseSawtooth
@@ -3142,6 +3152,7 @@ id toastip
 id toggle
 id top
 id topPanel
+id total
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3297,6 +3308,8 @@ layout fragment_checklist
 layout fragment_contract
 layout fragment_feed
 layout fragment_med
+layout item_breeder_header
+layout item_breeder_items
 layout item_farm
 layout item_header
 layout list_checklist_items

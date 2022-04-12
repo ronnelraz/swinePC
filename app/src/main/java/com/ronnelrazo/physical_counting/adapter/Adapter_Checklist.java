@@ -66,7 +66,8 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
         else if(holder instanceof VHItem) {
             modal_checklist_Details details = (modal_checklist_Details) items.get(position);
             VHItem item = (VHItem)holder;
-            item.itemDetails.setText(details.getDetails());
+            item.itemDetails.setText(Globalfunction.createIndentedText(details.getDetails(),10,50));
+//            item.itemDetails.setText(details.getDetails());
 
 
         }

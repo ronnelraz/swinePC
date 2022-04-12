@@ -40,6 +40,8 @@ import retrofit2.Callback;
 
 public class Tab_checklist extends Fragment {
 
+
+    public static String str_bu_Type;
     private Globalfunction data;
     private SharedPref sharedPref;
 
@@ -62,15 +64,16 @@ public class Tab_checklist extends Fragment {
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
-        LoadFarmlist();
+        LoadFarmlist(str_bu_Type);
 
+//        Globalfunction.getInstance(getActivity()).toast(R.raw.checked,str_bu_Type,Gravity.TOP,0,50);
         return view;
     }
 
-    private void LoadFarmlist() {
+    private void LoadFarmlist(String BUtype) {
         data.Preloader(getActivity(),"Please wait...");
         items.clear();
-        API_.getClient().checkList("SWCOM_1").enqueue(new Callback<Object>() {
+        API_.getClient().checkList(BUtype).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -80,23 +83,7 @@ public class Tab_checklist extends Fragment {
                     String checklist_type = jsonResponse.getString("type");
                     String maintopic = jsonResponse.getString("mainTopic");
                     JSONArray checklistData = jsonResponse.getJSONArray("data");
-//                    items.add(new model_checklist_maintopic(getTYpeCompany));
                     items.add(new modal_checklist_maintopic(maintopic));
-
-//                    JSONObject company = jsonResponse.getJSONObject("company");
-//                    int getcountCompany = company.getInt("count");
-//                    String getTYpeCompany = company.getString("type");
-//                    JSONArray company_data = company.getJSONArray("data");
-//
-//                    JSONObject integration = jsonResponse.getJSONObject("integration");
-//                    int getcountIntegration = integration.getInt("count");
-//                    String getTYpeIntegration = integration.getString("type");
-//                    JSONArray integration_data = integration.getJSONArray("data");
-//
-//                    Log.d("swine",getTYpeCompany);
-//                    Log.d("swine",getTYpeIntegration);
-
-
                     if(success){
                         data.loaddialog.dismiss();
 

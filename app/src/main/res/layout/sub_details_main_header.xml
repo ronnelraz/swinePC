@@ -8,5 +8,5 @@
     android:id="@+id/sub_details_header"
     android:paddingLeft="5dp"
     android:textSize="18sp"
-    android:paddingTop="10dp"
+    android:paddingTop="20dp"
     tools:text="A. COMPLIANCE TO REGULATORY AUTHORITY\r\n   Permits are displayed in an easy to see area of the business premises." />
