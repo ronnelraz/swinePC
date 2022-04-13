@@ -9,6 +9,7 @@ color odd
 color purple_200
 color purple_500
 color purple_700
+color shimmer_placeholder
 color tabBackgroundColor
 color teal_200
 color teal_700
@@ -65,6 +66,7 @@ id farmcode
 id farmlist
 id farmname
 id farmorg
+id feed_data
 id female
 id header_title
 id icon
@@ -75,12 +77,14 @@ id item_no
 id item_remarks
 id item_yes
 id keepme
+id loading
 id location
 id login
 id logo
 id logout
 id maintopic
 id male
+id med_data
 id menu
 id negative
 id org_code
@@ -92,8 +96,13 @@ id password
 id password_layout
 id permission
 id positive
+id productCode
+id productName
 id remark
+id shimmerLayout
 id status
+id stock
+id stockUnit
 id sub_details_header
 id tabs
 id title
@@ -120,8 +129,12 @@ layout fragment_med
 layout item_breeder_header
 layout item_breeder_items
 layout item_farm
+layout item_feed_header
+layout item_feed_items
 layout item_header
 layout list_checklist_items
+layout loading_shimmer
+layout loading_shimmer_checklist
 layout main_topic
 layout sub_details_main_header
 mipmap ic_launcher

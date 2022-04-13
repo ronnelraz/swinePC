@@ -713,12 +713,15 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr lottieAnimationViewStyle
 attr lottie_autoPlay
 attr lottie_cacheComposition
+attr lottie_clipToCompositionBounds
 attr lottie_colorFilter
 attr lottie_enableMergePathsForKitKatAndAbove
 attr lottie_fallbackRes
 attr lottie_fileName
+attr lottie_ignoreDisabledSystemAnimations
 attr lottie_imageAssetsFolder
 attr lottie_loop
 attr lottie_progress
@@ -726,7 +729,6 @@ attr lottie_rawRes
 attr lottie_renderMode
 attr lottie_repeatCount
 attr lottie_repeatMode
-attr lottie_scale
 attr lottie_speed
 attr lottie_url
 attr marginHorizontal
@@ -936,6 +938,26 @@ attr shapeAppearanceLargeComponent
 attr shapeAppearanceMediumComponent
 attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
+attr shimmer_auto_start
+attr shimmer_base_alpha
+attr shimmer_base_color
+attr shimmer_clip_to_children
+attr shimmer_colored
+attr shimmer_direction
+attr shimmer_dropoff
+attr shimmer_duration
+attr shimmer_fixed_height
+attr shimmer_fixed_width
+attr shimmer_height_ratio
+attr shimmer_highlight_alpha
+attr shimmer_highlight_color
+attr shimmer_intensity
+attr shimmer_repeat_count
+attr shimmer_repeat_delay
+attr shimmer_repeat_mode
+attr shimmer_shape
+attr shimmer_tilt
+attr shimmer_width_ratio
 attr shortcutMatchRequired
 attr showAnimationBehavior
 attr showAsAction
@@ -1835,6 +1857,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color shimmer_placeholder
 color success_stroke_color
 color sweet_dialog_bg_color
 color sweet_dialog_bg_color_dark
@@ -2736,6 +2759,7 @@ id bestChoice
 id blocking
 id body
 id bottom
+id bottom_to_top
 id bottompanel
 id bounce
 id bounceBoth
@@ -2845,6 +2869,7 @@ id farmcode
 id farmlist
 id farmname
 id farmorg
+id feed_data
 id female
 id fill
 id fill_horizontal
@@ -2903,6 +2928,7 @@ id labeled
 id layout
 id left
 id leftToRight
+id left_to_right
 id legacy
 id line1
 id line3
@@ -2941,6 +2967,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id med_data
 id menu
 id message
 id middle
@@ -3025,10 +3052,13 @@ id pin
 id position
 id positive
 id postLayout
+id productCode
+id productName
 id progressWheel
 id progress_circular
 id progress_dialog
 id progress_horizontal
+id radial
 id radio
 id ratio
 id rectangles
@@ -3040,6 +3070,7 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id right_to_left
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -3067,6 +3098,7 @@ id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shimmerLayout
 id shortcut
 id showCustom
 id showHome
@@ -3100,6 +3132,8 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id status
+id stock
+id stockUnit
 id stop
 id stretch
 id sub_details_header
@@ -3152,6 +3186,7 @@ id toastip
 id toggle
 id top
 id topPanel
+id top_to_bottom
 id total
 id touch_outside
 id transitionToEnd
@@ -3311,8 +3346,12 @@ layout fragment_med
 layout item_breeder_header
 layout item_breeder_items
 layout item_farm
+layout item_feed_header
+layout item_feed_items
 layout item_header
 layout list_checklist_items
+layout loading_shimmer
+layout loading_shimmer_checklist
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4637,7 +4676,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
-styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
+styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_clipToCompositionBounds lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_ignoreDisabledSystemAnimations lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_speed lottie_url
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType
@@ -4685,6 +4724,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
+styleable ShimmerFrameLayout shimmer_auto_start shimmer_base_alpha shimmer_base_color shimmer_clip_to_children shimmer_colored shimmer_direction shimmer_dropoff shimmer_duration shimmer_fixed_height shimmer_fixed_width shimmer_height_ratio shimmer_highlight_alpha shimmer_highlight_color shimmer_intensity shimmer_repeat_count shimmer_repeat_delay shimmer_repeat_mode shimmer_shape shimmer_tilt shimmer_width_ratio
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:singleLine="false"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:textSize="18sp"
+            android:enabled="true"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:lineSpacingMultiplier="1"
+            android:layout_marginRight="10dp"
+            android:background="@color/shimmer_placeholder"/>
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:background="@color/shimmer_placeholder"
+                    android:buttonTint="@color/shimmer_placeholder"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <RadioButton
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:background="@color/shimmer_placeholder"
+                    android:buttonTint="@color/shimmer_placeholder"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <RadioButton
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:background="@color/shimmer_placeholder"
+                    android:buttonTint="@color/shimmer_placeholder"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:textSize="20sp"
+            android:orientation="vertical">
+
+
+
+            <EditText
+                android:isScrollContainer="true"
+                android:background="@color/shimmer_placeholder"
+                android:textSize="18sp"
+                android:fontFamily="@font/cpf_imm_sook_regular"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,80 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:gravity="center"
     android:background="@color/purple_700"
-    android:layout_height="50dp">
+    android:layout_height="50dp"
+    tools:ignore="MissingDefaultResource">
 
-
-    <TextView
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.1"
-        android:text="Location"/>
 
     <TextView
         android:paddingLeft="10dp"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:textAlignment="textStart"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:fontFamily="@font/cpf_imm_sook_bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="2.8"
         android:text="Farm"/>
 
     <TextView
+        android:paddingLeft="4dp"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
-        android:textAlignment="textEnd"
+        android:textAlignment="textStart"
+        android:fontFamily="@font/cpf_imm_sook_bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.3"
-        android:text="Female"/>
+        android:layout_weight="3.5"
+        android:text="Product"/>
 
     <TextView
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
-        android:textAlignment="textEnd"
+        android:fontFamily="@font/cpf_imm_sook_bold"
+        android:textAlignment="center"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.3"
-        android:text="Male"/>
+        android:layout_weight="1"
+        android:text="Unit"/>
 
     <TextView
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:fontFamily="@font/cpf_imm_sook_bold"
         android:textAlignment="textEnd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.3"
-        android:text="Total"/>
+        android:layout_weight="1.5"
+        android:text="Stock"/>
+
+
+
 
     <TextView
-        android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:fontFamily="@font/cpf_imm_sook_bold"
         android:layout_width="0dp"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
-        android:layout_weight="1.3"
-        android:text="Counting"/>
+        android:layout_weight="1.7"
+        android:text="Count"/>
 
     <TextView
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textAlignment="center"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:fontFamily="@font/cpf_imm_sook_bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="3"
         android:text="Remark"/>
 
 </LinearLayout>

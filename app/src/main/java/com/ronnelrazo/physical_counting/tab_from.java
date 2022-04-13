@@ -9,6 +9,8 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.ronnelrazo.physical_counting.adapter.TabLayoutAdapter;
 import com.ronnelrazo.physical_counting.fragment.Tab_breeder;
+import com.ronnelrazo.physical_counting.fragment.Tab_feed;
+import com.ronnelrazo.physical_counting.fragment.Tab_med;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
@@ -46,8 +48,18 @@ public class tab_from extends AppCompatActivity {
         headerDetails[3].setText(str_farmcode);
         headerDetails[4].setText(str_farmname);
 
+
+        //breeder
         Tab_breeder.orgCode = str_orgcode;
         Tab_breeder.farmOrg = str_farmcode;
+        //feed
+        Tab_feed.orgCode = str_orgcode;
+        Tab_feed.farmOrg = str_farmcode;
+
+        //Med
+        Tab_med.orgCode = str_orgcode;
+        Tab_med.farmOrg = str_farmcode;
+
 
         tabs.addTab(tabs.newTab().setText("Contact"));
         tabs.addTab(tabs.newTab().setText("Checklist"));

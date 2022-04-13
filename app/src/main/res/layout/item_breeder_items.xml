@@ -8,33 +8,36 @@
 
 
     <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/location"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:fontFamily="@font/cpf_imm_sook_semibold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.2"
+            android:layout_weight="0.8"
             android:text="1"
-            android:layout_gravity="center|left"
-            android:paddingLeft="20dp"/>
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.6" >
+            android:layout_weight="3" >
 
             <TextView
-                android:layout_gravity="center"
+                android:layout_gravity="center|left"
                 android:id="@+id/farmorg"
-                android:textSize="12sp"
-                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:textSize="13sp"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
@@ -42,10 +45,10 @@
                 android:text="xxxx-xx-xxx" />
 
             <TextView
-                android:layout_gravity="center"
+                android:layout_gravity="center|left"
                 android:id="@+id/farm"
-                android:textSize="12sp"
-                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:textSize="13sp"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
@@ -57,31 +60,31 @@
             android:layout_gravity="center"
             android:gravity="center|right"
             android:id="@+id/female"
-            android:textSize="15sp"
-            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.3"
+            android:layout_weight="1.2"
             android:text="9999"/>
 
         <TextView
             android:id="@+id/male"
-            android:textSize="15sp"
-            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.3"
+            android:layout_weight="1.2"
             android:text="9999"
             android:layout_gravity="center"
             android:gravity="center|right"/>
 
         <TextView
             android:id="@+id/total"
-            android:textSize="15sp"
-            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.3"
+            android:layout_weight="1.2"
             android:text="9999"
             android:layout_gravity="center"
             android:gravity="center|right"/>
@@ -90,31 +93,33 @@
             android:id="@+id/counting"
             android:inputType="number"
             android:background="@drawable/edit_text_dot"
-            android:textSize="15sp"
-            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:isScrollContainer="true"
-            android:layout_gravity="center"
+            android:layout_gravity="center|left"
             android:gravity="center"
-            android:layout_weight="1.1"
-            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="5dp"
             android:hint="0"
             />
 
         <EditText
             android:id="@+id/remark"
-            android:inputType="number"
+            android:inputType=""
             android:background="@drawable/edit_text_dot"
-            android:textSize="14sp"
-            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="2"
+            android:layout_weight="2.1"
             android:isScrollContainer="true"
             android:layout_gravity="center"
-            android:gravity="bottom|left"
+            android:singleLine="false"
+            android:gravity="center"
             />
 
     </LinearLayout>

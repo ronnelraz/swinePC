@@ -68,8 +68,8 @@
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\raw\\farm.json"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout-land_item_breeder_items.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout-land\\item_breeder_items.xml"
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout-land_checklist_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout-land\\checklist_header.xml"
     },
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -80,8 +80,8 @@
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout-land_checklist_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout-land\\checklist_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_item_feed_items.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\item_feed_items.xml"
     },
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_feed.xml.flat",
@@ -140,6 +140,10 @@
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\item_header.xml"
     },
     {
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_loading_shimmer.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\loading_shimmer.xml"
+    },
+    {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round_adaptive_back.png.flat",
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round_adaptive_back.png"
     },
@@ -182,6 +186,10 @@
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\drawable_edit.xml.flat",
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\drawable\\edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_loading_shimmer_checklist.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\loading_shimmer_checklist.xml"
     },
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_farm_categories.xml.flat",
@@ -304,12 +312,12 @@
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_item_feed_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\item_feed_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout-land_item_breeder_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout-land\\item_breeder_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_breeder.xml.flat",
@@ -328,12 +336,12 @@
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\list_checklist_items.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round_adaptive_fore.png"
-    },
-    {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\drawable_radius_border.xml.flat",
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\drawable\\radius_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round_adaptive_fore.png"
     },
     {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_adaptive_back.png.flat",

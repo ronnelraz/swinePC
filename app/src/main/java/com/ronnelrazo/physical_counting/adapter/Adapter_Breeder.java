@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -50,8 +51,8 @@ public class Adapter_Breeder extends RecyclerView.Adapter<Adapter_Breeder.ViewHo
     @Override
     public void onBindViewHolder(final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         final model_breeder getData = newsList.get(position);
-        String isOdd = position%2==0 ? String.valueOf(R.color.even) :  String.valueOf(R.color.odd);
-        Log.d("swine",isOdd);
+        int backgroundColor = position%2==0 ? R.color.even : R.color.odd;
+        holder.container.setBackgroundColor(ContextCompat.getColor(mContext,backgroundColor));
 
         holder.location.setText(getData.getLocation_Code());
         holder.farmorg.setText(getData.getFarm_Org());

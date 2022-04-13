@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.format.DateFormat;
 import android.text.style.LeadingMarginSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,6 +31,7 @@ import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Date;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -205,6 +207,13 @@ public class Globalfunction {
         SpannableString result=new SpannableString(text);
         result.setSpan(new LeadingMarginSpan.Standard(marginFirstLine, marginNextLines),0,text.length(),0);
         return result;
+    }
+
+    //date get 1st date of month
+    public String getMonth(){
+        Date d = new Date();
+        CharSequence s  = DateFormat.format("MM/01/yyyy ", d.getTime());
+        return String.valueOf(s);
     }
 
 

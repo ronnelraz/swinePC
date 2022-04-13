@@ -6,6 +6,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -34,6 +35,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,6 +50,9 @@ public class Tab_checklist extends Fragment {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     private ArrayList<ListItem_Checklist> items =  new ArrayList<>();
+
+    @BindView(R.id.loading)
+    LinearLayout loading;
 
 
     @Override
@@ -64,6 +69,7 @@ public class Tab_checklist extends Fragment {
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
+        loading.setVisibility(View.VISIBLE);
         LoadFarmlist(str_bu_Type);
 
 //        Globalfunction.getInstance(getActivity()).toast(R.raw.checked,str_bu_Type,Gravity.TOP,0,50);
@@ -71,7 +77,7 @@ public class Tab_checklist extends Fragment {
     }
 
     private void LoadFarmlist(String BUtype) {
-        data.Preloader(getActivity(),"Please wait...");
+//        data.Preloader(getActivity(),"Please wait...");
         items.clear();
         API_.getClient().checkList(BUtype).enqueue(new Callback<Object>() {
             @Override
@@ -85,7 +91,8 @@ public class Tab_checklist extends Fragment {
                     JSONArray checklistData = jsonResponse.getJSONArray("data");
                     items.add(new modal_checklist_maintopic(maintopic));
                     if(success){
-                        data.loaddialog.dismiss();
+                        loading.setVisibility(View.GONE);
+//                        data.loaddialog.dismiss();
 
                         for (int i = 0; i < checklistData.length(); i++) {
                             JSONObject object = checklistData.getJSONObject(i);
@@ -114,12 +121,14 @@ public class Tab_checklist extends Fragment {
                     }
                     else{
                         data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
-                        data.loaddialog.dismiss();
+//                        data.loaddialog.dismiss();
+                        loading.setVisibility(View.GONE);
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage());
+                    loading.setVisibility(View.GONE);
                 }
             }
 
@@ -127,7 +136,8 @@ public class Tab_checklist extends Fragment {
             public void onFailure(Call<Object> call, Throwable t) {
                 if (t instanceof IOException) {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
-                    data.loaddialog.dismiss();
+//                    data.loaddialog.dismiss();
+                    loading.setVisibility(View.GONE);
                 }
             }
         });

@@ -6,6 +6,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -32,6 +33,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,6 +49,9 @@ public class Tab_breeder extends Fragment {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     public static List<model_breeder> list = new ArrayList<>();
+
+    @BindView(R.id.loading)
+    LinearLayout loading;
 
 
     @Override
@@ -65,6 +70,8 @@ public class Tab_breeder extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new Adapter_Breeder(list,getActivity());
         recyclerView.setAdapter(adapter);
+        list.clear();
+        loading.setVisibility(View.VISIBLE);
         loadBreederForm(orgCode,farmOrg);
 
         Log.d("swine", " ->breeder " + orgCode);
@@ -85,6 +92,7 @@ public class Tab_breeder extends Fragment {
                     JSONArray result = jsonResponse.getJSONArray("data");
 
                     if(success){
+                        loading.setVisibility(View.GONE);
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
                             model_breeder item = new model_breeder(
@@ -109,6 +117,7 @@ public class Tab_breeder extends Fragment {
                         recyclerView.setAdapter(adapter);
                     }
                     else{
+                        loading.setVisibility(View.GONE);
                         data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
                         data.loaddialog.dismiss();
                     }
@@ -116,6 +125,7 @@ public class Tab_breeder extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage());
+                    loading.setVisibility(View.GONE);
                 }
             }
 
@@ -124,6 +134,7 @@ public class Tab_breeder extends Fragment {
                 if (t instanceof IOException) {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
                     data.loaddialog.dismiss();
+                    loading.setVisibility(View.GONE);
                 }
             }
         });

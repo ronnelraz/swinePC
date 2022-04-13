@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="5dp"
+            android:id="@+id/farmorg"
+            android:textSize="16sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="131518PG-0000-0000"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            />
+
+        <LinearLayout
+           android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" >
+
+            <TextView
+                android:layout_gravity="center|left"
+                android:id="@+id/productCode"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:singleLine="false"
+                android:text="21105501200150" />
+
+            <TextView
+                android:layout_gravity="center|left"
+                android:id="@+id/productName"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:singleLine="false"
+                android:text="550Lac -Booster 50KG." />
+        </LinearLayout>
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/stockUnit"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="W"/>
+
+        <TextView
+            android:id="@+id/stock"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="150"
+            android:layout_gravity="center|right"
+            android:gravity="center|right"/>
+
+
+        <EditText
+            android:id="@+id/counting"
+            android:inputType="number"
+            android:background="@drawable/edit_text_dot"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:isScrollContainer="true"
+            android:layout_gravity="center|left"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:hint="0"
+            />
+
+        <EditText
+            android:id="@+id/remark"
+            android:inputType=""
+            android:background="@drawable/edit_text_dot"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3.5"
+            android:isScrollContainer="true"
+            android:layout_gravity="center"
+            android:singleLine="false"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:background="#1734495E"/>
+
+
+
+</LinearLayout>

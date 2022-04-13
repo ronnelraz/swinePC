@@ -42,4 +42,23 @@ public interface APIInterface {
     );
 
 
+    //physical count breeder
+    @FormUrlEncoded
+    @POST("swineFeedCount.php")
+    Call<Object> Feed(
+            @Field("orgCode") String orgCode,
+            @Field("farmCode") String farmCode,
+            @Field("period") String period
+    );
+
+    //physical count breeder
+    @FormUrlEncoded
+    @POST("swineMedCount.php")
+    Call<Object> Med(
+            @Field("orgCode") String orgCode,
+            @Field("farmCode") String farmCode,
+            @Field("period") String period
+    );
+
+
 }

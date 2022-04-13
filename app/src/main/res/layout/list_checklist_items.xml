@@ -87,7 +87,9 @@
            android:id="@+id/item_remarks"
            android:textSize="18sp"
            android:fontFamily="@font/cpf_imm_sook_regular"
-           android:gravity="bottom"
+           android:layout_gravity="center"
+           android:singleLine="false"
+           android:gravity="center"
            android:layout_width="match_parent"
            android:layout_height="40dp"/>
 

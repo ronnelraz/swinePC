@@ -4,10 +4,38 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
+
+
     <include layout="@layout/item_breeder_header"/>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+        <include layout="@layout/loading_shimmer"/>
+    </LinearLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:itemCount="1"
         android:id="@+id/breeder_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

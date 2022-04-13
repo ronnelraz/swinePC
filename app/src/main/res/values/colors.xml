@@ -15,6 +15,7 @@
 
     <color name="tabBackgroundColor">#3E9ED3</color>
 
-    <color name="odd">#f5f6fa</color>
-    <color name="even">#CDE8E8EC</color>
+    <color name="odd">#E4F1F1F4</color>
+    <color name="even">#FFFFFF</color>
+    <color name="shimmer_placeholder">#dddddd</color>
 </resources>
