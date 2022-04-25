@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -27,6 +28,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -46,6 +48,8 @@ public class Integration_submenu extends AppCompatActivity {
 
     @BindViews({R.id.breadcrumb_header,R.id.breadcrumb_orgname,R.id.breadcrumb_orgcode})
     TextView[] breadcrumbs;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

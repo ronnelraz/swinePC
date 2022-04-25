@@ -29,6 +29,9 @@
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="picker" parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="colorAccent">@color/purple_500</item>
+    </style>
     <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily">@font/cpf_imm_sook_semibold</item>
         <item name="android:textSize">20sp</item>

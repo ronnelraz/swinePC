@@ -8,36 +8,70 @@
 
     <include layout="@layout/item_feed_header"/>
 
-    <LinearLayout
-        android:id="@+id/loading"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-        <include layout="@layout/loading_shimmer"/>
-    </LinearLayout>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/nodataContainer"
+            android:layout_centerInParent="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/feed_data"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_feed_items"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/nodata"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Data"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+            <include layout="@layout/loading_shimmer"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feed_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_feed_items"/>
+    </RelativeLayout>
+
+
 
 </LinearLayout>

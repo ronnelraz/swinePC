@@ -75,11 +75,15 @@ public class Farm_categories extends AppCompatActivity {
 
         logout.setOnClickListener(v -> {
             data.Confirmation(v.getContext(),"Are you sure you want to sign out your account?",R.drawable.ic_icons8_warning);
+            data.positive.setText("Logout");
             data.negative.setOnClickListener(v1 ->{
                 data.ConfirmDialog.dismiss();
             });
             data.positive.setOnClickListener(v1 -> {
                 data.ConfirmDialog.dismiss();
+                sharedPref.signout("false");
+                data.intent(Login.class,v1.getContext());
+                finish();
             });
         });
 

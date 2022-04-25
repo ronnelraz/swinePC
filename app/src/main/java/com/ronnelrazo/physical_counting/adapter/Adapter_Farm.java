@@ -1,6 +1,7 @@
 package com.ronnelrazo.physical_counting.adapter;
 
 
+import android.app.DatePickerDialog;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.tab_from;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -58,24 +60,54 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             VHitem.org_code.setText(orgData.getOrgcode());
             VHitem.org_name.setText(orgData.getOrgname());
             VHitem.card.setOnClickListener(v -> {
-//                Globalfunction.getInstance(v.getContext()).toast(R.raw.error,orgData.getOrgcode(), Gravity.TOP|Gravity.CENTER,0,50); //50
-//                Log.d("swine",orgData.getCompanyType() + " " + orgData.getOrgcode());
-                if(orgData.getCompanyType().equals("0")){
-                    Globalfunction.getInstance(v.getContext()).intent(tab_from.class,v.getContext());
-                    tab_from.str_types = "Company Farm";
-                    Tab_checklist.str_bu_Type = "SWCOM_1";
-                    tab_from.str_orgcode = orgData.getOrgcode();
-                    tab_from.str_orgname = orgData.getOrgname();
-                    tab_from.str_farmcode = orgData.getOrgcode();
-                    tab_from.str_farmname = orgData.getOrgname();
 
-                }
-                else{
-                    Globalfunction.getInstance(v.getContext()).intent(Integration_submenu.class,v.getContext());
-                    Integration_submenu.Integration = "integration";
-                    Integration_submenu.orgname = orgData.getOrgname();
-                    Integration_submenu.orgcode = orgData.getOrgcode();
-                }
+                if(orgData.getCompanyType().equals("0")){
+                            Globalfunction.getInstance(v.getContext()).auditDialog(v.getContext());
+                            Globalfunction.getInstance(v.getContext()).audit_save.setOnClickListener(v1 -> {
+
+                                String getCurrentDate = Globalfunction.getInstance(v1.getContext()).currentDate.getText().toString();
+                                String getAuditDate = Globalfunction.getInstance(v1.getContext()).auditDate.getText().toString();
+
+
+                                if(getCurrentDate.isEmpty()){
+                                    Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+                                }
+                                else if(getAuditDate.isEmpty()){
+                                    Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Audit Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+                                    new DatePickerDialog(v1.getContext(),R.style.picker,Globalfunction.getInstance(v1.getContext()).getDateto(), Globalfunction.getInstance(v1.getContext()).calendar
+                                            .get(Calendar.YEAR), Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.MONTH),
+                                            Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.DAY_OF_MONTH)).show();
+                                }
+                                else{
+                                    Globalfunction.getInstance(v1.getContext()).Auditalert.dismiss();
+                                    Globalfunction.getInstance(v1.getContext()).intent(tab_from.class,v1.getContext());
+                                    tab_from.str_types = "Company Farm";
+                                    Tab_checklist.str_bu_Type = "SWCOM_1";
+                                    tab_from.str_orgcode = orgData.getOrgcode();
+                                    tab_from.str_orgname = orgData.getOrgname();
+                                    tab_from.str_farmcode = orgData.getOrgcode();
+                                    tab_from.str_farmname = orgData.getOrgname();
+                                    tab_from.doc_date = getCurrentDate;
+                                    tab_from.audit_date = getAuditDate;
+                                }
+
+                            });
+                            Globalfunction.getInstance(v.getContext()).audit_cancel.setOnClickListener(v1 -> {
+                                Globalfunction.getInstance(v1.getContext()).Auditalert.dismiss();
+                            });
+
+
+
+                        }
+                        else{
+                            Globalfunction.getInstance(v.getContext()).intent(Integration_submenu.class,v.getContext());
+                            Integration_submenu.Integration = "integration";
+                            Integration_submenu.orgname = orgData.getOrgname();
+                            Integration_submenu.orgcode = orgData.getOrgcode();
+                        }
+
+
+
             });
         }
     }

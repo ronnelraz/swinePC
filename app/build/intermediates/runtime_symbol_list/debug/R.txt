@@ -2559,6 +2559,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f07005d
 int drawable btn_radio_on_mtrl 0x7f07005e
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f07005f
 int drawable buttoncheckbox 0x7f070060
+int drawable calendar 0x7f0700c3
 int drawable checked 0x7f070061
 int drawable create 0x7f070062
 int drawable custom_eye 0x7f070063
@@ -2630,6 +2631,7 @@ int drawable mtrl_popupmenu_background 0x7f0700a4
 int drawable mtrl_popupmenu_background_overlay 0x7f0700a5
 int drawable mtrl_tabs_default_indicator 0x7f0700a6
 int drawable navigation_empty_icon 0x7f0700a7
+int drawable nodata 0x7f0700c4
 int drawable notification_action_background 0x7f0700a8
 int drawable notification_bg 0x7f0700a9
 int drawable notification_bg_low 0x7f0700aa
@@ -2745,6 +2747,7 @@ int id anticipate 0x7f090050
 int id arc 0x7f090051
 int id asConfigured 0x7f090052
 int id async 0x7f090053
+int id auditDate 0x7f090234
 int id auto 0x7f090054
 int id autoComplete 0x7f090055
 int id autoCompleteToEnd 0x7f090056
@@ -2810,6 +2813,8 @@ int id coordinator 0x7f090091
 int id cos 0x7f090092
 int id counterclockwise 0x7f090093
 int id counting 0x7f090094
+int id create 0x7f090238
+int id currentDate 0x7f090235
 int id currentState 0x7f090095
 int id custom 0x7f090096
 int id customPanel 0x7f090097
@@ -2838,6 +2843,7 @@ int id disableIntraAutoTransition 0x7f0900ad
 int id disablePostScroll 0x7f0900ae
 int id disableScroll 0x7f0900af
 int id disjoint 0x7f0900b0
+int id docDate 0x7f090237
 int id dragAnticlockwise 0x7f0900b1
 int id dragClockwise 0x7f0900b2
 int id dragDown 0x7f0900b3
@@ -2851,6 +2857,7 @@ int id easeIn 0x7f0900ba
 int id easeInOut 0x7f0900bb
 int id easeOut 0x7f0900bc
 int id east 0x7f0900bd
+int id edit 0x7f090239
 int id edit_query 0x7f0900be
 int id elastic 0x7f0900bf
 int id end 0x7f0900c0
@@ -3016,6 +3023,7 @@ int id neverCompleteToEnd 0x7f09015e
 int id neverCompleteToStart 0x7f09015f
 int id noScroll 0x7f090160
 int id noState 0x7f090161
+int id nodataContainer 0x7f09023b
 int id none 0x7f090162
 int id normal 0x7f090163
 int id north 0x7f090164
@@ -3369,6 +3377,7 @@ int layout material_time_input 0x7f0c0053
 int layout material_timepicker 0x7f0c0054
 int layout material_timepicker_dialog 0x7f0c0055
 int layout material_timepicker_textinput_display 0x7f0c0056
+int layout modal_audit_dialog 0x7f0c008e
 int layout mtrl_alert_dialog 0x7f0c0057
 int layout mtrl_alert_dialog_actions 0x7f0c0058
 int layout mtrl_alert_dialog_title 0x7f0c0059
@@ -4598,6 +4607,7 @@ int style Widget_Support_CoordinatorLayout 0x7f1203fc
 int style alert_dialog_dark 0x7f1203fd
 int style alert_dialog_light 0x7f1203fe
 int style dialog_blue_button 0x7f1203ff
+int style picker 0x7f120401
 int style tab_text 0x7f120400
 int[] styleable ActionBar { 0x7f030040, 0x7f030047, 0x7f030048, 0x7f030109, 0x7f03010a, 0x7f03010b, 0x7f03010c, 0x7f03010d, 0x7f03010e, 0x7f030134, 0x7f030147, 0x7f030148, 0x7f030167, 0x7f0301d0, 0x7f0301d7, 0x7f0301dd, 0x7f0301de, 0x7f0301e2, 0x7f0301f3, 0x7f030208, 0x7f030281, 0x7f0302fe, 0x7f03032e, 0x7f030335, 0x7f030336, 0x7f0303ad, 0x7f0303b1, 0x7f030433, 0x7f030440 }
 int styleable ActionBar_background 0

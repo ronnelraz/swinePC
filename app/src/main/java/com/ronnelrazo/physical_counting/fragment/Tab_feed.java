@@ -50,6 +50,8 @@ public class Tab_feed extends Fragment {
     @BindView(R.id.loading)
     LinearLayout loading;
 
+    @BindView(R.id.nodataContainer) LinearLayout nodatacontainer;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_feed,parent,false);
@@ -92,6 +94,7 @@ public class Tab_feed extends Fragment {
 
                     if(success){
                         loading.setVisibility(View.GONE);
+                        nodatacontainer.setVisibility(View.GONE);
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
                             model_feed item = new model_feed(
@@ -119,13 +122,14 @@ public class Tab_feed extends Fragment {
                     }
                     else{
                         loading.setVisibility(View.GONE);
-                        data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        nodatacontainer.setVisibility(View.VISIBLE);
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage());
                     loading.setVisibility(View.GONE);
+                    nodatacontainer.setVisibility(View.GONE);
                 }
             }
 
@@ -134,6 +138,7 @@ public class Tab_feed extends Fragment {
                 if (t instanceof IOException) {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
                     loading.setVisibility(View.GONE);
+                    nodatacontainer.setVisibility(View.GONE);
                 }
             }
         });

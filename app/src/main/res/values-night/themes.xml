@@ -18,4 +18,8 @@
         <item name="android:fontFamily">@font/cpf_imm_sook_semibold</item>
         <item name="android:textSize">20sp</item>
     </style>
+
+    <style name="picker" parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="colorAccent">@color/purple_500</item>
+    </style>
 </resources>

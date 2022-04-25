@@ -2560,6 +2560,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable buttoncheckbox
+drawable calendar
 drawable checked
 drawable create
 drawable custom_eye
@@ -2631,6 +2632,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable nodata
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -2746,6 +2748,7 @@ id anticipate
 id arc
 id asConfigured
 id async
+id auditDate
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -2811,6 +2814,8 @@ id coordinator
 id cos
 id counterclockwise
 id counting
+id create
+id currentDate
 id currentState
 id custom
 id customPanel
@@ -2839,6 +2844,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id docDate
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2852,6 +2858,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit
 id edit_query
 id elastic
 id end
@@ -3017,6 +3024,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id nodataContainer
 id none
 id normal
 id north
@@ -3370,6 +3378,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout modal_audit_dialog
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -4599,6 +4608,7 @@ style Widget_Support_CoordinatorLayout
 style alert_dialog_dark
 style alert_dialog_light
 style dialog_blue_button
+style picker
 style tab_text
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity

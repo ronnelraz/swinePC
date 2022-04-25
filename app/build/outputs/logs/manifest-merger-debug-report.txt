@@ -151,27 +151,27 @@ ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:13-44
 activity#com.ronnelrazo.physical_counting.Login
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:9-30:40
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:9-36:20
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:13-34
-activity#com.ronnelrazo.physical_counting.MainActivity
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:9-39:20
-	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-36
-	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-35:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:27-74
+activity#com.ronnelrazo.physical_counting.MainActivity
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:9-39:39
+	android:exported
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:13-41
 service#com.novoda.merlin.MerlinService
 ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:9-43:40
 MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\04c4ee9526b89df1a9920b27f4d9c4b0\transformed\merlin-1.2.0\AndroidManifest.xml:11:9-13:40

@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 public class tab_from extends AppCompatActivity {
 
 
-    public static String str_types,str_orgcode,str_orgname,str_farmcode,str_farmname;
+    public static String str_types,str_orgcode,str_orgname,str_farmcode,str_farmname,doc_date,audit_date;
 
     private Globalfunction data;
     private SharedPref sharedPref;
@@ -31,7 +31,7 @@ public class tab_from extends AppCompatActivity {
     @BindView(R.id.pager)
     ViewPager pager;
 
-    @BindViews({R.id.types,R.id.orgcode,R.id.orgname,R.id.farmcode,R.id.farmname})
+    @BindViews({R.id.types,R.id.orgcode,R.id.orgname,R.id.farmcode,R.id.farmname,R.id.docDate,R.id.auditDate})
     TextView[] headerDetails;
 
     @Override
@@ -47,6 +47,8 @@ public class tab_from extends AppCompatActivity {
         headerDetails[2].setText(str_orgname);
         headerDetails[3].setText(str_farmcode);
         headerDetails[4].setText(str_farmname);
+        headerDetails[5].setText(doc_date);
+        headerDetails[6].setText(audit_date);
 
 
         //breeder

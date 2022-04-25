@@ -1,6 +1,7 @@
 package com.ronnelrazo.physical_counting.globalfunc;
 
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -30,8 +31,11 @@ import com.ronnelrazo.physical_counting.R;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
 import java.sql.Array;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -41,14 +45,22 @@ public class Globalfunction {
     private static Globalfunction application;
     private static Context cont;
     public SweetAlertDialog pDialog;
+    public final Calendar calendar = Calendar.getInstance();
 
     //dialog
     public MaterialAlertDialogBuilder Materialdialog;
     public AlertDialog loaddialog;
     //end dialog
 
+    //confirm
     public AlertDialog ConfirmDialog;
     public MaterialButton positive,negative;
+
+    //audit dialog
+    public MaterialAlertDialogBuilder AuditDialog;
+    public AlertDialog Auditalert;
+    public MaterialButton audit_save,audit_cancel;
+    public TextView currentDate,auditDate;
 
 
     //observe network conenction
@@ -177,10 +189,7 @@ public class Globalfunction {
     }
 
     //login checker
-    public boolean LoginChecker(SharedPref sharedPref){
-        boolean iflogin = sharedPref.checkAuto_login_auth();
-        return iflogin;
-    }
+
 
 
     //custom alert dialog confirmation
@@ -214,6 +223,56 @@ public class Globalfunction {
         Date d = new Date();
         CharSequence s  = DateFormat.format("MM/01/yyyy ", d.getTime());
         return String.valueOf(s);
+    }
+
+
+
+
+    //audit dialog
+
+    private String auditCurrentMonth(){
+        Date d = new Date();
+        CharSequence s  = DateFormat.format("MM/dd/yyyy ", d.getTime());
+        return String.valueOf(s);
+    }
+
+    public DatePickerDialog.OnDateSetListener getDateto(){
+        DatePickerDialog.OnDateSetListener date = (view1, year, monthOfYear, dayOfMonth) -> {
+            calendar.set(Calendar.YEAR, year);
+            calendar.set(Calendar.MONTH, monthOfYear);
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            Formatter();
+        };
+        return date;
+    }
+
+    private void Formatter() {
+        String myFormat = "MM/dd/yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        auditDate.setText(sdf.format(calendar.getTime()));
+    }
+
+    public void auditDialog(Context context){
+        AuditDialog = new MaterialAlertDialogBuilder(context);
+        View v = LayoutInflater.from(context).inflate(R.layout.modal_audit_dialog,null);
+        currentDate = v.findViewById(R.id.currentDate);
+        currentDate.setText(auditCurrentMonth());
+//
+        auditDate = v.findViewById(R.id.auditDate);
+        auditDate.setOnClickListener(v1 -> {
+            new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(), calendar
+                    .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH)).show();
+        });
+        audit_save = v.findViewById(R.id.positive);
+        audit_cancel = v.findViewById(R.id.negative);
+
+        AuditDialog.setView(v);
+
+        Auditalert = AuditDialog.create();
+        Auditalert.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        BounceView.addAnimTo(Auditalert);
+        Auditalert.show();
     }
 
 

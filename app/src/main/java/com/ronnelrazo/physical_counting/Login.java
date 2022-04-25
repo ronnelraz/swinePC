@@ -61,8 +61,8 @@ public class Login extends AppCompatActivity {
         sharedPref = new SharedPref(this);
         permission();
 
-        if(data.LoginChecker(sharedPref)){
-            Log.d("swine","auto login");
+        if(sharedPref.checkAuto_login_auth().equals("true")){
+            Log.d("swine",sharedPref.checkAuto_login_auth() + " ");
             data.intent(inv_form.class, this);
             finish();
         }
@@ -159,7 +159,7 @@ public class Login extends AppCompatActivity {
                             sharedPref.set_login_auth("sdsdsds",keepmelogin);
                             data.toast(R.raw.checked,MESSAGE, Gravity.TOP|Gravity.CENTER,0,50); //50
                             data.loaddialog.dismiss();
-                            data.intent(Farm_categories.class,  Login.this);
+                            data.intent(inv_form.class,  Login.this);
                             finish();
 
                         }

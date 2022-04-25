@@ -64,28 +64,28 @@
 37            android:exported="false" />
 37-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:13-37
 38        <activity
-38-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:9-30:40
+38-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:9-36:20
 39            android:name="com.ronnelrazo.physical_counting.Login"
 39-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:13-34
-40            android:exported="false" />
-40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-37
-41        <activity
-41-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:9-39:20
-42            android:name="com.ronnelrazo.physical_counting.MainActivity"
-42-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:13-41
-43            android:exported="true" >
-43-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-36
-44            <intent-filter>
-44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-38:29
-45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:17-69
-45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:25-66
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:17-77
-47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:27-74
-48            </intent-filter>
-49        </activity>
+40            android:exported="true" >
+40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-36
+41            <intent-filter>
+41-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-35:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:17-69
+42-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:17-77
+44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity
+47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:9-39:39
+48            android:name="com.ronnelrazo.physical_counting.MainActivity"
+48-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:13-41
+49            android:exported="false" />
+49-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:13-37
 50
 51        <service
 51-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:9-43:40

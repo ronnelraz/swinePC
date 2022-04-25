@@ -15,6 +15,7 @@ color teal_200
 color teal_700
 color white
 drawable buttoncheckbox
+drawable calendar
 drawable checked
 drawable create
 drawable custom_eye
@@ -37,6 +38,7 @@ drawable ic_password
 drawable ic_username
 drawable icons8_cancel_1
 drawable logout
+drawable nodata
 drawable play_1024
 drawable play_store
 drawable radius_border
@@ -48,6 +50,7 @@ font cpf_imm_sook_regular
 font cpf_imm_sook_semibold
 font cpf_mm_sook_bold
 id animationView
+id auditDate
 id body
 id bottompanel
 id breadcrumb_header
@@ -59,8 +62,12 @@ id checlist_data
 id container
 id content
 id counting
+id create
+id currentDate
 id custom_header
 id custom_toolbar
+id docDate
+id edit
 id farm
 id farmcode
 id farmlist
@@ -87,6 +94,7 @@ id male
 id med_data
 id menu
 id negative
+id nodataContainer
 id org_code
 id org_name
 id orgcode
@@ -136,6 +144,7 @@ layout list_checklist_items
 layout loading_shimmer
 layout loading_shimmer_checklist
 layout main_topic
+layout modal_audit_dialog
 layout sub_details_main_header
 mipmap ic_launcher
 mipmap ic_launcher_adaptive_back
@@ -149,4 +158,5 @@ raw farm
 string app_name
 string title_login
 style Theme.Physical_counting
+style picker
 style tab_text

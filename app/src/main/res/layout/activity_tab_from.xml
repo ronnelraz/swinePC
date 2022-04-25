@@ -42,7 +42,7 @@
                  android:textSize="19sp"
                  android:layout_width="0dp"
                  android:layout_height="wrap_content"
-                 android:layout_weight="1"
+                 android:layout_weight="0.8"
                  android:text="Org Code : "
                  android:fontFamily="@font/cpf_imm_sook_semibold"
                  android:textColor="#FBC02D"/>
@@ -72,7 +72,7 @@
                     android:textSize="19sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:text="Farm Code : "
                     android:fontFamily="@font/cpf_imm_sook_semibold"
                     android:textColor="#FBC02D"/>
@@ -93,7 +93,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
@@ -111,7 +110,7 @@
                     android:textSize="19sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.8"
                     android:text="Org Name : "
                     android:fontFamily="@font/cpf_imm_sook_semibold"
                     android:textColor="#FBC02D"/>
@@ -150,6 +149,77 @@
                 <TextView
                     android:textAlignment="textStart"
                     android:id="@+id/farmname"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Org Name"
+                    android:fontFamily="@font/cpf_imm_sook_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:textSize="19sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:text="Doc Date : "
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textColor="#FBC02D"/>
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:id="@+id/docDate"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Org Name"
+                    android:fontFamily="@font/cpf_imm_sook_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:textSize="19sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:text="Audit Date : "
+                    android:fontFamily="@font/cpf_imm_sook_semibold"
+                    android:textColor="#FBC02D"/>
+
+                <TextView
+                    android:textAlignment="textStart"
+                    android:id="@+id/auditDate"
                     android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

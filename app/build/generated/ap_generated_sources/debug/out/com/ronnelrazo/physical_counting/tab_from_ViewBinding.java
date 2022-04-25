@@ -31,7 +31,9 @@ public class tab_from_ViewBinding implements Unbinder {
         Utils.findRequiredViewAsType(source, R.id.orgcode, "field 'headerDetails'", TextView.class), 
         Utils.findRequiredViewAsType(source, R.id.orgname, "field 'headerDetails'", TextView.class), 
         Utils.findRequiredViewAsType(source, R.id.farmcode, "field 'headerDetails'", TextView.class), 
-        Utils.findRequiredViewAsType(source, R.id.farmname, "field 'headerDetails'", TextView.class));
+        Utils.findRequiredViewAsType(source, R.id.farmname, "field 'headerDetails'", TextView.class), 
+        Utils.findRequiredViewAsType(source, R.id.docDate, "field 'headerDetails'", TextView.class), 
+        Utils.findRequiredViewAsType(source, R.id.auditDate, "field 'headerDetails'", TextView.class));
   }
 
   @Override

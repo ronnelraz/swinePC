@@ -1,6 +1,7 @@
 package com.ronnelrazo.physical_counting.adapter;
 
 
+import android.app.DatePickerDialog;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.tab_from;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Adapter_FarmList extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -57,13 +59,44 @@ public class Adapter_FarmList extends RecyclerView.Adapter<RecyclerView.ViewHold
             VHitem.org_code.setText(orgData.getFarmcode());
             VHitem.org_name.setText(orgData.getFarmname());
             VHitem.card.setOnClickListener(v -> {
-                Globalfunction.getInstance(v.getContext()).intent(tab_from.class,v.getContext());
-                tab_from.str_types = "Integration";
-                Tab_checklist.str_bu_Type = "SWINT_1";
-                tab_from.str_orgcode = orgData.getOrgcode();
-                tab_from.str_orgname = orgData.getOrgname();
-                tab_from.str_farmcode = orgData.getFarmcode();
-                tab_from.str_farmname = orgData.getFarmname();
+
+                Globalfunction.getInstance(v.getContext()).auditDialog(v.getContext());
+                Globalfunction.getInstance(v.getContext()).audit_save.setOnClickListener(v1 -> {
+
+                    String getCurrentDate = Globalfunction.getInstance(v1.getContext()).currentDate.getText().toString();
+                    String getAuditDate = Globalfunction.getInstance(v1.getContext()).auditDate.getText().toString();
+
+
+                    if(getCurrentDate.isEmpty()){
+                        Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+                    }
+                    else if(getAuditDate.isEmpty()){
+                        Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Audit Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        new DatePickerDialog(v1.getContext(),R.style.picker,Globalfunction.getInstance(v1.getContext()).getDateto(), Globalfunction.getInstance(v1.getContext()).calendar
+                                .get(Calendar.YEAR), Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.MONTH),
+                                Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.DAY_OF_MONTH)).show();
+                    }
+                    else{
+                        Globalfunction.getInstance(v1.getContext()).Auditalert.dismiss();
+                        Globalfunction.getInstance(v.getContext()).intent(tab_from.class,v.getContext());
+                        tab_from.str_types = "Integration";
+                        Tab_checklist.str_bu_Type = "SWINT_1";
+                        tab_from.str_orgcode = orgData.getOrgcode();
+                        tab_from.str_orgname = orgData.getOrgname();
+                        tab_from.str_farmcode = orgData.getFarmcode();
+                        tab_from.str_farmname = orgData.getFarmname();
+                        tab_from.doc_date = getCurrentDate;
+                        tab_from.audit_date = getAuditDate;
+                    }
+
+                });
+                Globalfunction.getInstance(v.getContext()).audit_cancel.setOnClickListener(v1 -> {
+                    Globalfunction.getInstance(v1.getContext()).Auditalert.dismiss();
+                });
+
+
+
+
 
             });
         }

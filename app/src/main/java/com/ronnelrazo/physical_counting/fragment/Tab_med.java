@@ -49,10 +49,17 @@ public class Tab_med extends Fragment {
     @BindView(R.id.loading)
     LinearLayout loading;
 
+
+    @BindView(R.id.nodataContainer) LinearLayout nodatacontainer;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_med,parent,false);
         ButterKnife.bind(this,view);
+
+
+
 
         data = new Globalfunction(getActivity());
         sharedPref = new SharedPref(getActivity());
@@ -92,6 +99,7 @@ public class Tab_med extends Fragment {
 
                     if(success){
                         loading.setVisibility(View.GONE);
+                        nodatacontainer.setVisibility(View.GONE);
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
                             model_med item = new model_med(
@@ -119,13 +127,15 @@ public class Tab_med extends Fragment {
                     }
                     else{
                         loading.setVisibility(View.GONE);
-                        data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        nodatacontainer.setVisibility(View.VISIBLE);
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage());
                     loading.setVisibility(View.GONE);
+                    nodatacontainer.setVisibility(View.GONE);
+
                 }
             }
 
@@ -134,6 +144,7 @@ public class Tab_med extends Fragment {
                 if (t instanceof IOException) {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
                     loading.setVisibility(View.GONE);
+                    nodatacontainer.setVisibility(View.GONE);
                 }
             }
         });

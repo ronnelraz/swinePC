@@ -31,6 +31,13 @@ public class SharedPref {
     }
 
 
+    public boolean signout(String logout){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        editor.putString(SHARED_KEEP_SIGNED_IN, logout);
+        editor.apply();
+        return true;
+    }
 
     public boolean set_login_auth(String token, String keeplogin){
         sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
@@ -41,9 +48,9 @@ public class SharedPref {
         return true;
     }
 
-    public boolean checkAuto_login_auth(){
+    public String checkAuto_login_auth(){
         sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
-        return sharedPreferences.getString(SHARED_KEEP_SIGNED_IN, "false").equals("false") ? false : true;
+        return sharedPreferences.getString(SHARED_KEEP_SIGNED_IN, "false");
     }
 
     public String getAuth_token(){
