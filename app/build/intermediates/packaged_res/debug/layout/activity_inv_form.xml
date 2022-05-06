@@ -17,6 +17,35 @@
             android:fontFamily="@font/cpf_imm_sook_bold" />
 
 
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:drawableLeft="@drawable/ic_jwt_username"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/black"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:gravity="center|left"
+        android:textSize="18sp"
+        tools:text="User : ronnel.raz" />
+
+
+    <TextView
+        android:textSize="18sp"
+        android:fontFamily="@font/cpf_imm_sook_semibold"
+        android:layout_below="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Role : IT - IT Department"
+        android:gravity="center|left"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_jwt_role"
+        android:drawableTint="@color/black"
+        android:id="@+id/role"
+        />
+
+
         <GridLayout
             android:layout_marginTop="50dp"
             android:layout_below="@+id/menu"

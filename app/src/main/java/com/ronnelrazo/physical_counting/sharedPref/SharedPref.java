@@ -17,6 +17,9 @@ public class SharedPref {
     private static final String SHARED_DATA = "SHARED_DATA";
     private static final String SHARED_TOKEN = "TOKEN";
     private static final String SHARED_KEEP_SIGNED_IN = "false";
+    private static final String JWT_USERNAME = "JWT_USERNAME";
+    private static final String JWT_ROLE = "JWT_ROLE";
+    private static final String JWT_BU = "JWT_BU";
 
 
     public SharedPref(Context context){
@@ -30,6 +33,16 @@ public class SharedPref {
         return application;
     }
 
+
+    public boolean setJWTData(String username,String role,String bu){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        editor.putString(JWT_USERNAME,username);
+        editor.putString(JWT_ROLE,role);
+        editor.putString(JWT_BU,bu);
+        editor.apply();
+        return true;
+    }
 
     public boolean signout(String logout){
         sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
@@ -46,6 +59,22 @@ public class SharedPref {
         editor.putString(SHARED_KEEP_SIGNED_IN, keeplogin);
         editor.apply();
         return true;
+    }
+
+
+    public String getRole(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_ROLE, "");
+    }
+
+    public String getBU(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_BU, "");
+    }
+
+    public String getUser(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_USERNAME, "");
     }
 
     public String checkAuto_login_auth(){

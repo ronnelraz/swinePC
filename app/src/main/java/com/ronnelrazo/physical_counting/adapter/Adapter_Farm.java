@@ -87,6 +87,10 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                                     tab_from.str_orgname = orgData.getOrgname();
                                     tab_from.str_farmcode = orgData.getOrgcode();
                                     tab_from.str_farmname = orgData.getOrgname();
+                                    tab_from.business_type = orgData.getBusiness_type();
+                                    tab_from.bu_code = orgData.getBu_code();
+                                    tab_from.bu_name = orgData.getBu_name();
+                                    tab_from.bu_type_name = orgData.getBu_type_name();
                                     tab_from.doc_date = getCurrentDate;
                                     tab_from.audit_date = getAuditDate;
                                 }

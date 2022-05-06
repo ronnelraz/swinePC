@@ -123,7 +123,7 @@ MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\CPF Nigs\.gradle\ca
 	android:icon
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:9-36
 	android:theme
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-55
 activity#com.ronnelrazo.physical_counting.Integration_submenu

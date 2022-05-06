@@ -34,6 +34,8 @@
 
 
             <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="0.2in"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,6 +65,7 @@
                     android:backgroundTint="#388E3C"
                     style="@style/Widget.Material3.Button.TextButton"
                     android:textSize="12sp"
+                    app:iconPadding="-1px"
                     android:textColor="@color/white"
                     app:iconTint="@color/white"
                     android:text="Okay" />
@@ -78,6 +81,7 @@
                     app:iconGravity="textStart"
                     style="@style/Widget.Material3.Button.TextButton"
                     android:textSize="12sp"
+                    app:iconPadding="-1px"
                     android:textColor="@color/white"
                     app:iconTint="@color/white"
                     android:text="Cancel" />

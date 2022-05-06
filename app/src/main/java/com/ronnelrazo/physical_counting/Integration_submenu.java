@@ -106,7 +106,11 @@ public class Integration_submenu extends AppCompatActivity {
                                     object.getString("orgcode"),
                                     object.getString("orgname"),
                                     object.getString("farmcode"),
-                                    object.getString("farmname")
+                                    object.getString("farmname"),
+                                    object.getString("bu_code"),
+                                    object.getString("bu_name"),
+                                    object.getString("bu_type_code"),
+                                    object.getString("bu_type_name")
                             );
 
                             items.add(item);

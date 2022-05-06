@@ -34,6 +34,8 @@ drawable ic_icons8_key
 drawable ic_icons8_multiply
 drawable ic_icons8_ok
 drawable ic_icons8_warning
+drawable ic_jwt_role
+drawable ic_jwt_username
 drawable ic_password
 drawable ic_username
 drawable icons8_cancel_1
@@ -57,6 +59,7 @@ id breadcrumb_header
 id breadcrumb_orgcode
 id breadcrumb_orgname
 id breeder_data
+id cancel
 id card
 id checlist_data
 id container
@@ -107,6 +110,8 @@ id positive
 id productCode
 id productName
 id remark
+id role
+id save
 id shimmerLayout
 id status
 id stock

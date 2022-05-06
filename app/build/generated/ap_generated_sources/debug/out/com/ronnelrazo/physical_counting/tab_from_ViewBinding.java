@@ -8,6 +8,7 @@ import androidx.annotation.UiThread;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.IllegalStateException;
 import java.lang.Override;
@@ -34,6 +35,9 @@ public class tab_from_ViewBinding implements Unbinder {
         Utils.findRequiredViewAsType(source, R.id.farmname, "field 'headerDetails'", TextView.class), 
         Utils.findRequiredViewAsType(source, R.id.docDate, "field 'headerDetails'", TextView.class), 
         Utils.findRequiredViewAsType(source, R.id.auditDate, "field 'headerDetails'", TextView.class));
+    target.btn_func = Utils.arrayFilteringNull(
+        Utils.findRequiredViewAsType(source, R.id.save, "field 'btn_func'", MaterialButton.class), 
+        Utils.findRequiredViewAsType(source, R.id.cancel, "field 'btn_func'", MaterialButton.class));
   }
 
   @Override
@@ -46,5 +50,6 @@ public class tab_from_ViewBinding implements Unbinder {
     target.tabs = null;
     target.pager = null;
     target.headerDetails = null;
+    target.btn_func = null;
   }
 }

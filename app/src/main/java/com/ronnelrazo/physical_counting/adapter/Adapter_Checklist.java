@@ -1,10 +1,16 @@
 package com.ronnelrazo.physical_counting.adapter;
 
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -12,6 +18,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.hariprasanths.bounceview.BounceView;
+import com.google.android.material.button.MaterialButton;
 import com.ronnelrazo.physical_counting.Integration_submenu;
 import com.ronnelrazo.physical_counting.ListItem;
 import com.ronnelrazo.physical_counting.ListItem_Checklist;
@@ -30,9 +37,13 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
 
     private ArrayList<ListItem_Checklist> items;
+    private Context context;
 
-    public Adapter_Checklist(ArrayList<ListItem_Checklist> items) {
+
+    public Adapter_Checklist(ArrayList<ListItem_Checklist> items,Context context) {
         this.items = items;
+        this.context = context;
+
     }
 
     @Override
@@ -52,7 +63,7 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if(holder instanceof VHMain) {
             modal_checklist_maintopic main = (modal_checklist_maintopic) items.get(position);
             VHMain mainTopic = (VHMain)holder;
@@ -67,7 +78,60 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
             modal_checklist_Details details = (modal_checklist_Details) items.get(position);
             VHItem item = (VHItem)holder;
             item.itemDetails.setText(Globalfunction.createIndentedText(details.getDetails(),10,50));
-//            item.itemDetails.setText(details.getDetails());
+
+
+
+            String getRemark = item.item_remarks.getText().toString();
+            String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                    (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                            (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+            boolean save_details = Globalfunction.getInstance(context).ADD_CHECKLIST_HEADER_DETAILS(position,tab_from.str_orgcode,tab_from.str_farmcode,tab_from.str_types,getCheckedvalue,getRemark);
+            if(save_details){
+                Log.d("swine","save header" + getCheckedvalue);
+            }
+            else{
+                Log.d("swine","existing header" + getCheckedvalue);
+            }
+//            Log.d("swine",getCheckedvalue);
+            item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+                RadioButton checked = radioGroup.findViewById(i);
+                String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
+                        (checked.getId() == R.id.item_no ? "N" :
+                                (checked.getId() == R.id.item_na ? "N/A" : null));
+                String getRemarkchangeans = item.item_remarks.getText().toString();
+                Log.d("swine",rbcheckStatus + " position:" +position);
+                boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans);
+                if(update_postion){
+                    Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
+                }
+
+            });
+
+
+            item.item_remarks.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+                @Override
+                public void afterTextChanged(Editable editable) {
+                    String getRemark = editable.toString();
+                    String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                            (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                                    (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+//                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
+                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark);
+                    if(update_postion){
+                        Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
+                    }
+
+
+                }
+            });
 
 
         }
@@ -103,11 +167,14 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
         public TextView itemDetails;
         public RadioGroup itemGroup;
         public EditText item_remarks;
+        public RadioButton choices;
         public VHItem(View itemView) {
             super(itemView);
             this.itemDetails = itemView.findViewById(R.id.itemDetails);
             this.itemGroup = itemView.findViewById(R.id.item_group_button);
             this.item_remarks = itemView.findViewById(R.id.item_remarks);
+            this.choices = itemGroup.findViewById(itemGroup.getCheckedRadioButtonId());
+
 
         }
     }

@@ -1,11 +1,15 @@
 package com.ronnelrazo.physical_counting;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 import com.ronnelrazo.physical_counting.adapter.TabLayoutAdapter;
 import com.ronnelrazo.physical_counting.fragment.Tab_breeder;
@@ -22,6 +26,7 @@ public class tab_from extends AppCompatActivity {
 
 
     public static String str_types,str_orgcode,str_orgname,str_farmcode,str_farmname,doc_date,audit_date;
+    public static String business_type,bu_code,bu_name,bu_type_name;
 
     private Globalfunction data;
     private SharedPref sharedPref;
@@ -31,8 +36,14 @@ public class tab_from extends AppCompatActivity {
     @BindView(R.id.pager)
     ViewPager pager;
 
+
+
     @BindViews({R.id.types,R.id.orgcode,R.id.orgname,R.id.farmcode,R.id.farmname,R.id.docDate,R.id.auditDate})
     TextView[] headerDetails;
+
+    @BindViews({R.id.save,R.id.cancel})
+    public MaterialButton[] btn_func;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +60,25 @@ public class tab_from extends AppCompatActivity {
         headerDetails[4].setText(str_farmname);
         headerDetails[5].setText(doc_date);
         headerDetails[6].setText(audit_date);
+
+
+
+        Log.d("swine",business_type);
+        Log.d("swine",bu_code);
+        Log.d("swine",bu_name);
+        Log.d("Swine",bu_type_name);
+
+
+
+
+        //SAVE HEADER
+        boolean setChecklistHeader =  data.ADD_CHECKLIST_HEADER(str_orgcode, str_farmcode,str_orgname,str_farmname,doc_date,audit_date,str_types,business_type,bu_code,bu_name,bu_type_name);
+        if(setChecklistHeader){
+            Log.d("swine","save header");
+        }
+        else{
+            Log.d("swine","error header");
+        }
 
 
         //breeder
@@ -92,6 +122,30 @@ public class tab_from extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+        });
+
+
+        btn_func[0].setOnClickListener(v -> {
+            Toast.makeText(v.getContext(), "save", Toast.LENGTH_SHORT).show();
+
+        });
+
+        btn_func[1].setOnClickListener(v -> {
+            data.Confirmation(v.getContext(),"Are you sure you want to cancel " + str_farmname + "?",R.drawable.ic_icons8_warning);
+            data.positive.setText("confirm");
+            data.negative.setOnClickListener(v1 ->{
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setOnClickListener(v1 -> {
+                boolean result = data.clearAll(str_orgcode,str_farmcode);
+                if(result){
+                    Log.d("swine", "cancel transaction : " + result);
+                    data.ConfirmDialog.dismiss();
+                    data.intent(Farm_categories.class,v1.getContext());
+                    finish();
+                }
+
+            });
         });
 
 

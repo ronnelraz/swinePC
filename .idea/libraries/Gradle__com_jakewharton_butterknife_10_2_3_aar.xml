@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.jakewharton:butterknife:10.2.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/01d7b3c5c36b5c6afaece5900093445d/transformed/butterknife-10.2.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01d7b3c5c36b5c6afaece5900093445d/transformed/butterknife-10.2.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01d7b3c5c36b5c6afaece5900093445d/transformed/butterknife-10.2.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/41463ae47b8806a964943ea980662206/transformed/butterknife-10.2.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/41463ae47b8806a964943ea980662206/transformed/butterknife-10.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/41463ae47b8806a964943ea980662206/transformed/butterknife-10.2.3/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/10.2.3/d194e4482f40005acec8f2d5e31f66d5ea7779da/butterknife-10.2.3-javadoc.jar!/" />

@@ -2,8 +2,10 @@ package com.ronnelrazo.physical_counting.globalfunc;
 
 
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.text.Editable;
@@ -27,12 +29,17 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.novoda.merlin.Merlin;
+import com.ronnelrazo.physical_counting.Database.MyDatabaseHelper;
+import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
+import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
 import com.ronnelrazo.physical_counting.R;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
-import java.sql.Array;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -71,6 +78,8 @@ public class Globalfunction {
     public Globalfunction(Context context){
         cont = context;
     }
+
+    private MyDatabaseHelper databaseHelper = new MyDatabaseHelper(cont);
 
     public static synchronized Globalfunction getInstance(Context context){
         if(application == null){
@@ -191,6 +200,41 @@ public class Globalfunction {
     //login checker
 
 
+    public void decodeToken(String token, SharedPref sharedPref){
+        Base64.Decoder decoder = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            decoder = Base64.getUrlDecoder();
+        }
+        String[] parts = token.split("\\."); // split out the "parts" (header, payload and signature)
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            String headerJson = new String(decoder.decode(parts[0]));
+            Log.d("swine",headerJson);
+        }
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            String payloadJson = new String(decoder.decode(parts[1]));
+
+            try {
+                JSONObject jsonResponse = new JSONObject(payloadJson);
+                String iss = jsonResponse.getString("iss");
+
+                JSONObject dataobj = new JSONObject(jsonResponse.getString("data"));
+                String username = dataobj.getString("username");
+                String role = dataobj.getString("role");
+                String buisness = dataobj.getString("business");
+
+                sharedPref.setJWTData(username,role,buisness);
+
+
+                Log.d("swine", "role: " + sharedPref.getRole() + " buisness: " + sharedPref.getBU() + " user: " + sharedPref.getUser());
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        //String signatureJson = new String(decoder.decode(parts[2]));
+    }
 
     //custom alert dialog confirmation
     public void Confirmation(Context context,String msg,int resicon){
@@ -217,6 +261,8 @@ public class Globalfunction {
         result.setSpan(new LeadingMarginSpan.Standard(marginFirstLine, marginNextLines),0,text.length(),0);
         return result;
     }
+
+
 
     //date get 1st date of month
     public String getMonth(){
@@ -275,6 +321,83 @@ public class Globalfunction {
         Auditalert.show();
     }
 
+
+    //set header
+    public boolean ADD_CHECKLIST_HEADER(String str_orgcode, String str_farmcode,String str_orgname,String str_farmname,String doc_date,String audit_date,String str_types,String bu_Type,String bu_code,String bu_name,String bu_type_name){
+        TABLE_HEADER column = new TABLE_HEADER();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.ORG_CODE, str_orgcode);
+        cv.put(column.FARM_CODE,str_farmcode);
+        cv.put(column.ORG_NAME,str_orgname);
+        cv.put(column.FARM_NAME,str_farmname);
+        cv.put(column.DOC_DATE, doc_date);
+        cv.put(column.AUDIT_DATE, audit_date);
+        cv.put(column.TYPE, str_types);
+        cv.put(column.BU_TYPE,bu_Type);
+        cv.put(column.BU_CODE,bu_code);
+        cv.put(column.BU_NAME,bu_name);
+        cv.put(column.BU_TYPE_NAME,bu_type_name);
+        long result = db.insert(column.TABLE_CHECKLIST_HEADER,null, cv);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    //save header_details
+    public boolean ADD_CHECKLIST_HEADER_DETAILS(int position,String org_code,String farm_code,String type, String check_item,String remark){
+        TABLE_HEADER_DETAILS column = new TABLE_HEADER_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.POSITION, position);
+        cv.put(column.ORG_CODE, org_code);
+        cv.put(column.FARM_CODE,farm_code);
+        cv.put(column.TYPE, type);
+        cv.put(column.CHECK_ITEM, check_item);
+        cv.put(column.REMARK,remark);
+        long result = db.insert(column.TABLE_CHECKLIST_HEADER_DETAILS,null, cv);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    //updateChecklist
+    public boolean updatechecklist(int pos,String org_code,String farm_code,String checked_value,String remark){
+        TABLE_HEADER_DETAILS column = new TABLE_HEADER_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.CHECK_ITEM,checked_value);
+        cv.put(column.REMARK,remark);
+
+        int save = db.update(
+                column.TABLE_CHECKLIST_HEADER_DETAILS,
+                cv,
+                column.POSITION+" = ? and " +
+                            column.ORG_CODE+" = ? and " +
+                            column.FARM_CODE+" = ?", new String[] { String.valueOf(pos),org_code,farm_code } );
+        if(save == 1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    //cancel_function
+    public boolean clearAll(String org_code,String farm_code){
+        TABLE_HEADER column_header_checklist = new TABLE_HEADER();
+        TABLE_HEADER_DETAILS column_details_checklist = new TABLE_HEADER_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+//        db.delete(column_details_checklist.TABLE_CHECKLIST_HEADER_DETAILS,column_details_checklist.ORG_CODE + " = ? and " + column_details_checklist.FARM_CODE + " = ?",new String[]{org_code,farm_code} );
+//        db.delete(column_header_checklist.TABLE_CHECKLIST_HEADER,column_header_checklist.ORG_CODE + " = ? and " + column_header_checklist.FARM_CODE + " = ?",new String[]{org_code,farm_code} );
+        db.delete(column_details_checklist.TABLE_CHECKLIST_HEADER_DETAILS,null,null);
+        db.delete(column_header_checklist.TABLE_CHECKLIST_HEADER,null,null);
+        return true;
+    }
 
 
 

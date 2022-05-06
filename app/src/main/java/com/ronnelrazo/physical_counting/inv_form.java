@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
@@ -21,6 +22,9 @@ public class inv_form extends AppCompatActivity {
     @BindViews({R.id.create,R.id.edit})
     MaterialButton[] menus;
 
+    @BindViews({R.id.username,R.id.role})
+    TextView[] JWTauth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,9 @@ public class inv_form extends AppCompatActivity {
         sharedPref = new SharedPref(this);
         BounceView.addAnimTo(menus[0]);
         BounceView.addAnimTo(menus[1]);
+
+        JWTauth[0].setText("User : " +sharedPref.getUser());
+        JWTauth[1].setText("Role : " +sharedPref.getRole() + " - " + sharedPref.getBU());
     }
 
     public void create(View view) {

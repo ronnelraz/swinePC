@@ -58,6 +58,7 @@
               android:layout_width="30dp"
               android:layout_height="30dp"/>
           <RadioButton
+              android:checked="true"
               android:scaleX="0.9"
               android:scaleY="0.9"
               android:id="@+id/item_na"

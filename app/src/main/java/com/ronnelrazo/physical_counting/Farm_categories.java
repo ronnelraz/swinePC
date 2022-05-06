@@ -122,7 +122,12 @@ public class Farm_categories extends AppCompatActivity {
                             model_farm item = new model_farm(
                                     object.getString("orgcode"),
                                     object.getString("orgname"),
-                                    "0"
+                                    "0",
+                                    object.getString("businessType"),
+                                    object.getString("bu_code"),
+                                    object.getString("bu_name"),
+                                    object.getString("bu_type_name")
+
                             );
 
                             items.add(item);
@@ -136,7 +141,11 @@ public class Farm_categories extends AppCompatActivity {
                             model_farm item = new model_farm(
                                     object.getString("orgcode"),
                                     object.getString("orgname"),
-                                    "1"
+                                    "1",
+                                    object.getString("businessType"),
+                                    object.getString("bu_code"),
+                                    object.getString("bu_name"),
+                                    object.getString("bu_type_name")
                             );
 
                             items.add(item);

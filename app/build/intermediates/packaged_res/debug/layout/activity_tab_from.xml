@@ -282,6 +282,7 @@
             app:iconGravity="textStart"
             app:cornerRadius="20dp"
             app:icon="@drawable/ic_icons8_done"
+            android:id="@+id/save"
             android:text="Save"/>
 
         <com.google.android.material.button.MaterialButton
@@ -293,6 +294,7 @@
             app:iconGravity="textStart"
             app:icon="@drawable/ic_icons8_multiply"
             app:cornerRadius="20dp"
+            android:id="@+id/cancel"
             android:text="Close"/>
 
 

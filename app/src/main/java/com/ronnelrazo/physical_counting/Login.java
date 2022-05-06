@@ -14,6 +14,9 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -156,11 +159,22 @@ public class Login extends AppCompatActivity {
                             Log.d("swine",TOKEN);
                             Log.d("swine","Keep me signed in : " + keepmelogin);
                             Log.d("swine",MESSAGE);
-                            sharedPref.set_login_auth("sdsdsds",keepmelogin);
+                            data.decodeToken(TOKEN,sharedPref);
+                            sharedPref.set_login_auth(TOKEN,keepmelogin);
                             data.toast(R.raw.checked,MESSAGE, Gravity.TOP|Gravity.CENTER,0,50); //50
                             data.loaddialog.dismiss();
                             data.intent(inv_form.class,  Login.this);
                             finish();
+
+//                            try {
+//                                DecodedJWT jwt = JWT.decode(TOKEN);
+//                                String getpayload = jwt.getPayload();
+//
+//
+//                            } catch (JWTDecodeException exception){
+//                                //Invalid token
+//                                data.toast(R.raw.checked,"Invalid Token", Gravity.TOP|Gravity.CENTER,0,50); //50
+//                            }
 
                         }
                         else{

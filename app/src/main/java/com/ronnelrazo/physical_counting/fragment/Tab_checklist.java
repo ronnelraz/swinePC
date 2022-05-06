@@ -27,6 +27,7 @@ import com.ronnelrazo.physical_counting.model.modal_checklist_maintopic;
 import com.ronnelrazo.physical_counting.model.model_farm;
 import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
+import com.ronnelrazo.physical_counting.tab_from;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,6 +56,8 @@ public class Tab_checklist extends Fragment {
     LinearLayout loading;
 
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_checklist,parent,false);
@@ -65,7 +68,8 @@ public class Tab_checklist extends Fragment {
 
         recyclerView = view.findViewById(R.id.checlist_data);
         recyclerView.setHasFixedSize(true);
-        adapter = new Adapter_Checklist(items);
+        recyclerView.setItemViewCacheSize(999999999);
+        adapter = new Adapter_Checklist(items,getActivity());
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -105,6 +109,7 @@ public class Tab_checklist extends Fragment {
                             items.add(subDetails_items);
                             JSONArray details =  object.getJSONArray("details");
                                 for (int i_d = 0; i_d < details.length(); i_d++){
+
                                         JSONObject details_data = details.getJSONObject(i_d);
                                         modal_checklist_Details  details_item = new modal_checklist_Details(
                                                 details_data.getString("detailsCode"),
@@ -116,7 +121,7 @@ public class Tab_checklist extends Fragment {
 
                         }
 
-                        adapter = new Adapter_Checklist(items);
+                        adapter = new Adapter_Checklist(items,getActivity());
                         recyclerView.setAdapter(adapter);
                     }
                     else{
