@@ -48,6 +48,22 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 CHECKLIST_DETAILS.TYPE + " TEXT, " +
                 CHECKLIST_DETAILS.CHECK_ITEM + " TEXT, " +
                 CHECKLIST_DETAILS.REMARK + " TEXT," +
+
+                CHECKLIST_DETAILS.MAINCODE + " TEXT," +
+                CHECKLIST_DETAILS.MAINDESC + " TEXT," +
+                CHECKLIST_DETAILS.MAINSEQ + " TEXT," +
+
+                CHECKLIST_DETAILS.SUBCODE + " TEXT," +
+                CHECKLIST_DETAILS.SUBDESC + " TEXT," +
+                CHECKLIST_DETAILS.SUBSEQ + " TEXT," +
+
+                CHECKLIST_DETAILS.DETAILSCODE + " TEXT," +
+                CHECKLIST_DETAILS.DETAILSDESC + " TEXT," +
+                CHECKLIST_DETAILS.DETAILSSEQ + " TEXT," +
+
+                CHECKLIST_DETAILS.BUCODE + " TEXT," +
+                CHECKLIST_DETAILS.BU_TYPE_CODE + " TEXT," +
+
                 "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
         db.execSQL(header_details);
 

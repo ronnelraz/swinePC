@@ -113,7 +113,19 @@ public class Tab_checklist extends Fragment {
                                         JSONObject details_data = details.getJSONObject(i_d);
                                         modal_checklist_Details  details_item = new modal_checklist_Details(
                                                 details_data.getString("detailsCode"),
-                                                details_data.getString("details")
+                                                details_data.getString("details"),
+                                                details_data.getString("details_seq"),
+
+                                                details_data.getString("Maincode"),
+                                                details_data.getString("mainTopicListDesc"),
+                                                details_data.getString("mainTopicListseq"),
+
+                                                details_data.getString("subDetailsCode"),
+                                                details_data.getString("subDetails"),
+                                                details_data.getString("subDetails_seq"),
+
+                                                details_data.getString("BUcode"),
+                                                details_data.getString("BUTypecode")
                                         );
                                     items.add(details_item);
                                 }

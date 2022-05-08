@@ -61,4 +61,45 @@ public interface APIInterface {
     );
 
 
+    //physical count breeder
+    @FormUrlEncoded
+    @POST("trnHeader")
+    Call<Object> Header(
+            @Field("orgcode") String orgcode,
+            @Field("doc_date") String doc_date,
+            @Field("audit_date") String audit_date,
+            @Field("bu_code") String bu_code,
+            @Field("bu_name") String bu_name,
+            @Field("bu_type_code") String bu_type_code,
+            @Field("bu_type_name") String bu_type_name,
+            @Field("farm_code") String farm_code,
+            @Field("user_create") String user_create
+    );
+
+    //physical count breeder detials
+    @FormUrlEncoded
+    @POST("trnChecklist")
+    Call<Object> Header_checklist(
+            @Field("ORG_CODE") String ORG_CODE,
+            @Field("DOCUMENT_DATE") String DOCUMENT_DATE,
+            @Field("AUDIT_DATE") String AUDIT_DATE,
+            @Field("FARM_CODE") String FARM_CODE,
+            @Field("BUSINESS_GROUP_CODE") String BUSINESS_GROUP_CODE,
+            @Field("BUSINESS_TYPE_CODE") String BUSINESS_TYPE_CODE,
+            @Field("MAIN_TOPIC_LIST_CODE") String MAIN_TOPIC_LIST_CODE,
+            @Field("MAIN_TOPIC_LIST_DESC") String MAIN_TOPIC_LIST_DESC,
+            @Field("MAIN_TOPIC_LIST_SEQ") String MAIN_TOPIC_LIST_SEQ,
+            @Field("SUB_TOPIC_LIST_CODE") String SUB_TOPIC_LIST_CODE,
+            @Field("SUB_TOPIC_LIST_DESC") String SUB_TOPIC_LIST_DESC,
+            @Field("SUB_TOPIC_LIST_SEQ") String SUB_TOPIC_LIST_SEQ,
+            @Field("DETAIL_TOPIC_LIST_CODE") String DETAIL_TOPIC_LIST_CODE,
+            @Field("DETAIL_TOPIC_LIST_DESC") String DETAIL_TOPIC_LIST_DESC,
+            @Field("DETAIL_TOPIC_LIST_SEQ") String DETAIL_TOPIC_LIST_SEQ,
+            @Field("CHECK_FLAG") String CHECK_FLAG,
+            @Field("REMARK") String REMARK,
+            @Field("USER_CREATE") String USER_CREATE,
+            @Field("AUDIT_NO") String AUDIT_NO
+    );
+
+
 }

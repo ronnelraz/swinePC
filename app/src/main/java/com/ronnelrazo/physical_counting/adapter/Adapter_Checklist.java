@@ -85,7 +85,25 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
             String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
                     (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
                             (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
-            boolean save_details = Globalfunction.getInstance(context).ADD_CHECKLIST_HEADER_DETAILS(position,tab_from.str_orgcode,tab_from.str_farmcode,tab_from.str_types,getCheckedvalue,getRemark);
+            boolean save_details = Globalfunction.getInstance(context)
+                    .ADD_CHECKLIST_HEADER_DETAILS(
+                            position,
+                            tab_from.str_orgcode,
+                            tab_from.str_farmcode,
+                            tab_from.str_types,
+                            getCheckedvalue,
+                            getRemark,
+                            details.getM_code(),
+                            details.getM_desc(),
+                            details.getM_seq(),
+                            details.getS_code(),
+                            details.getS_desc(),
+                            details.getS_seq(),
+                            details.getDetails_code(),
+                            details.getDetails(),
+                            details.getDetails_seq(),
+                            details.getBu_code(),
+                            details.getBu_type());
             if(save_details){
                 Log.d("swine","save header" + getCheckedvalue);
             }
@@ -100,7 +118,17 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                                 (checked.getId() == R.id.item_na ? "N/A" : null));
                 String getRemarkchangeans = item.item_remarks.getText().toString();
                 Log.d("swine",rbcheckStatus + " position:" +position);
-                boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans);
+                boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans,details.getM_code(),
+                        details.getM_desc(),
+                        details.getM_seq(),
+                        details.getS_code(),
+                        details.getS_desc(),
+                        details.getS_seq(),
+                        details.getDetails_code(),
+                        details.getDetails(),
+                        details.getDetails_seq(),
+                        details.getBu_code(),
+                        details.getBu_type());
                 if(update_postion){
                     Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
                 }
@@ -124,7 +152,17 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                             (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
                                     (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
 //                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
-                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark);
+                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark,details.getM_code(),
+                            details.getM_desc(),
+                            details.getM_seq(),
+                            details.getS_code(),
+                            details.getS_desc(),
+                            details.getS_seq(),
+                            details.getDetails_code(),
+                            details.getDetails(),
+                            details.getDetails_seq(),
+                            details.getBu_code(),
+                            details.getBu_type());
                     if(update_postion){
                         Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
                     }

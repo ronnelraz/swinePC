@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -347,7 +348,9 @@ public class Globalfunction {
     }
 
     //save header_details
-    public boolean ADD_CHECKLIST_HEADER_DETAILS(int position,String org_code,String farm_code,String type, String check_item,String remark){
+    public boolean ADD_CHECKLIST_HEADER_DETAILS(int position,String org_code,String farm_code,String type, String check_item,String remark,
+                                                String MAINCODE, String MAINDESC, String MAINSEQ, String SUBCODE, String SUBDESC, String SUBSEQ, String DETAILSCODE,
+                                                String DETAILSDESC, String DETAILSSEQ, String BUCODE, String BU_TYPE_CODE){
         TABLE_HEADER_DETAILS column = new TABLE_HEADER_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -357,6 +360,18 @@ public class Globalfunction {
         cv.put(column.TYPE, type);
         cv.put(column.CHECK_ITEM, check_item);
         cv.put(column.REMARK,remark);
+        cv.put(column.MAINCODE, MAINCODE);
+        cv.put(column.MAINDESC, MAINDESC);
+        cv.put(column.MAINSEQ,MAINSEQ);
+        cv.put(column.SUBCODE, SUBCODE);
+        cv.put(column.SUBDESC, SUBDESC);
+        cv.put(column.SUBSEQ,SUBSEQ);
+        cv.put(column.DETAILSCODE, DETAILSCODE);
+        cv.put(column.DETAILSDESC,DETAILSDESC);
+        cv.put(column.DETAILSSEQ, DETAILSSEQ);
+        cv.put(column.BUCODE, BUCODE);
+        cv.put(column.BU_TYPE_CODE,BU_TYPE_CODE);
+
         long result = db.insert(column.TABLE_CHECKLIST_HEADER_DETAILS,null, cv);
         if(result == -1){
             return false;
@@ -366,13 +381,24 @@ public class Globalfunction {
     }
 
     //updateChecklist
-    public boolean updatechecklist(int pos,String org_code,String farm_code,String checked_value,String remark){
+    public boolean updatechecklist(int pos,String org_code,String farm_code,String checked_value,String remark, String MAINCODE, String MAINDESC, String MAINSEQ, String SUBCODE, String SUBDESC, String SUBSEQ, String DETAILSCODE,
+                                   String DETAILSDESC, String DETAILSSEQ, String BUCODE, String BU_TYPE_CODE){
         TABLE_HEADER_DETAILS column = new TABLE_HEADER_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(column.CHECK_ITEM,checked_value);
         cv.put(column.REMARK,remark);
-
+        cv.put(column.MAINCODE, MAINCODE);
+        cv.put(column.MAINDESC, MAINDESC);
+        cv.put(column.MAINSEQ,MAINSEQ);
+        cv.put(column.SUBCODE, SUBCODE);
+        cv.put(column.SUBDESC, SUBDESC);
+        cv.put(column.SUBSEQ,SUBSEQ);
+        cv.put(column.DETAILSCODE, DETAILSCODE);
+        cv.put(column.DETAILSDESC,DETAILSDESC);
+        cv.put(column.DETAILSSEQ, DETAILSSEQ);
+        cv.put(column.BUCODE, BUCODE);
+        cv.put(column.BU_TYPE_CODE,BU_TYPE_CODE);
         int save = db.update(
                 column.TABLE_CHECKLIST_HEADER_DETAILS,
                 cv,
@@ -387,6 +413,30 @@ public class Globalfunction {
         }
     }
 
+
+
+    //header send to server
+    public Cursor getHeader(String org_code,String farm_code){
+        String query = "SELECT *  FROM table_header where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    //details checcklist send to server
+    public Cursor getChecklistDetails(String org_code,String farm_code){
+        String query = "SELECT *  FROM table_header_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
     //cancel_function
     public boolean clearAll(String org_code,String farm_code){
         TABLE_HEADER column_header_checklist = new TABLE_HEADER();
@@ -398,6 +448,10 @@ public class Globalfunction {
         db.delete(column_header_checklist.TABLE_CHECKLIST_HEADER,null,null);
         return true;
     }
+
+
+
+
 
 
 
