@@ -2,9 +2,9 @@ package com.ronnelrazo.physical_counting.model;
 
 public class model_breeder {
 
-    public String location_Code,location_Name,org_Code,org_Name,farm_Org,farm_Name,female_Stock,Male_Stock,stock_Balance;
+    public String location_Code,location_Name,org_Code,org_Name,farm_Org,farm_Name,female_Stock,Male_Stock,stock_Balance,bu_code,bu_type,farm_code;
 
-    public model_breeder(String location_Code, String location_Name, String org_Code, String org_Name, String farm_Org, String farm_Name, String female_Stock, String male_Stock, String stock_Balance) {
+    public model_breeder(String location_Code, String location_Name, String org_Code, String org_Name, String farm_Org, String farm_Name, String female_Stock, String male_Stock, String stock_Balance, String bu_code, String bu_type, String farm_code) {
         this.location_Code = location_Code;
         this.location_Name = location_Name;
         this.org_Code = org_Code;
@@ -14,6 +14,9 @@ public class model_breeder {
         this.female_Stock = female_Stock;
         this.Male_Stock = male_Stock;
         this.stock_Balance = stock_Balance;
+        this.bu_code = bu_code;
+        this.bu_type = bu_type;
+        this.farm_code = farm_code;
     }
 
     public String getLocation_Code() {
@@ -82,6 +85,30 @@ public class model_breeder {
 
     public String getStock_Balance() {
         return stock_Balance;
+    }
+
+    public String getBu_code() {
+        return bu_code;
+    }
+
+    public void setBu_code(String bu_code) {
+        this.bu_code = bu_code;
+    }
+
+    public String getBu_type() {
+        return bu_type;
+    }
+
+    public void setBu_type(String bu_type) {
+        this.bu_type = bu_type;
+    }
+
+    public String getFarm_code() {
+        return farm_code;
+    }
+
+    public void setFarm_code(String farm_code) {
+        this.farm_code = farm_code;
     }
 
     public void setStock_Balance(String stock_Balance) {

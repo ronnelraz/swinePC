@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -31,6 +32,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.novoda.merlin.Merlin;
 import com.ronnelrazo.physical_counting.Database.MyDatabaseHelper;
+import com.ronnelrazo.physical_counting.Database.TABLE_BREEDER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
 import com.ronnelrazo.physical_counting.R;
@@ -58,6 +60,7 @@ public class Globalfunction {
     //dialog
     public MaterialAlertDialogBuilder Materialdialog;
     public AlertDialog loaddialog;
+    public  TextView content;
     //end dialog
 
     //confirm
@@ -171,7 +174,7 @@ public class Globalfunction {
     public void Preloader(Context context,String msg){
         Materialdialog = new MaterialAlertDialogBuilder(context);
         View v = LayoutInflater.from(context).inflate(R.layout.custom_loading,null);
-        TextView content = v.findViewById(R.id.content);
+        content = v.findViewById(R.id.content);
         content.setText(msg);
         Materialdialog.setView(v);
 
@@ -437,20 +440,104 @@ public class Globalfunction {
         return cursor;
     }
 
+    //getcountrow
+//    public long getChecklistCount(String org_code,String farm_code,String tablename){
+//        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+//        long count = DatabaseUtils.queryNumEntries(db, tablename);
+//        db.close();
+//        return count;
+//    }
+
     //cancel_function
     public boolean clearAll(String org_code,String farm_code){
         TABLE_HEADER column_header_checklist = new TABLE_HEADER();
+
         TABLE_HEADER_DETAILS column_details_checklist = new TABLE_HEADER_DETAILS();
+        TABLE_BREEDER_DETAILS column_details_breeder = new TABLE_BREEDER_DETAILS();
+
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
 //        db.delete(column_details_checklist.TABLE_CHECKLIST_HEADER_DETAILS,column_details_checklist.ORG_CODE + " = ? and " + column_details_checklist.FARM_CODE + " = ?",new String[]{org_code,farm_code} );
 //        db.delete(column_header_checklist.TABLE_CHECKLIST_HEADER,column_header_checklist.ORG_CODE + " = ? and " + column_header_checklist.FARM_CODE + " = ?",new String[]{org_code,farm_code} );
+
+        //checklist
         db.delete(column_details_checklist.TABLE_CHECKLIST_HEADER_DETAILS,null,null);
         db.delete(column_header_checklist.TABLE_CHECKLIST_HEADER,null,null);
+        //breeder
+        db.delete(column_details_breeder.TABLE_BREEDER_DETAILS,null,null);
+
+
+
         return true;
     }
 
 
+    /**
+     * Add table_bneeder details
+     * all breeder list add here
+     * */
+    public Cursor getBreederDetails(String org_code,String farm_code){
+        String query = "SELECT *  FROM table_breeder_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
 
+
+    //save header_details
+    public boolean ADD_BREEDER_DETAILS(int position,String org_code,String bucode,
+                                       String bu_type,String location,String farm_code,
+                                       String farm_org,String farm_name,String female_stock,
+                                       String male_Stock,String total_Stock,String counting_Stock,
+                                       String remark){
+        TABLE_BREEDER_DETAILS column = new TABLE_BREEDER_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.POSITION, position);
+        cv.put(column.ORG_CODE, org_code);
+        cv.put(column.BUCODE, bucode);
+        cv.put(column.BU_TYPE_CODE, bu_type);
+        cv.put(column.LOCATION, location);
+        cv.put(column.FARM_CODE, farm_code);
+        cv.put(column.FARM_ORG, farm_org);
+        cv.put(column.FARM_NAME, farm_name);
+        cv.put(column.FEMALE_STOCK, female_stock);
+        cv.put(column.MALE_STOCK, male_Stock);
+        cv.put(column.TOTAL_STOCK, total_Stock);
+        cv.put(column.COUNTING_STOCK, counting_Stock);
+        cv.put(column.REMARK, remark);
+        long result = db.insert(column.TABLE_BREEDER_DETAILS,null, cv);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    /**
+     * updateBreeder count
+     * **/
+    public boolean updatebreederlist(int pos,String org_code,String farm_code,String counting,String remark){
+        TABLE_BREEDER_DETAILS column = new TABLE_BREEDER_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.COUNTING_STOCK,counting);
+        cv.put(column.REMARK,remark);
+        int save = db.update(
+                column.TABLE_BREEDER_DETAILS,
+                cv,
+                column.POSITION+" = ? and " +
+                        column.ORG_CODE+" = ? and " +
+                        column.FARM_CODE+" = ?", new String[] { String.valueOf(pos),org_code,farm_code } );
+        if(save == 1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 
 
 

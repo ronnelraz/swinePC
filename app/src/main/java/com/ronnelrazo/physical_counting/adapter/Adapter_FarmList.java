@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +16,7 @@ import com.github.hariprasanths.bounceview.BounceView;
 import com.ronnelrazo.physical_counting.Integration_submenu;
 import com.ronnelrazo.physical_counting.ListItem;
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.fragment.Tab_breeder;
 import com.ronnelrazo.physical_counting.fragment.Tab_checklist;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.model_Farmlist;
@@ -92,6 +94,9 @@ public class Adapter_FarmList extends RecyclerView.Adapter<RecyclerView.ViewHold
                         tab_from.bu_name = orgData.getBu_name();
                         tab_from.bu_type_name = orgData.getBu_type_name();
                         tab_from.business_type = orgData.getBu_type_code();
+
+                        Tab_breeder.BU_CODE = "SWINT_1";
+                        Tab_breeder.BU_TYPE = "SW";
                     }
 
                 });

@@ -101,5 +101,30 @@ public interface APIInterface {
             @Field("AUDIT_NO") String AUDIT_NO
     );
 
+    //physical count breeder count
+    @FormUrlEncoded
+    @POST("trnBreederCountList")
+    Call<Object> Header_BreederCountList(
+            @Field("ORG_CODE") String ORG_CODE,
+            @Field("AUDIT_NO") String AUDIT_NO,
+            @Field("DOCUMENT_DATE") String DOCUMENT_DATE,
+            @Field("PERIOD") String PERIOD,
+            @Field("AUDIT_DATE") String AUDIT_DATE,
+            @Field("BUSINESS_GROUP_CODE") String BUSINESS_GROUP_CODE,
+            @Field("BUSINESS_TYPE_CODE") String BUSINESS_TYPE_CODE,
+            @Field("LOCATION") String LOCATION,
+            @Field("FARM_CODE") String FARM_CODE,
+            @Field("FARM_ORG") String FARM_ORG,
+            @Field("FARM_NAME") String FARM_NAME,
+            @Field("SYS_FEMALE_STOCK") String SYS_FEMALE_STOCK,
+            @Field("SYS_MALE_STOCK") String SYS_MALE_STOCK,
+            @Field("SYS_TOTAL_STOCK") String SYS_TOTAL_STOCK,
+            @Field("COUNTING_STOCK") String COUNTING_STOCK,
+            @Field("REMARK") String REMARK,
+            @Field("USER_CREATE") String USER_CREATE
+    );
+
+
+
 
 }

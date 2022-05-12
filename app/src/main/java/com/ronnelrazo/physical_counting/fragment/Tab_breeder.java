@@ -24,6 +24,7 @@ import com.ronnelrazo.physical_counting.model.model_breeder;
 import com.ronnelrazo.physical_counting.model.model_farm;
 import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
+import com.ronnelrazo.physical_counting.tab_from;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,6 +43,7 @@ public class Tab_breeder extends Fragment {
 
 
     public static String orgCode,farmOrg;
+    public static String BU_CODE,BU_TYPE;
 
     private Globalfunction data;
     private SharedPref sharedPref;
@@ -76,6 +78,9 @@ public class Tab_breeder extends Fragment {
 
         Log.d("swine", " ->breeder " + orgCode);
         Log.d("swine", " ->breeder " + farmOrg);
+
+//        Log.d("swine", " ->BU CODE: " + tab_from.business_type);
+//        Log.d("swine", " ->BU_TYPE: " + tab_from.bu_code);
         return view;
 
     }
@@ -104,7 +109,10 @@ public class Tab_breeder extends Fragment {
                                     object.getString("farmName"),
                                     object.getString("maleQty"),
                                     object.getString("femaleQty"),
-                                    object.getString("stockBalance")
+                                    object.getString("stockBalance"),
+                                    tab_from.business_type,
+                                    tab_from.bu_code,
+                                    farmOrg
 
                             );
 

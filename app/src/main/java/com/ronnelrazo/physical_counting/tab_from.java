@@ -63,6 +63,8 @@ public class tab_from extends AppCompatActivity {
     public MaterialButton[] btn_func;
 
 
+    private int RowCounter = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +74,7 @@ public class tab_from extends AppCompatActivity {
         sharedPref = new SharedPref(this);
 
         //clear data first before fetch save all datas
-        data.clearAll(str_orgcode,str_farmcode);
+//        data.clearAll(str_orgcode,str_farmcode);
 
         headerDetails[0].setText(str_types);
         headerDetails[1].setText(str_orgcode);
@@ -84,8 +86,8 @@ public class tab_from extends AppCompatActivity {
 
 
 
-        Log.d("swine",business_type);
-        Log.d("swine",bu_code);
+        Log.d("swine",business_type);//need
+        Log.d("swine",bu_code);//need
         Log.d("swine",bu_name);
         Log.d("Swine",bu_type_name);
 
@@ -200,27 +202,25 @@ public class tab_from extends AppCompatActivity {
             listHeader.add(cursor.getString(9)); //bu_name
             listHeader.add(cursor.getString(10)); //bu_type
 
-            Log.d("Swine",cursor.getString(0) + " " +
-                    cursor.getString(1) + " " +
-                    cursor.getString(2) + " " +
-                    cursor.getString(3) + " " +
-                    cursor.getString(4) + " " +
-                    cursor.getString(5) + " " +
-                    cursor.getString(6) + " " +
-                    cursor.getString(7) + " " +
-                    cursor.getString(8) + " " +
-                    cursor.getString(9) + " " +
-                    cursor.getString(01));
         }
         saveHeaderOnineDB(listHeader);
     }
 
+
+    //LOCALDATA CHECKLIST
     protected  void saveHeaderChecklist_details(String audit_no){
         String getorg_Code = str_orgcode;
         String getfarm_Code = str_farmcode;
 
         Cursor cursor = data.getChecklistDetails(getorg_Code,getfarm_Code);
+        int totalRow = cursor.getCount();
+//        Toast.makeText(this, String.valueOf(totalRow), Toast.LENGTH_SHORT).show();
+//        data.Preloader(this,"Checklist uploading to the server. " );
         while(cursor.moveToNext()){
+            RowCounter++;
+//            data.content.setText("Checklist uploading to the server. (" +totalRow + "/" + ChecklistCount +")");
+//            Log.d("swine", String.valueOf(ChecklistCount));
+
             saveHeader_detials_OnineDB(
                     cursor.getString(1),
                     cursor.getString(2),
@@ -239,6 +239,42 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(5),
                     audit_no
             );
+            if (RowCounter == totalRow) {
+               data.toast(R.raw.checked,"[Checklist] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
+               RowCounter = 0;
+            }
+        }
+
+    }
+
+    //LOCALDATA BREEDER COUNT
+    protected  void saveBreederCount_details(String audit_no){
+        String getorg_Code = str_orgcode;
+        String getfarm_Code = str_farmcode;
+
+        Cursor cursor = data.getBreederDetails(getorg_Code,getfarm_Code);
+        int totalRow = cursor.getCount();
+        while(cursor.moveToNext()){
+            RowCounter++;
+            saveBreeder_count_OnineDB(
+                    cursor.getString(1),
+                    audit_no,
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getString(7),
+                    cursor.getString(8),
+                    cursor.getString(9),
+                    cursor.getString(10),
+                    cursor.getString(11),
+                    cursor.getString(12)
+                    );
+            if (RowCounter == totalRow) {
+                data.toast(R.raw.checked,"[Breeder] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
+                RowCounter = 0;
+            }
         }
 
     }
@@ -255,12 +291,13 @@ public class tab_from extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
                     String audit_no = jsonResponse.getString("audit_no");
                     if(success){
-                        Toast.makeText(getApplicationContext(), "save", Toast.LENGTH_SHORT).show();
+                        data.toast(R.raw.checked,"Generate Audit No. " + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
                         saveHeaderChecklist_details(audit_no);
+                        saveBreederCount_details(audit_no);
 
                     }
                     else{
-                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                        data.toast(R.raw.error,"Data Already Exist" + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
                     }
 
                 } catch (JSONException e) {
@@ -280,11 +317,8 @@ public class tab_from extends AppCompatActivity {
     }
 
 
-    protected void saveHeader_detials_OnineDB(String ORG_CODE,String FARM_CODE,String BUSINESS_GROUP_CODE,String BUSINESS_TYPE_CODE,
-                                              String MAIN_TOPIC_LIST_CODE, String MAIN_TOPIC_LIST_DESC, String MAIN_TOPIC_LIST_SEQ,
-                                              String SUB_TOPIC_LIST_CODE,String SUB_TOPIC_LIST_DESC, String SUB_TOPIC_LIST_SEQ,
-                                              String DETAIL_TOPIC_LIST_CODE, String DETAIL_TOPIC_LIST_DESC,String DETAIL_TOPIC_LIST_SEQ,
-                                              String CHECK_FLAG,String REMARK,String audit_no){
+
+    protected void saveHeader_detials_OnineDB(String ORG_CODE,String FARM_CODE,String BUSINESS_GROUP_CODE,String BUSINESS_TYPE_CODE,String MAIN_TOPIC_LIST_CODE, String MAIN_TOPIC_LIST_DESC, String MAIN_TOPIC_LIST_SEQ,String SUB_TOPIC_LIST_CODE,String SUB_TOPIC_LIST_DESC, String SUB_TOPIC_LIST_SEQ,String DETAIL_TOPIC_LIST_CODE, String DETAIL_TOPIC_LIST_DESC,String DETAIL_TOPIC_LIST_SEQ,String CHECK_FLAG,String REMARK,String audit_no){
         String ADuser = sharedPref.getUser();
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
@@ -300,10 +334,10 @@ public class tab_from extends AppCompatActivity {
                     JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
                     boolean success = jsonResponse.getBoolean("success");
                     if(success){
-                        Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
@@ -321,4 +355,42 @@ public class tab_from extends AppCompatActivity {
             }
         });
     }
+
+    protected void saveBreeder_count_OnineDB(String ORG_CODE,String AUDIT_NO, String BUSINESS_GROUP_CODE, String BUSINESS_TYPE_CODE,String LOCATION,String FARM_CODE, String FARM_ORG,String FARM_NAME, String SYS_FEMALE_STOCK,String SYS_MALE_STOCK,String SYS_TOTAL_STOCK,String COUNTING_STOCK,String REMARK){
+        String ADuser = sharedPref.getUser();
+        String getDoc_date = doc_date;
+        String getAudit_date = audit_date;
+
+        API.getClient().Header_BreederCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,LOCATION,
+                FARM_CODE,FARM_ORG,FARM_NAME,SYS_FEMALE_STOCK,SYS_MALE_STOCK,SYS_TOTAL_STOCK,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    if(success){
+//                        Toast.makeText(getApplicationContext(), "ok breeder", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+//                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                }
+            }
+        });
+    }
+
+
 }

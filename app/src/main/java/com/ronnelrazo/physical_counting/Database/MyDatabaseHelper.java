@@ -15,6 +15,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     //tables
     private TABLE_HEADER CHECKLIST_HEADER = new TABLE_HEADER();
     private TABLE_HEADER_DETAILS CHECKLIST_DETAILS = new TABLE_HEADER_DETAILS();
+    private TABLE_BREEDER_DETAILS BREEDER_DETAILS = new TABLE_BREEDER_DETAILS();
 
 
 
@@ -67,16 +68,37 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
         db.execSQL(header_details);
 
+        String breeder_details = "CREATE TABLE " + BREEDER_DETAILS.TABLE_BREEDER_DETAILS +
+                " (" + BREEDER_DETAILS.POSITION + " INTEGER, " +
+                BREEDER_DETAILS.ORG_CODE + " TEXT, " +
+                BREEDER_DETAILS.BUCODE + " TEXT, " +
+                BREEDER_DETAILS.BU_TYPE_CODE + " TEXT, " +
+                BREEDER_DETAILS.LOCATION + " TEXT," +
+
+                BREEDER_DETAILS.FARM_CODE + " TEXT," +
+                BREEDER_DETAILS.FARM_ORG + " TEXT," +
+                BREEDER_DETAILS.FARM_NAME + " TEXT," +
+
+                BREEDER_DETAILS.FEMALE_STOCK + " TEXT," +
+                BREEDER_DETAILS.MALE_STOCK + " TEXT," +
+                BREEDER_DETAILS.TOTAL_STOCK + " TEXT," +
+
+                BREEDER_DETAILS.COUNTING_STOCK + " TEXT," +
+                BREEDER_DETAILS.REMARK + " TEXT," +
+                "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
+        db.execSQL(breeder_details);
+
 
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-
         db.execSQL("DROP TABLE IF EXISTS " + CHECKLIST_HEADER.TABLE_CHECKLIST_HEADER );
         onCreate(db);
 
-
         db.execSQL("DROP TABLE IF EXISTS " + CHECKLIST_DETAILS.TABLE_CHECKLIST_HEADER_DETAILS );
+        onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS " + BREEDER_DETAILS.TABLE_BREEDER_DETAILS );
         onCreate(db);
 
     }

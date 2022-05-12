@@ -16,6 +16,7 @@ import com.github.hariprasanths.bounceview.BounceView;
 import com.ronnelrazo.physical_counting.Integration_submenu;
 import com.ronnelrazo.physical_counting.ListItem;
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.fragment.Tab_breeder;
 import com.ronnelrazo.physical_counting.fragment.Tab_checklist;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.inv_form;
@@ -93,6 +94,10 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                                     tab_from.bu_type_name = orgData.getBu_type_name();
                                     tab_from.doc_date = getCurrentDate;
                                     tab_from.audit_date = getAuditDate;
+                                    //TAB BREEDER
+                                    Tab_breeder.BU_CODE = "SWCOM_1";
+                                    Tab_breeder.BU_TYPE = "SW";
+
                                 }
 
                             });

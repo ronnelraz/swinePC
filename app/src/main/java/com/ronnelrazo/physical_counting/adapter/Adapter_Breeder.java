@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.icu.util.ULocale;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -13,12 +15,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.model_breeder;
 
 import org.json.JSONException;
@@ -61,8 +65,82 @@ public class Adapter_Breeder extends RecyclerView.Adapter<Adapter_Breeder.ViewHo
         holder.male.setText(getData.getMale_Stock());
         holder.total.setText(getData.getStock_Balance());
 
+        holder.counting.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String count = s.toString().isEmpty() ? "0" : s.toString();
+
+
+                boolean updateBreederList = Globalfunction.getInstance(mContext)
+                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),count,holder.remark.getText().toString());
+                if(updateBreederList){
+                    Log.d("swine","update breeder details" + position);
+                }
+                else{
+                    Log.d("swine","update breeder details" + position);
+                }
+            }
+        });
+
+        holder.remark.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                boolean updateBreederList = Globalfunction.getInstance(mContext)
+                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),holder.counting.getText().toString(),s.toString());
+                if(updateBreederList){
+                    Log.d("swine","update breeder details" + position);
+                }
+                else{
+                    Log.d("swine","update breeder details" + position);
+                }
+            }
+        });
+
+        boolean save_breeder_details = Globalfunction.getInstance(mContext)
+                .ADD_BREEDER_DETAILS(position,
+                        getData.getOrg_Code(),
+                        getData.getBu_code(),
+                        getData.getBu_type(),
+                        getData.getLocation_Code(),
+                        getData.getFarm_code(),
+                        getData.getFarm_Org(),
+                        getData.farm_Name,
+                        getData.getFemale_Stock().replace(",",""),
+                        getData.getMale_Stock().replace(",",""),
+                        getData.getStock_Balance().replace(",",""),
+                        "0",
+                        ""
+                );
+        if(save_breeder_details){
+            Log.d("swine","save breeder details" + position);
+        }
+        else{
+            Log.d("swine","existing breeder details" + position);
+        }
 
     }
+
+
 
 
 
