@@ -33,6 +33,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.novoda.merlin.Merlin;
 import com.ronnelrazo.physical_counting.Database.MyDatabaseHelper;
 import com.ronnelrazo.physical_counting.Database.TABLE_BREEDER_DETAILS;
+import com.ronnelrazo.physical_counting.Database.TABLE_FEED_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
 import com.ronnelrazo.physical_counting.R;
@@ -454,6 +455,7 @@ public class Globalfunction {
 
         TABLE_HEADER_DETAILS column_details_checklist = new TABLE_HEADER_DETAILS();
         TABLE_BREEDER_DETAILS column_details_breeder = new TABLE_BREEDER_DETAILS();
+        TABLE_FEED_DETAILS column_details_feed = new TABLE_FEED_DETAILS();
 
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
 //        db.delete(column_details_checklist.TABLE_CHECKLIST_HEADER_DETAILS,column_details_checklist.ORG_CODE + " = ? and " + column_details_checklist.FARM_CODE + " = ?",new String[]{org_code,farm_code} );
@@ -464,6 +466,8 @@ public class Globalfunction {
         db.delete(column_header_checklist.TABLE_CHECKLIST_HEADER,null,null);
         //breeder
         db.delete(column_details_breeder.TABLE_BREEDER_DETAILS,null,null);
+        //feed
+        db.delete(column_details_feed.TABLE_FEED_DETAILS,null,null);
 
 
 
@@ -539,6 +543,58 @@ public class Globalfunction {
         }
     }
 
+    /**
+     * Feed add feed
+     * **/
+    public boolean ADD_FEED_DETAILS(int position,String org_code,String bucode,
+                                       String bu_type,String farm_code,
+                                       String farm_org,String farm_name,String feed_code,String feed_name,
+                                       String feed_stock_qty,String feed_stock_wgh,String stock_unit,String counting_Stock,
+                                       String remark){
+        TABLE_FEED_DETAILS column = new TABLE_FEED_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.POSITION, position);
+        cv.put(column.ORG_CODE, org_code);
+        cv.put(column.BUCODE, bucode);
+        cv.put(column.BU_TYPE_CODE, bu_type);
+        cv.put(column.FARM_CODE, farm_code);
+        cv.put(column.FARM_ORG, farm_org);
+        cv.put(column.FARM_NAME, farm_name);
+        cv.put(column.FEED_CODE, feed_code);
+        cv.put(column.FEED_NAME, feed_name);
+        cv.put(column.SYS_FEED_STOCK_QTY, feed_stock_qty);
+        cv.put(column.SYS_FEED_STOCK_WGH, feed_stock_wgh);
+        cv.put(column.STOCK_UNIT, stock_unit);
+        cv.put(column.COUNTING_STOCK,counting_Stock);
+        cv.put(column.REMARK, remark);
+        long result = db.insert(column.TABLE_FEED_DETAILS,null, cv);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean updateFeedlist(int pos,String org_code,String farm_code,String counting,String remark){
+        TABLE_FEED_DETAILS column = new TABLE_FEED_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.COUNTING_STOCK,counting);
+        cv.put(column.REMARK,remark);
+        int save = db.update(
+                column.TABLE_FEED_DETAILS,
+                cv,
+                column.POSITION+" = ? and " +
+                        column.ORG_CODE+" = ? and " +
+                        column.FARM_CODE+" = ?", new String[] { String.valueOf(pos),org_code,farm_code } );
+        if(save == 1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
 
 

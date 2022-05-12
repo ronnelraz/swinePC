@@ -16,6 +16,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private TABLE_HEADER CHECKLIST_HEADER = new TABLE_HEADER();
     private TABLE_HEADER_DETAILS CHECKLIST_DETAILS = new TABLE_HEADER_DETAILS();
     private TABLE_BREEDER_DETAILS BREEDER_DETAILS = new TABLE_BREEDER_DETAILS();
+    private TABLE_FEED_DETAILS FEED_DETAILS = new TABLE_FEED_DETAILS();
 
 
 
@@ -68,6 +69,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
         db.execSQL(header_details);
 
+
+
         String breeder_details = "CREATE TABLE " + BREEDER_DETAILS.TABLE_BREEDER_DETAILS +
                 " (" + BREEDER_DETAILS.POSITION + " INTEGER, " +
                 BREEDER_DETAILS.ORG_CODE + " TEXT, " +
@@ -89,6 +92,26 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(breeder_details);
 
 
+
+        String feed_details = "CREATE TABLE " + FEED_DETAILS.TABLE_FEED_DETAILS +
+                " (" + FEED_DETAILS.POSITION + " INTEGER, " +
+                FEED_DETAILS.ORG_CODE + " TEXT, " +
+                FEED_DETAILS.BUCODE + " TEXT, " +
+                FEED_DETAILS.BU_TYPE_CODE + " TEXT, " +
+                FEED_DETAILS.FARM_CODE + " TEXT," +
+                FEED_DETAILS.FARM_ORG + " TEXT," +
+                FEED_DETAILS.FARM_NAME + " TEXT," +
+                FEED_DETAILS.FEED_CODE + " TEXT," +
+                FEED_DETAILS.FEED_NAME + " TEXT," +
+                FEED_DETAILS.SYS_FEED_STOCK_QTY + " TEXT," +
+                FEED_DETAILS.SYS_FEED_STOCK_WGH + " TEXT," +
+                FEED_DETAILS.STOCK_UNIT + " TEXT," +
+                FEED_DETAILS.COUNTING_STOCK + " TEXT," +
+                FEED_DETAILS.REMARK + " TEXT," +
+                "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
+        db.execSQL(feed_details);
+
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
@@ -99,6 +122,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
         db.execSQL("DROP TABLE IF EXISTS " + BREEDER_DETAILS.TABLE_BREEDER_DETAILS );
+        onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS " + FEED_DETAILS.TABLE_FEED_DETAILS );
         onCreate(db);
 
     }
