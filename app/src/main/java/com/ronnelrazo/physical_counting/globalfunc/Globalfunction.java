@@ -596,6 +596,16 @@ public class Globalfunction {
         }
     }
 
+    public Cursor getFeedListDetails(String org_code,String farm_code){
+        String query = "SELECT *  FROM table_feed_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
 
 
 

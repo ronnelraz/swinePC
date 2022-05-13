@@ -214,13 +214,8 @@ public class tab_from extends AppCompatActivity {
 
         Cursor cursor = data.getChecklistDetails(getorg_Code,getfarm_Code);
         int totalRow = cursor.getCount();
-//        Toast.makeText(this, String.valueOf(totalRow), Toast.LENGTH_SHORT).show();
-//        data.Preloader(this,"Checklist uploading to the server. " );
         while(cursor.moveToNext()){
             RowCounter++;
-//            data.content.setText("Checklist uploading to the server. (" +totalRow + "/" + ChecklistCount +")");
-//            Log.d("swine", String.valueOf(ChecklistCount));
-
             saveHeader_detials_OnineDB(
                     cursor.getString(1),
                     cursor.getString(2),
@@ -279,6 +274,42 @@ public class tab_from extends AppCompatActivity {
 
     }
 
+    protected  void saveFeedCount_details(String audit_no){
+        String getorg_Code = str_orgcode;
+        String getfarm_Code = str_farmcode;
+
+        Cursor cursor = data.getFeedListDetails(getorg_Code,getfarm_Code);
+        int totalRow = cursor.getCount();
+        while(cursor.moveToNext()){
+            RowCounter++;
+            saveFeed_count_OnineDB(
+                    cursor.getString(1),
+                    audit_no,
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getString(7),
+                    cursor.getString(8),
+                    cursor.getString(9),
+                    cursor.getString(10),
+                    cursor.getString(11),
+                    cursor.getString(12),
+                    cursor.getString(13)
+            );
+            if (RowCounter == totalRow) {
+                data.toast(R.raw.checked,"[Feed] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
+                RowCounter = 0;
+            }
+        }
+
+    }
+
+
+
+    /**************************************************/
+
     protected void saveHeaderOnineDB(List<String> list){
         String ADuser = sharedPref.getUser();
         API.getClient().Header(list.get(0),list.get(4),list.get(5),list.get(8),list.get(9),list.get(7),list.get(10),list.get(1),ADuser).enqueue(new Callback<Object>() {
@@ -294,6 +325,7 @@ public class tab_from extends AppCompatActivity {
                         data.toast(R.raw.checked,"Generate Audit No. " + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
                         saveHeaderChecklist_details(audit_no);
                         saveBreederCount_details(audit_no);
+                        saveFeedCount_details(audit_no);
 
                     }
                     else{
@@ -391,6 +423,49 @@ public class tab_from extends AppCompatActivity {
             }
         });
     }
+
+    protected void saveFeed_count_OnineDB(String ORG_CODE,
+                                          String AUDIT_NO,
+                                          String BUSINESS_GROUP_CODE,
+                                          String BUSINESS_TYPE_CODE,
+                                          String FARM_CODE,
+                                          String FARM_ORG,
+                                          String FARM_NAME,
+                                          String FEED_CODE,
+                                          String FEED_NAME,
+                                          String SYS_FFED_STOCK_QTY,
+                                          String SYS_FEED_STOCK_WGH,
+                                          String STOCK_UNIT,
+                                          String COUNTING_STOCK,
+                                          String REMARK){
+        String ADuser = sharedPref.getUser();
+        String getDoc_date = doc_date;
+        String getAudit_date = audit_date;
+
+        API.getClient().Header_FeedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,FEED_CODE,FEED_NAME,SYS_FFED_STOCK_QTY,SYS_FEED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    Log.d("swine",String.valueOf(success));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                }
+            }
+        });
+    }
+
 
 
 }

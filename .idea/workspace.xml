@@ -13,8 +13,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="swine" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -32,24 +31,23 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/globalfunc/Globalfunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/globalfunc/Globalfunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/globalfunc/Globalfunction$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/globalfunc/Globalfunction$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Database/MyDatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Database/MyDatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Database/TABLE_FEED_DETAILS.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Database/TABLE_FEED_DETAILS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Feed.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Feed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/APIInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/tab_from.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/tab_from.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R52N40Y8RGN]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R52RA00WNEW]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -101,7 +99,7 @@
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-viewC:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/java/com/ronnelrazo/physical_counting/textWatcher.java_SELECTED" value="textWatcher" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="com.android.tools.idea.sqlite.queryhistory" value="SELECT * from TABLE_FEED_DETAILS&#10;SELECT * from table_breeder_details&#10;SELECT * from table_header_details&#10;select *  from table_header &#10;delete from table_breeder_details" />
+    <property name="com.android.tools.idea.sqlite.queryhistory" value="select * from table_feed_details&#10;SELECT * from TABLE_FEED_DETAILS&#10;SELECT * from table_breeder_details&#10;SELECT * from table_header_details&#10;select *  from table_header " />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/CHICPOS" />
     <property name="project.structure.last.edited" value="Dependencies" />
