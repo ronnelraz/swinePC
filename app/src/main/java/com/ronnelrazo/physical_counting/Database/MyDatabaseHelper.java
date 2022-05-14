@@ -17,6 +17,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private TABLE_HEADER_DETAILS CHECKLIST_DETAILS = new TABLE_HEADER_DETAILS();
     private TABLE_BREEDER_DETAILS BREEDER_DETAILS = new TABLE_BREEDER_DETAILS();
     private TABLE_FEED_DETAILS FEED_DETAILS = new TABLE_FEED_DETAILS();
+    private TABLE_MED_DETAILS MED_DETAILS = new TABLE_MED_DETAILS();
 
 
 
@@ -112,6 +113,25 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(feed_details);
 
 
+        String med_details = "CREATE TABLE " + MED_DETAILS.TABLE_MED_DETAILS +
+                " (" + MED_DETAILS.POSITION + " INTEGER, " +
+                MED_DETAILS.ORG_CODE + " TEXT, " +
+                MED_DETAILS.BUCODE + " TEXT, " +
+                MED_DETAILS.BU_TYPE_CODE + " TEXT, " +
+                MED_DETAILS.FARM_CODE + " TEXT," +
+                MED_DETAILS.FARM_ORG + " TEXT," +
+                MED_DETAILS.FARM_NAME + " TEXT," +
+                MED_DETAILS.MED_CODE + " TEXT," +
+                MED_DETAILS.MED_NAME + " TEXT," +
+                MED_DETAILS.SYS_MED_STOCK_QTY + " TEXT," +
+                MED_DETAILS.SYS_MED_STOCK_WGH + " TEXT," +
+                MED_DETAILS.STOCK_UNIT + " TEXT," +
+                MED_DETAILS.COUNTING_STOCK + " TEXT," +
+                MED_DETAILS.REMARK + " TEXT," +
+                "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
+        db.execSQL(med_details);
+
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
@@ -125,6 +145,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
         db.execSQL("DROP TABLE IF EXISTS " + FEED_DETAILS.TABLE_FEED_DETAILS );
+        onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS " + MED_DETAILS.TABLE_MED_DETAILS );
         onCreate(db);
 
     }

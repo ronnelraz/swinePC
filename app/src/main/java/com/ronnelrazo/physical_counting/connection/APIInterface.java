@@ -151,4 +151,29 @@ public interface APIInterface {
 
 
 
+    @FormUrlEncoded
+    @POST("trnMedCountList")
+    Call<Object> Header_MedCountList(
+            @Field("ORG_CODE") String ORG_CODE,
+            @Field("AUDIT_NO") String AUDIT_NO,
+            @Field("DOCUMENT_DATE") String DOCUMENT_DATE,
+            @Field("PERIOD") String PERIOD,
+            @Field("AUDIT_DATE") String AUDIT_DATE,
+            @Field("BUSINESS_GROUP_CODE") String BUSINESS_GROUP_CODE,
+            @Field("BUSINESS_TYPE_CODE") String BUSINESS_TYPE_CODE,
+            @Field("FARM_CODE") String FARM_CODE,
+            @Field("FARM_ORG") String FARM_ORG,
+            @Field("FARM_NAME") String FARM_NAME,
+            @Field("MED_CODE") String MED_CODE,
+            @Field("MED_NAME") String MED_NAME,
+            @Field("SYS_MED_STOCK_QTY") String SYS_MED_STOCK_QTY,
+            @Field("SYS_MED_STOCK_WGH") String SYS_MED_STOCK_WGH,
+            @Field("STOCK_UNIT") String STOCK_UNIT,
+            @Field("COUNTING_STOCK") String COUNTING_STOCK,
+            @Field("REMARK") String REMARK,
+            @Field("USER_CREATE") String USER_CREATE
+    );
+
+
+
 }

@@ -36,6 +36,7 @@ import com.ronnelrazo.physical_counting.Database.TABLE_BREEDER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_FEED_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
+import com.ronnelrazo.physical_counting.Database.TABLE_MED_DETAILS;
 import com.ronnelrazo.physical_counting.R;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
@@ -456,6 +457,7 @@ public class Globalfunction {
         TABLE_HEADER_DETAILS column_details_checklist = new TABLE_HEADER_DETAILS();
         TABLE_BREEDER_DETAILS column_details_breeder = new TABLE_BREEDER_DETAILS();
         TABLE_FEED_DETAILS column_details_feed = new TABLE_FEED_DETAILS();
+        TABLE_MED_DETAILS column_details_med = new TABLE_MED_DETAILS();
 
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
 //        db.delete(column_details_checklist.TABLE_CHECKLIST_HEADER_DETAILS,column_details_checklist.ORG_CODE + " = ? and " + column_details_checklist.FARM_CODE + " = ?",new String[]{org_code,farm_code} );
@@ -468,6 +470,7 @@ public class Globalfunction {
         db.delete(column_details_breeder.TABLE_BREEDER_DETAILS,null,null);
         //feed
         db.delete(column_details_feed.TABLE_FEED_DETAILS,null,null);
+        db.delete(column_details_med.TABLE_MED_DETAILS,null,null);
 
 
 
@@ -607,6 +610,80 @@ public class Globalfunction {
     }
 
 
+
+    /**
+     * med
+     * **/
+
+    public boolean ADD_MED_DETAILS(int position,String org_code,String bucode,
+                                    String bu_type,String farm_code,
+                                    String farm_org,String farm_name,String med_code,String med_name,
+                                    String med_stock_qty,String med_stock_wgh,String stock_unit,String counting_Stock,
+                                    String remark){
+        TABLE_MED_DETAILS column = new TABLE_MED_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.POSITION, position);
+        cv.put(column.ORG_CODE, org_code);
+        cv.put(column.BUCODE, bucode);
+        cv.put(column.BU_TYPE_CODE, bu_type);
+        cv.put(column.FARM_CODE, farm_code);
+        cv.put(column.FARM_ORG, farm_org);
+        cv.put(column.FARM_NAME, farm_name);
+        cv.put(column.MED_CODE, med_code);
+        cv.put(column.MED_NAME, med_name);
+        cv.put(column.SYS_MED_STOCK_QTY, med_stock_qty);
+        cv.put(column.SYS_MED_STOCK_WGH, med_stock_wgh);
+        cv.put(column.STOCK_UNIT, stock_unit);
+        cv.put(column.COUNTING_STOCK,counting_Stock);
+        cv.put(column.REMARK, remark);
+        long result = db.insert(column.TABLE_MED_DETAILS,null, cv);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean updateMedlist(int pos,String org_code,String farm_code,String counting,String remark){
+        TABLE_MED_DETAILS column = new TABLE_MED_DETAILS();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.COUNTING_STOCK,counting);
+        cv.put(column.REMARK,remark);
+        int save = db.update(
+                column.TABLE_MED_DETAILS,
+                cv,
+                column.POSITION+" = ? and " +
+                        column.ORG_CODE+" = ? and " +
+                        column.FARM_CODE+" = ?", new String[] { String.valueOf(pos),org_code,farm_code } );
+        if(save == 1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    public Cursor getMedListDetails(String org_code,String farm_code){
+        String query = "SELECT *  FROM table_med_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+
+
+    public long tabUsed(String tablename){
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        long count = DatabaseUtils.queryNumEntries(db, tablename);
+        db.close();
+        return count;
+    }
 
 
 }

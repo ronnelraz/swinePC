@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
+import com.ronnelrazo.physical_counting.adapter.Adapter_Checklist;
 import com.ronnelrazo.physical_counting.adapter.Adapter_Feed;
 import com.ronnelrazo.physical_counting.adapter.TabLayoutAdapter;
 import com.ronnelrazo.physical_counting.connection.API;
@@ -149,6 +150,13 @@ public class tab_from extends AppCompatActivity {
 
 
         btn_func[0].setOnClickListener(v -> {
+           String tab_contact = 0 == 0 ? "N" : "Y";
+           String tab_checklist = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_HEADER_DETAILS") == 0 ? "N" : "Y";
+           String tab_breeder = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_BREEDER_DETAILS") == 0 ? "N" : "Y";
+           String tab_feed = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_FEED_DETAILS") == 0 ? "N" : "Y";
+           String tab_med = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_MED_DETAILS") == 0 ? "N" : "Y";
+           Log.d("swine", tab_contact + " " + tab_checklist + " " + tab_breeder + " " + tab_feed + " " + tab_med);
+
             saveHeaderChecklist();
         });
 
@@ -303,6 +311,38 @@ public class tab_from extends AppCompatActivity {
                 RowCounter = 0;
             }
         }
+    }
+
+
+    protected  void saveMedCount_details(String audit_no){
+        String getorg_Code = str_orgcode;
+        String getfarm_Code = str_farmcode;
+
+        Cursor cursor = data.getMedListDetails(getorg_Code,getfarm_Code);
+        int totalRow = cursor.getCount();
+        while(cursor.moveToNext()){
+            RowCounter++;
+            saveMed_count_OnineDB(
+                    cursor.getString(1),
+                    audit_no,
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getString(7),
+                    cursor.getString(8),
+                    cursor.getString(9),
+                    cursor.getString(10),
+                    cursor.getString(11),
+                    cursor.getString(12),
+                    cursor.getString(13)
+            );
+            if (RowCounter == totalRow) {
+                data.toast(R.raw.checked,"[Med] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
+                RowCounter = 0;
+            }
+        }
 
     }
 
@@ -326,6 +366,7 @@ public class tab_from extends AppCompatActivity {
                         saveHeaderChecklist_details(audit_no);
                         saveBreederCount_details(audit_no);
                         saveFeedCount_details(audit_no);
+                        saveMedCount_details(audit_no);
 
                     }
                     else{
@@ -443,6 +484,49 @@ public class tab_from extends AppCompatActivity {
         String getAudit_date = audit_date;
 
         API.getClient().Header_FeedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,FEED_CODE,FEED_NAME,SYS_FFED_STOCK_QTY,SYS_FEED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    Log.d("swine",String.valueOf(success));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                }
+            }
+        });
+    }
+
+
+    protected void saveMed_count_OnineDB(String ORG_CODE,
+                                          String AUDIT_NO,
+                                          String BUSINESS_GROUP_CODE,
+                                          String BUSINESS_TYPE_CODE,
+                                          String FARM_CODE,
+                                          String FARM_ORG,
+                                          String FARM_NAME,
+                                          String MED_CODE,
+                                          String MED_NAME,
+                                          String SYS_MED_STOCK_QTY,
+                                          String SYS_MED_STOCK_WGH,
+                                          String STOCK_UNIT,
+                                          String COUNTING_STOCK,
+                                          String REMARK){
+        String ADuser = sharedPref.getUser();
+        String getDoc_date = doc_date;
+        String getAudit_date = audit_date;
+
+        API.getClient().Header_MedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,MED_CODE,MED_NAME,SYS_MED_STOCK_QTY,SYS_MED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
