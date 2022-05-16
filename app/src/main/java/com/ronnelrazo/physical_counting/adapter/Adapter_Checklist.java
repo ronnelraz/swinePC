@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -67,7 +68,19 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
         if(holder instanceof VHMain) {
             modal_checklist_maintopic main = (modal_checklist_maintopic) items.get(position);
             VHMain mainTopic = (VHMain)holder;
-            mainTopic.MainTopic.setText(main.getMainTopic());
+            if(position == 0){
+                mainTopic.MainTopic.setText(main.getMainTopic());
+            }
+            else{
+                if(main.getMainTopic().isEmpty()){
+                    mainTopic.MainTopic.setVisibility(View.GONE);
+                }
+                else{
+                    mainTopic.annexHeader.setVisibility(View.VISIBLE);
+                    mainTopic.MainTopic.setText(main.getMainTopic());
+                }
+
+            }
         } else if(holder instanceof VHSubDetails) {
             modal_checklist_SubDetails subDetails = (modal_checklist_SubDetails) items.get(position);
             VHSubDetails sub = (VHSubDetails)holder;
@@ -77,82 +90,54 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
         else if(holder instanceof VHItem) {
             modal_checklist_Details details = (modal_checklist_Details) items.get(position);
             VHItem item = (VHItem)holder;
-            item.itemDetails.setText(Globalfunction.createIndentedText(details.getDetails(),10,50));
 
 
-
-            String getRemark = item.item_remarks.getText().toString();
-            String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
-                    (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
-                            (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
-            boolean save_details = Globalfunction.getInstance(context)
-                    .ADD_CHECKLIST_HEADER_DETAILS(
-                            position,
-                            tab_from.str_orgcode,
-                            tab_from.str_farmcode,
-                            tab_from.str_types,
-                            getCheckedvalue,
-                            getRemark,
-                            details.getM_code(),
-                            details.getM_desc(),
-                            details.getM_seq(),
-                            details.getS_code(),
-                            details.getS_desc(),
-                            details.getS_seq(),
-                            details.getDetails_code(),
-                            details.getDetails(),
-                            details.getDetails_seq(),
-                            details.getBu_code(),
-                            details.getBu_type());
-            if(save_details){
-                Log.d("swine","save header" + getCheckedvalue);
+            if(details.getDetails().equals("free_text")){
+                item.checklistA.setVisibility(View.GONE);
+                item.freeText.setVisibility(View.VISIBLE);
             }
             else{
-                Log.d("swine","existing header" + getCheckedvalue);
-            }
+                item.checklistA.setVisibility(View.VISIBLE);
+                item.freeText.setVisibility(View.GONE);
+                item.itemDetails.setText(Globalfunction.createIndentedText(details.getDetails(),10,50));
+                String getRemark = item.item_remarks.getText().toString();
+                String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                        (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                                (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+                boolean save_details = Globalfunction.getInstance(context)
+                        .ADD_CHECKLIST_HEADER_DETAILS(
+                                position,
+                                tab_from.str_orgcode,
+                                tab_from.str_farmcode,
+                                tab_from.str_types,
+                                getCheckedvalue,
+                                getRemark,
+                                details.getM_code(),
+                                details.getM_desc(),
+                                details.getM_seq(),
+                                details.getS_code(),
+                                details.getS_desc(),
+                                details.getS_seq(),
+                                details.getDetails_code(),
+                                details.getDetails(),
+                                details.getDetails_seq(),
+                                details.getBu_code(),
+                                details.getBu_type());
+                if(save_details){
+                    Log.d("swine","save header" + getCheckedvalue);
+                }
+                else{
+                    Log.d("swine","existing header" + getCheckedvalue);
+                }
 //            Log.d("swine",getCheckedvalue);
-            item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
-                RadioButton checked = radioGroup.findViewById(i);
-                String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
-                        (checked.getId() == R.id.item_no ? "N" :
-                                (checked.getId() == R.id.item_na ? "N/A" : null));
-                String getRemarkchangeans = item.item_remarks.getText().toString();
-                Log.d("swine",rbcheckStatus + " position:" +position);
-                boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans,details.getM_code(),
-                        details.getM_desc(),
-                        details.getM_seq(),
-                        details.getS_code(),
-                        details.getS_desc(),
-                        details.getS_seq(),
-                        details.getDetails_code(),
-                        details.getDetails(),
-                        details.getDetails_seq(),
-                        details.getBu_code(),
-                        details.getBu_type());
-                if(update_postion){
-                    Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
-                }
-
-            });
-
-
-            item.item_remarks.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                }
-                @Override
-                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                }
-                @Override
-                public void afterTextChanged(Editable editable) {
-                    String getRemark = editable.toString();
-                    String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
-                            (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
-                                    (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
-//                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
-                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark,details.getM_code(),
+                item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+                    RadioButton checked = radioGroup.findViewById(i);
+                    String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
+                            (checked.getId() == R.id.item_no ? "N" :
+                                    (checked.getId() == R.id.item_na ? "N/A" : null));
+                    String getRemarkchangeans = item.item_remarks.getText().toString();
+                    Log.d("swine",rbcheckStatus + " position:" +position);
+                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans,details.getM_code(),
                             details.getM_desc(),
                             details.getM_seq(),
                             details.getS_code(),
@@ -164,12 +149,51 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                             details.getBu_code(),
                             details.getBu_type());
                     if(update_postion){
-                        Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
+                        Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
                     }
 
+                });
 
-                }
-            });
+
+                item.item_remarks.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        String getRemark = editable.toString();
+                        String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                                (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                                        (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+//                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
+                        boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark,details.getM_code(),
+                                details.getM_desc(),
+                                details.getM_seq(),
+                                details.getS_code(),
+                                details.getS_desc(),
+                                details.getS_seq(),
+                                details.getDetails_code(),
+                                details.getDetails(),
+                                details.getDetails_seq(),
+                                details.getBu_code(),
+                                details.getBu_type());
+                        if(update_postion){
+                            Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
+                        }
+
+
+                    }
+                });
+
+            }
+
+
+
 
 
         }
@@ -187,9 +211,11 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     class VHMain extends RecyclerView.ViewHolder{
         public TextView MainTopic;
+        public LinearLayout annexHeader;
         public VHMain(View itemView) {
             super(itemView);
             this.MainTopic = itemView.findViewById(R.id.maintopic);
+            this.annexHeader = itemView.findViewById(R.id.headerAnnex);
         }
     }
 
@@ -206,12 +232,16 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
         public RadioGroup itemGroup;
         public EditText item_remarks;
         public RadioButton choices;
+        public EditText freeText;
+        public LinearLayout checklistA;
         public VHItem(View itemView) {
             super(itemView);
             this.itemDetails = itemView.findViewById(R.id.itemDetails);
             this.itemGroup = itemView.findViewById(R.id.item_group_button);
             this.item_remarks = itemView.findViewById(R.id.item_remarks);
             this.choices = itemGroup.findViewById(itemGroup.getCheckedRadioButtonId());
+            this.freeText = itemView.findViewById(R.id.freeText);
+            this.checklistA = itemView.findViewById(R.id.checklistA);
 
 
         }

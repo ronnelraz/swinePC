@@ -91,13 +91,22 @@ public class Tab_checklist extends Fragment {
                     JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
                     boolean success = jsonResponse.getBoolean("success");
                     String checklist_type = jsonResponse.getString("type");
-                    String maintopic = jsonResponse.getString("mainTopic");
-                    JSONArray checklistData = jsonResponse.getJSONArray("data");
-                    items.add(new modal_checklist_maintopic(maintopic));
+//                    String maintopic = jsonResponse.getString("Checklist");
+//                    String Annex = jsonResponse.getString("Annex");
+
+
+                    JSONObject Checklist = jsonResponse.getJSONObject("Checklist");
+                    String maintopicA = Checklist.getString("mainTopic");
+                    JSONArray checklistData = Checklist.getJSONArray("data");
+
+
+                    JSONObject Annex = jsonResponse.getJSONObject("Annex");
+                    String maintopicB = Annex.getString("mainTopic");
+                    JSONArray AnnexData = Annex.getJSONArray("data");
                     if(success){
                         loading.setVisibility(View.GONE);
-//                        data.loaddialog.dismiss();
-
+//
+                        items.add(new modal_checklist_maintopic(maintopicA));
                         for (int i = 0; i < checklistData.length(); i++) {
                             JSONObject object = checklistData.getJSONObject(i);
                             modal_checklist_SubDetails subDetails_items = new modal_checklist_SubDetails(
@@ -129,6 +138,43 @@ public class Tab_checklist extends Fragment {
                                         );
                                     items.add(details_item);
                                 }
+
+
+                        }
+
+
+                        items.add(new modal_checklist_maintopic(maintopicB));
+                        for (int i = 0; i < AnnexData.length(); i++) {
+                            JSONObject object = AnnexData.getJSONObject(i);
+                            modal_checklist_SubDetails subDetails_items = new modal_checklist_SubDetails(
+                                    object.getString("BUcode"),
+                                    object.getString("Maincode"),
+                                    object.getString("subDetailsCode"),
+                                    object.getString("subDetails")
+                            );
+                            items.add(subDetails_items);
+                            JSONArray details =  object.getJSONArray("details");
+                            for (int i_d = 0; i_d < details.length(); i_d++){
+
+                                JSONObject details_data = details.getJSONObject(i_d);
+                                modal_checklist_Details  details_item = new modal_checklist_Details(
+                                        details_data.getString("detailsCode"),
+                                        details_data.getString("details"),
+                                        details_data.getString("details_seq"),
+
+                                        details_data.getString("Maincode"),
+                                        details_data.getString("mainTopicListDesc"),
+                                        details_data.getString("mainTopicListseq"),
+
+                                        details_data.getString("subDetailsCode"),
+                                        details_data.getString("subDetails"),
+                                        details_data.getString("subDetails_seq"),
+
+                                        details_data.getString("BUcode"),
+                                        details_data.getString("BUTypecode")
+                                );
+                                items.add(details_item);
+                            }
 
 
                         }

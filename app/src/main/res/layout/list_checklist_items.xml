@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:gravity="center"
     android:background="@color/white"
@@ -10,92 +11,129 @@
 
 
 
-    <TextView
-        android:singleLine="false"
-        android:layout_marginTop="3dp"
-        android:id="@+id/itemDetails"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
-        android:layout_marginLeft="5dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2.4"
+    <LinearLayout
+        android:id="@+id/checklistA"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:singleLine="false"
+            android:layout_marginTop="3dp"
+            android:id="@+id/itemDetails"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:textSize="18sp"
+            android:enabled="true"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:lineSpacingMultiplier="1"
+            android:text="1. Are production records updated until cut-off date?"/>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/item_group_button"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:id="@+id/item_yes"
+                    android:buttonTint="@color/purple_500"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <RadioButton
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:id="@+id/item_no"
+                    android:buttonTint="@color/error"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <RadioButton
+                    android:checked="true"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:id="@+id/item_na"
+                    android:buttonTint="@color/main_disabled_stroke_color"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:textSize="20sp"
+            android:orientation="vertical">
+
+
+
+            <EditText
+                android:isScrollContainer="true"
+                android:background="@drawable/edit_text_dot"
+                android:id="@+id/item_remarks"
+                android:textSize="18sp"
+                android:fontFamily="@font/cpf_imm_sook_regular"
+                android:layout_gravity="center"
+                android:singleLine="false"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:padding="10dp"
+        android:backgroundTint="@color/odd"
+        android:layout_margin="10dp"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:isScrollContainer="true"
+        android:background="@drawable/edit_text_dot"
+        android:id="@+id/freeText"
         android:textSize="18sp"
-        android:enabled="true"
-        android:textIsSelectable="true"
-        android:focusable="true"
-        android:longClickable="true"
-        android:lineSpacingMultiplier="1"
-        android:text="1. Are production records updated until cut-off date?"/>
-
-    <LinearLayout
-        android:layout_gravity="bottom"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="20sp"
-        android:orientation="vertical">
-
-      <RadioGroup
-          android:id="@+id/item_group_button"
-          android:gravity="center"
-          android:orientation="horizontal"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content">
-
-          <RadioButton
-              android:scaleX="0.9"
-              android:scaleY="0.9"
-              android:id="@+id/item_yes"
-              android:buttonTint="@color/purple_500"
-              android:layout_width="30dp"
-              android:layout_height="30dp"/>
-
-          <RadioButton
-              android:scaleX="0.9"
-              android:scaleY="0.9"
-              android:id="@+id/item_no"
-              android:buttonTint="@color/error"
-              android:layout_width="30dp"
-              android:layout_height="30dp"/>
-          <RadioButton
-              android:checked="true"
-              android:scaleX="0.9"
-              android:scaleY="0.9"
-              android:id="@+id/item_na"
-              android:buttonTint="@color/main_disabled_stroke_color"
-              android:layout_width="30dp"
-              android:layout_height="30dp"/>
-      </RadioGroup>
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_gravity="bottom"
-        android:layout_marginRight="10dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.1"
-        android:textSize="20sp"
-        android:orientation="vertical">
-
-
-
-       <EditText
-           android:isScrollContainer="true"
-           android:background="@drawable/edit_text_dot"
-           android:id="@+id/item_remarks"
-           android:textSize="18sp"
-           android:fontFamily="@font/cpf_imm_sook_regular"
-           android:layout_gravity="center"
-           android:singleLine="false"
-           android:gravity="center"
-           android:layout_width="match_parent"
-           android:layout_height="40dp"/>
-
-    </LinearLayout>
-
+        android:fontFamily="@font/cpf_imm_sook_regular"
+        android:layout_gravity="center"
+        android:inputType="textMultiLine"
+        android:paddingTop="10dp"
+        android:lines="8"
+        android:gravity="top|start"
+        android:maxLines="10"
+        android:hint="Remark"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

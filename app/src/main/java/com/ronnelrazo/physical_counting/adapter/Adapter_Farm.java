@@ -83,7 +83,7 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                                     Globalfunction.getInstance(v1.getContext()).Auditalert.dismiss();
                                     Globalfunction.getInstance(v1.getContext()).intent(tab_from.class,v1.getContext());
                                     tab_from.str_types = "Company Farm";
-                                    Tab_checklist.str_bu_Type = "SWCOM_1";
+                                    Tab_checklist.str_bu_Type = "SWCOM_2";
                                     tab_from.str_orgcode = orgData.getOrgcode();
                                     tab_from.str_orgname = orgData.getOrgname();
                                     tab_from.str_farmcode = orgData.getOrgcode();
