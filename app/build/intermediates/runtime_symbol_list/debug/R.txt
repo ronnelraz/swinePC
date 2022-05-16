@@ -2789,6 +2789,7 @@ int id chain2 0x7f090078
 int id chains 0x7f090079
 int id checkbox 0x7f09007a
 int id checked 0x7f09007b
+int id checklistA 0x7f09023e
 int id checlist_data 0x7f09007c
 int id chip 0x7f09007d
 int id chip1 0x7f09007e
@@ -2890,6 +2891,7 @@ int id flip 0x7f0900dd
 int id floating 0x7f0900de
 int id forever 0x7f0900df
 int id fragment_container_view_tag 0x7f0900e0
+int id freeText 0x7f09023f
 int id frost 0x7f0900e1
 int id ghost_view 0x7f0900e2
 int id ghost_view_holder 0x7f0900e3
@@ -2901,6 +2903,7 @@ int id grouping 0x7f0900e8
 int id groups 0x7f0900e9
 int id guideline 0x7f0900ea
 int id hardware 0x7f0900eb
+int id headerAnnex 0x7f09023d
 int id header_title 0x7f0900ec
 int id hideable 0x7f0900ed
 int id home 0x7f0900ee
