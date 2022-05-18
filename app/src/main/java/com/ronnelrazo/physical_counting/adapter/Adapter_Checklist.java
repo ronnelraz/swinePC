@@ -4,26 +4,36 @@ package com.ronnelrazo.physical_counting.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextWatcher;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
+import com.google.gson.Gson;
 import com.ronnelrazo.physical_counting.Integration_submenu;
 import com.ronnelrazo.physical_counting.ListItem;
 import com.ronnelrazo.physical_counting.ListItem_Checklist;
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.connection.API;
+import com.ronnelrazo.physical_counting.connection.API_;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.modal_checklist_Details;
 import com.ronnelrazo.physical_counting.model.modal_checklist_SubDetails;
@@ -32,7 +42,15 @@ import com.ronnelrazo.physical_counting.model.model_farm;
 import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.tab_from;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -91,27 +109,35 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
             modal_checklist_Details details = (modal_checklist_Details) items.get(position);
             VHItem item = (VHItem)holder;
 
+            if(details.getDetails().equals("text_view")){
+                item.a1_form.setVisibility(View.VISIBLE);
+                item.checklistA.setVisibility(View.GONE);
+                item.freeText.setVisibility(View.GONE);
+                getA1_1Form(tab_from.str_orgcode,item);
+                item.audit_date.setText("Date of Audit:   " + tab_from.audit_date);
 
-            if(details.getDetails().equals("free_text")){
+            }
+
+            else if(details.getDetails().equals("null")){
                 item.checklistA.setVisibility(View.GONE);
                 item.freeText.setVisibility(View.VISIBLE);
-            }
-            else{
-                item.checklistA.setVisibility(View.VISIBLE);
-                item.freeText.setVisibility(View.GONE);
-                item.itemDetails.setText(Globalfunction.createIndentedText(details.getDetails(),10,50));
-                String getRemark = item.item_remarks.getText().toString();
-                String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
-                        (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
-                                (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+                item.a1_form.setVisibility(View.GONE);
+
+                item.freeText.setOnTouchListener((v, event) -> {
+                    v.getParent().requestDisallowInterceptTouchEvent(true);
+                    return false;
+                });
+                item.freeText.setMovementMethod(new ScrollingMovementMethod());
+
+
                 boolean save_details = Globalfunction.getInstance(context)
                         .ADD_CHECKLIST_HEADER_DETAILS(
                                 position,
                                 tab_from.str_orgcode,
                                 tab_from.str_farmcode,
                                 tab_from.str_types,
-                                getCheckedvalue,
-                                getRemark,
+                                "",
+                                "",
                                 details.getM_code(),
                                 details.getM_desc(),
                                 details.getM_seq(),
@@ -124,71 +150,121 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                                 details.getBu_code(),
                                 details.getBu_type());
                 if(save_details){
-                    Log.d("swine","save header" + getCheckedvalue);
+                    Log.d("swine","save freeText" + position);
                 }
                 else{
-                    Log.d("swine","existing header" + getCheckedvalue);
+                    Log.d("swine","existing freeText" + position);
                 }
-//            Log.d("swine",getCheckedvalue);
-                item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
-                    RadioButton checked = radioGroup.findViewById(i);
-                    String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
-                            (checked.getId() == R.id.item_no ? "N" :
-                                    (checked.getId() == R.id.item_na ? "N/A" : null));
-                    String getRemarkchangeans = item.item_remarks.getText().toString();
-                    Log.d("swine",rbcheckStatus + " position:" +position);
-                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans,details.getM_code(),
-                            details.getM_desc(),
-                            details.getM_seq(),
-                            details.getS_code(),
-                            details.getS_desc(),
-                            details.getS_seq(),
-                            details.getDetails_code(),
-                            details.getDetails(),
-                            details.getDetails_seq(),
-                            details.getBu_code(),
-                            details.getBu_type());
-                    if(update_postion){
-                        Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
+
+                item.freeText.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
                     }
 
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+
+                        boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,"",s.toString());
+                        if(update_postion){
+                            Log.d("swine","update position:" +position + " value : " + s);
+                        }
+                    }
                 });
 
 
-                item.item_remarks.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            else{
+                item.checklistA.setVisibility(View.VISIBLE);
+                item.freeText.setVisibility(View.GONE);
+                item.a1_form.setVisibility(View.GONE);
+                item.itemDetails.setText(Globalfunction.createIndentedText(details.getDetails(),10,50));
+                String getRemark = item.item_remarks.getText().toString();
+                String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                        (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                                (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
 
+                if(!details.getDetails().equals("text_view")){
+                    boolean save_details = Globalfunction.getInstance(context)
+                            .ADD_CHECKLIST_HEADER_DETAILS(
+                                    position,
+                                    tab_from.str_orgcode,
+                                    tab_from.str_farmcode,
+                                    tab_from.str_types,
+                                    getCheckedvalue,
+                                    getRemark,
+                                    details.getM_code(),
+                                    details.getM_desc(),
+                                    details.getM_seq(),
+                                    details.getS_code(),
+                                    details.getS_desc(),
+                                    details.getS_seq(),
+                                    details.getDetails_code(),
+                                    details.getDetails(),
+                                    details.getDetails_seq(),
+                                    details.getBu_code(),
+                                    details.getBu_type());
+                    if(save_details){
+                        Log.d("swine","save header" + getCheckedvalue);
                     }
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
+                    else{
+                        Log.d("swine","existing header" + getCheckedvalue);
                     }
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        String getRemark = editable.toString();
-                        String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
-                                (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
-                                        (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
-//                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
-                        boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark,details.getM_code(),
-                                details.getM_desc(),
-                                details.getM_seq(),
-                                details.getS_code(),
-                                details.getS_desc(),
-                                details.getS_seq(),
-                                details.getDetails_code(),
-                                details.getDetails(),
-                                details.getDetails_seq(),
-                                details.getBu_code(),
-                                details.getBu_type());
+                    item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+                        RadioButton checked = radioGroup.findViewById(i);
+                        String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
+                                (checked.getId() == R.id.item_no ? "N" :
+                                        (checked.getId() == R.id.item_na ? "N/A" : null));
+                        String getRemarkchangeans = item.item_remarks.getText().toString();
+                        Log.d("swine",rbcheckStatus + " position:" +position);
+                        if(rbcheckStatus.equals("N")){
+                            item.item_remarks.requestFocus();
+                            Toast.makeText(context, "Please State the Reason", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            item.item_remarks.clearFocus();
+                        }
+                        boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans);
                         if(update_postion){
-                            Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
+                            Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
                         }
 
+                    });
 
-                    }
-                });
+
+
+                    item.item_remarks.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            String getRemark = editable.toString();
+                            String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                                    (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                                            (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+//                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
+                            boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark);
+                            if(update_postion){
+                                Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
+                            }
+
+
+                        }
+                    });
+
+                }
+
 
             }
 
@@ -198,6 +274,50 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
         }
     }
+
+
+    protected void getA1_1Form(String BU_CODE,VHItem item){
+        API.getClient().A1_1Form(BU_CODE).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    JSONArray data = jsonResponse.getJSONArray("data");
+
+                    if(success){
+
+                        for (int i = 0; i < data.length(); i++) {
+                            JSONObject object = data.getJSONObject(i);
+                            item.business_farmname.setText("Business/Farm Name:   "+Html.fromHtml("<b>"+object.getString("ORG_NAME")+"</b>"));
+                            item.businessAddress.setText("Business address:   " +object.getString("ADDRESS"));
+                            item.farmManager.setText("Farm Manager:   " +object.getString("FARM_MANAGER_NAME"));
+                            item.headAnimalHusbandman.setText("Head Animal Husbandman:  " +object.getString("FARM_CLERK_NAME"));
+                            item.contact.setText("Contact Number:   " +object.getString("FARM_MANAGER_CONTACT_NO"));
+                        }
+
+                    }
+                    else{
+                        Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    Globalfunction.getInstance(context).toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                }
+            }
+        });
+    }
+
+
 
     @Override
     public int getItemCount() {
@@ -233,7 +353,10 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
         public EditText item_remarks;
         public RadioButton choices;
         public EditText freeText;
-        public LinearLayout checklistA;
+        public LinearLayout checklistA,a1_form;
+        public ScrollView scroller;
+
+        public TextView business_farmname,businessAddress,farmManager,headAnimalHusbandman,contact,audit_date;
         public VHItem(View itemView) {
             super(itemView);
             this.itemDetails = itemView.findViewById(R.id.itemDetails);
@@ -242,6 +365,15 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
             this.choices = itemGroup.findViewById(itemGroup.getCheckedRadioButtonId());
             this.freeText = itemView.findViewById(R.id.freeText);
             this.checklistA = itemView.findViewById(R.id.checklistA);
+            this.a1_form = itemView.findViewById(R.id.a1_form);
+
+            this.business_farmname = itemView.findViewById(R.id.business_farmname);
+            this.businessAddress = itemView.findViewById(R.id.businessAddress);
+            this.farmManager = itemView.findViewById(R.id.farmManager);
+            this.headAnimalHusbandman = itemView.findViewById(R.id.headAnimalHusbandman);
+            this.contact = itemView.findViewById(R.id.contact);
+            this.audit_date = itemView.findViewById(R.id.audit_dateA1);
+            this.scroller = itemView.findViewById(R.id.bodyScroller);
 
 
         }

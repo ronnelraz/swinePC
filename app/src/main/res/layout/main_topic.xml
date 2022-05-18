@@ -76,7 +76,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/cpf_imm_sook_semibold"
-            android:text="if No,State Reason"
+            android:text="If No,State Reason"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp" />

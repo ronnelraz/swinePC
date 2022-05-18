@@ -386,24 +386,23 @@ public class Globalfunction {
     }
 
     //updateChecklist
-    public boolean updatechecklist(int pos,String org_code,String farm_code,String checked_value,String remark, String MAINCODE, String MAINDESC, String MAINSEQ, String SUBCODE, String SUBDESC, String SUBSEQ, String DETAILSCODE,
-                                   String DETAILSDESC, String DETAILSSEQ, String BUCODE, String BU_TYPE_CODE){
+    public boolean updatechecklist(int pos,String org_code,String farm_code,String checked_value,String remark){
         TABLE_HEADER_DETAILS column = new TABLE_HEADER_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(column.CHECK_ITEM,checked_value);
         cv.put(column.REMARK,remark);
-        cv.put(column.MAINCODE, MAINCODE);
-        cv.put(column.MAINDESC, MAINDESC);
-        cv.put(column.MAINSEQ,MAINSEQ);
-        cv.put(column.SUBCODE, SUBCODE);
-        cv.put(column.SUBDESC, SUBDESC);
-        cv.put(column.SUBSEQ,SUBSEQ);
-        cv.put(column.DETAILSCODE, DETAILSCODE);
-        cv.put(column.DETAILSDESC,DETAILSDESC);
-        cv.put(column.DETAILSSEQ, DETAILSSEQ);
-        cv.put(column.BUCODE, BUCODE);
-        cv.put(column.BU_TYPE_CODE,BU_TYPE_CODE);
+//        cv.put(column.MAINCODE, MAINCODE);
+//        cv.put(column.MAINDESC, MAINDESC);
+//        cv.put(column.MAINSEQ,MAINSEQ);
+//        cv.put(column.SUBCODE, SUBCODE);
+//        cv.put(column.SUBDESC, SUBDESC);
+//        cv.put(column.SUBSEQ,SUBSEQ);
+//        cv.put(column.DETAILSCODE, DETAILSCODE);
+//        cv.put(column.DETAILSDESC,DETAILSDESC);
+//        cv.put(column.DETAILSSEQ, DETAILSSEQ);
+//        cv.put(column.BUCODE, BUCODE);
+//        cv.put(column.BU_TYPE_CODE,BU_TYPE_CODE);
         int save = db.update(
                 column.TABLE_CHECKLIST_HEADER_DETAILS,
                 cv,

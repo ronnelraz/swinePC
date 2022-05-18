@@ -175,5 +175,12 @@ public interface APIInterface {
     );
 
 
+    @FormUrlEncoded
+    @POST("A1_1Form")
+    Call<Object> A1_1Form(
+            @Field("BU_CODE") String BU_CODE
+    );
+
+
 
 }

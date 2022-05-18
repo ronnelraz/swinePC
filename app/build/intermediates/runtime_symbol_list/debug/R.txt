@@ -2679,6 +2679,7 @@ int id SHOW_PROGRESS 0x7f09000a
 int id SYM 0x7f09000b
 int id TOP_END 0x7f09000c
 int id TOP_START 0x7f09000d
+int id a1_form 0x7f090240
 int id accelerate 0x7f09000e
 int id accessibility_action_clickable_span 0x7f09000f
 int id accessibility_custom_action_0 0x7f090010
@@ -2750,6 +2751,7 @@ int id arc 0x7f090051
 int id asConfigured 0x7f090052
 int id async 0x7f090053
 int id auditDate 0x7f090054
+int id audit_dateA1 0x7f090247
 int id auto 0x7f090055
 int id autoComplete 0x7f090056
 int id autoCompleteToEnd 0x7f090057
@@ -2762,6 +2764,7 @@ int id beginning 0x7f09005d
 int id bestChoice 0x7f09005e
 int id blocking 0x7f09005f
 int id body 0x7f090060
+int id bodyScroller 0x7f090248
 int id bottom 0x7f090061
 int id bottom_to_top 0x7f090062
 int id bottompanel 0x7f090063
@@ -2773,6 +2776,8 @@ int id breadcrumb_header 0x7f090068
 int id breadcrumb_orgcode 0x7f090069
 int id breadcrumb_orgname 0x7f09006a
 int id breeder_data 0x7f09006b
+int id businessAddress 0x7f090243
+int id business_farmname 0x7f090241
 int id buttonPanel 0x7f09006c
 int id buttons_container 0x7f09006d
 int id cache_measures 0x7f09006e
@@ -2807,6 +2812,7 @@ int id collapseActionView 0x7f090089
 int id compress 0x7f09008a
 int id confirm_button 0x7f09008b
 int id constraint 0x7f09008c
+int id contact 0x7f090244
 int id container 0x7f09008d
 int id content 0x7f09008e
 int id contentPanel 0x7f09008f
@@ -2875,6 +2881,7 @@ int id expand_activities_button 0x7f0900cd
 int id expanded_menu 0x7f0900ce
 int id fade 0x7f0900cf
 int id farm 0x7f0900d0
+int id farmManager 0x7f090245
 int id farmcode 0x7f0900d1
 int id farmlist 0x7f0900d2
 int id farmname 0x7f0900d3
@@ -2903,6 +2910,7 @@ int id grouping 0x7f0900e8
 int id groups 0x7f0900e9
 int id guideline 0x7f0900ea
 int id hardware 0x7f0900eb
+int id headAnimalHusbandman 0x7f090246
 int id headerAnnex 0x7f09023d
 int id header_title 0x7f0900ec
 int id hideable 0x7f0900ed

@@ -406,11 +406,12 @@ public class tab_from extends AppCompatActivity {
 
                     JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
                     boolean success = jsonResponse.getBoolean("success");
+                    String remark = jsonResponse.getString("message");
                     if(success){
-//                        Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), remark, Toast.LENGTH_LONG).show();
                     }
                     else{
-//                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (JSONException e) {

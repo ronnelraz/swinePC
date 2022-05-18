@@ -113,27 +113,106 @@
 
     </LinearLayout>
 
-    <EditText
-        android:padding="10dp"
-        android:backgroundTint="@color/odd"
-        android:layout_margin="10dp"
+
+
+    <ScrollView
+        android:id="@+id/bodyScroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="false">
+
+        <EditText
+
+            android:padding="10dp"
+            android:backgroundTint="@color/odd"
+            android:layout_margin="10dp"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:isScrollContainer="true"
+            android:background="@drawable/edit_text_dot"
+            android:id="@+id/freeText"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_regular"
+            android:layout_gravity="center"
+            android:inputType="textMultiLine"
+            android:paddingTop="10dp"
+            android:lines="8"
+            android:gravity="top|start"
+            android:maxLines="10"
+            android:hint="Remark"
+            android:layout_width="match_parent"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
         tools:visibility="visible"
         android:visibility="gone"
-        android:isScrollContainer="true"
-        android:background="@drawable/edit_text_dot"
-        android:id="@+id/freeText"
-        android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_regular"
-        android:layout_gravity="center"
-        android:inputType="textMultiLine"
-        android:paddingTop="10dp"
-        android:lines="8"
-        android:gravity="top|start"
-        android:maxLines="10"
-        android:hint="Remark"
-        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/a1_form">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Business/Farm Name:"
+            android:id="@+id/business_farmname"/>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Owner/Business Information"/>
+
+        <TextView
+            android:id="@+id/businessAddress"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Business address: "/>
+
+        <TextView
+            android:id="@+id/farmManager"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Manager: "/>
+
+        <TextView
+            android:id="@+id/headAnimalHusbandman"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Head Animal Husbandman:"/>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Number:"/>
+
+        <TextView
+            android:id="@+id/audit_dateA1"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Audit: "
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
 
 
 </LinearLayout>
