@@ -364,9 +364,9 @@ public class tab_from extends AppCompatActivity {
                     if(success){
                         data.toast(R.raw.checked,"Generate Audit No. " + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
                         saveHeaderChecklist_details(audit_no);
-//                        saveBreederCount_details(audit_no);
-//                        saveFeedCount_details(audit_no);
-//                        saveMedCount_details(audit_no);
+                        saveBreederCount_details(audit_no);
+                        saveFeedCount_details(audit_no);
+                        saveMedCount_details(audit_no);
 
                     }
                     else{
