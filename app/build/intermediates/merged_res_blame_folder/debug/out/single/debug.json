@@ -320,6 +320,10 @@
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\drawable\\ic_icons8_warning.xml"
     },
     {
+        "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\drawable_icons8_pdf_1.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\drawable\\icons8_pdf_1.xml"
+    },
+    {
         "merged": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\build\\intermediates\\merged_res\\debug\\layout_checklist_header.xml.flat",
         "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\layout\\checklist_header.xml"
     },

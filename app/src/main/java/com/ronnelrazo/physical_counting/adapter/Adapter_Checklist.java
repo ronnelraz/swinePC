@@ -116,6 +116,32 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                 getA1_1Form(tab_from.str_orgcode,item);
                 item.audit_date.setText("Date of Audit:   " + tab_from.audit_date);
 
+                boolean save_details = Globalfunction.getInstance(context)
+                        .ADD_CHECKLIST_HEADER_DETAILS(
+                                position,
+                                tab_from.str_orgcode,
+                                tab_from.str_farmcode,
+                                tab_from.str_types,
+                                null,
+                                null,
+                                details.getM_code(),
+                                details.getM_desc(),
+                                details.getM_seq(),
+                                details.getS_code(),
+                                details.getS_desc(),
+                                details.getS_seq(),
+                                details.getDetails_code(),
+                                details.getDetails(),
+                                details.getDetails_seq(),
+                                details.getBu_code(),
+                                details.getBu_type());
+                if(save_details){
+                    Log.d("swine","save header" + details.getDetails());
+                }
+                else{
+                    Log.d("swine","existing header" +  details.getDetails());
+                }
+
             }
 
             else if(details.getDetails().equals("null")){
@@ -189,81 +215,78 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                         (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
                                 (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
 
-                if(!details.getDetails().equals("text_view")){
-                    boolean save_details = Globalfunction.getInstance(context)
-                            .ADD_CHECKLIST_HEADER_DETAILS(
-                                    position,
-                                    tab_from.str_orgcode,
-                                    tab_from.str_farmcode,
-                                    tab_from.str_types,
-                                    getCheckedvalue,
-                                    getRemark,
-                                    details.getM_code(),
-                                    details.getM_desc(),
-                                    details.getM_seq(),
-                                    details.getS_code(),
-                                    details.getS_desc(),
-                                    details.getS_seq(),
-                                    details.getDetails_code(),
-                                    details.getDetails(),
-                                    details.getDetails_seq(),
-                                    details.getBu_code(),
-                                    details.getBu_type());
-                    if(save_details){
-                        Log.d("swine","save header" + getCheckedvalue);
+                boolean save_details = Globalfunction.getInstance(context)
+                        .ADD_CHECKLIST_HEADER_DETAILS(
+                                position,
+                                tab_from.str_orgcode,
+                                tab_from.str_farmcode,
+                                tab_from.str_types,
+                                getCheckedvalue,
+                                getRemark,
+                                details.getM_code(),
+                                details.getM_desc(),
+                                details.getM_seq(),
+                                details.getS_code(),
+                                details.getS_desc(),
+                                details.getS_seq(),
+                                details.getDetails_code(),
+                                details.getDetails(),
+                                details.getDetails_seq(),
+                                details.getBu_code(),
+                                details.getBu_type());
+                if(save_details){
+                    Log.d("swine","save header" + getCheckedvalue);
+                }
+                else{
+                    Log.d("swine","existing header" + getCheckedvalue);
+                }
+                item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+                    RadioButton checked = radioGroup.findViewById(i);
+                    String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
+                            (checked.getId() == R.id.item_no ? "N" :
+                                    (checked.getId() == R.id.item_na ? "N/A" : null));
+                    String getRemarkchangeans = item.item_remarks.getText().toString();
+                    Log.d("swine",rbcheckStatus + " position:" +position);
+                    if(rbcheckStatus.equals("N")){
+                        item.item_remarks.requestFocus();
+                        Toast.makeText(context, "Please State the Reason", Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        Log.d("swine","existing header" + getCheckedvalue);
+                        item.item_remarks.clearFocus();
                     }
-                    item.itemGroup.setOnCheckedChangeListener((radioGroup, i) -> {
-                        RadioButton checked = radioGroup.findViewById(i);
-                        String rbcheckStatus = checked.getId() == R.id.item_yes ? "Y" :
-                                (checked.getId() == R.id.item_no ? "N" :
-                                        (checked.getId() == R.id.item_na ? "N/A" : null));
-                        String getRemarkchangeans = item.item_remarks.getText().toString();
-                        Log.d("swine",rbcheckStatus + " position:" +position);
-                        if(rbcheckStatus.equals("N")){
-                            item.item_remarks.requestFocus();
-                            Toast.makeText(context, "Please State the Reason", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            item.item_remarks.clearFocus();
-                        }
-                        boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans);
-                        if(update_postion){
-                            Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
-                        }
+                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans);
+                    if(update_postion){
+                        Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
+                    }
 
-                    });
+                });
 
 
 
-                    item.item_remarks.addTextChangedListener(new TextWatcher() {
-                        @Override
-                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                item.item_remarks.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                        }
-                        @Override
-                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    }
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                        }
-                        @Override
-                        public void afterTextChanged(Editable editable) {
-                            String getRemark = editable.toString();
-                            String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
-                                    (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
-                                            (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+                    }
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        String getRemark = editable.toString();
+                        String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
+                                (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
+                                        (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
 //                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
-                            boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark);
-                            if(update_postion){
-                                Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
-                            }
-
-
+                        boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark);
+                        if(update_postion){
+                            Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
                         }
-                    });
 
-                }
+
+                    }
+                });
 
 
             }

@@ -75,7 +75,7 @@ public class tab_from extends AppCompatActivity {
         sharedPref = new SharedPref(this);
 
         //clear data first before fetch save all datas
-//        data.clearAll(str_orgcode,str_farmcode);
+        data.clearAll(str_orgcode,str_farmcode);
 
         headerDetails[0].setText(str_types);
         headerDetails[1].setText(str_orgcode);
@@ -408,7 +408,7 @@ public class tab_from extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
                     String remark = jsonResponse.getString("message");
                     if(success){
-                        Toast.makeText(getApplicationContext(), remark, Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(), remark, Toast.LENGTH_LONG).show();
                     }
                     else{
                         Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_LONG).show();

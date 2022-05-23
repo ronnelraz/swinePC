@@ -2604,6 +2604,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_password
 drawable ic_username
 drawable icons8_cancel_1
+drawable icons8_pdf_1
 drawable logout
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -3067,6 +3068,7 @@ id password_layout
 id password_toggle
 id path
 id pathRelative
+id pdf
 id peekHeight
 id percent
 id permission

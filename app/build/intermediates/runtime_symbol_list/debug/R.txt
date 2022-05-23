@@ -2603,6 +2603,7 @@ int drawable ic_mtrl_chip_close_circle 0x7f070089
 int drawable ic_password 0x7f07008a
 int drawable ic_username 0x7f07008b
 int drawable icons8_cancel_1 0x7f07008c
+int drawable icons8_pdf_1 0x7f0700c7
 int drawable logout 0x7f07008d
 int drawable m3_appbar_background 0x7f07008e
 int drawable m3_popupmenu_background_overlay 0x7f07008f
@@ -3066,6 +3067,7 @@ int id password_layout 0x7f090182
 int id password_toggle 0x7f090183
 int id path 0x7f090184
 int id pathRelative 0x7f090185
+int id pdf 0x7f090249
 int id peekHeight 0x7f090186
 int id percent 0x7f090187
 int id permission 0x7f090188

@@ -97,6 +97,28 @@
                 android:textStyle="bold"
                 android:text="Edit" />
 
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pdf"
+                android:onClick="pdf"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="#BEF1EC"
+                app:iconTint="@color/black"
+                app:elevation="10dp"
+                app:icon="@drawable/icons8_pdf_1"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:textSize="20sp"
+                android:textColor="#365471"
+                android:textStyle="bold"
+                android:text="Report" />
+
 <!--            <TextView-->
 <!--                android:layout_width="0dp"-->
 <!--                android:layout_height="100dp"-->
