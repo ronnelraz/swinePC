@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
@@ -44,6 +45,6 @@ public class inv_form extends AppCompatActivity {
     }
 
     public void pdf(View view) {
-
+        data.intent(Pdf_record_list.class,  this);
     }
 }

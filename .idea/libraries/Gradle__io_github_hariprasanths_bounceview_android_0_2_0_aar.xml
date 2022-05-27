@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: io.github.hariprasanths:bounceview-android:0.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b2783c4f2abe529e49c464c5e95b5a3f/transformed/bounceview-android-0.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b2783c4f2abe529e49c464c5e95b5a3f/transformed/bounceview-android-0.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b2783c4f2abe529e49c464c5e95b5a3f/transformed/bounceview-android-0.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/67bda8da7f4ec4f996ced3f5f705390b/transformed/bounceview-android-0.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/67bda8da7f4ec4f996ced3f5f705390b/transformed/bounceview-android-0.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/67bda8da7f4ec4f996ced3f5f705390b/transformed/bounceview-android-0.2.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.hariprasanths/bounceview-android/0.2.0/d8529478b3330a6cb42114737183f789acdd72f3/bounceview-android-0.2.0-javadoc.jar!/" />

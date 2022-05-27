@@ -73,7 +73,9 @@ public interface APIInterface {
             @Field("bu_type_code") String bu_type_code,
             @Field("bu_type_name") String bu_type_name,
             @Field("farm_code") String farm_code,
-            @Field("user_create") String user_create
+            @Field("user_create") String user_create,
+            @Field("org_name") String org_name,
+             @Field("farm_name") String farm_name
     );
 
     //physical count breeder detials

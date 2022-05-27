@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Physical_counting">
         <activity
+            android:name=".Pdf_record_list"
+            android:exported="false" />
+        <activity
             android:name=".Integration_submenu"
             android:exported="false" />
         <activity
@@ -36,7 +39,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
 
         <service
             android:name="com.novoda.merlin.MerlinService"

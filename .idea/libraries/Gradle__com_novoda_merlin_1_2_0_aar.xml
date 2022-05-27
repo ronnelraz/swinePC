@@ -2,9 +2,10 @@
   <library name="Gradle: com.novoda:merlin:1.2.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/04c4ee9526b89df1a9920b27f4d9c4b0/transformed/merlin-1.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b2780d63f88d01e7c5ed2a0cc619ad7d/transformed/merlin-1.2.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b2780d63f88d01e7c5ed2a0cc619ad7d/transformed/merlin-1.2.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b2780d63f88d01e7c5ed2a0cc619ad7d/transformed/merlin-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/024ceda5a8f9b9eacf75900d57841661/transformed/merlin-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/024ceda5a8f9b9eacf75900d57841661/transformed/merlin-1.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/024ceda5a8f9b9eacf75900d57841661/transformed/merlin-1.2.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.novoda/merlin/1.2.0/390f8c7b38c724507a67659afee7595d50dc84f9/merlin-1.2.0-javadoc.jar!/" />

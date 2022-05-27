@@ -24,6 +24,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Physical_counting" >
         <activity
+            android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
+            android:exported="false" />
+        <activity
             android:name="com.ronnelrazo.physical_counting.Integration_submenu"
             android:exported="false" />
         <activity

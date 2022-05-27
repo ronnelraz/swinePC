@@ -47,6 +47,7 @@ public class tab_from extends AppCompatActivity {
     public static String str_types,str_orgcode,str_orgname,str_farmcode,str_farmname,doc_date,audit_date;
     public static String business_type,bu_code,bu_name,bu_type_name;
 
+
     private Globalfunction data;
     private SharedPref sharedPref;
 
@@ -76,6 +77,8 @@ public class tab_from extends AppCompatActivity {
 
         //clear data first before fetch save all datas
         data.clearAll(str_orgcode,str_farmcode);
+
+//        Toast.makeText(this, str_orgname + " " + str_farmname, Toast.LENGTH_SHORT).show();
 
         headerDetails[0].setText(str_types);
         headerDetails[1].setText(str_orgcode);
@@ -352,7 +355,7 @@ public class tab_from extends AppCompatActivity {
 
     protected void saveHeaderOnineDB(List<String> list){
         String ADuser = sharedPref.getUser();
-        API.getClient().Header(list.get(0),list.get(4),list.get(5),list.get(8),list.get(9),list.get(7),list.get(10),list.get(1),ADuser).enqueue(new Callback<Object>() {
+        API.getClient().Header(list.get(0),list.get(4),list.get(5),list.get(8),list.get(9),list.get(7),list.get(10),list.get(1),ADuser,str_orgname,str_farmname).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
 

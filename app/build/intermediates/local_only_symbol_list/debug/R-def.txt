@@ -142,6 +142,7 @@ layout activity_integration_submenu
 layout activity_inv_form
 layout activity_login
 layout activity_main
+layout activity_pdf_record_list
 layout activity_tab_from
 layout checklist_header
 layout custom_confirmation
