@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RadioButton
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:id="@+id/radio_btn"
+        android:buttonTint="@color/purple_500"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="orgname"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/org_name"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:singleLine="false"
+            android:layout_height="wrap_content"
+            android:text="farm_name"
+            android:textSize="15sp"
+            android:id="@+id/farm_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audit No."
+            android:textSize="15sp"
+            android:id="@+id/audi_No"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audit date"
+            android:textSize="15sp"
+            android:id="@+id/audi_date"/>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/pdfbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Get PDF"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:cornerRadius="30dp" />
+
+</RelativeLayout>

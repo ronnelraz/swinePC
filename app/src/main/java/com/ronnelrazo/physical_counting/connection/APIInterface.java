@@ -184,5 +184,20 @@ public interface APIInterface {
     );
 
 
+    @FormUrlEncoded
+    @POST("PDFReportList")
+    Call<Object> ReportPDF(
+            @Field("username") String username,
+            @Field("org_code") String org_code,
+            @Field("audit_date") String audit_date
+    );
+
+    @FormUrlEncoded
+    @POST("autoComplete_org_code")
+    Call<Object> autoCompleteOrg_code(
+            @Field("username") String username
+    );
+
+
 
 }

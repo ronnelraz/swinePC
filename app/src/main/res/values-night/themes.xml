@@ -22,4 +22,12 @@
     <style name="picker" parent="ThemeOverlay.MaterialComponents.TimePicker">
         <item name="colorAccent">@color/purple_500</item>
     </style>
+
+    <style name="full_screen_dialog" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>

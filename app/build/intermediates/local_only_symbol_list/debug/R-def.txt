@@ -25,6 +25,7 @@ drawable fattening
 drawable ic_eye_close
 drawable ic_eye_open
 drawable ic_icons8_back
+drawable ic_icons8_calendar
 drawable ic_icons8_cancel
 drawable ic_icons8_chevron_right
 drawable ic_icons8_done
@@ -33,6 +34,7 @@ drawable ic_icons8_info
 drawable ic_icons8_key
 drawable ic_icons8_multiply
 drawable ic_icons8_ok
+drawable ic_icons8_search
 drawable ic_icons8_warning
 drawable ic_jwt_role
 drawable ic_jwt_username
@@ -42,6 +44,7 @@ drawable icons8_cancel_1
 drawable icons8_pdf_1
 drawable logout
 drawable nodata
+drawable pfd_heade_filter
 drawable play_1024
 drawable play_store
 drawable radius_border
@@ -54,8 +57,12 @@ font cpf_imm_sook_semibold
 font cpf_mm_sook_bold
 id a1_form
 id animationView
+id appbar
+id audi_No
+id audi_date
 id auditDate
 id audit_dateA1
+id audit_date_filter
 id body
 id bodyScroller
 id bottompanel
@@ -77,10 +84,12 @@ id create
 id currentDate
 id custom_header
 id custom_toolbar
+id data
 id docDate
 id edit
 id farm
 id farmManager
+id farm_name
 id farmcode
 id farmlist
 id farmname
@@ -111,6 +120,7 @@ id menu
 id negative
 id nodataContainer
 id org_code
+id org_code_filter
 id org_name
 id orgcode
 id orgname
@@ -118,10 +128,12 @@ id pager
 id password
 id password_layout
 id pdf
+id pdfbtn
 id permission
 id positive
 id productCode
 id productName
+id radio_btn
 id remark
 id role
 id save
@@ -164,6 +176,8 @@ layout loading_shimmer
 layout loading_shimmer_checklist
 layout main_topic
 layout modal_audit_dialog
+layout pdf_listreport
+layout pdf_modal
 layout sub_details_main_header
 mipmap ic_launcher
 mipmap ic_launcher_adaptive_back
@@ -177,5 +191,6 @@ raw farm
 string app_name
 string title_login
 style Theme.Physical_counting
+style full_screen_dialog
 style picker
 style tab_text

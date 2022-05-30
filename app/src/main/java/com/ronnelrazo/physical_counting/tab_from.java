@@ -79,6 +79,7 @@ public class tab_from extends AppCompatActivity {
         data.clearAll(str_orgcode,str_farmcode);
 
 //        Toast.makeText(this, str_orgname + " " + str_farmname, Toast.LENGTH_SHORT).show();
+        Log.d("swine",str_orgname + " " + str_farmname);
 
         headerDetails[0].setText(str_types);
         headerDetails[1].setText(str_orgcode);
