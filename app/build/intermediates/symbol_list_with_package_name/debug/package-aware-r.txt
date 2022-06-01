@@ -125,6 +125,8 @@ attr applyMotionScene
 attr arcMode
 attr arrowHeadLength
 attr arrowShaftLength
+attr assetFileName
+attr assetName
 attr attributeName
 attr autoCompleteMode
 attr autoCompleteTextViewStyle
@@ -861,6 +863,7 @@ attr paddingRightSystemWindowInsets
 attr paddingStart
 attr paddingTopNoTitle
 attr paddingTopSystemWindowInsets
+attr panEnabled
 attr panelBackground
 attr panelMenuListTheme
 attr panelMenuListWidth
@@ -871,6 +874,7 @@ attr passwordToggleTint
 attr passwordToggleTintMode
 attr pathMotionArc
 attr path_percent
+attr pdfUrl
 attr percentHeight
 attr percentWidth
 attr percentX
@@ -899,6 +903,7 @@ attr quantizeMotionSteps
 attr queryBackground
 attr queryHint
 attr queryPatterns
+attr quickScaleEnabled
 attr radioButtonStyle
 attr rangeFillColor
 attr ratingBarStyle
@@ -920,6 +925,7 @@ attr rotationCenterId
 attr round
 attr roundPercent
 attr saturation
+attr scale
 attr scaleFromTextSize
 attr scrimAnimationDuration
 attr scrimBackground
@@ -986,6 +992,7 @@ attr springDamping
 attr springMass
 attr springStiffness
 attr springStopThreshold
+attr src
 attr srcCompat
 attr stackFromEnd
 attr staggered
@@ -1143,6 +1150,7 @@ attr tickMark
 attr tickMarkTint
 attr tickMarkTintMode
 attr tickVisible
+attr tileBackgroundColor
 attr tint
 attr tintMode
 attr title
@@ -1224,6 +1232,7 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
+attr zoomEnabled
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool m3_sys_typescale_body_large_text_all_caps
@@ -1837,6 +1846,10 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color odd
+color pdfViewPager_ab_color
+color pdfViewPager_ab_color_darker
+color pdfViewPager_ab_color_lighter
+color pdfViewPager_background_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2576,6 +2589,7 @@ drawable edit_text_dot
 drawable error_center_x
 drawable error_circle
 drawable fattening
+drawable flaticon_pdf_dummy
 drawable gray_button_background
 drawable green_button_background
 drawable ic_clock_black_24dp
@@ -2604,6 +2618,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_password
+drawable ic_pdfviewpager
 drawable ic_username
 drawable icons8_cancel_1
 drawable icons8_pdf_1
@@ -2816,6 +2831,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id clockwise
+id close
 id closest
 id collapseActionView
 id compress
@@ -2843,6 +2859,7 @@ id custom_toolbar
 id custom_view_container
 id cut
 id data
+id datapdf
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2935,6 +2952,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id info
@@ -3079,6 +3097,7 @@ id password_toggle
 id path
 id pathRelative
 id pdf
+id pdf_page_container
 id pdfbtn
 id peekHeight
 id percent
@@ -3099,6 +3118,7 @@ id radio_btn
 id ratio
 id rectangles
 id remark
+id remote_pdf_root
 id restart
 id reverse
 id reverseSawtooth
@@ -3177,9 +3197,11 @@ id stretch
 id sub_details_header
 id submenuarrow
 id submit_area
+id subsamplingImageView
 id success_frame
 id success_tick
 id supportScrollUp
+id tab
 id tabMode
 id tabs
 id tag_accessibility_actions
@@ -3467,6 +3489,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout view_pdf_page
 menu example_menu
 menu example_menu2
 mipmap ic_launcher
@@ -3614,6 +3637,8 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pdfvp_ready_to_download
+string sampleURL
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_login
@@ -4754,6 +4779,7 @@ styleable NavigationRailView headerLayout itemMinHeight menuGravity
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
+styleable PDFViewPager assetFileName pdfUrl scale
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable ProgressWheel matProg_barColor matProg_barSpinCycleTime matProg_barWidth matProg_circleRadius matProg_fillRadius matProg_linearProgress matProg_progressIndeterminate matProg_rimColor matProg_rimWidth matProg_spinSpeed
@@ -4777,6 +4803,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable SubsamplingScaleImageView assetName panEnabled quickScaleEnabled src tileBackgroundColor zoomEnabled
 styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors

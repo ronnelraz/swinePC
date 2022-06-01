@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Swine Physical Counting</string>
     <string name="title_login">Please, login into your account</string>
+    <string name="sampleURL"><![CDATA[https://agro.cpf-phil.com/swinePC/api/BreederPDF?ORG_CODE=071512SW&AUDIT_NO=PC2200002&FARM_ORG=]]></string>
 </resources>

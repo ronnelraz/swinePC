@@ -124,6 +124,8 @@ int attr applyMotionScene 0x7f030033
 int attr arcMode 0x7f030034
 int attr arrowHeadLength 0x7f030035
 int attr arrowShaftLength 0x7f030036
+int attr assetFileName 0x7f030486
+int attr assetName 0x7f030487
 int attr attributeName 0x7f030037
 int attr autoCompleteMode 0x7f030038
 int attr autoCompleteTextViewStyle 0x7f030039
@@ -860,6 +862,7 @@ int attr paddingRightSystemWindowInsets 0x7f030313
 int attr paddingStart 0x7f030314
 int attr paddingTopNoTitle 0x7f030315
 int attr paddingTopSystemWindowInsets 0x7f030316
+int attr panEnabled 0x7f030488
 int attr panelBackground 0x7f030317
 int attr panelMenuListTheme 0x7f030318
 int attr panelMenuListWidth 0x7f030319
@@ -870,6 +873,7 @@ int attr passwordToggleTint 0x7f03031d
 int attr passwordToggleTintMode 0x7f03031e
 int attr pathMotionArc 0x7f03031f
 int attr path_percent 0x7f030320
+int attr pdfUrl 0x7f030489
 int attr percentHeight 0x7f030321
 int attr percentWidth 0x7f030322
 int attr percentX 0x7f030323
@@ -898,6 +902,7 @@ int attr quantizeMotionSteps 0x7f030339
 int attr queryBackground 0x7f03033a
 int attr queryHint 0x7f03033b
 int attr queryPatterns 0x7f03033c
+int attr quickScaleEnabled 0x7f03048a
 int attr radioButtonStyle 0x7f03033d
 int attr rangeFillColor 0x7f03033e
 int attr ratingBarStyle 0x7f03033f
@@ -919,6 +924,7 @@ int attr rotationCenterId 0x7f03034e
 int attr round 0x7f03034f
 int attr roundPercent 0x7f030350
 int attr saturation 0x7f030351
+int attr scale 0x7f03048b
 int attr scaleFromTextSize 0x7f030352
 int attr scrimAnimationDuration 0x7f030353
 int attr scrimBackground 0x7f030354
@@ -985,6 +991,7 @@ int attr springDamping 0x7f030390
 int attr springMass 0x7f030391
 int attr springStiffness 0x7f030392
 int attr springStopThreshold 0x7f030393
+int attr src 0x7f03048c
 int attr srcCompat 0x7f030394
 int attr stackFromEnd 0x7f030395
 int attr staggered 0x7f030396
@@ -1142,6 +1149,7 @@ int attr tickMark 0x7f03042d
 int attr tickMarkTint 0x7f03042e
 int attr tickMarkTintMode 0x7f03042f
 int attr tickVisible 0x7f030430
+int attr tileBackgroundColor 0x7f03048d
 int attr tint 0x7f030431
 int attr tintMode 0x7f030432
 int attr title 0x7f030433
@@ -1223,6 +1231,7 @@ int attr windowNoTitle 0x7f03047e
 int attr yearSelectedStyle 0x7f03047f
 int attr yearStyle 0x7f030480
 int attr yearTodayStyle 0x7f030481
+int attr zoomEnabled 0x7f03048e
 int bool abc_action_bar_embed_tabs 0x7f040000
 int bool abc_config_actionMenuItemAllCaps 0x7f040001
 int bool m3_sys_typescale_body_large_text_all_caps 0x7f040002
@@ -1836,6 +1845,10 @@ int color mtrl_textinput_hovered_box_stroke_color 0x7f05024f
 int color notification_action_color_filter 0x7f050250
 int color notification_icon_bg_color 0x7f050251
 int color odd 0x7f050252
+int color pdfViewPager_ab_color 0x7f050280
+int color pdfViewPager_ab_color_darker 0x7f050281
+int color pdfViewPager_ab_color_lighter 0x7f050282
+int color pdfViewPager_background_color 0x7f050283
 int color primary_dark_material_dark 0x7f050253
 int color primary_dark_material_light 0x7f050254
 int color primary_material_dark 0x7f050255
@@ -2575,6 +2588,7 @@ int drawable edit_text_dot 0x7f07006d
 int drawable error_center_x 0x7f07006e
 int drawable error_circle 0x7f07006f
 int drawable fattening 0x7f070070
+int drawable flaticon_pdf_dummy 0x7f0700cf
 int drawable gray_button_background 0x7f070071
 int drawable green_button_background 0x7f070072
 int drawable ic_clock_black_24dp 0x7f070073
@@ -2603,6 +2617,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f070087
 int drawable ic_mtrl_chip_checked_circle 0x7f070088
 int drawable ic_mtrl_chip_close_circle 0x7f070089
 int drawable ic_password 0x7f07008a
+int drawable ic_pdfviewpager 0x7f0700d0
 int drawable ic_username 0x7f07008b
 int drawable icons8_cancel_1 0x7f07008c
 int drawable icons8_pdf_1 0x7f07008d
@@ -2815,6 +2830,7 @@ int id clear_text 0x7f09008a
 int id clip_horizontal 0x7f09008b
 int id clip_vertical 0x7f09008c
 int id clockwise 0x7f09008d
+int id close 0x7f09026d
 int id closest 0x7f09008e
 int id collapseActionView 0x7f09008f
 int id compress 0x7f090090
@@ -2842,6 +2858,7 @@ int id custom_toolbar 0x7f0900a5
 int id custom_view_container 0x7f0900a6
 int id cut 0x7f0900a7
 int id data 0x7f09024a
+int id datapdf 0x7f09026c
 int id date_picker_actions 0x7f0900a8
 int id decelerate 0x7f0900a9
 int id decelerateAndComplete 0x7f0900aa
@@ -2934,6 +2951,7 @@ int id ifRoom 0x7f0900ff
 int id ignore 0x7f090100
 int id ignoreRequest 0x7f090101
 int id image 0x7f090102
+int id imageView 0x7f09025d
 int id immediateStop 0x7f090103
 int id included 0x7f090104
 int id info 0x7f090105
@@ -3078,6 +3096,7 @@ int id password_toggle 0x7f09018e
 int id path 0x7f09018f
 int id pathRelative 0x7f090190
 int id pdf 0x7f090191
+int id pdf_page_container 0x7f09025e
 int id pdfbtn 0x7f09024d
 int id peekHeight 0x7f090192
 int id percent 0x7f090193
@@ -3098,6 +3117,7 @@ int id radio_btn 0x7f09024e
 int id ratio 0x7f0901a1
 int id rectangles 0x7f0901a2
 int id remark 0x7f0901a3
+int id remote_pdf_root 0x7f090266
 int id restart 0x7f0901a4
 int id reverse 0x7f0901a5
 int id reverseSawtooth 0x7f0901a6
@@ -3176,9 +3196,11 @@ int id stretch 0x7f0901ee
 int id sub_details_header 0x7f0901ef
 int id submenuarrow 0x7f0901f0
 int id submit_area 0x7f0901f1
+int id subsamplingImageView 0x7f090260
 int id success_frame 0x7f0901f2
 int id success_tick 0x7f0901f3
 int id supportScrollUp 0x7f0901f4
+int id tab 0x7f090253
 int id tabMode 0x7f0901f5
 int id tabs 0x7f0901f6
 int id tag_accessibility_actions 0x7f0901f7
@@ -3466,6 +3488,7 @@ int layout text_view_with_line_height_from_layout 0x7f0c008c
 int layout text_view_with_line_height_from_style 0x7f0c008d
 int layout text_view_with_theme_line_height 0x7f0c008e
 int layout text_view_without_line_height 0x7f0c008f
+int layout view_pdf_page 0x7f0c009b
 int menu example_menu 0x7f0d0000
 int menu example_menu2 0x7f0d0001
 int mipmap ic_launcher 0x7f0e0000
@@ -3613,6 +3636,8 @@ int string path_password_eye 0x7f110083
 int string path_password_eye_mask_strike_through 0x7f110084
 int string path_password_eye_mask_visible 0x7f110085
 int string path_password_strike_through 0x7f110086
+int string pdfvp_ready_to_download 0x7f11008a
+int string sampleURL 0x7f11008b
 int string search_menu_title 0x7f110087
 int string status_bar_notification_info_overflow 0x7f110088
 int string title_login 0x7f110089
@@ -6216,6 +6241,10 @@ int styleable OnSwipe_springStopThreshold 15
 int styleable OnSwipe_touchAnchorId 16
 int styleable OnSwipe_touchAnchorSide 17
 int styleable OnSwipe_touchRegionId 18
+int[] styleable PDFViewPager { 0x7f030486, 0x7f030489, 0x7f03048b }
+int styleable PDFViewPager_assetFileName 0
+int styleable PDFViewPager_pdfUrl 1
+int styleable PDFViewPager_scale 2
 int[] styleable PopupWindow { 0x01010176, 0x010102c9, 0x7f03030d }
 int styleable PopupWindow_android_popupBackground 0
 int styleable PopupWindow_android_popupAnimationStyle 1
@@ -6388,6 +6417,13 @@ int[] styleable StateListDrawableItem { 0x01010199 }
 int styleable StateListDrawableItem_android_drawable 0
 int[] styleable StateSet { 0x7f030140 }
 int styleable StateSet_defaultState 0
+int[] styleable SubsamplingScaleImageView { 0x7f030487, 0x7f030488, 0x7f03048a, 0x7f03048c, 0x7f03048d, 0x7f03048e }
+int styleable SubsamplingScaleImageView_assetName 0
+int styleable SubsamplingScaleImageView_panEnabled 1
+int styleable SubsamplingScaleImageView_quickScaleEnabled 2
+int styleable SubsamplingScaleImageView_src 3
+int styleable SubsamplingScaleImageView_tileBackgroundColor 4
+int styleable SubsamplingScaleImageView_zoomEnabled 5
 int[] styleable SwipeRefreshLayout { 0x7f0303b9 }
 int styleable SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor 0
 int[] styleable SwitchCompat { 0x01010124, 0x01010125, 0x01010142, 0x7f03037f, 0x7f03038e, 0x7f0303ba, 0x7f0303bb, 0x7f0303bd, 0x7f030427, 0x7f030428, 0x7f030429, 0x7f03044e, 0x7f030455, 0x7f030456 }

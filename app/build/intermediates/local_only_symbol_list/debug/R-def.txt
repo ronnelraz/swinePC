@@ -76,6 +76,7 @@ id cancel
 id card
 id checklistA
 id checlist_data
+id close
 id contact
 id container
 id content
@@ -85,6 +86,7 @@ id currentDate
 id custom_header
 id custom_toolbar
 id data
+id datapdf
 id docDate
 id edit
 id farm
@@ -135,6 +137,7 @@ id productCode
 id productName
 id radio_btn
 id remark
+id remote_pdf_root
 id role
 id save
 id shimmerLayout
@@ -142,6 +145,7 @@ id status
 id stock
 id stockUnit
 id sub_details_header
+id tab
 id tabs
 id title
 id toastip
@@ -189,6 +193,7 @@ raw checked
 raw error
 raw farm
 string app_name
+string sampleURL
 string title_login
 style Theme.Physical_counting
 style full_screen_dialog

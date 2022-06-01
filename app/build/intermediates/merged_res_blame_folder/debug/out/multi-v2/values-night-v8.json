@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-30:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\69592bd19cec1de513dd3643bec51fc2\\transformed\\appcompat-1.4.1\\res\\values-night-v8\\values-night-v8.xml",
@@ -40,20 +40,20 @@
                 {
                     "source": "C:\\Users\\CPF Nigs\\Desktop\\physical_counting\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
-                        "startLines": "2,21,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "100,1053,830",
-                        "endLines": "14,23,19",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "824,1197,1047"
+                        "startLines": "2,25,21,16",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "100,1203,1053,830",
+                        "endLines": "14,31,23,19",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "824,1603,1197,1047"
                     },
                     "to": {
-                        "startLines": "33,55,58",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "3386,5082,5231",
-                        "endLines": "45,57,61",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "3987,5226,5448"
+                        "startLines": "33,55,62,65",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3386,5082,5487,5636",
+                        "endLines": "45,61,64,68",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "3987,5482,5631,5853"
                     }
                 }
             ]

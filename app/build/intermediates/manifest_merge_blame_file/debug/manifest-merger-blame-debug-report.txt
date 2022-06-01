@@ -21,84 +21,84 @@
 13-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:22-76
 14
 15    <application
-15-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:5-47:19
-16        android:allowBackup="false"
-16-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:9-36
+15-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:5-48:19
+16        android:allowBackup="true"
+16-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.7.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0c734a8f9451ded3159b05d46fc9a23a\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
 19        android:extractNativeLibs="false"
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:9-43
+20-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:12:9-43
 21        android:label="@string/app_name"
-21-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:12:9-41
+21-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:9-54
+22-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:14:9-54
 23        android:supportsRtl="true"
-23-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:14:9-35
+23-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-35
 24        android:testOnly="true"
 25        android:theme="@style/Theme.Physical_counting" >
-25-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-55
+25-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:16:9-55
 26        <activity
-26-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:16:9-18:40
+26-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:17:9-19:40
 27            android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
-27-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:17:13-44
+27-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:18:13-44
 28            android:exported="false" />
-28-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:18:13-37
+28-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:19:13-37
 29        <activity
-29-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:19:9-21:40
+29-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:9-22:40
 30            android:name="com.ronnelrazo.physical_counting.Integration_submenu"
-30-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:13-48
+30-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:13-48
 31            android:exported="false" />
-31-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:13-37
+31-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:22:13-37
 32        <activity
-32-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:22:9-24:40
+32-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:9-25:40
 33            android:name="com.ronnelrazo.physical_counting.tab_from"
-33-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:13-37
+33-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:13-37
 34            android:exported="false" />
-34-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:13-37
+34-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:13-37
 35        <activity
-35-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:9-27:40
+35-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:9-28:40
 36            android:name="com.ronnelrazo.physical_counting.inv_form"
-36-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:13-37
+36-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:13-37
 37            android:exported="false" />
-37-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:13-37
+37-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-37
 38        <activity
-38-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:9-30:40
+38-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:9-31:40
 39            android:name="com.ronnelrazo.physical_counting.Farm_categories"
-39-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:13-44
+39-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-44
 40            android:exported="false" />
-40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-37
+40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-37
 41        <activity
-41-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:9-39:20
+41-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:9-40:20
 42            android:name="com.ronnelrazo.physical_counting.Login"
-42-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:13-34
+42-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-34
 43            android:exported="true" >
-43-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-36
+43-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-36
 44            <intent-filter>
-44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-38:29
+44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:13-39:29
 45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:17-69
-45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:25-66
+45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:17-69
+45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:25-66
 46
 47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:17-77
-47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:27-74
+47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:17-77
+47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:27-74
 48            </intent-filter>
 49        </activity>
 50        <activity
-50-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:40:9-42:40
+50-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:9-43:40
 51            android:name="com.ronnelrazo.physical_counting.MainActivity"
-51-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:13-41
+51-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:13-41
 52            android:exported="false" />
-52-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:13-37
+52-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:13-37
 53
 54        <service
-54-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:44:9-46:40
+54-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:9-47:40
 55            android:name="com.novoda.merlin.MerlinService"
-55-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:13-59
+55-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-59
 56            android:exported="false" />
-56-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-37
+56-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:47:13-37
 57
 58        <activity
 58-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2ce0e9ffd8ad130cc0a8f35dac9619fa\transformed\dexter-6.2.3\AndroidManifest.xml:27:9-29:72
@@ -107,27 +107,35 @@
 60            android:theme="@style/Dexter.Internal.Theme.Transparent" />
 60-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2ce0e9ffd8ad130cc0a8f35dac9619fa\transformed\dexter-6.2.3\AndroidManifest.xml:29:13-69
 61
-62        <provider
-62-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-63            android:name="androidx.startup.InitializationProvider"
-63-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
-64            android:authorities="com.ronnelrazo.physical_counting.androidx-startup"
-64-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
-65            android:exported="false" >
-65-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
-66            <meta-data
-66-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-67                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-67-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
-68                android:value="androidx.startup" />
-68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
-69            <meta-data
-69-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-70                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-70-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-71                android:value="androidx.startup" />
-71-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-72        </provider>
-73    </application>
-74
-75</manifest>
+62        <service
+62-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\88e5665950e8b5d737a0162641664f44\transformed\library-1.1.2\AndroidManifest.xml:12:9-15:19
+63            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
+63-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\88e5665950e8b5d737a0162641664f44\transformed\library-1.1.2\AndroidManifest.xml:13:13-84
+64            android:exported="false" >
+64-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\88e5665950e8b5d737a0162641664f44\transformed\library-1.1.2\AndroidManifest.xml:14:13-37
+65        </service>
+66
+67        <provider
+67-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+68            android:name="androidx.startup.InitializationProvider"
+68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+69            android:authorities="com.ronnelrazo.physical_counting.androidx-startup"
+69-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+70            android:exported="false" >
+70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+71            <meta-data
+71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+72                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+73                android:value="androidx.startup" />
+73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9cb5d0b2fd275b8005e0d8fda37c4df6\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+74            <meta-data
+74-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+75                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+76                android:value="androidx.startup" />
+76-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eef53d9995d138e5396bc0361630197\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+77        </provider>
+78    </application>
+79
+80</manifest>

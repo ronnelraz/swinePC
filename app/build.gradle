@@ -37,6 +37,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.3'
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.loopj.android:android-async-http:1.4.11'
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
@@ -60,6 +61,8 @@ dependencies {
 
     //jwt
     implementation 'com.auth0:java-jwt:3.19.1'
+    //pdf viewer
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
 
 
 

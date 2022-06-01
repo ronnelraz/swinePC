@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.ronnelrazo.physical_counting.adapter.Adapter_Feed;
 import com.ronnelrazo.physical_counting.adapter.Adapter_PDFReport;
 import com.ronnelrazo.physical_counting.connection.API;
@@ -40,6 +42,7 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cz.msebera.android.httpclient.Header;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -151,6 +154,10 @@ public class Pdf_record_list extends AppCompatActivity {
 
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","checklistPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","BreederPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","FeedPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","MedPDF");
                             modal_pdf_report item = new modal_pdf_report(
                                     object.getString("org_name"),
                                     object.getString("farm_name"),
@@ -158,7 +165,9 @@ public class Pdf_record_list extends AppCompatActivity {
                                     object.getString("farm_code"),
                                     object.getString("audit_no"),
                                     object.getString("audit_date"),
-                                    false
+                                    false,
+                                    object.getString("path"),
+                                    object.getString("url")
 
                             );
 
@@ -191,6 +200,36 @@ public class Pdf_record_list extends AppCompatActivity {
         });
     }
 
+
+    protected void Webhook(String urlString,String type) {
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(urlString, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onStart() {
+                // called before request is started
+                Log.d("swine",type +" Webhook : -> Started");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                // called when response HTTP status is "200 OK"
+                Log.d("swine",type +" Success" + " " + response);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                Log.d("swine",type +" Failed" + " " + errorResponse);
+            }
+
+            @Override
+            public void onRetry(int retryNo) {
+                Log.d("swine",type +" retry ->" + retryNo);
+            }
+        });
+    }
 
 
     private void AutoCompleteCode(String user) {

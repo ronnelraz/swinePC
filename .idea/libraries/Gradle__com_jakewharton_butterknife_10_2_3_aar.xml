@@ -4,6 +4,7 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01d7b3c5c36b5c6afaece5900093445d/transformed/butterknife-10.2.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/41463ae47b8806a964943ea980662206/transformed/butterknife-10.2.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ce6853637c95289664e58bced9cb3205/transformed/butterknife-10.2.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5bf13ef3669f4b5f4470c1e98e07dc06/transformed/jetified-butterknife-10.2.3/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ce6853637c95289664e58bced9cb3205/transformed/butterknife-10.2.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ce6853637c95289664e58bced9cb3205/transformed/butterknife-10.2.3/AndroidManifest.xml" />
     </CLASSES>
