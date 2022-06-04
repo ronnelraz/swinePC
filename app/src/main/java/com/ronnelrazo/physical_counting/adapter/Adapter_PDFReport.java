@@ -1,75 +1,59 @@
 package com.ronnelrazo.physical_counting.adapter;
 
-import static android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL;
-import static android.view.View.VISIBLE;
-
 import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
+import android.app.DownloadManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.text.Editable;
-import android.text.InputType;
-import android.text.TextWatcher;
+import android.os.Build;
+import android.os.Environment;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.URLUtil;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.content.ContextCompat;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.appcompat.view.menu.MenuPopupHelper;
+import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.tabs.TabLayout;
 
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.pspdfkit.configuration.activity.PdfActivityConfiguration;
+import com.pspdfkit.ui.PdfActivity;
 import com.ronnelrazo.physical_counting.ItemClickListener;
 
 import com.ronnelrazo.physical_counting.R;
 
+import com.ronnelrazo.physical_counting.connection.config;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.modal_pdf_report;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.File;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
-import cz.msebera.android.httpclient.HttpEntity;
-import cz.msebera.android.httpclient.HttpResponse;
-import cz.msebera.android.httpclient.client.methods.HttpPost;
-import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 import es.voghdev.pdfviewpager.library.PDFViewPager;
 import es.voghdev.pdfviewpager.library.RemotePDFViewPager;
 import es.voghdev.pdfviewpager.library.adapter.PDFPagerAdapter;
@@ -88,6 +72,7 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
     LinearLayout root;
     RemotePDFViewPager remotePDF;
     PDFPagerAdapter adapter;
+
 
 
     public Adapter_PDFReport(List<modal_pdf_report> list, Context context, ItemClickListener itemClickListener) {
@@ -132,10 +117,41 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
 
             MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(v.getContext(),R.style.full_screen_dialog);
             View view = LayoutInflater.from(v.getContext()).inflate(R.layout.pdf_modal,null);
-
             TabLayout tabs = view.findViewById(R.id.tab);
 
+            try {
+                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"checklist.pdf");
+                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"breeder.pdf");
+                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"feed.pdf");
+                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"med.pdf");
+            }catch (Exception e){
+                Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
             root = view.findViewById(R.id.remote_pdf_root);
+            MaterialButton downloadPDF = view.findViewById(R.id.downloadPDF);
+            MaterialButton moreOption = view.findViewById(R.id.moreOption);
+            downloadPDF.setOnClickListener(v2-> {
+                try {
+//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"checklist.pdf",v2);
+//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"breeder.pdf",v2);
+//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"feed.pdf",v2);
+//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"med.pdf",v2);
+//
+
+                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"checklist.pdf");
+                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"breeder.pdf");
+                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"feed.pdf");
+                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"med.pdf");
+                }catch (Exception e){
+                    Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+            //default open more option
+            MenuOption(moreOption,getData.getPath()+"checklist.pdf");
+
+
+
 
 
 
@@ -147,16 +163,16 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
 
 
 
-
-            PDFViewPager pdfViewPager = view.findViewById(R.id.datapdf);
             ImageView closeModal = view.findViewById(R.id.close);
 
             //CHECKLIST
             String PDF_Path = getData.getUrl()+getData.getPath()+"checklist.pdf";
             Log.d("Swine","URL : ->" + PDF_Path.trim());
             setDownload(PDF_Path,R.id.datapdf);
-
-
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"checklist.pdf",v1);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"breeder.pdf",v1);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"feed.pdf",v1);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"med.pdf",v1);
 
 
             tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
@@ -165,37 +181,33 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
                 public void onTabSelected(TabLayout.Tab tab) {
 
                     if(tab.getPosition() == 0){
-
-                        Toast.makeText(mContext, tab.getText(), Toast.LENGTH_SHORT).show();
                         String PDF_Path = getData.getUrl()+getData.getPath()+"checklist.pdf";
-//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Checklist");
                         Log.d("Swine","URL : ->" + PDF_Path.trim());
                         setDownload(PDF_Path,R.id.datapdf);
+                        MenuOption(moreOption,getData.getPath()+"checklist.pdf");
 
                     }
                     else if(tab.getPosition() == 1){
-                        Toast.makeText(mContext, tab.getText(), Toast.LENGTH_SHORT).show();
                         String PDF_Path = getData.getUrl()+getData.getPath()+"breeder.pdf";
 //                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Breeder");
                         Log.d("Swine","URL : ->" + PDF_Path.trim());
                         setDownload(PDF_Path,R.id.datapdf);
-
-
+                        MenuOption(moreOption,getData.getPath()+"breeder.pdf");
 
                     }
                     else if(tab.getPosition() == 2){
-                        Toast.makeText(mContext, tab.getText(), Toast.LENGTH_SHORT).show();
                         String PDF_Path = getData.getUrl()+getData.getPath()+"feed.pdf";
 //                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Feed");
                         Log.d("Swine","URL : ->" + PDF_Path.trim());
                         setDownload(PDF_Path,R.id.datapdf);
+                        MenuOption(moreOption,getData.getPath()+"feed.pdf");
                     }
                     else if(tab.getPosition() == 3){
-                        Toast.makeText(mContext, tab.getText(), Toast.LENGTH_SHORT).show();
                         String PDF_Path = getData.getUrl()+getData.getPath()+"med.pdf";
 //                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Med");
                         Log.d("Swine","URL : ->" + PDF_Path.trim());
                         setDownload(PDF_Path,R.id.datapdf);
+                        MenuOption(moreOption,getData.getPath()+"med.pdf");
 
                     }
 
@@ -217,11 +229,12 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
             dialogBuilder.setView(view);
 
             AlertDialog alertDialog = dialogBuilder.create();
-            alertDialog.setCanceledOnTouchOutside(true);
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.setCancelable(false);
             closeModal.setOnClickListener(v2 -> {
                 alertDialog.dismiss();
             });
-//            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             BounceView.addAnimTo(alertDialog);
             alertDialog.show();
 
@@ -244,6 +257,43 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
 
     }
 
+
+    protected void SysPDFEditor(View v,String path){
+        File file=new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/"+path);
+        Uri uri= FileProvider.getUriForFile(v.getContext(),"com.ronnelrazo.physical_counting"+".provider",file);
+        final PdfActivityConfiguration config = new PdfActivityConfiguration.Builder(v.getContext()).build();
+        config.getConfiguration().allowMultipleBookmarksPerPage();
+        config.getConfiguration().animateScrollOnEdgeTaps();
+        config.getConfiguration().getDefaultSigner();
+        config.getConfiguration().getEnabledShareFeatures();
+        config.getConfiguration().getFitMode();
+        PdfActivity.showDocument(v.getContext(), uri, config);
+    }
+
+    protected void MenuOption(MaterialButton moreOption,String path){
+        moreOption.setOnClickListener(v1 -> {
+            PopupMenu popupMenu = new PopupMenu(v1.getContext(),moreOption);
+            popupMenu.inflate(R.menu.more_option);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                popupMenu.setForceShowIcon(true);
+            }
+            popupMenu.setOnMenuItemClickListener(item -> {
+                switch (item.getItemId()){
+                    case R.id.edit:
+                        SysPDFEditor(v1,path);
+                        return true;
+                    case  R.id.openWith:
+                        Globalfunction.getInstance(v1.getContext()).ViewPDFView(path,v1);
+                        return true;
+                    default:
+                        return false;
+                }
+
+            });
+            popupMenu.show();
+        });
+    }
+
     public boolean exists(String url){
         try {
             URL u = new URL(url);
@@ -255,7 +305,12 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
             e.printStackTrace();
             return false;
         }
+
+
     }
+
+
+
 
     protected void Webhook(String urlString,String type) {
 
@@ -296,6 +351,7 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
         root.removeAllViewsInLayout();
         root.addView(remotePDF,LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
     }
+
 
 
     protected void ErrorhandlingPDF(String url,PDFViewPager pdfViewPager,View v,String tabname){
@@ -344,6 +400,8 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
     public void onProgressUpdate(int progress, int total) {
 
     }
+
+
 
 
 

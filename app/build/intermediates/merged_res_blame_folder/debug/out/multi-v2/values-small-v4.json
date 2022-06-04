@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-31:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-42:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\d719c211d28576cf41164fe387cd83b0\\transformed\\material-1.5.0\\res\\values-small-v4\\values-small-v4.xml",

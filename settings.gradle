@@ -5,6 +5,10 @@ pluginManagement {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         jcenter()
+        maven {
+            url 'https://customers.pspdfkit.com/maven/'
+        }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     }
 }
 dependencyResolutionManagement {
@@ -14,6 +18,10 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         jcenter()
+        maven {
+            url 'https://customers.pspdfkit.com/maven/'
+        }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     }
 }
 rootProject.name = "physical_counting"

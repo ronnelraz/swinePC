@@ -14,6 +14,7 @@
            android:orientation="vertical">
 
            <ImageView
+               android:layout_marginTop="10dp"
                android:id="@+id/close"
                android:layout_marginRight="10dp"
                android:layout_gravity="right"
@@ -35,19 +36,55 @@
                    app:tabTextAppearance="@style/tab_text"
                    app:tabTextColor="@color/gray_btn_bg_pressed_color" />
 
+           <LinearLayout
+               android:padding="8dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+
+               <com.google.android.material.button.MaterialButton
+                   style="@style/Widget.MaterialComponents.Button.TextButton"
+                   app:cornerRadius="20dp"
+                   android:backgroundTint="@color/odd"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="Download PDF"
+                   android:id="@+id/downloadPDF"
+                   android:layout_marginRight="10dp"
+                   app:icon="@drawable/ic_icons8_export_pdf"
+                   app:iconGravity="textStart"/>
+
+               <com.google.android.material.button.MaterialButton
+                   android:id="@+id/moreOption"
+                   style="@style/Widget.MaterialComponents.Button.TextButton"
+                   app:cornerRadius="20dp"
+                   android:backgroundTint="@color/odd"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.4"
+                   android:text="more"
+                   android:layout_marginLeft="10dp"
+                   app:icon="@drawable/ic_icons8_menu_vertical"
+                   app:iconGravity="textStart"/>
+
+           </LinearLayout>
+
 
            <LinearLayout
-
                android:id="@+id/remote_pdf_root"
                android:orientation="vertical"
-               android:layout_width="fill_parent"
-               android:layout_height="fill_parent">
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+
+
 
                <es.voghdev.pdfviewpager.library.PDFViewPager
                    android:id="@+id/datapdf"
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent"/>
-
+                   android:layout_height="wrap_content"/>
 
            </LinearLayout>
 
@@ -55,7 +92,8 @@
 
 
 
-
        </LinearLayout>
+
+
 
 </com.google.android.material.card.MaterialCardView>

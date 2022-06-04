@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array stepLabels
 color bgEdit
 color black
 color cardColor
@@ -24,25 +25,32 @@ drawable edit_text_dot
 drawable fattening
 drawable ic_eye_close
 drawable ic_eye_open
+drawable ic_icons8_add_user_male
 drawable ic_icons8_back
 drawable ic_icons8_calendar
 drawable ic_icons8_cancel
 drawable ic_icons8_chevron_right
 drawable ic_icons8_done
 drawable ic_icons8_error
+drawable ic_icons8_export_pdf
+drawable ic_icons8_import_pdf
 drawable ic_icons8_info
 drawable ic_icons8_key
+drawable ic_icons8_menu_vertical
 drawable ic_icons8_multiply
 drawable ic_icons8_ok
 drawable ic_icons8_search
+drawable ic_icons8_sync
 drawable ic_icons8_warning
 drawable ic_jwt_role
 drawable ic_jwt_username
 drawable ic_password
 drawable ic_username
+drawable icons8_back
 drawable icons8_cancel_1
 drawable icons8_pdf_1
 drawable logout
+drawable next
 drawable nodata
 drawable pfd_heade_filter
 drawable play_1024
@@ -55,6 +63,7 @@ font cpf_imm_sook_bold
 font cpf_imm_sook_regular
 font cpf_imm_sook_semibold
 font cpf_mm_sook_bold
+id FarmSetup
 id a1_form
 id animationView
 id appbar
@@ -63,6 +72,7 @@ id audi_date
 id auditDate
 id audit_dateA1
 id audit_date_filter
+id back
 id body
 id bodyScroller
 id bottompanel
@@ -72,6 +82,7 @@ id breadcrumb_orgname
 id breeder_data
 id businessAddress
 id business_farmname
+id business_type
 id cancel
 id card
 id checklistA
@@ -88,6 +99,7 @@ id custom_toolbar
 id data
 id datapdf
 id docDate
+id downloadPDF
 id edit
 id farm
 id farmManager
@@ -110,6 +122,11 @@ id item_no
 id item_remarks
 id item_yes
 id keepme
+id layout1
+id layout2
+id layout3
+id layout4
+id layout5
 id loading
 id location
 id login
@@ -119,8 +136,12 @@ id maintopic
 id male
 id med_data
 id menu
+id moreOption
+id municipality
 id negative
+id next
 id nodataContainer
+id openWith
 id org_code
 id org_code_filter
 id org_name
@@ -133,8 +154,10 @@ id pdf
 id pdfbtn
 id permission
 id positive
+id previous
 id productCode
 id productName
+id province
 id radio_btn
 id remark
 id remote_pdf_root
@@ -142,6 +165,7 @@ id role
 id save
 id shimmerLayout
 id status
+id step_view
 id stock
 id stockUnit
 id sub_details_header
@@ -154,16 +178,22 @@ id types
 id username
 id username_layout
 layout activity_farm_categories
+layout activity_farm_setup
 layout activity_integration_submenu
 layout activity_inv_form
 layout activity_login
 layout activity_main
 layout activity_pdf_record_list
 layout activity_tab_from
+layout address_area_layout
+layout business_area_layout
 layout checklist_header
+layout clerk_area_layout
 layout custom_confirmation
 layout custom_loading
 layout custom_toast
+layout farm_manager_area_layout
+layout form_area_layout
 layout fragment_breeder
 layout fragment_checklist
 layout fragment_contract
@@ -183,6 +213,7 @@ layout modal_audit_dialog
 layout pdf_listreport
 layout pdf_modal
 layout sub_details_main_header
+menu more_option
 mipmap ic_launcher
 mipmap ic_launcher_adaptive_back
 mipmap ic_launcher_adaptive_fore
@@ -199,3 +230,4 @@ style Theme.Physical_counting
 style full_screen_dialog
 style picker
 style tab_text
+xml file_path

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="stepLabels">
+        <item>Business Area</item>
+        <item>Form</item>
+        <item>Address</item>
+        <item>Farm Manager</item>
+        <item>Clerk Manager</item>
+    </string-array>
+</resources>

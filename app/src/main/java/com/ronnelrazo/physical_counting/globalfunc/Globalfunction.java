@@ -1,7 +1,10 @@
 package com.ronnelrazo.physical_counting.globalfunc;
 
 
+import static android.content.Context.DOWNLOAD_SERVICE;
+
 import android.app.DatePickerDialog;
+import android.app.DownloadManager;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -10,12 +13,16 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.text.style.LeadingMarginSpan;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,26 +30,46 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.FileProvider;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
 import com.novoda.merlin.Merlin;
+import com.pspdfkit.configuration.activity.PdfActivityConfiguration;
+import com.pspdfkit.ui.PdfActivity;
 import com.ronnelrazo.physical_counting.Database.MyDatabaseHelper;
 import com.ronnelrazo.physical_counting.Database.TABLE_BREEDER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_FEED_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_MED_DETAILS;
+import com.ronnelrazo.physical_counting.Pdf_record_list;
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.adapter.Adapter_PDFReport;
+import com.ronnelrazo.physical_counting.connection.API;
+import com.ronnelrazo.physical_counting.connection.API_GET;
+import com.ronnelrazo.physical_counting.connection.Pdf_url_checker_strRequest;
+import com.ronnelrazo.physical_counting.connection.config;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Calendar;
@@ -50,6 +77,8 @@ import java.util.Date;
 import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class Globalfunction {
 
@@ -78,6 +107,9 @@ public class Globalfunction {
 
     //observe network conenction
     public Merlin merlin;
+
+    public String fileName;
+    public URL url = null;
 
 
 
@@ -242,6 +274,102 @@ public class Globalfunction {
         //String signatureJson = new String(decoder.decode(parts[2]));
     }
 
+
+
+    public void PDFURLCHECKER(String URL,View v){
+        API_GET.getClient().PDFURLCHECKER(config.URLDownload+URL).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+
+                    if(!success){
+                        Toast.makeText(v.getContext(), "error", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(response.isSuccessful()){
+                        Toast.makeText(v.getContext(), "error", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage() + " Error");
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                }
+            }
+        });
+    }
+
+    public void DownloadPDFURL(String URL){
+
+        try {
+            url = new URL(URL);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        fileName = url.getPath();
+        fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
+
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        String fileNamex = folder.getPath() + "/" + fileName;
+        File myFile = new File(fileNamex);
+        if(myFile.exists()) {
+            System.out.println("exists");
+            myFile.delete();
+        }
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(URL + ""));
+        request.setTitle(fileName);
+        request.setMimeType("applcation/pdf");
+        request.allowScanningByMediaScanner();
+        request.setAllowedOverMetered(true);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            request.allowScanningByMediaScanner();
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        }
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+        DownloadManager dm = (DownloadManager) cont.getSystemService(DOWNLOAD_SERVICE);
+        dm.enqueue(request);
+
+
+    }
+
+    private boolean isFileExists(String filename){
+        File folder1 = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
+        return folder1.exists();
+    }
+
+    private boolean deleteFile( String filename){
+        File folder1 = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
+        return folder1.delete();
+    }
+
+    public void ViewPDFView(String path,View v){
+        File file=new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/"+path);
+        Uri uri= FileProvider.getUriForFile(v.getContext(),"com.ronnelrazo.physical_counting"+".provider",file);
+        Intent i=new Intent(Intent.ACTION_VIEW);
+        i.setDataAndType(uri,"application/pdf");
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        v.getContext().startActivity(i);
+    }
+
+
+
+    public void PDFEfitor(String Uriparse,View v){
+        final Uri uri = Uri.parse(Uriparse);
+        final PdfActivityConfiguration config = new PdfActivityConfiguration.Builder(v.getContext()).build();
+        PdfActivity.showDocument(v.getContext(), uri, config);
+    }
     //custom alert dialog confirmation
     public void Confirmation(Context context,String msg,int resicon){
         Materialdialog = new MaterialAlertDialogBuilder(context);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/edit"
+        android:enabled="false"
+        android:title="PDF Editor soon"
+        android:icon="@drawable/icons8_pdf_1"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/openWith"
+        android:title="Open With"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_icons8_menu_vertical"
+        app:showAsAction="ifRoom|withText"/>
+
+</menu>

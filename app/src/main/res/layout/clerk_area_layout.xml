@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="1dp">
+
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3"
+            android:hint="Clerk Manager Code"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3"
+            android:inputType="text"
+            android:hint="Clerk Manager Name"/>
+
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3"
+            android:inputType="number"
+            android:hint="Clerk Manager Contact"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3"
+            android:inputType="textEmailAddress"
+            android:hint="Clerk Manager Email"/>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

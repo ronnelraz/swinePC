@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Farm_setup">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="back"
+        android:text="Back"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/icons8_back" />
+
+    <com.shuhart.stepview.StepView
+        android:layout_below="@+id/back"
+        android:layout_margin="10dp"
+        android:id="@+id/step_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:sv_selectedCircleColor="#0288D1"
+        app:sv_selectedTextColor="#0288D1"
+        app:sv_steps="@array/stepLabels"
+        app:sv_stepLineWidth="1dp"
+        app:sv_nextTextColor="@color/material_blue_grey_80"
+        app:sv_nextStepLineColor="#0288D1"
+        app:sv_doneCircleColor="#689F38"
+        app:sv_doneStepLineColor="#689F38"
+        app:sv_doneCircleRadius="12dp"
+        app:sv_selectedCircleRadius="12dp"
+        app:sv_selectedStepNumberColor="@color/button_text_color"
+        app:sv_stepViewStyle="@style/StepView"
+        app:sv_doneStepMarkColor="#FFFFFF"
+        app:sv_doneTextColor="#689F38"
+        app:sv_stepNumberTextSize="12sp"
+        app:sv_stepsNumber="4"
+        app:sv_textSize="9sp"
+        app:sv_animationType="Line"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/step_view"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout1"
+            layout="@layout/business_area_layout" />
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/layout2"
+            layout="@layout/form_area_layout" />
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/layout3"
+            layout="@layout/address_area_layout" />
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/layout4"
+            layout="@layout/farm_manager_area_layout" />
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/layout5"
+            layout="@layout/clerk_area_layout" />
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        tools:visibility="visible"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="left"
+        android:text="Previous"
+        app:cornerRadius="20dp"
+        android:id="@+id/previous"
+        app:icon="@drawable/icons8_back" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Next"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/next"
+        app:iconGravity="textEnd" />
+
+</RelativeLayout>

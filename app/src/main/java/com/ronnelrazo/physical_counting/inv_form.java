@@ -47,4 +47,8 @@ public class inv_form extends AppCompatActivity {
     public void pdf(View view) {
         data.intent(Pdf_record_list.class,  this);
     }
+
+    public void FarmSetup(View view) {
+        data.intent(Farm_setup.class,  this);
+    }
 }

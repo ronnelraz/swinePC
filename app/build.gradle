@@ -63,7 +63,10 @@ dependencies {
     implementation 'com.auth0:java-jwt:3.19.1'
     //pdf viewer
     implementation 'es.voghdev.pdfviewpager:library:1.1.2'
-
-
+    implementation 'com.pspdfkit:pspdfkit:8.2.1'
+    implementation 'com.ixuea:android-downloader:3.0.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.shuhart.stepview:stepview:1.2.6'
+    implementation "com.github.skydoves:powerspinner:1.2.2"
 
 }

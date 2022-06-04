@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="1dp">
+
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/org_code"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3"
+            android:gravity="center"
+            android:hint="Org Code"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14.5sp"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_divider_color="@color/purple_500"
+            app:spinner_divider_show="true"
+            app:drawableTint="@color/black"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_height="46dp"
+            app:spinner_popup_animation="bounce"
+            app:spinner_item_array="@array/stepLabels"
+            app:spinner_popup_background="#F4F3F3"
+            app:spinner_popup_elevation="14dp"
+            android:layout_marginRight="10dp"/>
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/org_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3"
+            android:gravity="center"
+            android:hint="Org Name"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14.5sp"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_divider_color="@color/purple_500"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_height="46dp"
+            app:drawableTint="@color/black"
+            app:spinner_item_array="@array/stepLabels"
+            app:spinner_popup_animation="bounce"
+            app:spinner_popup_background="#F4F3F3"
+            app:spinner_popup_elevation="14dp"
+            android:layout_marginLeft="10dp"/>
+
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:layout_marginTop="5dp"
+                android:id="@+id/business_type"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_border"
+                android:backgroundTint="#F4F3F3"
+                android:gravity="center"
+                android:hint="Business Type"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14.5sp"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_divider_color="@color/purple_500"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_height="46dp"
+                app:spinner_item_array="@array/stepLabels"
+                app:spinner_popup_animation="bounce"
+                app:spinner_popup_background="#F4F3F3"
+                app:spinner_popup_elevation="14dp"
+                app:drawableTint="@color/black"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:enabled="false"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/radius_border"
+                android:backgroundTint="#F4F3F3"
+                android:text="SW"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
