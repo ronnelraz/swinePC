@@ -74,6 +74,7 @@ id audit_dateA1
 id audit_date_filter
 id back
 id barangay
+id barangayLoading
 id body
 id bodyScroller
 id bottompanel
@@ -91,6 +92,10 @@ id card
 id checklist
 id checklistA
 id checlist_data
+id clerkcode
+id clerkcontact
+id clerkemail
+id clerkname
 id close
 id contact
 id container
@@ -110,6 +115,8 @@ id farm
 id farmManager
 id farm_name
 id farmcode
+id farmcontact
+id farmemail
 id farmlist
 id farmname
 id farmorg
@@ -147,6 +154,7 @@ id med_data
 id menu
 id moreOption
 id municipality
+id municipalityLoading
 id negative
 id next
 id nodataContainer

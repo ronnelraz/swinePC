@@ -15,8 +15,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Manager Code"/>
+
 
         <EditText
+            android:id="@+id/farmcode"
             android:singleLine="true"
             android:textColor="@color/black"
             android:gravity="left|center"
@@ -26,7 +32,14 @@
             android:backgroundTint="#F4F3F3"
             android:hint="Farm Manager Code"/>
 
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Manager Name"/>
+
         <EditText
+            android:id="@+id/farmname"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -35,11 +48,19 @@
             android:layout_height="45dp"
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
-            android:inputType="text"
+            android:inputType="textCapWords"
             android:hint="Farm Manager Name"/>
 
 
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Manager Contact"/>
+
+
         <EditText
+            android:id="@+id/farmcontact"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -49,9 +70,19 @@
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
             android:inputType="number"
+            android:maxLength="11"
             android:hint="Farm Manager Contact"/>
 
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Manager Email"/>
+
+
         <EditText
+            android:id="@+id/farmemail"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:textColor="@color/black"

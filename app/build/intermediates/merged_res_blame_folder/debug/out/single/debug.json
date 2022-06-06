@@ -1,490 +1,486 @@
 [
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_pfd_heade_filter.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\pfd_heade_filter.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_search.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_search.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xhdpi_ic_launcher_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xhdpi\\ic_launcher_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_calendar.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_calendar.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\font_cpf_imm_sook_semibold.otf.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\font\\cpf_imm_sook_semibold.otf"
+        "merged": "com.ronnelrazo.physical_counting.app-merged_res-46:/layout_address_area_layout.xml.flat",
+        "source": "com.ronnelrazo.physical_counting.app-main-48:/layout/address_area_layout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_jwt_role.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_jwt_role.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_custom_eye.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\custom_eye.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_fragment_med.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\fragment_med.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_fragment_contract.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\fragment_contract.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_cancel.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_cancel.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_icons8_cancel_1.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\icons8_cancel_1.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_fragment_breeder.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\fragment_breeder.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_jwt_username.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_jwt_username.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_multiply.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_multiply.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_fattening.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\fattening.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_checklist_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\checklist_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_integration_submenu.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_integration_submenu.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_play_1024.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\play_1024.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_round_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_round_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_calendar.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\calendar.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_loading_shimmer_checklist.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\loading_shimmer_checklist.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-hdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-hdpi\\ic_launcher_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-mdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-mdpi\\ic_launcher_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_info.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_info.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_item_breeder_items.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\item_breeder_items.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_jwt_role.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_jwt_role.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-mdpi_ic_launcher_round_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-mdpi\\ic_launcher_round_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_checklist_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\checklist_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_radius_border.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\radius_border.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_farm_categories.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_farm_categories.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_integration_submenu.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_integration_submenu.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_fragment_breeder.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\fragment_breeder.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_jwt_username.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_jwt_username.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_custom_confirmation.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\custom_confirmation.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_logout.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\logout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_item_breeder_items.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\item_breeder_items.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_unchecked.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\unchecked.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_edit_text_dot.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\edit_text_dot.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_address_area_layout.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\address_area_layout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_logout.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\logout.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\font_cpf_imm_sook_semibold.otf.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\font\\cpf_imm_sook_semibold.otf"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_error.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_error.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_play_store.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\play_store.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_loading_shimmer_checklist.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\loading_shimmer_checklist.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_custom_loading.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\custom_loading.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_custom_loading.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\custom_loading.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_buttoncheckbox.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\buttoncheckbox.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_done.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_done.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher_round_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_round_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\font_cpf_mm_sook_bold.otf.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\font\\cpf_mm_sook_bold.otf"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_fragment_contract.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\fragment_contract.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\font_cpf_imm_sook_bold.ttf.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\font\\cpf_imm_sook_bold.ttf"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\font_cpf_mm_sook_bold.otf.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\font\\cpf_mm_sook_bold.otf"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_cancel.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_cancel.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\raw_error.json.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\raw\\error.json"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_add_user_male.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_add_user_male.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_fragment_checklist.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\fragment_checklist.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_form_area_layout.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\form_area_layout.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-hdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-hdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xhdpi_ic_launcher_round_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xhdpi\\ic_launcher_round_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_checked.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\checked.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_edit_text_dot.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\edit_text_dot.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout-land_checklist_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout-land\\checklist_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_chevron_right.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_chevron_right.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_nodata.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\nodata.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_next.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\next.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxhdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher_round_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_round_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_sync.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_sync.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxhdpi\\ic_launcher_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_item_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\item_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_swine_logo.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\swine_logo.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_checked.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\checked.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_key.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_key.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_clerk_area_layout.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\clerk_area_layout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_pdf_record_list.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_pdf_record_list.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_icons8_pdf_1.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\icons8_pdf_1.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_back.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_back.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_nodata.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\nodata.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-mdpi_ic_launcher_round_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-mdpi\\ic_launcher_round_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xhdpi_ic_launcher_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xhdpi\\ic_launcher_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_item_feed_items.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\item_feed_items.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\xml_file_path.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\xml\\file_path.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_add_user_male.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_add_user_male.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_icons8_back.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\icons8_back.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_loading_shimmer.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\loading_shimmer.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\xml_file_path.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\xml\\file_path.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_chevron_right.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_chevron_right.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_fragment_feed.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\fragment_feed.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-mdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-mdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\raw_farm.json.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\raw\\farm.json"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_fragment_med.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\fragment_med.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-mdpi_ic_launcher_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-mdpi\\ic_launcher_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_swine_logo.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\swine_logo.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-mdpi_ic_launcher_round_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-mdpi\\ic_launcher_round_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_pfd_heade_filter.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\pfd_heade_filter.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_farm_manager_area_layout.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\farm_manager_area_layout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_username.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_username.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_round_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxhdpi\\ic_launcher_round_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxhdpi\\ic_launcher_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_item_feed_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\item_feed_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_pdf_modal.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\pdf_modal.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_farm_manager_area_layout.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\farm_manager_area_layout.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_play_store.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\play_store.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_password.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_password.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_main_topic.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\main_topic.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_back.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_back.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_next.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\next.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\raw_checked.json.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\raw\\checked.json"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_item_feed_items.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\item_feed_items.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\font_cpf_imm_sook_regular.otf.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\font\\cpf_imm_sook_regular.otf"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_eye_close.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_eye_close.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\menu_more_option.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\menu\\more_option.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_icons8_back.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\icons8_back.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_round_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxhdpi\\ic_launcher_round_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_eye_close.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_eye_close.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\menu_more_option.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\menu\\more_option.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_password.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_password.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_import_pdf.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_import_pdf.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\raw_farm.json.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\raw\\farm.json"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_list_checklist_items.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\list_checklist_items.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_error.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_error.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_icons8_pdf_1.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\icons8_pdf_1.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-mdpi_ic_launcher_round_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-mdpi\\ic_launcher_round_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_fragment_feed.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\fragment_feed.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_farm_setup.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_farm_setup.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xhdpi_ic_launcher_round_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xhdpi\\ic_launcher_round_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_main_topic.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\main_topic.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_warning.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_warning.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_form_area_layout.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\form_area_layout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_item_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\item_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_export_pdf.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_export_pdf.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_fragment_checklist.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\fragment_checklist.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_modal_audit_dialog.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\modal_audit_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_item_breeder_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\item_breeder_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_pdf_modal.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\pdf_modal.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_export_pdf.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_export_pdf.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_pdf_record_list.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_pdf_record_list.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-hdpi_ic_launcher_round_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-hdpi\\ic_launcher_round_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-hdpi_ic_launcher_round_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-hdpi\\ic_launcher_round_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_modal_audit_dialog.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\modal_audit_dialog.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\raw_checked.json.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\raw\\checked.json"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_item_farm.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\item_farm.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_fattening.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\fattening.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_custom_toast.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\custom_toast.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_play_1024.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\play_1024.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_custom_toast.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\custom_toast.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher_round_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\raw_error.json.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\raw\\error.json"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_clerk_area_layout.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\clerk_area_layout.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_pdf_listreport.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\pdf_listreport.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_warning.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\warning.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_round_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xhdpi\\ic_launcher_round_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_inv_form.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_inv_form.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_warning.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\warning.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_create.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\create.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_ok.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_ok.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_custom_eye.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\custom_eye.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_info.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_info.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_pdf_listreport.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\pdf_listreport.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_menu_vertical.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_menu_vertical.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-hdpi_ic_launcher_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-hdpi\\ic_launcher_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_create.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\create.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-hdpi_ic_launcher_round_adaptive_back.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-hdpi\\ic_launcher_round_adaptive_back.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_import_pdf.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_import_pdf.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_ok.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_ok.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xhdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_round_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_round_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_radius_border.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\radius_border.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_username.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_username.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_calendar.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_calendar.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_calendar.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\calendar.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_tab_from.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_tab_from.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_item_farm.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\item_farm.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_search.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_search.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_sub_details_main_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\sub_details_main_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_done.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_done.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_list_checklist_items.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\list_checklist_items.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_sub_details_main_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\sub_details_main_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_edit.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\edit.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_eye_open.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_eye_open.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_buttoncheckbox.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\buttoncheckbox.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\font_cpf_imm_sook_bold.ttf.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\font\\cpf_imm_sook_bold.ttf"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_multiply.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_multiply.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_item_breeder_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\item_breeder_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_inv_form.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_inv_form.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_activity_farm_setup.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\activity_farm_setup.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_round_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xhdpi\\ic_launcher_round_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_item_feed_header.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\item_feed_header.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_eye_open.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_eye_open.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_unchecked.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\unchecked.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_ic_icons8_key.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\ic_icons8_key.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_loading_shimmer.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\loading_shimmer.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_business_area_layout.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\business_area_layout.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-hdpi_ic_launcher_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-hdpi\\ic_launcher_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout-land_checklist_header.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout-land\\checklist_header.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_menu_vertical.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_menu_vertical.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_farm_categories.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_farm_categories.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_business_area_layout.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\business_area_layout.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_activity_tab_from.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\activity_tab_from.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_warning.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_warning.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\layout_custom_confirmation.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\layout\\custom_confirmation.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_ic_icons8_sync.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\ic_icons8_sync.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\drawable_icons8_cancel_1.xml.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\drawable\\icons8_cancel_1.xml"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\layout_address_area_layout.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\layout\\address_area_layout.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\font_cpf_imm_sook_regular.otf.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\font\\cpf_imm_sook_regular.otf"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\drawable_edit.xml.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\drawable\\edit.xml"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-hdpi_ic_launcher_round_adaptive_back.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-hdpi\\ic_launcher_round_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher_round_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round_adaptive_fore.png"
-    },
-    {
-        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-45:\\mipmap-mdpi_ic_launcher_adaptive_fore.png.flat",
-        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-47:\\mipmap-mdpi\\ic_launcher_adaptive_fore.png"
+        "merged": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-merged_res-46:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\CPF Nigs\\.gradle\\daemon\\7.3.3\\com.ronnelrazo.physical_counting.app-main-48:\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]

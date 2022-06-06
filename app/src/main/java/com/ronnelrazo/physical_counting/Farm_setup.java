@@ -3,6 +3,9 @@ package com.ronnelrazo.physical_counting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,6 +19,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.hariprasanths.bounceview.BounceView;
+import com.github.ybq.android.spinkit.SpinKitView;
+import com.github.ybq.android.spinkit.sprite.Sprite;
+import com.github.ybq.android.spinkit.style.Circle;
 import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
 import com.ronnelrazo.physical_counting.connection.API;
@@ -91,6 +97,13 @@ public class Farm_setup extends AppCompatActivity {
     private List<String> barangay_name= new ArrayList<>();
     ArrayAdapter barangay_adapter;
 
+    @BindViews({R.id.municipalityLoading,R.id.barangayLoading}) SpinKitView[] loading;
+
+    @BindViews({R.id.farmcode,R.id.farmname,R.id.farmcontact,R.id.farmemail}) EditText[] farmManager;
+    @BindViews({R.id.clerkcode,R.id.clerkname,R.id.clerkcontact,R.id.clerkemail}) EditText[] clerkManager;
+
+    private int Save = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,38 +117,8 @@ public class Farm_setup extends AppCompatActivity {
 
 
         step(currentSelectStepView);
-        btn_trigger[1].setOnClickListener(v -> {
-            Log.d("swine","count " + currentSelectStepView);
-
-            if(currentSelectStepView == 0){
-                businessAreaValidator();
-            }
-
-            else if(currentSelectStepView == 1){
-                FormAreaValudator();
-            }
-            else if(currentSelectStepView == 2){
-                AddressValidator();
-            }
-            else if(currentSelectStepView == 3){
-                ShowPager(0,View.GONE);
-                ShowPager(1,View.GONE);
-                ShowPager(2,View.GONE);
-                ShowPager(3,View.VISIBLE);
-                ShowPager(4,View.GONE);
-            }
-            else if(currentSelectStepView == 4){
-                ShowPager(0,View.GONE);
-                ShowPager(1,View.GONE);
-                ShowPager(2,View.GONE);
-                ShowPager(3,View.GONE);
-                ShowPager(4,View.VISIBLE);
-                btn_trigger[1].setText("Save");
-            }
-
-        });
-
         btn_trigger[0].setOnClickListener(v -> {
+            Save = 0;
             currentSelectStepView--;
             Log.d("swine","count " + currentSelectStepView);
             step(currentSelectStepView);
@@ -179,6 +162,69 @@ public class Farm_setup extends AppCompatActivity {
 
             }
         });
+        btn_trigger[1].setOnClickListener(v -> {
+            Log.d("swine","count " + currentSelectStepView);
+
+            if(currentSelectStepView == 0){
+                businessAreaValidator();
+            }
+
+            else if(currentSelectStepView == 1){
+                FormAreaValudator();
+            }
+            else if(currentSelectStepView == 2){
+                AddressValidator();
+            }
+            else if(currentSelectStepView == 3){
+                FarmManagerValidator();
+            }
+            else if(currentSelectStepView == 4){
+                if(Save == 0){
+                    ClerkManagerValidator();
+                }
+                else{
+                    SaveFarmSetup();
+                }
+            }
+
+        });
+
+
+    }
+
+
+    protected void SaveFarmSetup(){
+        String getOrgcode = business_Area[0].getSelectedItem().toString();
+        String getOrgName = business_Area[1].getSelectedItem().toString();
+        String getBu_type = Business_area_code[0].getText().toString();
+        String getBu_code = Business_area_code[1].getText().toString();
+        String getChecklist = FormArea[0].isChecked() ? "Y" : "N";
+        String getBreeder = FormArea[1].isChecked() ? "Y" : "N";
+        String getFeed = FormArea[2].isChecked() ? "Y" : "N";
+        String getMed = FormArea[3].isChecked() ? "Y" : "N";
+        String getProvince = address_Area[0].getSelectedItem().toString();
+        String getMunicipal =  address_Area[1].getSelectedItem().toString();
+        String getBarangay =  address_Area[2].getSelectedItem().toString();
+        String getProvinceCode = province_code.get(address_Area[0].getSelectedItemPosition());
+        String getMunicipalCode =  municipal_code.get(address_Area[1].getSelectedItemPosition()).replaceFirst("C","M");
+        String getBarangayCode =   barangay_code.get(address_Area[2].getSelectedItemPosition());
+        String getZipCode = address_Area_edit[0].getText().toString();
+        String getlati = address_Area_edit[1].getText().toString();
+        String getlongi = address_Area_edit[2].getText().toString();
+        String getFarmcode = farmManager[0].getText().toString();
+        String getFarmName = farmManager[1].getText().toString();
+        String getFarmContact = farmManager[2].getText().toString();
+        String getFarmMail = farmManager[3].getText().toString();
+        String getClerkcode = clerkManager[0].getText().toString();
+        String getClerkName = clerkManager[1].getText().toString();
+        String getClerkContact = clerkManager[2].getText().toString();
+        String getClerkMail = clerkManager[3].getText().toString();
+
+
+        Log.d("swine", getOrgcode + " " + getOrgName + " " + getBu_type + " " + getBu_code + " " + getChecklist + " " + getBreeder + " " + getFeed + " " + getMed + " " +getProvince + " " +
+                getMunicipal + " " + getBarangay + " " + getZipCode + " " + getProvinceCode + " " + getMunicipalCode + " " + getBarangayCode + " " + getZipCode + " " + getlati + " " + getlongi + " " +getFarmcode + " " + getFarmName + " " + getFarmContact + " " +getFarmMail + " " + getClerkcode + " " +
+                getClerkName + " " + getClerkContact + " " + getClerkMail);
+
     }
 
 
@@ -250,6 +296,7 @@ public class Farm_setup extends AppCompatActivity {
         address_Area[1].setAdapter(null);
         municipal_code.clear();
         municipal_name.clear();
+        initLoading(loading[0]);
         API.getClient().getMunicipal(province_code).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -268,14 +315,16 @@ public class Farm_setup extends AppCompatActivity {
                         municipal_adapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,municipal_name);
                         SpinnerSetup(address_Area[1],municipal_adapter,"Please Select Municipality");
                         loadBarangay();
+                        LoadingHide(loading[0]);
                     }
                     else{
-
+                        LoadingHide(loading[0]);
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage());
+                    LoadingHide(loading[0]);
 
                 }
             }
@@ -295,6 +344,7 @@ public class Farm_setup extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 loadbarangay_data(municipal_code.get(position));
+                Log.d("swine",municipal_code.get(position));
             }
 
             @Override
@@ -308,6 +358,7 @@ public class Farm_setup extends AppCompatActivity {
         address_Area[2].setAdapter(null);
         barangay_code.clear();
         barangay_name.clear();
+        initLoading(loading[1]);
         API.getClient().getBarangay(municipal_code).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -320,20 +371,24 @@ public class Farm_setup extends AppCompatActivity {
                     if(success){
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
-                            barangay_code.add(object.getString("MUNICIPAL_CODE"));
-                            barangay_name.add(object.getString("MUNICIPAL_NAME"));
+                            barangay_code.add(object.getString("BARANGAY_CODE"));
+                            barangay_name.add(object.getString("BARANGAY_NAME"));
                         }
                         barangay_adapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,barangay_name);
                         SpinnerSetup(address_Area[2],barangay_adapter,"Please Select Barangay");
                         loadBarangay();
+                        LoadingHide(loading[1]);
+
                     }
                     else{
-
+                        LoadingHide(loading[1]);
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage());
+                    loading[0].setVisibility(View.GONE);
+                    LoadingHide(loading[1]);
 
                 }
             }
@@ -348,9 +403,141 @@ public class Farm_setup extends AppCompatActivity {
         });
     }
 
+    protected void initLoading(SpinKitView spinKitView){
+        spinKitView.setVisibility(View.VISIBLE);
+        Sprite circle = new Circle();
+        spinKitView.setIndeterminateDrawable(circle);
+    }
+    protected void LoadingHide(SpinKitView spinKitView){
+        spinKitView.setVisibility(View.GONE);
+    }
+
+
+    private void ClerkManagerValidator(){
+        clerkManager[1].setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z-]+\\.+[a-z]+";
+        String farmNamePattern = "[a-zA-Z ]+";
+        if(clerkManager[0].getText().toString().isEmpty()){
+            clerkManager[0].requestFocus();
+            Toast.makeText(this, "Please Enter Clerk manager Code.", Toast.LENGTH_SHORT).show();
+        }
+        else if(clerkManager[1].getText().toString().isEmpty()){
+            clerkManager[1].requestFocus();
+            Toast.makeText(this, "Please Enter Clerk manager Name.", Toast.LENGTH_SHORT).show();
+        }
+        else if(!clerkManager[1].getText().toString().trim().matches(farmNamePattern)){
+            clerkManager[1].requestFocus();
+            Toast.makeText(this, "Please Enter Valid Clerk Manager Name", Toast.LENGTH_SHORT).show();
+        }
+        else if(clerkManager[2].getText().toString().isEmpty()){
+            clerkManager[2].requestFocus();
+            Toast.makeText(this, "Please Enter Clerk manager Contact.", Toast.LENGTH_SHORT).show();
+        }
+        else if(clerkManager[2].getText().toString().length() <= 10){
+            clerkManager[2].requestFocus();
+            Toast.makeText(this, "Please Invalid Clerk manager Contact.", Toast.LENGTH_SHORT).show();
+        }
+        else if(clerkManager[3].getText().toString().isEmpty()){
+            clerkManager[3].requestFocus();
+            Toast.makeText(this, "Please Enter Clerk manager Email.", Toast.LENGTH_SHORT).show();
+        }
+        else if(!clerkManager[3].getText().toString().trim().matches(emailPattern)){
+            clerkManager[3].requestFocus();
+            Toast.makeText(this, "Please Enter Valid email Address", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            ErrorMessage.setVisibility(View.GONE);
+            step(5);
+            currentSelectStepView++;
+            ShowPager(0,View.GONE);
+            ShowPager(1,View.GONE);
+            ShowPager(2,View.GONE);
+            ShowPager(3,View.GONE);
+            ShowPager(4,View.VISIBLE);
+            BounceView.addAnimTo(btn_trigger[0]);
+        }
+
+    }
+
+
+    private void FarmManagerValidator(){
+        farmManager[1].setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z-]+\\.+[a-z]+";
+        String farmNamePattern = "[a-zA-Z ]+";
+        if(farmManager[0].getText().toString().isEmpty()){
+            farmManager[0].requestFocus();
+            Toast.makeText(this, "Please Enter Farm manager Code.", Toast.LENGTH_SHORT).show();
+        }
+        else if(farmManager[1].getText().toString().isEmpty()){
+            farmManager[1].requestFocus();
+            Toast.makeText(this, "Please Enter Farm manager Name.", Toast.LENGTH_SHORT).show();
+        }
+        else if(!farmManager[1].getText().toString().trim().matches(farmNamePattern)){
+            farmManager[1].requestFocus();
+            Toast.makeText(this, "Please Enter Valid Farm Manager Name", Toast.LENGTH_SHORT).show();
+        }
+        else if(farmManager[2].getText().toString().isEmpty()){
+            farmManager[2].requestFocus();
+            Toast.makeText(this, "Please Enter Farm manager Contact.", Toast.LENGTH_SHORT).show();
+        }
+        else if(farmManager[2].getText().toString().length() <= 10){
+            farmManager[2].requestFocus();
+            Toast.makeText(this, "Please Invalid Farm manager Contact.", Toast.LENGTH_SHORT).show();
+        }
+        else if(farmManager[3].getText().toString().isEmpty()){
+            farmManager[3].requestFocus();
+            Toast.makeText(this, "Please Enter Farm manager Email.", Toast.LENGTH_SHORT).show();
+        }
+        else if(!farmManager[3].getText().toString().trim().matches(emailPattern)){
+            farmManager[3].requestFocus();
+            Toast.makeText(this, "Please Enter Valid email Address", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            ErrorMessage.setVisibility(View.GONE);
+            step(4);
+            currentSelectStepView++;
+            ShowPager(0,View.GONE);
+            ShowPager(1,View.GONE);
+            ShowPager(2,View.GONE);
+            ShowPager(3,View.GONE);
+            ShowPager(4,View.VISIBLE);
+            btn_trigger[1].setText("Save");
+            Save = 1;
+            BounceView.addAnimTo(btn_trigger[0]);
+        }
+
+    }
+
+
 
     private void AddressValidator(){
+        if(address_Area[0].getSelectedItem() == null){
+            address_Area[0].performClick();
+            ErrorCode("Please Select Province");
+            Toast.makeText(this, "Please Select Province", Toast.LENGTH_SHORT).show();
 
+        }
+        else if(address_Area[1].getSelectedItem() == null){
+            address_Area[1].performClick();
+            ErrorCode("Please Select Municipality");
+            Toast.makeText(this, "Please Select Municipality", Toast.LENGTH_SHORT).show();
+        }
+        else if(address_Area[2].getSelectedItem() == null){
+            address_Area[2].performClick();
+            ErrorCode("Please Select Barangay");
+            Toast.makeText(this, "Please Select Barangay", Toast.LENGTH_SHORT).show();
+        }
+        else{
+          ErrorMessage.setVisibility(View.GONE);
+            step(3);
+            currentSelectStepView++;
+            ShowPager(0,View.GONE);
+            ShowPager(1,View.GONE);
+            ShowPager(2,View.GONE);
+            ShowPager(3,View.VISIBLE);
+            ShowPager(4,View.GONE);
+            BounceView.addAnimTo(btn_trigger[0]);
+        }
     }
 
     private void FormAreaValudator(){

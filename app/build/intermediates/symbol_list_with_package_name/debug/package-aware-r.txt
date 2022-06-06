@@ -84,6 +84,9 @@ array stepLabels
 array steps
 attr SharedValue
 attr SharedValueId
+attr SpinKitViewStyle
+attr SpinKit_Color
+attr SpinKit_Style
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -3658,13 +3661,24 @@ id All
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id ChasingDots
 id Circle
+id CubeGrid
+id DoubleBounce
 id FUNCTION
+id FadingCircle
 id FarmSetup
+id FoldingCube
 id Line
 id META
+id MultiplePulse
+id MultiplePulseRing
 id NO_DEBUG
 id None
+id Pulse
+id PulseRing
+id RotatingCircle
+id RotatingPlane
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -3672,6 +3686,9 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id ThreeBounce
+id WanderingCubes
+id Wave
 id a1_form
 id accelerate
 id accessibility_action_clickable_span
@@ -3760,6 +3777,7 @@ id autoCompleteToStart
 id automatic
 id back
 id barangay
+id barangayLoading
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3813,6 +3831,10 @@ id chip_group
 id chronometer
 id circle_center
 id clear_text
+id clerkcode
+id clerkcontact
+id clerkemail
+id clerkname
 id clip_horizontal
 id clip_vertical
 id clockwise
@@ -3901,6 +3923,8 @@ id farm
 id farmManager
 id farm_name
 id farmcode
+id farmcontact
+id farmemail
 id farmlist
 id farmname
 id farmorg
@@ -4061,6 +4085,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id municipality
+id municipalityLoading
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -6236,6 +6261,54 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SpinKitView
+style SpinKitView_ChasingDots
+style SpinKitView_Circle
+style SpinKitView_CubeGrid
+style SpinKitView_DoubleBounce
+style SpinKitView_FadingCircle
+style SpinKitView_FoldingCube
+style SpinKitView_Large
+style SpinKitView_Large_ChasingDots
+style SpinKitView_Large_Circle
+style SpinKitView_Large_CubeGrid
+style SpinKitView_Large_DoubleBounce
+style SpinKitView_Large_FadingCircle
+style SpinKitView_Large_FoldingCube
+style SpinKitView_Large_MultiplePulse
+style SpinKitView_Large_MultiplePulseRing
+style SpinKitView_Large_Pulse
+style SpinKitView_Large_PulseRing
+style SpinKitView_Large_RotatingCircle
+style SpinKitView_Large_RotatingPlane
+style SpinKitView_Large_ThreeBounce
+style SpinKitView_Large_WanderingCubes
+style SpinKitView_Large_Wave
+style SpinKitView_MultiplePulse
+style SpinKitView_MultiplePulseRing
+style SpinKitView_Pulse
+style SpinKitView_PulseRing
+style SpinKitView_RotatingCircle
+style SpinKitView_RotatingPlane
+style SpinKitView_Small
+style SpinKitView_Small_ChasingDots
+style SpinKitView_Small_Circle
+style SpinKitView_Small_CubeGrid
+style SpinKitView_Small_DoubleBounce
+style SpinKitView_Small_FadingCircle
+style SpinKitView_Small_FoldingCube
+style SpinKitView_Small_MultiplePulse
+style SpinKitView_Small_MultiplePulseRing
+style SpinKitView_Small_Pulse
+style SpinKitView_Small_PulseRing
+style SpinKitView_Small_RotatingCircle
+style SpinKitView_Small_RotatingPlane
+style SpinKitView_Small_ThreeBounce
+style SpinKitView_Small_WanderingCubes
+style SpinKitView_Small_Wave
+style SpinKitView_ThreeBounce
+style SpinKitView_WanderingCubes
+style SpinKitView_Wave
 style StepView
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
@@ -7056,6 +7129,7 @@ styleable ShimmerFrameLayout shimmer_auto_start shimmer_base_alpha shimmer_base_
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
+styleable SpinKitView SpinKit_Color SpinKit_Style
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable SplitPairFilter primaryActivityName secondaryActivityAction secondaryActivityName
 styleable SplitPairRule clearTop finishPrimaryWithSecondary finishSecondaryWithPrimary splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio

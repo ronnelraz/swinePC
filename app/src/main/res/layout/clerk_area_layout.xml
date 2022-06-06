@@ -16,7 +16,14 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clerk Manager Code"/>
+
+
         <EditText
+            android:id="@+id/clerkcode"
             android:singleLine="true"
             android:textColor="@color/black"
             android:gravity="left|center"
@@ -26,7 +33,15 @@
             android:backgroundTint="#F4F3F3"
             android:hint="Clerk Manager Code"/>
 
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clerk Manager Name"/>
+
         <EditText
+            android:id="@+id/clerkname"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -35,11 +50,19 @@
             android:layout_height="45dp"
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
-            android:inputType="text"
+            android:inputType="textCapWords"
             android:hint="Clerk Manager Name"/>
 
 
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clerk Manager Contact"/>
+
+
         <EditText
+            android:id="@+id/clerkcontact"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -49,9 +72,18 @@
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
             android:inputType="number"
+            android:maxLength="11"
             android:hint="Clerk Manager Contact"/>
 
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clerk Manager Email"/>
+
         <EditText
+            android:id="@+id/clerkemail"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:textColor="@color/black"

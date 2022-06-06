@@ -36,13 +36,40 @@
             android:layout_height="wrap_content"
             android:text="Select Municipality"/>
 
-        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-            android:id="@+id/municipality"
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            app:hintText="Select Municipality"
-            android:background="@drawable/radius_border"
-            android:backgroundTint="#F4F3F3" />
+            android:layout_height="wrap_content">
+
+
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:layout_alignParentLeft="true"
+                android:id="@+id/municipality"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:hintText="Select Municipality"
+                android:background="@drawable/radius_border"
+                android:backgroundTint="#F4F3F3" />
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginRight="10dp"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/purple_500"
+                android:layout_alignParentRight="true"
+                android:id="@+id/municipalityLoading"
+                style="@style/SpinKitView.Circle"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:fitsSystemWindows="true"
+                android:indeterminate="true" />
+        </RelativeLayout>
+
+
 
 
     <LinearLayout
@@ -78,15 +105,39 @@
 
 
 
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/barangay"
-                android:layout_width="0dp"
-                android:layout_marginRight="10dp"
-                android:layout_height="45dp"
+            <RelativeLayout
                 android:layout_weight="2"
-                app:hintText="Select Province"
-                android:background="@drawable/radius_border"
-                android:backgroundTint="#F4F3F3" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/barangay"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="2"
+                    app:hintText="Select Barangay"
+                    android:background="@drawable/radius_border"
+                    android:backgroundTint="#F4F3F3" />
+
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/barangayLoading"
+                    style="@style/SpinKitView.Circle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="18dp"
+                    android:fitsSystemWindows="true"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:SpinKit_Color="@color/purple_500"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
 
             <EditText
                 android:id="@+id/zipcode"
@@ -145,7 +196,7 @@
                 android:backgroundTint="#F4F3F3"
                 android:hint="Latitude"
                 android:singleLine="true"
-                android:inputType="number"/>
+                android:inputType="number|numberDecimal"/>
 
 
             <EditText
@@ -158,7 +209,7 @@
                 android:background="@drawable/radius_border"
                 android:backgroundTint="#F4F3F3"
                 android:singleLine="true"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:hint="Longitude"/>
 
         </LinearLayout>
