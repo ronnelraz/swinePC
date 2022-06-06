@@ -16,26 +16,39 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#E2F4F6"
+            android:text="Please Select Form"
+            android:textColor="@color/black"
+            android:padding="10dp"/>
+
         <CheckBox
+            android:id="@+id/checklist"
             android:buttonTint="@color/purple_500"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Checklist"/>
         <CheckBox
+            android:id="@+id/breeder"
             android:buttonTint="@color/purple_500"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Breeder"/>
         <CheckBox
+            android:id="@+id/feed"
             android:buttonTint="@color/purple_500"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Feed"/>
         <CheckBox
+            android:id="@+id/med"
             android:buttonTint="@color/purple_500"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Med"/>
+            android:text="Medicine"/>
 
     </LinearLayout>
 

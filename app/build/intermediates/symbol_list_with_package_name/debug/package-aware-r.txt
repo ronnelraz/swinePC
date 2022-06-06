@@ -588,6 +588,7 @@ attr hideOnContentScroll
 attr hideOnScroll
 attr hintAnimationEnabled
 attr hintEnabled
+attr hintText
 attr hintTextAppearance
 attr hintTextColor
 attr homeAsUpIndicator
@@ -3758,6 +3759,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
 id back
+id barangay
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3776,8 +3778,10 @@ id bounceStart
 id breadcrumb_header
 id breadcrumb_orgcode
 id breadcrumb_orgname
+id breeder
 id breeder_data
 id businessAddress
+id business_code
 id business_farmname
 id business_type
 id buttonPanel
@@ -3798,6 +3802,7 @@ id chain2
 id chains
 id checkbox
 id checked
+id checklist
 id checklistA
 id checlist_data
 id chip
@@ -3884,6 +3889,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id error
 id error_frame
 id error_text
 id error_x
@@ -3898,6 +3904,7 @@ id farmcode
 id farmlist
 id farmname
 id farmorg
+id feed
 id feed_data
 id female
 id fill
@@ -3961,6 +3968,7 @@ id jumpToEnd
 id jumpToStart
 id keepme
 id labeled
+id lati
 id layout
 id layout1
 id layout2
@@ -3974,6 +3982,7 @@ id legacy
 id line1
 id line3
 id linear
+id listItems
 id listMode
 id list_item
 id loading
@@ -3983,6 +3992,7 @@ id location
 id login
 id logo
 id logout
+id longti
 id lottie_layer_name
 id ltr
 id maintopic
@@ -4011,6 +4021,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id med
 id med_data
 id media_actions
 id menu
@@ -4670,6 +4681,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id search_badge
 id search_bar
 id search_button
@@ -4822,6 +4834,7 @@ id x_right
 id y
 id z
 id zero_corner_chip
+id zipcode
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -5144,6 +5157,7 @@ layout pspdf__view_pager_tab_view
 layout pspdf__view_settings_mode_picker
 layout pspdf__view_settings_mode_picker_item
 layout pspdf__you_tube_activity
+layout searchable_list_dialog
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -5234,9 +5248,11 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string first_fragment_label
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string lorem_ipsum
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -5318,6 +5334,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
+string next
 string not_set
 string password_toggle_content_description
 string path_password_eye
@@ -5326,6 +5343,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string pdfvp_ready_to_download
 string preference_copied
+string previous
 string pspdf__action_menu_copy
 string pspdf__action_menu_speak
 string pspdf__activity_empty_message
@@ -5715,8 +5733,10 @@ string pspdf__z_index_front
 string pspdf__z_index_order
 string sampleURL
 string search_menu_title
+string second_fragment_label
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
+string title_activity_material_demo
 string title_login
 string v7_preference_off
 string v7_preference_on
@@ -7028,6 +7048,7 @@ styleable Rotate3dAnimation customPivotX customPivotY fromDeg rollType toDeg
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
+styleable SearchableSpinner hintText
 styleable SeekBarPreference android_layout android_max adjustable min seekBarIncrement showSeekBarValue updatesContinuously
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth

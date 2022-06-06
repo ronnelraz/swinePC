@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,11 +34,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.FileProvider;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.Volley;
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -53,13 +49,16 @@ import com.ronnelrazo.physical_counting.Database.TABLE_FEED_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_MED_DETAILS;
-import com.ronnelrazo.physical_counting.Pdf_record_list;
 import com.ronnelrazo.physical_counting.R;
-import com.ronnelrazo.physical_counting.adapter.Adapter_PDFReport;
+import com.ronnelrazo.physical_counting.adapter.Adapter_Farm;
+import com.ronnelrazo.physical_counting.adapter.Adapter_Feed;
 import com.ronnelrazo.physical_counting.connection.API;
+import com.ronnelrazo.physical_counting.connection.API_;
 import com.ronnelrazo.physical_counting.connection.API_GET;
-import com.ronnelrazo.physical_counting.connection.Pdf_url_checker_strRequest;
 import com.ronnelrazo.physical_counting.connection.config;
+import com.ronnelrazo.physical_counting.model.model_farm;
+import com.ronnelrazo.physical_counting.model.model_feed;
+import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
 import org.json.JSONArray;
@@ -71,6 +70,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
@@ -811,6 +811,9 @@ public class Globalfunction {
         db.close();
         return count;
     }
+
+
+
 
 
 }

@@ -205,4 +205,30 @@ public interface APIInterface {
     Call<Object> PDFURLCHECKER(@Url String url);
 
 
+    @POST("getFarm_org")
+    Call<Object> getFarm_org();
+
+    @FormUrlEncoded
+    @POST("getFarm_name")
+    Call<Object> getFarm_name(
+            @Field("org_code") String org_code
+    );
+
+//    form 3
+    @POST("getProvince")
+    Call<Object> getProvince();
+
+    @FormUrlEncoded
+    @POST("getMunicipal")
+    Call<Object> getMunicipal(
+            @Field("province_code") String province_code
+    );
+
+
+    @FormUrlEncoded
+    @POST("getBarangay")
+    Call<Object> getBarangay(
+            @Field("MUNICIPAL_CODE") String MUNICIPAL_CODE
+    );
+
 }

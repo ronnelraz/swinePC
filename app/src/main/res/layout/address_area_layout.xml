@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardBackgroundColor="#FFFFFF"
     android:layout_margin="10dp"
     app:cardElevation="5dp"
@@ -15,58 +16,58 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.skydoves.powerspinner.PowerSpinnerView
-            android:id="@+id/province"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/radius_border"
-            android:backgroundTint="#F4F3F3"
-            android:gravity="center"
-            android:hint="Select province"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="14.5sp"
-            app:spinner_arrow_gravity="end"
-            app:spinner_arrow_padding="8dp"
-            app:spinner_divider_color="@color/purple_500"
-            app:spinner_divider_show="true"
-            app:drawableTint="@color/black"
-            app:spinner_divider_size="0.4dp"
-            app:spinner_item_height="46dp"
-            app:spinner_popup_animation="bounce"
-            app:spinner_item_array="@array/stepLabels"
-            app:spinner_popup_background="#F4F3F3"
-            app:spinner_popup_elevation="14dp"
-            android:layout_marginRight="10dp"/>
 
-        <com.skydoves.powerspinner.PowerSpinnerView
-            android:layout_marginTop="10dp"
-            android:id="@+id/municipality"
-            android:layout_weight="1"
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Select Province"/>
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/province"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:hintText="Select Province"
             android:background="@drawable/radius_border"
-            android:backgroundTint="#F4F3F3"
-            android:gravity="center"
-            android:hint="Select Municipality"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="14.5sp"
-            app:spinner_arrow_gravity="end"
-            app:spinner_arrow_padding="8dp"
-            app:spinner_divider_color="@color/purple_500"
-            app:spinner_divider_show="true"
-            app:drawableTint="@color/black"
-            app:spinner_divider_size="0.4dp"
-            app:spinner_item_height="46dp"
-            app:spinner_popup_animation="bounce"
-            app:spinner_item_array="@array/stepLabels"
-            app:spinner_popup_background="#F4F3F3"
-            app:spinner_popup_elevation="14dp"
-            android:layout_marginRight="10dp"/>
+            android:backgroundTint="#F4F3F3" />
+
+        <TextView
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Municipality"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/municipality"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:hintText="Select Municipality"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#F4F3F3" />
+
+
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_marginTop="18dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Select Barangay"/>
+
+        <TextView
+            android:layout_marginTop="18dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Zip Code"/>
+
+    </LinearLayout>
+
 
 
         <LinearLayout
@@ -77,33 +78,20 @@
 
 
 
-            <com.skydoves.powerspinner.PowerSpinnerView
-                android:id="@+id/business_type"
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/barangay"
                 android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
                 android:layout_weight="2"
-                android:layout_height="wrap_content"
+                app:hintText="Select Province"
                 android:background="@drawable/radius_border"
-                android:backgroundTint="#F4F3F3"
-                android:gravity="center"
-                android:hint="Select Barangay"
-                android:padding="10dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="14.5sp"
-                app:spinner_arrow_gravity="end"
-                app:spinner_arrow_padding="8dp"
-                app:spinner_divider_color="@color/purple_500"
-                app:spinner_divider_show="true"
-                app:spinner_divider_size="0.4dp"
-                app:spinner_item_height="46dp"
-                app:spinner_item_array="@array/stepLabels"
-                app:spinner_popup_animation="bounce"
-                app:spinner_popup_background="#F4F3F3"
-                app:spinner_popup_elevation="14dp"
-                app:drawableTint="@color/black"
-                android:layout_marginRight="10dp"/>
+                android:backgroundTint="#F4F3F3" />
 
             <EditText
+                android:id="@+id/zipcode"
+                android:singleLine="true"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -116,6 +104,28 @@
         </LinearLayout>
 
 
+
+        <LinearLayout
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Latitude"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Longitude"/>
+
+        </LinearLayout>
+
         <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -124,6 +134,7 @@
 
 
             <EditText
+                android:id="@+id/lati"
                 android:layout_marginRight="10dp"
                 android:textColor="@color/black"
                 android:gravity="center"
@@ -133,11 +144,12 @@
                 android:background="@drawable/radius_border"
                 android:backgroundTint="#F4F3F3"
                 android:hint="Latitude"
-                android:inputType="numberDecimal"/>
+                android:singleLine="true"
+                android:inputType="number"/>
 
 
             <EditText
-                android:inputType="numberDecimal"
+                android:id="@+id/longti"
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -145,6 +157,8 @@
                 android:layout_height="45dp"
                 android:background="@drawable/radius_border"
                 android:backgroundTint="#F4F3F3"
+                android:singleLine="true"
+                android:inputType="number"
                 android:hint="Longitude"/>
 
         </LinearLayout>
