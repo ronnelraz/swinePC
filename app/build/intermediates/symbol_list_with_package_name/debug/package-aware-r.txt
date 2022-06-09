@@ -1481,6 +1481,8 @@ attr sv_doneCircleRadius
 attr sv_doneStepLineColor
 attr sv_doneStepMarkColor
 attr sv_doneTextColor
+attr sv_nextStepCircleColor
+attr sv_nextStepCircleEnabled
 attr sv_nextStepLineColor
 attr sv_nextTextColor
 attr sv_selectedCircleColor
@@ -2269,6 +2271,7 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color menubtn_text
 color message_color
 color message_color_dark
 color mtrl_btn_bg_color_selector
@@ -2322,6 +2325,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color munibtn_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -3384,6 +3388,7 @@ drawable ic_icons8_key
 drawable ic_icons8_menu_vertical
 drawable ic_icons8_multiply
 drawable ic_icons8_ok
+drawable ic_icons8_report_file
 drawable ic_icons8_search
 drawable ic_icons8_sync
 drawable ic_icons8_warning
@@ -3671,6 +3676,7 @@ id FarmSetup
 id FoldingCube
 id Line
 id META
+id Menu
 id MultiplePulse
 id MultiplePulseRing
 id NO_DEBUG
@@ -3748,6 +3754,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id address
 id alertTitle
 id alignBounds
 id alignMargins
@@ -3842,6 +3849,7 @@ id close
 id closest
 id collapseActionView
 id compress
+id confirm
 id confirm_button
 id constraint
 id contact
@@ -3926,6 +3934,7 @@ id farmcode
 id farmcontact
 id farmemail
 id farmlist
+id farmlistData
 id farmname
 id farmorg
 id feed
@@ -4049,6 +4058,7 @@ id med
 id med_data
 id media_actions
 id menu
+id menuheader
 id message
 id middle
 id mini
@@ -4683,6 +4693,7 @@ id recyclerView
 id recycler_view
 id remark
 id remote_pdf_root
+id report
 id restart
 id reverse
 id reverseSawtooth
@@ -4707,6 +4718,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id search
+id searchFarmlist
 id search_badge
 id search_bar
 id search_button
@@ -4981,6 +4993,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
+layout farm_detials_list
 layout farm_manager_area_layout
 layout form_area_layout
 layout fragment_breeder
@@ -4992,6 +5005,7 @@ layout image_frame
 layout item_breeder_header
 layout item_breeder_items
 layout item_farm
+layout item_farm_list_detials
 layout item_feed_header
 layout item_feed_items
 layout item_header
@@ -7138,7 +7152,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
-styleable StepView sv_animationDuration sv_animationType sv_background sv_doneCircleColor sv_doneCircleRadius sv_doneStepLineColor sv_doneStepMarkColor sv_doneTextColor sv_nextStepLineColor sv_nextTextColor sv_selectedCircleColor sv_selectedCircleRadius sv_selectedStepNumberColor sv_selectedTextColor sv_stepLineWidth sv_stepNumberTextSize sv_stepPadding sv_stepViewStyle sv_steps sv_stepsNumber sv_textPadding sv_textSize sv_typeface
+styleable StepView sv_animationDuration sv_animationType sv_background sv_doneCircleColor sv_doneCircleRadius sv_doneStepLineColor sv_doneStepMarkColor sv_doneTextColor sv_nextStepLineColor sv_nextTextColor sv_selectedCircleColor sv_selectedCircleRadius sv_selectedStepNumberColor sv_selectedTextColor sv_stepLineWidth sv_stepNumberTextSize sv_stepPadding sv_stepViewStyle sv_steps sv_stepsNumber sv_textPadding sv_textSize sv_typeface sv_nextStepCircleColor sv_nextStepCircleEnabled
 styleable SubsamplingScaleImageView assetName panEnabled quickScaleEnabled src tileBackgroundColor zoomEnabled
 styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode

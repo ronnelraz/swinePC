@@ -12,6 +12,8 @@
     <color name="cardColor">#DAEFED</color>
     <color name="error">#e74c3c</color>
     <color name="even">#FFFFFF</color>
+    <color name="menubtn_text">#365471</color>
+    <color name="munibtn_color">#BEF1EC</color>
     <color name="odd">#E4F1F1F4</color>
     <color name="purple_200">#3498db</color>
     <color name="purple_500">#16a085</color>

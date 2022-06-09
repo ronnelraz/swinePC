@@ -12,12 +12,28 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:onClick="back"
         android:text="Back"
         app:cornerRadius="20dp"
         app:icon="@drawable/icons8_back" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Menu"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/odd"
+        android:onClick="menu"
+        android:text="Farm List"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_username" />
 
     <com.shuhart.stepview.StepView
         android:layout_below="@+id/back"
@@ -42,7 +58,8 @@
         app:sv_stepNumberTextSize="12sp"
         app:sv_stepsNumber="4"
         app:sv_textSize="9sp"
-        app:sv_animationType="Line"/>
+        app:sv_animationType="All"
+        />
 
 
 
@@ -90,6 +107,10 @@
             android:visibility="gone"
             android:id="@+id/layout5"
             layout="@layout/clerk_area_layout" />
+
+
+<!--        <include android:id="@+id/farmlist"-->
+<!--            layout="@layout/farm_detials_list"/>-->
 
 
 

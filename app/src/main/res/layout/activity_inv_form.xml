@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="50px"
+    android:layout_margin="20px"
     tools:context=".inv_form">
 
+    <RelativeLayout
+        android:backgroundTint="@color/bgEdit"
+        android:background="@drawable/radius_border"
+        android:id="@+id/menuheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/menu"
@@ -17,38 +23,42 @@
             android:fontFamily="@font/cpf_imm_sook_bold" />
 
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/menu"
-        android:drawableLeft="@drawable/ic_jwt_username"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/black"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
-        android:gravity="center|left"
-        android:textSize="18sp"
-        tools:text="User : ronnel.raz" />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu"
+            android:drawableLeft="@drawable/ic_jwt_username"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:gravity="center|left"
+            android:textSize="18sp"
+            tools:text="User : ronnel.raz" />
 
 
-    <TextView
-        android:textSize="18sp"
-        android:fontFamily="@font/cpf_imm_sook_semibold"
-        android:layout_below="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Role : IT - IT Department"
-        android:gravity="center|left"
-        android:drawablePadding="5dp"
-        android:drawableLeft="@drawable/ic_jwt_role"
-        android:drawableTint="@color/black"
-        android:id="@+id/role"
-        />
+        <TextView
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_below="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Role : IT - IT Department"
+            android:gravity="center|left"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_jwt_role"
+            android:drawableTint="@color/black"
+            android:id="@+id/role"
+            />
+
+    </RelativeLayout>
+
+
 
 
         <GridLayout
-            android:layout_marginTop="50dp"
-            android:layout_below="@+id/menu"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/menuheader"
             android:background="@drawable/radius_border"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
@@ -65,13 +75,13 @@
                 android:gravity="center"
                 android:layout_gravity="fill_horizontal"
                 android:background="@drawable/radius_border"
-                app:backgroundTint="#BEF1EC"
-                app:iconTint="@color/black"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/tabBackgroundColor"
                 app:icon="@drawable/create"
                 app:iconGravity="textTop"
                 app:elevation="10dp"
                 app:iconSize="70sp"
-                android:textColor="#365471"
+                android:textColor="@color/black"
                 android:fontFamily="@font/cpf_imm_sook_bold"
                 android:textStyle="bold"
                 android:textSize="20sp"
@@ -90,14 +100,79 @@
                 android:gravity="center"
                 android:layout_gravity="fill_horizontal"
                 android:background="@drawable/radius_border"
-                app:backgroundTint="#BEF1EC"
-                app:iconTint="@color/black"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/tabBackgroundColor"
                 app:elevation="10dp"
                 app:icon="@drawable/icons8_pdf_1"
                 app:iconGravity="textTop"
                 app:iconSize="70sp"
                 android:textSize="20sp"
-                android:textColor="#365471"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Generate PDF" />
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/purple_200"
+                app:elevation="10dp"
+                app:icon="@drawable/edit"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Edit" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/purple_200"
+                app:elevation="10dp"
+                app:icon="@drawable/checked"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Confirm" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/report"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/purple_200"
+                app:elevation="10dp"
+                app:icon="@drawable/ic_icons8_report_file"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:text="Report" />
 
@@ -111,37 +186,18 @@
                 android:gravity="center"
                 android:layout_gravity="fill_horizontal"
                 android:background="@drawable/radius_border"
-                app:backgroundTint="#BEF1EC"
-                app:iconTint="@color/black"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/tabBackgroundColor"
                 app:elevation="10dp"
                 app:icon="@drawable/ic_icons8_add_user_male"
                 app:iconGravity="textTop"
                 app:iconSize="70sp"
                 android:textSize="20sp"
-                android:textColor="#365471"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:text="Farm setup" />
 
-            <com.google.android.material.button.MaterialButton
-                android:visibility="gone"
-                android:id="@+id/edit"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="#BEF1EC"
-                app:iconTint="@color/black"
-                app:elevation="10dp"
-                app:icon="@drawable/edit"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="#365471"
-                android:textStyle="bold"
-                android:text="Edit" />
+
 
 
 <!--            <TextView-->

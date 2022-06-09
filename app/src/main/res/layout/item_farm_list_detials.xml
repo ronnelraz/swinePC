@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardMaxElevation="5dp"
+    app:cardElevation="1.5dp"
+    android:id="@+id/card"
+    android:foreground="?attr/selectableItemBackground">
+
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cpf_imm_sook_bold"
+            android:text="Org Code : "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginLeft="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Org_Code"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_regular"
+            android:id="@+id/org_code"/>
+
+
+        <TextView
+            android:layout_below="@+id/org_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_bold"
+            android:text="Org Name : "/>
+
+        <TextView
+            android:layout_marginLeft="83dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/org_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Org_name"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_regular"
+            android:id="@+id/org_name"/>
+
+
+        <TextView
+            android:layout_below="@+id/org_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_bold"
+            android:text="Address : "/>
+
+        <TextView
+            android:layout_below="@+id/org_name"
+            android:layout_marginLeft="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADDRESS"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_regular"
+            android:id="@+id/address"/>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

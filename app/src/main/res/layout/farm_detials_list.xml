@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="back"
+        android:text="Back"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/icons8_back" />
+
+
+    <EditText
+        android:id="@+id/searchFarmlist"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/back"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_border"
+        android:backgroundTint="@color/odd"
+        android:drawableLeft="@drawable/ic_icons8_search"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:hint="Search..."
+        android:singleLine="true" />
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/farmlistData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchFarmlist"
+        tools:listitem="@layout/item_farm_list_detials" />
+
+
+</RelativeLayout>
+

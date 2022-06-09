@@ -1,5 +1,7 @@
 package com.ronnelrazo.physical_counting.connection;
 
+import com.google.gson.annotations.SerializedName;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -229,6 +231,71 @@ public interface APIInterface {
     @POST("getBarangay")
     Call<Object> getBarangay(
             @Field("MUNICIPAL_CODE") String MUNICIPAL_CODE
+    );
+
+
+    @FormUrlEncoded
+    @POST("Save_FarmSetup")
+    Call<Object> Save_FarmSetup(
+            @Field("ORG_CODE") String ORG_CODE,
+            @Field("ORG_NAME") String ORG_NAME,
+            @Field("BUSINESS_GROUP_CODE") String BUSINESS_GROUP_CODE,
+            @Field("BUSINESS_TYPE_CODE") String BUSINESS_TYPE_CODE,
+            @Field("CHECKLIST_AUDIT_FLAG") String CHECKLIST_AUDIT_FLAG,
+            @Field("BREEDER_AUDIT_FLAG") String BREEDER_AUDIT_FLAG,
+            @Field("FEED_AUDIT_FLAG") String FEED_AUDIT_FLAG,
+            @Field("MED_AUDIT_FLAG") String MED_AUDIT_FLAG,
+            @Field("ADDRESS") String ADDRESS,
+            @Field("PROVINCE_CODE") String PROVINCE_CODE,
+            @Field("MUNICIPALITY_CODE") String MUNICIPALITY_CODE,
+            @Field("BARANGAY_CODE") String BARANGAY_CODE,
+            @Field("ZIP_CODE") String ZIP_CODE,
+            @Field("FARM_MANAGER_CODE") String FARM_MANAGER_CODE,
+            @Field("FARM_MANAGER_NAME") String FARM_MANAGER_NAME,
+            @Field("FARM_MANAGER_CONTACT_NO") String FARM_MANAGER_CONTACT_NO,
+            @Field("FARM_MANAGER_EMAIL") String FARM_MANAGER_EMAIL,
+            @Field("FARM_CLERK_CODE") String FARM_CLERK_CODE,
+            @Field("FARM_CLERK_NAME") String FARM_CLERK_NAME,
+            @Field("FARM_CLERK_CONTACT_NO") String FARM_CLERK_CONTACT_NO,
+            @Field("FARM_CLERK_EMAIL") String FARM_CLERK_EMAIL,
+            @Field("LONGITUDE") String LONGITUDE,
+            @Field("LATITUDE") String LATITUDE,
+            @Field("USER_CREATE") String USER_CREATE
+    );
+
+
+    @POST("get_FarmSetup")
+    Call<Object> get_FarmSetup();
+
+
+    @FormUrlEncoded
+    @POST("modify_farm_details")
+    Call<Object> modify_farm_details(
+            @Field("ORG_CODE") String ORG_CODE,
+            @Field("ORG_NAME") String ORG_NAME,
+            @Field("BUSINESS_GROUP_CODE") String BUSINESS_GROUP_CODE,
+            @Field("BUSINESS_TYPE_CODE") String BUSINESS_TYPE_CODE,
+            @Field("CHECKLIST_AUDIT_FLAG") String CHECKLIST_AUDIT_FLAG,
+            @Field("BREEDER_AUDIT_FLAG") String BREEDER_AUDIT_FLAG,
+            @Field("FEED_AUDIT_FLAG") String FEED_AUDIT_FLAG,
+            @Field("MED_AUDIT_FLAG") String MED_AUDIT_FLAG,
+            @Field("ADDRESS") String ADDRESS,
+            @Field("PROVINCE_CODE") String PROVINCE_CODE,
+            @Field("MUNICIPALITY_CODE") String MUNICIPALITY_CODE,
+            @Field("BARANGAY_CODE") String BARANGAY_CODE,
+            @Field("ZIP_CODE") String ZIP_CODE,
+            @Field("FARM_MANAGER_CODE") String FARM_MANAGER_CODE,
+            @Field("FARM_MANAGER_NAME") String FARM_MANAGER_NAME,
+            @Field("FARM_MANAGER_CONTACT_NO") String FARM_MANAGER_CONTACT_NO,
+            @Field("FARM_MANAGER_EMAIL") String FARM_MANAGER_EMAIL,
+            @Field("FARM_CLERK_CODE") String FARM_CLERK_CODE,
+            @Field("FARM_CLERK_NAME") String FARM_CLERK_NAME,
+            @Field("FARM_CLERK_CONTACT_NO") String FARM_CLERK_CONTACT_NO,
+            @Field("FARM_CLERK_EMAIL") String FARM_CLERK_EMAIL,
+            @Field("LONGITUDE") String LONGITUDE,
+            @Field("LATITUDE") String LATITUDE,
+            @Field("USER_CREATE") String USER_CREATE,
+            @Field("ORG_CODE_ID") String ORG_CODE_ID
     );
 
 }

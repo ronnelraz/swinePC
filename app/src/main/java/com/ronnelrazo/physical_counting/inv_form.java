@@ -20,7 +20,7 @@ public class inv_form extends AppCompatActivity {
     private Globalfunction data;
     private SharedPref sharedPref;
 
-    @BindViews({R.id.create,R.id.edit})
+    @BindViews({R.id.create,R.id.edit,R.id.pdf,R.id.FarmSetup,R.id.report,R.id.confirm})
     MaterialButton[] menus;
 
     @BindViews({R.id.username,R.id.role})
@@ -35,6 +35,10 @@ public class inv_form extends AppCompatActivity {
         sharedPref = new SharedPref(this);
         BounceView.addAnimTo(menus[0]);
         BounceView.addAnimTo(menus[1]);
+        BounceView.addAnimTo(menus[2]);
+        BounceView.addAnimTo(menus[3]);
+        BounceView.addAnimTo(menus[4]);
+        BounceView.addAnimTo(menus[5]);
 
         JWTauth[0].setText("User : " +sharedPref.getUser());
         JWTauth[1].setText("Role : " +sharedPref.getRole() + " - " + sharedPref.getBU());

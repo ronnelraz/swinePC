@@ -18,4 +18,6 @@
     <color name="odd">#E4F1F1F4</color>
     <color name="even">#FFFFFF</color>
     <color name="shimmer_placeholder">#dddddd</color>
+    <color name="munibtn_color">#BEF1EC</color>
+    <color name="menubtn_text">#365471</color>
 </resources>

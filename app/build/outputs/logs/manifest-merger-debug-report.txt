@@ -25,7 +25,7 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CPF Nigs\.gr
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\026db242ee7fea5216ebc356e3ac7aeb\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:2:1-16:12
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:2:1-18:12
-MERGED from [com.shuhart.stepview:stepview:1.2.6] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9a9c9c98048bab0b9e2a1aaa4df4b93c\transformed\jetified-stepview-1.2.6\AndroidManifest.xml:2:1-12:12
+MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ceecfd2e8bdf709077857fbf5e0755a\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7034602a19d5c7fc600c8aa3c71a4be4\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\72de3ad0e7ea8651a6e87e246ac967c6\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -331,8 +331,8 @@ MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transform
 MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuhart.stepview:stepview:1.2.6] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9a9c9c98048bab0b9e2a1aaa4df4b93c\transformed\jetified-stepview-1.2.6\AndroidManifest.xml:8:5-10:41
-MERGED from [com.shuhart.stepview:stepview:1.2.6] C:\Users\CPF Nigs\.gradle\caches\transforms-3\9a9c9c98048bab0b9e2a1aaa4df4b93c\transformed\jetified-stepview-1.2.6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ceecfd2e8bdf709077857fbf5e0755a\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ceecfd2e8bdf709077857fbf5e0755a\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7034602a19d5c7fc600c8aa3c71a4be4\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:5:5-7:41

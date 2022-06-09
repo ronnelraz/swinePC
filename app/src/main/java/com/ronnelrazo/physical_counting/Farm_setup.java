@@ -1,19 +1,26 @@
 package com.ronnelrazo.physical_counting;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,14 +30,14 @@ import com.github.ybq.android.spinkit.SpinKitView;
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.Circle;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.gson.Gson;
+import com.ronnelrazo.physical_counting.adapter.Adapter_FarmDetails;
 import com.ronnelrazo.physical_counting.connection.API;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
+import com.ronnelrazo.physical_counting.model.modal_Farm_setup_details;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 import com.shuhart.stepview.StepView;
-import com.skydoves.powerspinner.IconSpinnerAdapter;
-import com.skydoves.powerspinner.IconSpinnerItem;
-import com.skydoves.powerspinner.PowerSpinnerView;
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import org.json.JSONArray;
@@ -41,6 +48,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
@@ -62,55 +70,71 @@ public class Farm_setup extends AppCompatActivity {
     @BindView(R.id.error) TextView ErrorMessage;
 
     private int currentSelectStepView = 0;
-    private List<String> Org_code_list = new ArrayList<>();
+    public List<String> Org_code_list = new ArrayList<>();
 
-    private List<String> Org_name_list = new ArrayList<>();
+    public List<String> Org_name_list = new ArrayList<>();
     private List<String> Org_bu_type_list = new ArrayList<>();
     private List<String> Org_bu_code_list = new ArrayList<>();
 
     @BindViews({R.id.org_code,R.id.org_name})
-    SearchableSpinner[] business_Area;
+    public SearchableSpinner[]  business_Area;
     @BindViews({R.id.business_type,R.id.business_code})
     TextView[] Business_area_code;
-    ArrayAdapter adapter_org_code;
+    public ArrayAdapter adapter_org_code;
     ArrayAdapter adapter_org_name;
 
 
     @BindViews({R.id.checklist,R.id.breeder,R.id.feed,R.id.med})
-    CheckBox[] FormArea;
+    public CheckBox[] FormArea;
 
 
     @BindViews({R.id.province,R.id.municipality,R.id.barangay})
-    SearchableSpinner[] address_Area;
+    public SearchableSpinner[] address_Area;
     @BindViews({R.id.zipcode,R.id.lati,R.id.longti})
-    EditText[] address_Area_edit;
-    private List<String> province_code = new ArrayList<>();
-    private List<String>province_name = new ArrayList<>();
-    private List<String> region_code = new ArrayList<>();
+    public EditText[] address_Area_edit;
+    public List<String> province_code = new ArrayList<>();
+    public List<String>province_name = new ArrayList<>();
+    public List<String> region_code = new ArrayList<>();
     ArrayAdapter province_adapter;
 
-    private List<String> municipal_code= new ArrayList<>();
-    private List<String> municipal_name= new ArrayList<>();
+    public List<String> municipal_code= new ArrayList<>();
+    public List<String> municipal_name= new ArrayList<>();
     ArrayAdapter municipal_adapter;
 
-    private List<String> barangay_code= new ArrayList<>();
-    private List<String> barangay_name= new ArrayList<>();
+    public List<String> barangay_code= new ArrayList<>();
+    public List<String> barangay_name= new ArrayList<>();
     ArrayAdapter barangay_adapter;
 
     @BindViews({R.id.municipalityLoading,R.id.barangayLoading}) SpinKitView[] loading;
 
-    @BindViews({R.id.farmcode,R.id.farmname,R.id.farmcontact,R.id.farmemail}) EditText[] farmManager;
-    @BindViews({R.id.clerkcode,R.id.clerkname,R.id.clerkcontact,R.id.clerkemail}) EditText[] clerkManager;
+    @BindViews({R.id.farmcode,R.id.farmname,R.id.farmcontact,R.id.farmemail}) public EditText[] farmManager;
+    @BindViews({R.id.clerkcode,R.id.clerkname,R.id.clerkcontact,R.id.clerkemail}) public EditText[] clerkManager;
 
     private int Save = 0;
+    private boolean modify = false;
+
+    public AlertDialog alertDialog;
+
+
+    //modal
+    private EditText search;
+    private RecyclerView farmlist;
+    private RecyclerView.Adapter adapter;
+    private List<modal_Farm_setup_details> list =  new ArrayList<>();
+
+    //dynamic data depend on the item
+    public static String item_selected_org_code;
+    public static String ORG_CODE_ID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farm_setup);
         ButterKnife.bind(this);
+        ButterKnife.setDebug(true);
         data = new Globalfunction(this);
         sharedPref = new SharedPref(this);
+        modify = false;
 
         loadFarmOrg();
         loadAddressProvince(); //load Province
@@ -183,17 +207,42 @@ public class Farm_setup extends AppCompatActivity {
                     ClerkManagerValidator();
                 }
                 else{
-                    SaveFarmSetup();
+                        SaveFarmSetup(v);
+
+
                 }
             }
 
         });
 
 
+        stepViewClick();
     }
 
 
-    protected void SaveFarmSetup(){
+    protected void stepViewClick(){
+        stepView.setOnStepClickListener(step -> {
+               switch (step){
+                   case 0:
+                       businessAreaValidator();
+                       break;
+                   case 1:
+                       FormAreaValudator();
+                       break;
+                   case 2:
+                       AddressValidator();
+                       break;
+                   case 3:
+                       FarmManagerValidator();
+                       break;
+                   case 4:
+                       ClerkManagerValidator();
+                       break;
+               }
+        });
+    }
+
+    protected void SaveFarmSetup(View v){
         String getOrgcode = business_Area[0].getSelectedItem().toString();
         String getOrgName = business_Area[1].getSelectedItem().toString();
         String getBu_type = Business_area_code[0].getText().toString();
@@ -220,11 +269,150 @@ public class Farm_setup extends AppCompatActivity {
         String getClerkContact = clerkManager[2].getText().toString();
         String getClerkMail = clerkManager[3].getText().toString();
 
-
-        Log.d("swine", getOrgcode + " " + getOrgName + " " + getBu_type + " " + getBu_code + " " + getChecklist + " " + getBreeder + " " + getFeed + " " + getMed + " " +getProvince + " " +
+        if(modify){
+            data.Confirmation(v.getContext(),"Are you sure you want to Save the new update?",R.drawable.ic_icons8_info);
+            data.negative.setOnClickListener(v1 -> {
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setText("Save Changes");
+            data.positive.setOnClickListener(v1 -> {
+                modifyFarm(getOrgcode, getOrgName, getBu_type, getBu_code, getChecklist, getBreeder, getFeed, getMed, getProvince, getMunicipal, getBarangay, getZipCode, getProvinceCode, getMunicipalCode, getBarangayCode, getlati, getlongi, getFarmcode, getFarmName, getFarmContact, getFarmMail, getClerkcode,
+                        getClerkName, getClerkContact, getClerkMail,ORG_CODE_ID);
+            });
+        }
+        else{
+            Log.d("swine", getOrgcode + " " + getOrgName + " " + getBu_type + " " + getBu_code + " " + getChecklist + " " + getBreeder + " " + getFeed + " " + getMed + " " +getProvince + " " +
                 getMunicipal + " " + getBarangay + " " + getZipCode + " " + getProvinceCode + " " + getMunicipalCode + " " + getBarangayCode + " " + getZipCode + " " + getlati + " " + getlongi + " " +getFarmcode + " " + getFarmName + " " + getFarmContact + " " +getFarmMail + " " + getClerkcode + " " +
                 getClerkName + " " + getClerkContact + " " + getClerkMail);
 
+
+            data.Confirmation(v.getContext(),"Are you sure you want to Save this new Setup?",R.drawable.ic_icons8_info);
+            data.negative.setOnClickListener(v1 -> {
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setOnClickListener(v1 -> {
+                saveFarmSetup(getOrgcode, getOrgName, getBu_type, getBu_code, getChecklist, getBreeder, getFeed, getMed, getProvince, getMunicipal, getBarangay, getZipCode, getProvinceCode, getMunicipalCode, getBarangayCode, getlati, getlongi, getFarmcode, getFarmName, getFarmContact, getFarmMail, getClerkcode,
+                    getClerkName, getClerkContact, getClerkMail);
+            });
+
+        }
+
+
+
+    }
+
+    protected void modifyFarm(String getOrgcode, String getOrgName, String getBu_type, String getBu_code, String getChecklist, String getBreeder, String getFeed, String getMed, String getProvince, String
+            getMunicipal, String getBarangay, String getZipCode, String getProvinceCode, String getMunicipalCode, String getBarangayCode, String getlati, String getlongi, String getFarmcode, String getFarmName, String getFarmContact, String getFarmMail, String getClerkcode, String
+                                         getClerkName, String getClerkContact, String getClerkMail, String getORG_CODE_ID){
+
+        data.loading("Please wait");
+        API.getClient().modify_farm_details(getOrgcode,getOrgName,
+                getBu_code,getBu_type,
+                getChecklist,getBreeder,getFeed,getMed,
+                getBarangay + ", " + getMunicipal + ", " + getProvince,getProvinceCode,getMunicipalCode,getBarangayCode,getZipCode,
+                getFarmcode,getFarmName,getFarmContact,getFarmMail,
+                getClerkcode,getClerkName,getClerkContact,getClerkMail,
+                getlongi,getlati,sharedPref.getUser(),getORG_CODE_ID).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+
+                    if(success){
+                        Log.d("swine","Save : " + success);
+                        data.toast(R.raw.checked,"Updated Successfully!", Gravity.BOTTOM|Gravity.CENTER,0,50);
+                        data.ConfirmDialog.dismiss();
+                        data.pDialog.dismiss();
+                        new Handler().postDelayed(() -> {
+                            clearData();
+                        },2000);
+                    }
+                    else{
+                        Log.d("swine","Save : " + success);
+                        data.toast(R.raw.error,"Data Already Exists. Please contact IT Department For more information.", Gravity.BOTTOM|Gravity.CENTER,0,50);
+                        data.ConfirmDialog.dismiss();
+                        data.pDialog.dismiss();
+                        clearData();
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+
+                }
+            }
+        });
+    }
+
+
+    protected void saveFarmSetup(String getOrgcode, String getOrgName, String getBu_type, String getBu_code, String getChecklist, String getBreeder, String getFeed, String getMed, String getProvince, String
+            getMunicipal, String getBarangay, String getZipCode, String getProvinceCode, String getMunicipalCode, String getBarangayCode, String getlati, String getlongi, String getFarmcode, String getFarmName, String getFarmContact, String getFarmMail, String getClerkcode, String
+                                         getClerkName, String getClerkContact, String getClerkMail){
+
+        data.loading("Please wait");
+        API.getClient().Save_FarmSetup(getOrgcode,getOrgName,
+                getBu_code,getBu_type,
+                getChecklist,getBreeder,getFeed,getMed,
+                getBarangay + ", " + getMunicipal + ", " + getProvince,getProvinceCode,getMunicipalCode,getBarangayCode,getZipCode,
+                getFarmcode,getFarmName,getFarmContact,getFarmMail,
+                getClerkcode,getClerkName,getClerkContact,getClerkMail,
+                getlongi,getlati,sharedPref.getUser()).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+
+                    if(success){
+                        Log.d("swine","Save : " + success);
+                        data.toast(R.raw.checked,"Saved Successfully!", Gravity.BOTTOM|Gravity.CENTER,0,50);
+                        data.ConfirmDialog.dismiss();
+                        data.pDialog.dismiss();
+                        new Handler().postDelayed(() -> {
+                            clearData();
+                        },2000);
+                    }
+                    else{
+                        Log.d("swine","Save : " + success);
+                        data.toast(R.raw.error,"Data Already Exists. Please contact IT Department For more information.", Gravity.BOTTOM|Gravity.CENTER,0,50);
+                        data.ConfirmDialog.dismiss();
+                        data.pDialog.dismiss();
+                        clearData();
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+
+                }
+            }
+        });
+    }
+
+
+    private void clearData(){
+        data.intent(Farm_setup.class,this);
     }
 
 
@@ -463,7 +651,7 @@ public class Farm_setup extends AppCompatActivity {
     private void FarmManagerValidator(){
         farmManager[1].setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z-]+\\.+[a-z]+";
-        String farmNamePattern = "[a-zA-Z ]+";
+        String farmNamePattern = "[a-zA-Z. ]+";
         if(farmManager[0].getText().toString().isEmpty()){
             farmManager[0].requestFocus();
             Toast.makeText(this, "Please Enter Farm manager Code.", Toast.LENGTH_SHORT).show();
@@ -662,7 +850,6 @@ public class Farm_setup extends AppCompatActivity {
     private void SpinnerSetup(SearchableSpinner spinner,ArrayAdapter adapter,String Title){
         spinner.setTitle(Title);
         spinner.setAdapter(adapter);
-
         OrgOnclick();
     }
 
@@ -713,6 +900,7 @@ public class Farm_setup extends AppCompatActivity {
                             @Override
                             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                 ErrorMessage.setVisibility(View.GONE);
+
                             }
 
                             @Override
@@ -748,4 +936,134 @@ public class Farm_setup extends AppCompatActivity {
 
 
 
+    public void menu(View v) {
+        modify = true;
+        MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(v.getContext(),R.style.full_screen_dialog);
+        View view = LayoutInflater.from(v.getContext()).inflate(R.layout.farm_detials_list,null);
+        MaterialButton back = view.findViewById(R.id.back);
+        back.setOnClickListener(v2 -> {
+            alertDialog.dismiss();
+        });
+        search = view.findViewById(R.id.searchFarmlist);
+        farmlist = view.findViewById(R.id.farmlistData);
+
+        farmlist.setHasFixedSize(true);
+        farmlist.setItemViewCacheSize(999999999);
+        farmlist.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        adapter = new Adapter_FarmDetails(list,v.getContext(),modify);
+        farmlist.setAdapter(adapter);
+
+        getFarmListDetials(view);
+        SearchDataModal(search,farmlist);
+
+        dialogBuilder.setView(view);
+        alertDialog = dialogBuilder.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        alertDialog.setCancelable(false);
+
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        BounceView.addAnimTo(alertDialog);
+        alertDialog.show();
+    }
+
+    private void SearchDataModal(EditText search,RecyclerView farmlist){
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int i, int i1, int i2) {
+                ArrayList<modal_Farm_setup_details> newList = new ArrayList<>();
+                for (modal_Farm_setup_details sub : list)
+                {
+                    String code = sub.getORG_CODE().toLowerCase();
+                    String name = sub.getORG_NAME().toLowerCase();
+                    String address = sub.getADDRESS().toLowerCase();
+                    if(name.contains(s) || code.contains(s) || address.contains(s)){
+                        newList.add(sub);
+                    }
+                    adapter = new Adapter_FarmDetails(newList, getApplicationContext(),modify);
+                    farmlist.setAdapter(adapter);
+
+                }
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+    }
+
+    private void getFarmListDetials(View v) {
+        list.clear();
+        API.getClient().get_FarmSetup().enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    JSONArray result = jsonResponse.getJSONArray("data");
+
+                    if(success){
+                        for (int i = 0; i < result.length(); i++) {
+
+                            JSONObject object = result.getJSONObject(i);
+                            modal_Farm_setup_details item = new modal_Farm_setup_details(
+                                    object.getString("ORG_CODE"),
+                                    object.getString("ORG_NAME"),
+                                    object.getString("BUSINESS_GROUP_CODE"),
+                                    object.getString("BUSINESS_TYPE_CODE"),
+                                    object.getString("CHECKLIST_AUDIT_FLAG"),
+                                    object.getString("BREEDER_AUDIT_FLAG"),
+                                    object.getString("FEED_AUDIT_FLAG"),
+                                    object.getString("MED_AUDIT_FLAG"),
+                                    object.getString("ADDRESS"),
+                                    object.getString("PROVINCE_CODE"),
+                                    object.getString("MUNICIPALITY_CODE"),
+                                    object.getString("BARANGAY_CODE"),
+                                    object.getString("ZIP_CODE") == null ? "none" : object.getString("ZIP_CODE"),
+                                    object.getString("FARM_MANAGER_CODE"),
+                                    object.getString("FARM_MANAGER_NAME"),
+                                    object.getString("FARM_MANAGER_CONTACT_NO"),
+                                    object.getString("FARM_MANAGER_EMAIL"),
+                                    object.getString("FARM_CLERK_CODE"),
+                                    object.getString("FARM_CLERK_NAME"),
+                                    object.getString("FARM_CLERK_CONTACT_NO"),
+                                    object.getString("FARM_CLERK_EMAIL"),
+                                    object.getString("STR_LONGITUDE"),
+                                    object.getString("STR_LATITUDE")
+                            );
+
+                            list.add(item);
+
+
+                        }
+
+                        adapter = new Adapter_FarmDetails(list,getApplicationContext(),modify);
+                        farmlist.setAdapter(adapter);
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage() + " Error");
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+
+                }
+            }
+        });
+    }
 }
