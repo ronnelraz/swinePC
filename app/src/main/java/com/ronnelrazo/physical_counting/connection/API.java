@@ -34,6 +34,7 @@ public class API {
 
             if (!response.isSuccessful() || response.code()==503) {
                 connectionPool.evictAll();
+                response.close();
                 return chain.proceed(request);
             } else {
                 // Customize or return the response

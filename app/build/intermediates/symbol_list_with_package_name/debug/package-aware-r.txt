@@ -3408,6 +3408,7 @@ drawable ic_username
 drawable icons8_back
 drawable icons8_cancel_1
 drawable icons8_pdf_1
+drawable icons8_smart_home_checked
 drawable logout
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -3775,8 +3776,10 @@ id async
 id audi_No
 id audi_date
 id auditDate
+id audit_date
 id audit_dateA1
 id audit_date_filter
+id audit_no
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -4960,6 +4963,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_edit_pdf
+layout activity_edit_tab_form
 layout activity_farm_categories
 layout activity_farm_setup
 layout activity_integration_submenu
@@ -4992,12 +4997,14 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout edit_pdf_list_detials
 layout expand_button
 layout farm_detials_list
 layout farm_manager_area_layout
 layout form_area_layout
 layout fragment_breeder
 layout fragment_checklist
+layout fragment_checklist_edit
 layout fragment_contract
 layout fragment_feed
 layout fragment_med

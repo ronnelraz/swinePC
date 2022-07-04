@@ -87,6 +87,47 @@
                 android:textSize="20sp"
                 android:text="Create" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/purple_200"
+                app:elevation="10dp"
+                app:icon="@drawable/edit"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:onClick="edit"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Edit" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm"
+                android:fontFamily="@font/cpf_imm_sook_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/radius_border"
+                app:backgroundTint="@color/shimmer_placeholder"
+                app:iconTint="@color/purple_200"
+                app:elevation="10dp"
+                app:icon="@drawable/checked"
+                app:iconGravity="textTop"
+                app:iconSize="70sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Confirm" />
+
 
 
 
@@ -113,9 +154,9 @@
 
 
 
-
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/edit"
+                android:id="@+id/FarmSetup"
+                android:onClick="FarmSetup"
                 android:fontFamily="@font/cpf_imm_sook_bold"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -124,37 +165,15 @@
                 android:layout_gravity="fill_horizontal"
                 android:background="@drawable/radius_border"
                 app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/purple_200"
+                app:iconTint="@color/tabBackgroundColor"
                 app:elevation="10dp"
-                app:icon="@drawable/edit"
+                app:icon="@drawable/icons8_smart_home_checked"
                 app:iconGravity="textTop"
                 app:iconSize="70sp"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Edit" />
-
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/confirm"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/purple_200"
-                app:elevation="10dp"
-                app:icon="@drawable/checked"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Confirm" />
-
+                android:text="Farm setup" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/report"
@@ -176,49 +195,7 @@
                 android:textStyle="bold"
                 android:text="Report" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/FarmSetup"
-                android:onClick="FarmSetup"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/tabBackgroundColor"
-                app:elevation="10dp"
-                app:icon="@drawable/ic_icons8_add_user_male"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Farm setup" />
 
-
-
-
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_gravity="fill_horizontal"-->
-<!--                android:background="@drawable/radius_border"-->
-<!--                android:backgroundTint="#BFD9F4"-->
-<!--                android:text="Tile3" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_gravity="fill_horizontal"-->
-<!--                android:background="@drawable/radius_border"-->
-<!--                android:backgroundTint="#BFD9F4"-->
-<!--                android:text="Tile4" />-->
 
         </GridLayout>
 

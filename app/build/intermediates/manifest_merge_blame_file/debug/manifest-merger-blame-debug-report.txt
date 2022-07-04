@@ -36,7 +36,7 @@
 19-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:22:22-68
 20
 21    <application
-21-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:12:5-68:19
+21-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:12:5-74:19
 22        android:allowBackup="true"
 22-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:9-35
 23        android:allowClearUserData="true"
@@ -64,193 +64,205 @@
 35-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:9-55
 36        <activity
 36-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:9-23:40
-37            android:name="com.ronnelrazo.physical_counting.Farm_setup"
-37-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:22:13-39
+37            android:name="com.ronnelrazo.physical_counting.edit_TabForm"
+37-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:22:13-41
 38            android:exported="false" />
 38-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:13-37
 39        <activity
 39-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:9-26:40
-40            android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
-40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:13-44
+40            android:name="com.ronnelrazo.physical_counting.Edit_pdf"
+40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:13-37
 41            android:exported="false" />
 41-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:13-37
 42        <activity
 42-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:9-29:40
-43            android:name="com.ronnelrazo.physical_counting.Integration_submenu"
-43-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-48
+43            android:name="com.ronnelrazo.physical_counting.Farm_setup"
+43-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-39
 44            android:exported="false" />
 44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:13-37
 45        <activity
 45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:9-32:40
-46            android:name="com.ronnelrazo.physical_counting.tab_from"
-46-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-37
+46            android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
+46-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-44
 47            android:exported="false" />
 47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:13-37
 48        <activity
 48-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:9-35:40
-49            android:name="com.ronnelrazo.physical_counting.inv_form"
-49-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-37
+49            android:name="com.ronnelrazo.physical_counting.Integration_submenu"
+49-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-48
 50            android:exported="false" />
 50-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:13-37
 51        <activity
 51-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:9-38:40
-52            android:name="com.ronnelrazo.physical_counting.Farm_categories"
-52-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:13-44
+52            android:name="com.ronnelrazo.physical_counting.tab_from"
+52-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:13-37
 53            android:exported="false" />
 53-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:13-37
 54        <activity
-54-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:9-47:20
-55            android:name="com.ronnelrazo.physical_counting.Login"
-55-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:40:13-34
-56            android:exported="true" >
-56-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:13-36
-57            <intent-filter>
-57-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:13-46:29
-58                <action android:name="android.intent.action.MAIN" />
-58-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:17-69
-58-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:25-66
-59
-60                <category android:name="android.intent.category.LAUNCHER" />
-60-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:17-77
-60-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:27-74
-61            </intent-filter>
-62        </activity>
-63        <activity
-63-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:48:9-50:40
-64            android:name="com.ronnelrazo.physical_counting.MainActivity"
-64-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:13-41
-65            android:exported="false" />
-65-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:50:13-37
-66        <activity
-66-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:9-53:59
-67            android:name="com.pspdfkit.ui.PdfActivity"
-67-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:52:13-55
-68            android:windowSoftInputMode="adjustNothing" />
-68-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:53:13-56
-69
-70        <provider
-70-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:55:9-63:20
-71            android:name="androidx.core.content.FileProvider"
-71-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:13-62
-72            android:authorities="com.ronnelrazo.physical_counting.provider"
-72-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:57:13-76
-73            android:exported="false"
-73-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:58:13-37
-74            android:grantUriPermissions="true" >
-74-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:59:13-47
-75            <meta-data
-75-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:60:13-62:53
-76                android:name="android.support.FILE_PROVIDER_PATHS"
-76-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:61:17-67
-77                android:resource="@xml/file_path" />
-77-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:62:17-50
-78        </provider>
-79
-80        <service
-80-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:65:9-67:40
-81            android:name="com.novoda.merlin.MerlinService"
-81-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:13-59
-82            android:exported="false" />
-82-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:67:13-37
-83
-84        <activity
-84-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:27:9-29:72
-85            android:name="com.karumi.dexter.DexterActivity"
-85-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:28:13-60
-86            android:theme="@style/Dexter.Internal.Theme.Transparent" /> <!-- Printing pdf documents -->
-86-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:29:13-69
-87        <activity
-87-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:35:9-39:40
-88            android:name="com.pspdfkit.document.printing.PrintActivity"
-88-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:36:13-72
-89            android:configChanges="orientation|screenSize"
-89-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:37:13-59
-90            android:excludeFromRecents="true"
-90-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:38:13-46
-91            android:exported="false" /> <!-- Content provider used for initializing the library. -->
-91-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:39:13-37
-92        <provider
-92-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:42:9-45:40
-93            android:name="com.pspdfkit.PSPDFKitInitializationProvider"
-93-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:43:13-71
-94            android:authorities="com.ronnelrazo.physical_counting.com.pspdfkit.PSPDFKitInitializationProvider"
-94-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:44:13-95
-95            android:exported="false" />
-95-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:45:13-37
-96        <provider
-96-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:46:9-49:40
-97            android:name="com.pspdfkit.media.AssetsContentProvider"
-97-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:47:13-68
-98            android:authorities="com.ronnelrazo.physical_counting.pdf.assets"
-98-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:48:13-62
-99            android:exported="false" />
-99-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:49:13-37
-100        <provider
-100-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:50:9-55:54
-101            android:name="com.pspdfkit.document.sharing.DocumentSharingProvider"
-101-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:51:13-81
-102            android:authorities="com.ronnelrazo.physical_counting.pdf.share"
-102-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:52:13-61
-103            android:exported="true"
-103-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:53:13-36
-104            android:grantUriPermissions="true" />
-104-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:54:13-47
-105
-106        <service
-106-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:10:9-16:19
-107            android:name="com.ixuea.android.downloader.DownloadService"
-107-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:11:13-72
-108            android:exported="true" >
-108-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:12:13-36
-109            <intent-filter>
-109-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:13:13-15:29
-110                <action android:name="com.ixuea.android.downloader.DOWNLOAD_SERVICE" />
-110-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:17-88
-110-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:25-85
-111            </intent-filter>
-112        </service>
-113        <service
-113-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:12:9-15:19
-114            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
-114-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:13:13-84
-115            android:exported="false" >
-115-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:14:13-37
-116        </service>
-117
-118        <provider
-118-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-119            android:name="androidx.startup.InitializationProvider"
-119-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-120            android:authorities="com.ronnelrazo.physical_counting.androidx-startup"
-120-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+54-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:9-41:40
+55            android:name="com.ronnelrazo.physical_counting.inv_form"
+55-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:40:13-37
+56            android:exported="false" />
+56-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:13-37
+57        <activity
+57-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:9-44:40
+58            android:name="com.ronnelrazo.physical_counting.Farm_categories"
+58-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:13-44
+59            android:exported="false" />
+59-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:44:13-37
+60        <activity
+60-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:9-53:20
+61            android:name="com.ronnelrazo.physical_counting.Login"
+61-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-34
+62            android:exported="true" >
+62-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:47:13-36
+63            <intent-filter>
+63-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:48:13-52:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:17-69
+64-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:17-77
+66-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:27-74
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:54:9-56:40
+70            android:name="com.ronnelrazo.physical_counting.MainActivity"
+70-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:55:13-41
+71            android:exported="false" />
+71-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:13-37
+72        <activity
+72-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:57:9-59:59
+73            android:name="com.pspdfkit.ui.PdfActivity"
+73-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:58:13-55
+74            android:windowSoftInputMode="adjustNothing" />
+74-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:59:13-56
+75
+76        <provider
+76-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:61:9-69:20
+77            android:name="androidx.core.content.FileProvider"
+77-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:62:13-62
+78            android:authorities="com.ronnelrazo.physical_counting.provider"
+78-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:63:13-76
+79            android:exported="false"
+79-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:64:13-37
+80            android:grantUriPermissions="true" >
+80-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:65:13-47
+81            <meta-data
+81-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:13-68:53
+82                android:name="android.support.FILE_PROVIDER_PATHS"
+82-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:67:17-67
+83                android:resource="@xml/file_path" />
+83-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:68:17-50
+84        </provider>
+85
+86        <service
+86-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:71:9-73:40
+87            android:name="com.novoda.merlin.MerlinService"
+87-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:72:13-59
+88            android:exported="false" />
+88-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:73:13-37
+89
+90        <activity
+90-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:27:9-29:72
+91            android:name="com.karumi.dexter.DexterActivity"
+91-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:28:13-60
+92            android:theme="@style/Dexter.Internal.Theme.Transparent" /> <!-- Printing pdf documents -->
+92-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:29:13-69
+93        <activity
+93-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:35:9-39:40
+94            android:name="com.pspdfkit.document.printing.PrintActivity"
+94-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:36:13-72
+95            android:configChanges="orientation|screenSize"
+95-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:37:13-59
+96            android:excludeFromRecents="true"
+96-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:38:13-46
+97            android:exported="false" /> <!-- Content provider used for initializing the library. -->
+97-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:39:13-37
+98        <provider
+98-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:42:9-45:40
+99            android:name="com.pspdfkit.PSPDFKitInitializationProvider"
+99-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:43:13-71
+100            android:authorities="com.ronnelrazo.physical_counting.com.pspdfkit.PSPDFKitInitializationProvider"
+100-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:44:13-95
+101            android:exported="false" />
+101-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:45:13-37
+102        <provider
+102-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:46:9-49:40
+103            android:name="com.pspdfkit.media.AssetsContentProvider"
+103-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:47:13-68
+104            android:authorities="com.ronnelrazo.physical_counting.pdf.assets"
+104-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:48:13-62
+105            android:exported="false" />
+105-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:49:13-37
+106        <provider
+106-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:50:9-55:54
+107            android:name="com.pspdfkit.document.sharing.DocumentSharingProvider"
+107-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:51:13-81
+108            android:authorities="com.ronnelrazo.physical_counting.pdf.share"
+108-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:52:13-61
+109            android:exported="true"
+109-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:53:13-36
+110            android:grantUriPermissions="true" />
+110-->[com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:54:13-47
+111
+112        <service
+112-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:10:9-16:19
+113            android:name="com.ixuea.android.downloader.DownloadService"
+113-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:11:13-72
+114            android:exported="true" >
+114-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:12:13-36
+115            <intent-filter>
+115-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:13:13-15:29
+116                <action android:name="com.ixuea.android.downloader.DOWNLOAD_SERVICE" />
+116-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:17-88
+116-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:25-85
+117            </intent-filter>
+118        </service>
+119        <service
+119-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:12:9-15:19
+120            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
+120-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:13:13-84
 121            android:exported="false" >
-121-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-122            <meta-data
-122-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-123                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-123-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-124                android:value="androidx.startup" />
-124-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-125            <meta-data
-125-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-126                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-126-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-127                android:value="androidx.startup" />
-127-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-128        </provider>
-129
-130        <uses-library
-130-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-131            android:name="androidx.window.extensions"
-131-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-132            android:required="false" />
-132-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-133        <uses-library
-133-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-134            android:name="androidx.window.sidecar"
-134-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-135            android:required="false" />
-135-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-136    </application>
-137
-138</manifest>
+121-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:14:13-37
+122        </service>
+123
+124        <provider
+124-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+125            android:name="androidx.startup.InitializationProvider"
+125-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+126            android:authorities="com.ronnelrazo.physical_counting.androidx-startup"
+126-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+127            android:exported="false" >
+127-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+128            <meta-data
+128-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+129                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+129-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+130                android:value="androidx.startup" />
+130-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+131            <meta-data
+131-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+132                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+132-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+133                android:value="androidx.startup" />
+133-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+134        </provider>
+135
+136        <uses-library
+136-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+137            android:name="androidx.window.extensions"
+137-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+138            android:required="false" />
+138-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+139        <uses-library
+139-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+140            android:name="androidx.window.sidecar"
+140-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+141            android:required="false" />
+141-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29a4a2635fe3ae7324fd4158242cc016\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+142    </application>
+143
+144</manifest>

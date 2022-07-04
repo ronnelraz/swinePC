@@ -19,6 +19,8 @@
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout-land/item_breeder_header.xml" value="0.25" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout-land/item_breeder_items.xml" value="0.33" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/Farm_manager_area_layout.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_edit_pdf.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_edit_tab_form.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_farm_categories.xml" value="0.33" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_farm_setup.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/activity_integration_submenu.xml" value="0.2" />
@@ -36,12 +38,14 @@
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_dialog.xml" value="0.17637732857709076" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_loading.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/custom_toast.xml" value="0.2172017439556084" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/edit_pdf_list_detials.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/farm_detials_list.xml" value="0.2967079948696024" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/farm_manager_area_layout.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/form_area_layout.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/form_layout.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_breeder.xml" value="0.25" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_checklist.xml" value="0.2" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_checklist_edit.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_contract.xml" value="0.16" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_feed.xml" value="0.18" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/fragment_med.xml" value="0.18" />

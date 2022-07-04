@@ -22,17 +22,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="876e6820-cfd9-49d0-9892-864f4fe60a09" name="Default Changelist" comment="06/06/2022 SAVE NLNG SA DATABASE IDANA :3">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_FarmDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/modal_Farm_setup_details.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_report_file.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/farm_detials_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_farm_list_detials.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Edit_pdf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Breeder_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Checklist_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Feed_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Med_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_editPDF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/TabLayoutAdapter_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/edit_TabForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/fragment/Tab_breeder_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/fragment/Tab_checklist_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/fragment/Tab_feed_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/fragment/Tab_med_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/modal_checklist_Details_Edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_breeder_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_edit_list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_feed_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_med_edit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icons8_smart_home_checked.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_pdf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_tab_form.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/edit_pdf_list_detials.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_checklist_edit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" afterDir="false" />
@@ -40,40 +55,43 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/API.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/API.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/APIInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/APIInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/inv_form.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/inv_form.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/local_only_symbol_list/debug/R-def.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/local_only_symbol_list/debug/R-def.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/layout_activity_inv_form.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/layout_activity_inv_form.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values_values.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/activity_inv_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/activity_inv_form.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/API.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/API.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/APIInterface.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/APIInterface.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/inv_form.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/inv_form.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Farm_setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Farm_setup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/API.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/APIInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/inv_form.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/inv_form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_farm_setup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_farm_setup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/tab_from.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/tab_from.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inv_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inv_form.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R52RA00WNEW]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R52N40Y8RGN]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -102,9 +120,9 @@
         <option value="resourceFile" />
         <option value="valueResourceFile" />
         <option value="layoutResourceFile_vertical" />
-        <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -156,9 +174,9 @@
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/es.voghdev.pdfviewpager/library/1.1.2/3a501d0a01b724ca9e188085c181e00ec867b524/library-1.1.2-sources.jar!/es/voghdev/pdfviewpager/library/RemotePDFViewPager.java_SELECTED" value="RemotePDFViewPager" />
     <property name="android-custom-viewC:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/java/com/ronnelrazo/physical_counting/textWatcher.java_SELECTED" value="textWatcher" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="com.android.tools.idea.sqlite.queryhistory" value="select * from table_header_details&#10;delete from table_header_details&#10;select* from TABLE_HEADER_DETAILS&#10;delete from TABLE_HEADER_DETAILS&#10;select * from TABLE_HEADER_DETAILS" />
+    <property name="com.android.tools.idea.sqlite.queryhistory" value="select * from table_header_details&#10;delete from table_header_details&#10;select * from table_breeder_details&#10;select * from table_header&#10;select* from TABLE_HEADER_DETAILS" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../QuizBee" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.20304568" />
@@ -182,12 +200,15 @@
     <key name="android.template.-24154379">
       <recent name="com.ronnelrazo.physical_counting" />
     </key>
+    <key name="android.template.1670131374">
+      <recent name="com.ronnelrazo.physical_counting" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ronnelrazo.physical_counting.adapter" />
+      <recent name="com.ronnelrazo.physical_counting.model" />
+      <recent name="com.ronnelrazo.physical_counting.fragment" />
       <recent name="com.ronnelrazo.physical_counting.connection" />
       <recent name="com.ronnelrazo.physical_counting.Database" />
-      <recent name="com.ronnelrazo.physical_counting.model" />
-      <recent name="com.ronnelrazo.physical_counting" />
     </key>
     <key name="android.template.-1479929641">
       <recent name="com.ronnelrazo.physical_counting" />
@@ -526,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654506876340</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="06/06/2022 SAVE NLNG SA DATABASE IDANA :3">
+      <created>1654765837665</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1654765837666</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

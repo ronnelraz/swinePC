@@ -298,4 +298,49 @@ public interface APIInterface {
             @Field("ORG_CODE_ID") String ORG_CODE_ID
     );
 
+
+    @FormUrlEncoded
+    @POST("edit_pdf_list")
+    Call<Object> edit_pdf_list(
+            @Field("username") String username
+    );
+
+
+    @FormUrlEncoded
+    @POST("edit_header")
+    Call<Object> edit_header(
+            @Field("org_code") String org_code,
+            @Field("farm_code") String farm_code
+    );
+
+
+    @FormUrlEncoded
+    @POST("edit_checklist")
+    Call<Object> edit_checklist(
+            @Field("audit_no") String audit_no
+    );
+
+
+    @FormUrlEncoded
+    @POST("edit_breeder")
+    Call<Object> edit_breeder(
+            @Field("audit_no") String audit_no
+    );
+
+    @FormUrlEncoded
+    @POST("edit_feed")
+    Call<Object> edit_feed(
+            @Field("audit_no") String audit_no
+    );
+
+
+    @FormUrlEncoded
+    @POST("edit_med")
+    Call<Object> edit_med(
+            @Field("audit_no") String audit_no
+    );
+
+
+
+
 }

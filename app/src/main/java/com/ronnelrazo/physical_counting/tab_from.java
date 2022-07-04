@@ -76,7 +76,7 @@ public class tab_from extends AppCompatActivity {
         sharedPref = new SharedPref(this);
 
         //clear data first before fetch save all datas
-        data.clearAll(str_orgcode,str_farmcode);
+//        data.clearAll(str_orgcode,str_farmcode);
 
 //        Toast.makeText(this, str_orgname + " " + str_farmname, Toast.LENGTH_SHORT).show();
         Log.d("swine",str_orgname + " " + str_farmname);
