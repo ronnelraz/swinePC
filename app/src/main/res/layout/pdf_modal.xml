@@ -21,7 +21,7 @@
                android:layout_width="30dp"
                android:layout_height="30dp"
                android:background="@drawable/icons8_cancel_1"
-               android:backgroundTint="@color/black"/>
+               android:backgroundTint="@color/error"/>
 
                <com.google.android.material.tabs.TabLayout
                    android:id="@+id/tab"

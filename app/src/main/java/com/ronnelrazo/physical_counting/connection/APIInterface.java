@@ -340,6 +340,63 @@ public interface APIInterface {
             @Field("audit_no") String audit_no
     );
 
+    @FormUrlEncoded
+    @POST("update_checklist")
+    Call<Object> update_checklist(
+            @Field("check") String check,
+            @Field("remark") String remark,
+            @Field("audit_no") String audit_no,
+            @Field("main_code") String main_code,
+            @Field("sub_code") String sub_code,
+            @Field("details_code") String details_code
+    );
+
+    @FormUrlEncoded
+    @POST("update_breeder")
+    Call<Object> update_breeder_idana(
+            @Field("counting") String counting,
+            @Field("remark") String remark,
+            @Field("org_code") String org_code,
+            @Field("audit_no") String audit_no,
+//            @Field("farm_code") String farm_code,
+//            @Field("locs") String locs,
+            @Field("farm_org") String farm_org
+    );
+
+    @FormUrlEncoded
+    @POST("update_feed")
+    Call<Object> update_feed(
+            @Field("counting") String counting,
+            @Field("remark") String remark,
+            @Field("org_code") String org_code,
+            @Field("audit_no") String audit_no,
+            @Field("farm_org") String farm_org,
+            @Field("feed_code") String feed_code
+    );
+
+    @FormUrlEncoded
+    @POST("update_med")
+    Call<Object> update_med(
+            @Field("counting") String counting,
+            @Field("remark") String remark,
+            @Field("org_code") String org_code,
+            @Field("audit_no") String audit_no,
+            @Field("farm_org") String farm_org,
+            @Field("med_code") String med_code
+    );
+
+    @FormUrlEncoded
+    @POST("confirm_list")
+    Call<Object> confirm_list(
+            @Field("user") String user
+    );
+
+    @FormUrlEncoded
+    @POST("flag")
+    Call<Object> flag(
+            @Field("audit_no") String audit_no,
+            @Field("flag") String flag
+    );
 
 
 

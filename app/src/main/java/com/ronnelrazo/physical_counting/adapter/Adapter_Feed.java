@@ -82,14 +82,14 @@ public class Adapter_Feed extends RecyclerView.Adapter<Adapter_Feed.ViewHolder> 
 
             @Override
             public void afterTextChanged(Editable s) {
-                boolean update = Globalfunction.getInstance(mContext)
-                        .updateFeedlist(position,getData.getOrgCode(),getData.getFarmCode(),s.toString(),holder.remark.getText().toString());
-                if(update){
-                    Log.d("swine","feed updated postion : " + position);
-                }
-                else{
-                    Log.d("swine","feed error postion : " + position);
-                }
+//                boolean update = Globalfunction.getInstance(mContext)
+//                        .updateFeedlist(position,getData.getOrgCode(),getData.getFarmCode(),s.toString(),holder.remark.getText().toString());
+//                if(update){
+//                    Log.d("swine","feed updated postion : " + position);
+//                }
+//                else{
+//                    Log.d("swine","feed error postion : " + position);
+//                }
             }
         });
 
@@ -107,15 +107,15 @@ public class Adapter_Feed extends RecyclerView.Adapter<Adapter_Feed.ViewHolder> 
 
             @Override
             public void afterTextChanged(Editable s) {
-                String counting = holder.counting.getText().toString().isEmpty() ? "0" : holder.counting.getText().toString();
-                boolean update = Globalfunction.getInstance(mContext)
-                        .updateFeedlist(position,getData.getOrgCode(),getData.getFarmCode(),counting,s.toString());
-                if(update){
-                    Log.d("swine","feed updated postion : " + position);
-                }
-                else{
-                    Log.d("swine","feed error postion : " + position);
-                }
+//                String counting = holder.counting.getText().toString().isEmpty() ? "0" : holder.counting.getText().toString();
+//                boolean update = Globalfunction.getInstance(mContext)
+//                        .updateFeedlist(position,getData.getOrgCode(),getData.getFarmCode(),counting,s.toString());
+//                if(update){
+//                    Log.d("swine","feed updated postion : " + position);
+//                }
+//                else{
+//                    Log.d("swine","feed error postion : " + position);
+//                }
             }
         });
 
@@ -135,7 +135,10 @@ public class Adapter_Feed extends RecyclerView.Adapter<Adapter_Feed.ViewHolder> 
                         getSYSStocks_W,
                         getData.getStockUnit(),
                         "0",
-                        null);
+                        null,
+                        "",
+                        "",
+                        "");
         if(savefeed){
             Log.d("swine","feed save : " + position);
         }

@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.CallSuper;
 import androidx.annotation.UiThread;
-import androidx.viewpager.widget.ViewPager;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.google.android.material.button.MaterialButton;
@@ -26,7 +25,7 @@ public class tab_from_ViewBinding implements Unbinder {
     this.target = target;
 
     target.tabs = Utils.findRequiredViewAsType(source, R.id.tabs, "field 'tabs'", TabLayout.class);
-    target.pager = Utils.findRequiredViewAsType(source, R.id.pager, "field 'pager'", ViewPager.class);
+    target.pager = Utils.findRequiredViewAsType(source, R.id.pager, "field 'pager'", CustomViewPager.class);
     target.headerDetails = Utils.arrayFilteringNull(
         Utils.findRequiredViewAsType(source, R.id.types, "field 'headerDetails'", TextView.class), 
         Utils.findRequiredViewAsType(source, R.id.orgcode, "field 'headerDetails'", TextView.class), 

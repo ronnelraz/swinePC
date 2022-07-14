@@ -4,6 +4,20 @@ public class model_feed {
 
     public String orgCode,period,projectCode,farmCode,farmOrg,FarnName,productCode,productName,stockUnit,stockQty,stockWgh;
 
+    public model_feed(String orgCode, String period, String projectCode, String farmCode, String farmOrg, String farnName, String productCode, String productName, String stockUnit, String stockQty, String stockWgh) {
+        this.orgCode = orgCode;
+        this.period = period;
+        this.projectCode = projectCode;
+        this.farmCode = farmCode;
+        this.farmOrg = farmOrg;
+        this.FarnName = farnName;
+        this.productCode = productCode;
+        this.productName = productName;
+        this.stockUnit = stockUnit;
+        this.stockQty = stockQty;
+        this.stockWgh = stockWgh;
+    }
+
     public String getOrgCode() {
         return orgCode;
     }
@@ -89,20 +103,6 @@ public class model_feed {
     }
 
     public void setStockWgh(String stockWgh) {
-        this.stockWgh = stockWgh;
-    }
-
-    public model_feed(String orgCode, String period, String projectCode, String farmCode, String farmOrg, String farnName, String productCode, String productName, String stockUnit, String stockQty, String stockWgh) {
-        this.orgCode = orgCode;
-        this.period = period;
-        this.projectCode = projectCode;
-        this.farmCode = farmCode;
-        this.farmOrg = farmOrg;
-        FarnName = farnName;
-        this.productCode = productCode;
-        this.productName = productName;
-        this.stockUnit = stockUnit;
-        this.stockQty = stockQty;
         this.stockWgh = stockWgh;
     }
 }

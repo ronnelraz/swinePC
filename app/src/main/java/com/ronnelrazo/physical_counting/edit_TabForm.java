@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import com.ronnelrazo.physical_counting.adapter.Adapter_editPDF;
 import com.ronnelrazo.physical_counting.adapter.TabLayoutAdapter;
 import com.ronnelrazo.physical_counting.adapter.TabLayoutAdapter_edit;
 import com.ronnelrazo.physical_counting.connection.API;
+import com.ronnelrazo.physical_counting.fragment.Tab_breeder_edit;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.model_edit_list;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
@@ -38,6 +40,7 @@ public class edit_TabForm extends AppCompatActivity {
 
 
     public static String Getorg_code,Getfarm_code;
+    public static String getAudit_no;
 
     private Globalfunction data;
     private SharedPref sharedPref;
@@ -77,6 +80,7 @@ public class edit_TabForm extends AppCompatActivity {
 
         TabLayoutAdapter_edit adapter = new TabLayoutAdapter_edit(this,getSupportFragmentManager(),tabs.getTabCount());
         pager.setAdapter(adapter);
+        pager.setOffscreenPageLimit(5);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
@@ -119,6 +123,7 @@ public class edit_TabForm extends AppCompatActivity {
                             headerDetails[1].setText(object.getString("org_code"));
                             headerDetails[2].setText(object.getString("org_name"));
                             headerDetails[3].setText(object.getString("farm_code"));
+                            Tab_breeder_edit.Farm_code = object.getString("farm_code");
                             headerDetails[4].setText(object.getString("farm_name"));
                             headerDetails[5].setText(object.getString("doc_date"));
                             headerDetails[6].setText(object.getString("audit_date"));
@@ -146,6 +151,27 @@ public class edit_TabForm extends AppCompatActivity {
 
                 }
             }
+        });
+    }
+
+    public void savechanges(View view) {
+        data.intent(Edit_pdf.class,view.getContext());
+        finish();
+    }
+
+    public void cancel(View view) {
+
+        data.Confirmation(view.getContext(),"Are you sure you want to cancel this Transaction?",R.drawable.ic_icons8_warning);
+        data.positive.setText(" Yes");
+        data.negative.setOnClickListener(v1 ->{
+            data.ConfirmDialog.dismiss();
+        });
+        data.positive.setOnClickListener(v1 -> {
+            data.ConfirmDialog.dismiss();
+           data.flag(getAudit_no,"C");
+            data.toast(R.raw.checked,"Transaction NO : " + getAudit_no + " has been Cancelled.", Gravity.TOP|Gravity.CENTER,0,50);
+            data.intent(inv_form.class,v1.getContext());
+            finish();
         });
     }
 }

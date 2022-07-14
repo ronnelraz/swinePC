@@ -25,7 +25,6 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +33,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.FileProvider;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
+import com.android.volley.ParseError;
+import com.android.volley.ServerError;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -50,18 +56,13 @@ import com.ronnelrazo.physical_counting.Database.TABLE_HEADER;
 import com.ronnelrazo.physical_counting.Database.TABLE_HEADER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_MED_DETAILS;
 import com.ronnelrazo.physical_counting.R;
-import com.ronnelrazo.physical_counting.adapter.Adapter_Farm;
-import com.ronnelrazo.physical_counting.adapter.Adapter_Feed;
 import com.ronnelrazo.physical_counting.connection.API;
-import com.ronnelrazo.physical_counting.connection.API_;
 import com.ronnelrazo.physical_counting.connection.API_GET;
 import com.ronnelrazo.physical_counting.connection.config;
-import com.ronnelrazo.physical_counting.model.model_farm;
-import com.ronnelrazo.physical_counting.model.model_feed;
-import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -70,7 +71,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
@@ -234,6 +234,26 @@ public class Globalfunction {
         toast.setView(vs);
         toast.show();
     }
+
+//
+//    public void fancyToast(String title,String msg,Context contexts){
+//        new FancyGifDialog.Builder(contexts)
+//                .setTitle(title)
+//                .setMessage(msg)
+//                .setTitleTextColor(R.color.black)
+//                .setDescriptionTextColor(R.color.black)
+//                .setPositiveBtnText("Ok")
+//                .setPositiveBtnBackground(R.color.purple_500)
+//                .setGifResource(R.drawable.nofiles)   //Pass your Gif here
+//                .isCancellable(true)
+//                .OnPositiveClicked(new FancyGifDialogListener() {
+//                    @Override
+//                    public void OnClick() {
+//
+//                    }
+//                })
+//                .build();
+//    }
 
     //login checker
 
@@ -416,20 +436,20 @@ public class Globalfunction {
         return String.valueOf(s);
     }
 
-    public DatePickerDialog.OnDateSetListener getDateto(){
+    public DatePickerDialog.OnDateSetListener getDateto(TextView textView){
         DatePickerDialog.OnDateSetListener date = (view1, year, monthOfYear, dayOfMonth) -> {
             calendar.set(Calendar.YEAR, year);
             calendar.set(Calendar.MONTH, monthOfYear);
             calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-            Formatter();
+            Formatter(textView);
         };
         return date;
     }
 
-    private void Formatter() {
+    private void Formatter(TextView textView) {
         String myFormat = "MM/dd/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-        auditDate.setText(sdf.format(calendar.getTime()));
+        textView.setText(sdf.format(calendar.getTime()));
     }
 
     public void auditDialog(Context context){
@@ -437,10 +457,17 @@ public class Globalfunction {
         View v = LayoutInflater.from(context).inflate(R.layout.modal_audit_dialog,null);
         currentDate = v.findViewById(R.id.currentDate);
         currentDate.setText(auditCurrentMonth());
-//
         auditDate = v.findViewById(R.id.auditDate);
+        auditDate.setText(auditCurrentMonth());
+
         auditDate.setOnClickListener(v1 -> {
-            new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(), calendar
+            new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(auditDate), calendar
+                    .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH)).show();
+        });
+
+        currentDate.setOnClickListener(v1 -> {
+            new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(currentDate), calendar
                     .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                     calendar.get(Calendar.DAY_OF_MONTH)).show();
         });
@@ -625,7 +652,7 @@ public class Globalfunction {
                                        String bu_type,String location,String farm_code,
                                        String farm_org,String farm_name,String female_stock,
                                        String male_Stock,String total_Stock,String counting_Stock,
-                                       String remark){
+                                       String remark,String var, String unpost,String active_var){
         TABLE_BREEDER_DETAILS column = new TABLE_BREEDER_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -642,6 +669,9 @@ public class Globalfunction {
         cv.put(column.TOTAL_STOCK, total_Stock);
         cv.put(column.COUNTING_STOCK, counting_Stock);
         cv.put(column.REMARK, remark);
+        cv.put(column.VARIANCE, var);
+        cv.put(column.UNPOST, unpost);
+        cv.put(column.ACTIVE_VAR, active_var);
         long result = db.insert(column.TABLE_BREEDER_DETAILS,null, cv);
         if(result == -1){
             return false;
@@ -653,12 +683,15 @@ public class Globalfunction {
     /**
      * updateBreeder count
      * **/
-    public boolean updatebreederlist(int pos,String org_code,String farm_code,String counting,String remark){
+    public boolean updatebreederlist(int pos,String org_code,String farm_code,String counting,String remark,String var, String unpost,String active_var){
         TABLE_BREEDER_DETAILS column = new TABLE_BREEDER_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(column.COUNTING_STOCK,counting);
         cv.put(column.REMARK,remark);
+        cv.put(column.VARIANCE,var);
+        cv.put(column.UNPOST,unpost);
+        cv.put(column.ACTIVE_VAR,active_var);
         int save = db.update(
                 column.TABLE_BREEDER_DETAILS,
                 cv,
@@ -680,7 +713,7 @@ public class Globalfunction {
                                        String bu_type,String farm_code,
                                        String farm_org,String farm_name,String feed_code,String feed_name,
                                        String feed_stock_qty,String feed_stock_wgh,String stock_unit,String counting_Stock,
-                                       String remark){
+                                       String remark,String variance,String unpost,String activevar){
         TABLE_FEED_DETAILS column = new TABLE_FEED_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -698,6 +731,9 @@ public class Globalfunction {
         cv.put(column.STOCK_UNIT, stock_unit);
         cv.put(column.COUNTING_STOCK,counting_Stock);
         cv.put(column.REMARK, remark);
+        cv.put(column.VARIANCE, variance);
+        cv.put(column.UNPOST,unpost);
+        cv.put(column.ACTIVE_VAR, activevar);
         long result = db.insert(column.TABLE_FEED_DETAILS,null, cv);
         if(result == -1){
             return false;
@@ -706,12 +742,15 @@ public class Globalfunction {
         }
     }
 
-    public boolean updateFeedlist(int pos,String org_code,String farm_code,String counting,String remark){
+    public boolean updateFeedlist(int pos,String org_code,String farm_code,String counting,String remark,String variance,String unpost,String activevar){
         TABLE_FEED_DETAILS column = new TABLE_FEED_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(column.COUNTING_STOCK,counting);
         cv.put(column.REMARK,remark);
+        cv.put(column.VARIANCE,variance);
+        cv.put(column.UNPOST,unpost);
+        cv.put(column.ACTIVE_VAR,activevar);
         int save = db.update(
                 column.TABLE_FEED_DETAILS,
                 cv,
@@ -813,6 +852,56 @@ public class Globalfunction {
     }
 
 
+    public void flag(String audit,String flag){
+
+        API.getClient().flag(audit,flag).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    if(success){
+                       Log.d("swine","updated");
+                    }
+                    else{
+                        Toast.makeText(cont, "error", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    Toast.makeText(cont, "Sorry Farm Details not yet setup, Please setup up first to complete the information.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+
+    /*Error response*/
+    public String Errorvolley(VolleyError volleyError){
+        String message = null;
+        if (volleyError instanceof NetworkError) {
+            message = "Cannot connect to Internet...Please check your connection!";
+        } else if (volleyError instanceof ServerError) {
+            message = "The server could not be found. Please try again after some time!!";
+        } else if (volleyError instanceof AuthFailureError) {
+            message = "Cannot connect to Internet...Please check your connection!";
+        } else if (volleyError instanceof ParseError) {
+            message = "Parsing error! Please try again after some time!!";
+        } else if (volleyError instanceof NoConnectionError) {
+            message = "Cannot connect to Internet...Please check your connection!";
+        } else if (volleyError instanceof TimeoutError) {
+            message = "Connection TimeOut! Please check your internet connection.";
+        }
+        return message;
+    }
 
 
 

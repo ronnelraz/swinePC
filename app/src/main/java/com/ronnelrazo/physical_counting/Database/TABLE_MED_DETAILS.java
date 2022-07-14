@@ -18,6 +18,9 @@ public class TABLE_MED_DETAILS {
     public String STOCK_UNIT = "STOCK_UNIT";
     public String COUNTING_STOCK = "COUNTING_STOCK";
     public String REMARK = "REMARK";
+    public String VARIANCE = "VARIANCE";
+    public String UNPOST = "UNPOST";
+    public String ACTIVE_VAR = "ACTIVE_VAR";
 
 
 

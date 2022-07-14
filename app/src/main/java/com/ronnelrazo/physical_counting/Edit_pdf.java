@@ -139,7 +139,7 @@ public class Edit_pdf extends AppCompatActivity {
                         farmlist.setAdapter(adapter);
                     }
                     else{
-                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "No Record Found!", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {

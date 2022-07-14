@@ -12,6 +12,7 @@ import com.google.android.material.button.MaterialButton;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
+import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 
@@ -25,6 +26,9 @@ public class inv_form extends AppCompatActivity {
 
     @BindViews({R.id.username,R.id.role})
     TextView[] JWTauth;
+
+    @BindView(R.id.logout)
+    MaterialButton logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,21 @@ public class inv_form extends AppCompatActivity {
 
         JWTauth[0].setText("User : " +sharedPref.getUser());
         JWTauth[1].setText("Role : " +sharedPref.getRole() + " - " + sharedPref.getBU());
+
+
+        logout.setOnClickListener(v -> {
+            data.Confirmation(v.getContext(),"Are you sure you want to sign out your account?",R.drawable.ic_icons8_warning);
+            data.positive.setText("Logout");
+            data.negative.setOnClickListener(v1 ->{
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setOnClickListener(v1 -> {
+                data.ConfirmDialog.dismiss();
+                sharedPref.signout("false");
+                data.intent(Login.class,v1.getContext());
+                finish();
+            });
+        });
     }
 
     public void create(View view) {
@@ -58,5 +77,9 @@ public class inv_form extends AppCompatActivity {
 
     public void edit(View view) {
         data.intent(Edit_pdf.class,  this);
+    }
+
+    public void confirm(View view) {
+        data.intent(Confirm.class,view.getContext());
     }
 }

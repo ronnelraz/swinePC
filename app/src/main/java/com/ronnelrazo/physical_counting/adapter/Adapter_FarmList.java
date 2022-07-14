@@ -70,11 +70,15 @@ public class Adapter_FarmList extends RecyclerView.Adapter<RecyclerView.ViewHold
 
 
                     if(getCurrentDate.isEmpty()){
-                        Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+//                        Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Audit Date", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        new DatePickerDialog(v1.getContext(),R.style.picker,Globalfunction.getInstance(v1.getContext()).getDateto(Globalfunction.getInstance(v1.getContext()).currentDate), Globalfunction.getInstance(v1.getContext()).calendar
+                                .get(Calendar.YEAR), Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.MONTH),
+                                Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.DAY_OF_MONTH)).show();
                     }
                     else if(getAuditDate.isEmpty()){
                         Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Audit Date", Gravity.TOP|Gravity.CENTER,0,50); //50
-                        new DatePickerDialog(v1.getContext(),R.style.picker,Globalfunction.getInstance(v1.getContext()).getDateto(), Globalfunction.getInstance(v1.getContext()).calendar
+                        new DatePickerDialog(v1.getContext(),R.style.picker,Globalfunction.getInstance(v1.getContext()).getDateto(Globalfunction.getInstance(v1.getContext()).auditDate), Globalfunction.getInstance(v1.getContext()).calendar
                                 .get(Calendar.YEAR), Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.MONTH),
                                 Globalfunction.getInstance(v1.getContext()).calendar.get(Calendar.DAY_OF_MONTH)).show();
                     }

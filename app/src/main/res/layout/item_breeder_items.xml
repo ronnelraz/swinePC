@@ -15,6 +15,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/location"
             android:textSize="16sp"
             android:fontFamily="@font/cpf_imm_sook_semibold"
@@ -27,6 +28,7 @@
             />
 
         <LinearLayout
+            android:layout_marginLeft="2dp"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_width="0dp"

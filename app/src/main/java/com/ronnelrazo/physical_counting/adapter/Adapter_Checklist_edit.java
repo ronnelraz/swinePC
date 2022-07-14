@@ -3,6 +3,7 @@ package com.ronnelrazo.physical_counting.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -49,11 +50,17 @@ public class Adapter_Checklist_edit extends RecyclerView.Adapter<RecyclerView.Vi
 
     private ArrayList<ListItem_Checklist> items;
     private Context context;
+    private String audit_no;
+
+    long delay = 3000; // 1 seconds after user stops typing
+    long last_text_edit = 0;
+    Handler handler = new Handler();
 
 
-    public Adapter_Checklist_edit(ArrayList<ListItem_Checklist> items, Context context) {
+    public Adapter_Checklist_edit(ArrayList<ListItem_Checklist> items, Context context,String audit_no) {
         this.items = items;
         this.context = context;
+        this.audit_no = audit_no;
 
     }
 
@@ -154,17 +161,19 @@ public class Adapter_Checklist_edit extends RecyclerView.Adapter<RecyclerView.Vi
                                     (checked.getId() == R.id.item_na ? "N/A" : null));
                     String getRemarkchangeans = item.item_remarks.getText().toString();
                     Log.d("swine",rbcheckStatus + " position:" +position);
+                    updateChanges(rbcheckStatus,getRemarkchangeans,audit_no,details.getM_code(),details.getS_code(),details.getDetails_code());
+
+
+
                     if(rbcheckStatus.equals("N")){
                         item.item_remarks.requestFocus();
                         Toast.makeText(context, "Please State the Reason", Toast.LENGTH_SHORT).show();
+                        item.item_remarks.setText("");
                     }
                     else{
                         item.item_remarks.clearFocus();
                     }
-                    boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,rbcheckStatus,getRemarkchangeans);
-                    if(update_postion){
-                        Log.d("swine","update position:" +position + " value : " + rbcheckStatus + " remake: " + getRemarkchangeans);
-                    }
+
 
                 });
 
@@ -185,6 +194,20 @@ public class Adapter_Checklist_edit extends RecyclerView.Adapter<RecyclerView.Vi
                         String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
                                 (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
                                         (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
+                        if (editable.length() > 0) {
+                            last_text_edit = System.currentTimeMillis();
+                             handler.postDelayed(new Runnable() {
+                                 @Override
+                                 public void run() {
+                                     if (System.currentTimeMillis() > (last_text_edit + delay - 500)) {
+                                         updateChanges(getCheckedvalue,getRemark,audit_no,details.getM_code(),details.getS_code(),details.getDetails_code());
+                                     }
+                                 }
+                             },delay);
+                        } else {
+
+                        }
+
 
 
 
@@ -199,6 +222,38 @@ public class Adapter_Checklist_edit extends RecyclerView.Adapter<RecyclerView.Vi
 
 
         }
+    }
+
+
+    protected void updateChanges(String check,String remark,String audit_no,String main_code,String sub_code,String details_code){
+        API.getClient().update_checklist(check,remark,audit_no,main_code,sub_code,details_code).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    if(success){
+                        Log.d("swine","save");
+                        Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params checklist adapter", Gravity.TOP|Gravity.CENTER,0,50); //50
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    Toast.makeText(context, "Sorry Farm Details not yet setup, Please setup up first to complete the information.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 
@@ -225,7 +280,7 @@ public class Adapter_Checklist_edit extends RecyclerView.Adapter<RecyclerView.Vi
 
                     }
                     else{
-                        Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params Checklist Form", Gravity.TOP|Gravity.CENTER,0,50); //50
                     }
 
                 } catch (JSONException e) {

@@ -67,7 +67,7 @@ public class Tab_feed_edit extends Fragment {
 
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new Adapter_Feed_edit(list,getActivity());
+        adapter = new Adapter_Feed_edit(list,getActivity(),str_audit_no);
         recyclerView.setAdapter(adapter);
         list.clear();
         loading.setVisibility(View.VISIBLE);
@@ -117,7 +117,7 @@ public class Tab_feed_edit extends Fragment {
 
                         }
 
-                        adapter = new Adapter_Feed_edit(list,getActivity());
+                        adapter = new Adapter_Feed_edit(list,getActivity(),str_audit_no);
                         recyclerView.setAdapter(adapter);
                     }
                     else{

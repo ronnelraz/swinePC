@@ -89,6 +89,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
                 BREEDER_DETAILS.COUNTING_STOCK + " TEXT," +
                 BREEDER_DETAILS.REMARK + " TEXT," +
+                BREEDER_DETAILS.VARIANCE + " TEXT," +
+                BREEDER_DETAILS.UNPOST + " TEXT," +
+                BREEDER_DETAILS.ACTIVE_VAR + " TEXT," +
                 "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
         db.execSQL(breeder_details);
 
@@ -109,6 +112,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 FEED_DETAILS.STOCK_UNIT + " TEXT," +
                 FEED_DETAILS.COUNTING_STOCK + " TEXT," +
                 FEED_DETAILS.REMARK + " TEXT," +
+                FEED_DETAILS.VARIANCE + " TEXT," +
+                FEED_DETAILS.UNPOST + " TEXT," +
+                FEED_DETAILS.ACTIVE_VAR + " TEXT," +
                 "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
         db.execSQL(feed_details);
 
@@ -128,6 +134,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 MED_DETAILS.STOCK_UNIT + " TEXT," +
                 MED_DETAILS.COUNTING_STOCK + " TEXT," +
                 MED_DETAILS.REMARK + " TEXT," +
+                MED_DETAILS.VARIANCE + " TEXT," +
+                MED_DETAILS.UNPOST + " TEXT," +
+                MED_DETAILS.ACTIVE_VAR + " TEXT," +
                 "PRIMARY KEY(POSITION,ORG_CODE,FARM_CODE)); ";
         db.execSQL(med_details);
 

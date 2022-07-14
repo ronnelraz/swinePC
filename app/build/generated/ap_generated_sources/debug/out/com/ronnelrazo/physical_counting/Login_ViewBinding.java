@@ -28,6 +28,7 @@ public class Login_ViewBinding implements Unbinder {
 
     target.str_permision = Utils.findRequiredViewAsType(source, R.id.permission, "field 'str_permision'", TextView.class);
     target.login = Utils.findRequiredViewAsType(source, R.id.login, "field 'login'", MaterialButton.class);
+    target.version = Utils.findRequiredViewAsType(source, R.id.verison, "field 'version'", TextView.class);
     target.keepme = Utils.findRequiredViewAsType(source, R.id.keepme, "field 'keepme'", CheckBox.class);
     target.input = Utils.arrayFilteringNull(
         Utils.findRequiredViewAsType(source, R.id.username, "field 'input'", TextInputEditText.class), 
@@ -46,6 +47,7 @@ public class Login_ViewBinding implements Unbinder {
 
     target.str_permision = null;
     target.login = null;
+    target.version = null;
     target.keepme = null;
     target.input = null;
     target.input_layout = null;

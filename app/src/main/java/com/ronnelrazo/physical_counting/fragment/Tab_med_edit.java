@@ -51,6 +51,9 @@ public class Tab_med_edit extends Fragment {
     LinearLayout loading;
 
 
+
+
+
     @BindView(R.id.nodataContainer) LinearLayout nodatacontainer;
 
 
@@ -72,7 +75,7 @@ public class Tab_med_edit extends Fragment {
 
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new Adapter_Med_edit(list,getActivity());
+        adapter = new Adapter_Med_edit(list,getActivity(),audit_no);
         recyclerView.setAdapter(adapter);
         list.clear();
         loading.setVisibility(View.VISIBLE);
@@ -121,7 +124,7 @@ public class Tab_med_edit extends Fragment {
 
                         }
 
-                        adapter = new Adapter_Med_edit(list,getActivity());
+                        adapter = new Adapter_Med_edit(list,getActivity(),audit_no);
                         recyclerView.setAdapter(adapter);
                     }
                     else{

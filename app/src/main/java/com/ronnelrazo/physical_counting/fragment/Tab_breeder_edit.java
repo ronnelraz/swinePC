@@ -45,6 +45,7 @@ public class Tab_breeder_edit extends Fragment {
     private Globalfunction data;
     private SharedPref sharedPref;
     public static String str_audit_no;
+    public static String Farm_code;
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
@@ -68,7 +69,7 @@ public class Tab_breeder_edit extends Fragment {
 
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new Adapter_Breeder_edit(list,getActivity());
+        adapter = new Adapter_Breeder_edit(list,getActivity(),str_audit_no,Farm_code);
         recyclerView.setAdapter(adapter);
         list.clear();
         loading.setVisibility(View.VISIBLE);
@@ -117,13 +118,13 @@ public class Tab_breeder_edit extends Fragment {
 
                         }
 
-                        adapter = new Adapter_Breeder_edit(list,getActivity());
+                        adapter = new Adapter_Breeder_edit(list,getActivity(),str_audit_no,Farm_code);
                         recyclerView.setAdapter(adapter);
                     }
                     else{
                         loading.setVisibility(View.GONE);
-                        data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
-                        data.loaddialog.dismiss();
+                        data.toast(R.raw.error,"Data Not Available", Gravity.TOP|Gravity.CENTER,0,50); //50
+//                        data.loaddialog.dismiss();
                     }
 
                 } catch (JSONException e) {

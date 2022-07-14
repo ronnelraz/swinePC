@@ -8,13 +8,24 @@
 
 
     <TextView
-        android:textSize="10sp"
-        android:padding="10px"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/permission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10px"
         android:text="Permission : "
-        android:id="@+id/permission"/>
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/verison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="10px"
+        android:text="version : "
+        android:textSize="10sp" />
 
 
 

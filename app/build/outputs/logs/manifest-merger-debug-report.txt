@@ -1,20 +1,21 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
 MERGED from [com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:17:1-32:12
 MERGED from [io.github.hariprasanths:bounceview-android:0.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5b368c02b8f573d574909f2df0372f82\transformed\jetified-bounceview-android-0.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:14:1-58:12
 MERGED from [com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:2:1-19:12
-MERGED from [com.google.android.material:material:1.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d719c211d28576cf41164fe387cd83b0\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0a260286398313079a698f4510509603\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.airbnb.android:lottie:5.0.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bd21e3ffd64f2ca6fd12ea2ae1848f2f\transformed\jetified-lottie-5.0.3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.skydoves:powerspinner:1.2.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\04165813548db23b00cc8b8ed9fff3fd\transformed\jetified-powerspinner-1.2.2\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bfec8dfcaf6c34e166a516bbd7a3f400\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ad4b0562467dfb6f3cd10869bd03e3f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2a73090c02f64f6e5094947b89992d0d\transformed\jetified-lottie-5.2.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.skydoves:powerspinner:1.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2ca517ec6b1fe9b40042f60e559ae01c\transformed\jetified-powerspinner-1.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.Shashank02051997:FancyGifDialog-Android:1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\fb944e5b3b27d14544ba9a6035f74318\transformed\jetified-FancyGifDialog-Android-1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.preference:preference-ktx:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\a61ada2f96528fdb2d11752e252ea3ae\transformed\jetified-preference-ktx-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.preference:preference:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\800aa833efbf0224974ab853a1c0784f\transformed\preference-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\69592bd19cec1de513dd3643bec51fc2\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f053ca72a4906620f9d7f529c412475e\transformed\appcompat-1.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5bf13ef3669f4b5f4470c1e98e07dc06\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.shimmer:shimmer:0.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\397100f81a6a9eed4ce67d0be6e17c54\transformed\jetified-shimmer-0.5.0\AndroidManifest.xml:2:1-7:12
@@ -23,17 +24,18 @@ MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\CPF Nigs\.gradle\cac
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\34c3819cee2951fdcdce0cc29fa8544c\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\a0f487a4babc02e94edd80c903b84cb8\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\026db242ee7fea5216ebc356e3ac7aeb\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:2:1-16:12
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:2:1-16:12
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:2:1-18:12
 MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ceecfd2e8bdf709077857fbf5e0755a\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7034602a19d5c7fc600c8aa3c71a4be4\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ebc4248a660d578c61289c6b8306685\transformed\jetified-volley-1.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\72de3ad0e7ea8651a6e87e246ac967c6\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.3.6] C:\Users\CPF Nigs\.gradle\caches\transforms-3\fc78fb4724fe79a5d54b60b2be57aec8\transformed\jetified-fragment-ktx-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\CPF Nigs\.gradle\caches\transforms-3\29bdfe4f1619e457b1b22ec172982bb4\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c8c997f7a4d5e22f4626fb29b045ffac\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0344911b91ed317780bda162b2454816\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\59fb4356d9d07244543ad210c670a836\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5fb3161ccd81a2f6ccae47a4c4a9c5e3\transformed\jetified-appcompat-resources-1.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\1d741778aec3db57fd68aa64c122ce13\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\edcdf00559453ac5f7364b461524ff25\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
@@ -66,7 +68,7 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\CPF Nigs\.gradle
 MERGED from [androidx.compose.runtime:runtime-rxjava2:1.1.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e8d2342186bc5cee8a78a7b836195085\transformed\jetified-runtime-rxjava2-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.compose.runtime:runtime:1.1.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\415479b9906a0d3ba5658ddb5a5a92da\transformed\jetified-runtime-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ac292ef7d0ef76badfd31e4dc43acf2\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.databinding:viewbinding:7.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\74b92b3bca11a2274409fa472b0a0a37\transformed\jetified-viewbinding-7.1.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3dd0083bf6aed538cfb8947ef9495110\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\447ac85792ab993fbd7e77bf9b5c3bd7\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -84,43 +86,46 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\CPF Nig
 MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\CPF Nigs\.gradle\caches\transforms-3\93a8ff749b91a046e790298b16e0df76\transformed\jetified-materialish-progress-1.7\AndroidManifest.xml:2:1-13:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\530692cb547e1e581d0f0490d7dbeb4e\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2e5b3238c05e22ed9ea6f968780df3ad\transformed\jetified-relinker-1.4.4\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7a3d1ecf08ef3f59ac701304ca90994b\transformed\jetified-android-gif-drawable-1.2.10\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
 	package
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:3:5-47
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:4:5-47
 		INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
 		INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-76:12
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:1-81:12
 		INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.loopj.android:android-async-http:1.4.11] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c7e187ac3836d6301057a7f9ad7a38f9\transformed\jetified-android-async-http-1.4.11\AndroidManifest.xml:9:5-67
 MERGED from [com.loopj.android:android-async-http:1.4.11] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c7e187ac3836d6301057a7f9ad7a38f9\transformed\jetified-android-async-http-1.4.11\AndroidManifest.xml:9:5-67
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:7:5-67
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:7:5-67
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:7:5-67
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:5-76
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:22-73
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:5-79
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:8:5-79
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:8:5-79
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:5-79
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:8:5-79
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:5-81
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:23:5-26:40
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:23:5-26:40
 	android:maxSdkVersion
@@ -128,35 +133,35 @@ MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\trans
 	tools:ignore
 		ADDED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:26:9-37
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:5-80
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:5-80
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:27:5-80
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:27:5-80
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:22-77
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:22-77
 uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:5-82
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:5-82
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:22-79
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:22-79
 application
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:12:5-74:19
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:5-79:19
 MERGED from [com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\99f19cf5d45dc147273b1b1a11f96314\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:26:5-30:19
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:29:5-56:19
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:29:5-56:19
 MERGED from [com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:9:5-17:19
 MERGED from [com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:9:5-17:19
-MERGED from [com.google.android.material:material:1.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d719c211d28576cf41164fe387cd83b0\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d719c211d28576cf41164fe387cd83b0\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0a260286398313079a698f4510509603\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0a260286398313079a698f4510509603\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
-MERGED from [com.airbnb.android:lottie:5.0.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bd21e3ffd64f2ca6fd12ea2ae1848f2f\transformed\jetified-lottie-5.0.3\AndroidManifest.xml:9:5-20
-MERGED from [com.airbnb.android:lottie:5.0.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bd21e3ffd64f2ca6fd12ea2ae1848f2f\transformed\jetified-lottie-5.0.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bfec8dfcaf6c34e166a516bbd7a3f400\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bfec8dfcaf6c34e166a516bbd7a3f400\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ad4b0562467dfb6f3cd10869bd03e3f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ad4b0562467dfb6f3cd10869bd03e3f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2a73090c02f64f6e5094947b89992d0d\transformed\jetified-lottie-5.2.0\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2a73090c02f64f6e5094947b89992d0d\transformed\jetified-lottie-5.2.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:11:5-20
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:11:5-20
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:10:5-14:19
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:10:5-14:19
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:10:5-14:19
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:10:5-14:19
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:11:5-16:19
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:11:5-16:19
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:11:5-15:19
@@ -176,127 +181,136 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\CPF Nigs\.gradle\c
 MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\CPF Nigs\.gradle\caches\transforms-3\93a8ff749b91a046e790298b16e0df76\transformed\jetified-materialish-progress-1.7\AndroidManifest.xml:11:5-20
 MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\CPF Nigs\.gradle\caches\transforms-3\93a8ff749b91a046e790298b16e0df76\transformed\jetified-materialish-progress-1.7\AndroidManifest.xml:11:5-20
 	android:requestLegacyExternalStorage
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:17:9-52
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:19:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0c734a8f9451ded3159b05d46fc9a23a\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:18:9-41
 	android:allowClearUserData
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:14:9-42
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:16:9-42
 	android:roundIcon
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:18:9-54
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:9-54
 	android:largeHeap
 		ADDED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:31:9-33
 	android:icon
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:17:9-43
 	android:allowBackup
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-36
+		REJECTED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:12:9-35
 	android:allowNativeHeapPointerTagging
 		ADDED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:30:9-54
 	android:theme
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:9-55
-activity#com.ronnelrazo.physical_counting.edit_TabForm
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:9-23:40
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:22:9-55
+	tools:replace
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:14:9-44
+activity#com.ronnelrazo.physical_counting.Confirm
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:13-37
-	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:22:13-41
-activity#com.ronnelrazo.physical_counting.Edit_pdf
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:9-26:40
-	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:13-37
-	android:name
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:13-36
+activity#com.ronnelrazo.physical_counting.edit_TabForm
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:9-28:40
+	android:exported
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:13-41
+activity#com.ronnelrazo.physical_counting.Edit_pdf
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:9-31:40
+	android:exported
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-37
 activity#com.ronnelrazo.physical_counting.Farm_setup
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:9-29:40
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:13-37
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-39
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-39
 activity#com.ronnelrazo.physical_counting.Pdf_record_list
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:9-32:40
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:13-37
-	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-44
-activity#com.ronnelrazo.physical_counting.Integration_submenu
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:9-35:40
-	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:13-37
-	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-48
-activity#com.ronnelrazo.physical_counting.tab_from
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:9-38:40
-	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:13-37
-	android:name
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:13-37
-activity#com.ronnelrazo.physical_counting.inv_form
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:9-41:40
-	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:13-37
 	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:13-44
+activity#com.ronnelrazo.physical_counting.Integration_submenu
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:9-40:40
+	android:exported
 		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:13-48
+activity#com.ronnelrazo.physical_counting.tab_from
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:9-43:40
+	android:exported
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:13-37
+activity#com.ronnelrazo.physical_counting.inv_form
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:44:9-46:40
+	android:exported
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:13-37
 activity#com.ronnelrazo.physical_counting.Farm_categories
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:9-44:40
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:47:9-49:40
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:44:13-37
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:13-37
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:13-44
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:48:13-44
 activity#com.ronnelrazo.physical_counting.Login
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:9-53:20
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:50:9-58:20
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:47:13-36
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-34
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:48:13-52:29
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:53:13-57:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:17-69
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:54:17-69
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:25-66
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:54:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:17-77
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:17-77
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:27-74
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:27-74
 activity#com.ronnelrazo.physical_counting.MainActivity
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:54:9-56:40
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:59:9-61:40
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:13-37
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:61:13-37
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:55:13-41
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:60:13-41
 activity#com.pspdfkit.ui.PdfActivity
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:57:9-59:59
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:62:9-64:59
 	android:windowSoftInputMode
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:64:13-56
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:58:13-55
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:63:13-55
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:61:9-69:20
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:9-74:20
 	android:grantUriPermissions
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:65:13-47
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:70:13-47
 	android:authorities
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:63:13-76
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:68:13-76
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:64:13-37
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:62:13-62
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:67:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:13-68:53
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:71:13-73:53
 	android:resource
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:68:17-50
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:73:17-50
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:67:17-67
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:72:17-67
 service#com.novoda.merlin.MerlinService
-ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:71:9-73:40
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:11:9-13:40
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:11:9-13:40
+ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:76:9-78:40
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:11:9-13:40
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:11:9-13:40
 	android:exported
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:73:13-37
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:78:13-37
 	android:name
-		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:72:13-59
+		ADDED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:77:13-59
 uses-sdk
 INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
@@ -309,20 +323,22 @@ MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\trans
 MERGED from [com.pspdfkit:pspdfkit:8.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8eda020925d17559ab38241867825bff\transformed\jetified-pspdfkit-8.2.1\AndroidManifest.xml:18:5-20:41
 MERGED from [com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b2fa23d0cb1d64793b6d1498be917184\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.material:material:1.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d719c211d28576cf41164fe387cd83b0\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d719c211d28576cf41164fe387cd83b0\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0a260286398313079a698f4510509603\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0a260286398313079a698f4510509603\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.airbnb.android:lottie:5.0.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bd21e3ffd64f2ca6fd12ea2ae1848f2f\transformed\jetified-lottie-5.0.3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.airbnb.android:lottie:5.0.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bd21e3ffd64f2ca6fd12ea2ae1848f2f\transformed\jetified-lottie-5.0.3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.skydoves:powerspinner:1.2.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\04165813548db23b00cc8b8ed9fff3fd\transformed\jetified-powerspinner-1.2.2\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.skydoves:powerspinner:1.2.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\04165813548db23b00cc8b8ed9fff3fd\transformed\jetified-powerspinner-1.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bfec8dfcaf6c34e166a516bbd7a3f400\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\bfec8dfcaf6c34e166a516bbd7a3f400\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ad4b0562467dfb6f3cd10869bd03e3f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ad4b0562467dfb6f3cd10869bd03e3f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2a73090c02f64f6e5094947b89992d0d\transformed\jetified-lottie-5.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2a73090c02f64f6e5094947b89992d0d\transformed\jetified-lottie-5.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.skydoves:powerspinner:1.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2ca517ec6b1fe9b40042f60e559ae01c\transformed\jetified-powerspinner-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.skydoves:powerspinner:1.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2ca517ec6b1fe9b40042f60e559ae01c\transformed\jetified-powerspinner-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.Shashank02051997:FancyGifDialog-Android:1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\fb944e5b3b27d14544ba9a6035f74318\transformed\jetified-FancyGifDialog-Android-1.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Shashank02051997:FancyGifDialog-Android:1.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\fb944e5b3b27d14544ba9a6035f74318\transformed\jetified-FancyGifDialog-Android-1.4\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.preference:preference-ktx:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\a61ada2f96528fdb2d11752e252ea3ae\transformed\jetified-preference-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.preference:preference-ktx:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\a61ada2f96528fdb2d11752e252ea3ae\transformed\jetified-preference-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.preference:preference:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\800aa833efbf0224974ab853a1c0784f\transformed\preference-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.preference:preference:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\800aa833efbf0224974ab853a1c0784f\transformed\preference-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\69592bd19cec1de513dd3643bec51fc2\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\69592bd19cec1de513dd3643bec51fc2\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f053ca72a4906620f9d7f529c412475e\transformed\appcompat-1.4.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f053ca72a4906620f9d7f529c412475e\transformed\appcompat-1.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5bf13ef3669f4b5f4470c1e98e07dc06\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
 MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5bf13ef3669f4b5f4470c1e98e07dc06\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:7:5-9:41
@@ -339,8 +355,8 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CPF Nigs\.gr
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\a0f487a4babc02e94edd80c903b84cb8\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\026db242ee7fea5216ebc356e3ac7aeb\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\026db242ee7fea5216ebc356e3ac7aeb\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\e45c581acb901137c13203d9b3e7071a\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ceecfd2e8bdf709077857fbf5e0755a\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:7:5-9:41
@@ -349,6 +365,8 @@ MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\U
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3bf1d9099d79ca6605a2058cd015b5bd\transformed\jetified-searchablespinnerlibrary-1.3.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7034602a19d5c7fc600c8aa3c71a4be4\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7034602a19d5c7fc600c8aa3c71a4be4\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ebc4248a660d578c61289c6b8306685\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\8ebc4248a660d578c61289c6b8306685\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\72de3ad0e7ea8651a6e87e246ac967c6\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\72de3ad0e7ea8651a6e87e246ac967c6\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.3.6] C:\Users\CPF Nigs\.gradle\caches\transforms-3\fc78fb4724fe79a5d54b60b2be57aec8\transformed\jetified-fragment-ktx-1.3.6\AndroidManifest.xml:20:5-22:41
@@ -359,8 +377,8 @@ MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\CPF Nigs\.gradle\cac
 MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c8c997f7a4d5e22f4626fb29b045ffac\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0344911b91ed317780bda162b2454816\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0344911b91ed317780bda162b2454816\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\59fb4356d9d07244543ad210c670a836\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\59fb4356d9d07244543ad210c670a836\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5fb3161ccd81a2f6ccae47a4c4a9c5e3\transformed\jetified-appcompat-resources-1.4.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\5fb3161ccd81a2f6ccae47a4c4a9c5e3\transformed\jetified-appcompat-resources-1.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\1d741778aec3db57fd68aa64c122ce13\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\1d741778aec3db57fd68aa64c122ce13\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\73850b32b2c7ce32b12b91c16b2382c2\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
@@ -425,8 +443,8 @@ MERGED from [androidx.compose.runtime:runtime:1.1.1] C:\Users\CPF Nigs\.gradle\c
 MERGED from [androidx.compose.runtime:runtime:1.1.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\415479b9906a0d3ba5658ddb5a5a92da\transformed\jetified-runtime-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ac292ef7d0ef76badfd31e4dc43acf2\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\0ac292ef7d0ef76badfd31e4dc43acf2\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:viewbinding:7.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\74b92b3bca11a2274409fa472b0a0a37\transformed\jetified-viewbinding-7.1.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:viewbinding:7.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\74b92b3bca11a2274409fa472b0a0a37\transformed\jetified-viewbinding-7.1.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3dd0083bf6aed538cfb8947ef9495110\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3dd0083bf6aed538cfb8947ef9495110\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\447ac85792ab993fbd7e77bf9b5c3bd7\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -461,6 +479,8 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\CPF Nigs\.gradle\cac
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\530692cb547e1e581d0f0490d7dbeb4e\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2e5b3238c05e22ed9ea6f968780df3ad\transformed\jetified-relinker-1.4.4\AndroidManifest.xml:5:5-43
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2e5b3238c05e22ed9ea6f968780df3ad\transformed\jetified-relinker-1.4.4\AndroidManifest.xml:5:5-43
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7a3d1ecf08ef3f59ac701304ca90994b\transformed\jetified-android-gif-drawable-1.2.10\AndroidManifest.xml:7:5-9:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] C:\Users\CPF Nigs\.gradle\caches\transforms-3\7a3d1ecf08ef3f59ac701304ca90994b\transformed\jetified-android-gif-drawable-1.2.10\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

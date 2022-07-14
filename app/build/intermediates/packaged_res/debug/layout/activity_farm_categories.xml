@@ -55,15 +55,15 @@
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_marginRight="20px"
-            app:iconTint="@color/white"
-            android:textColor="@color/white"
             android:backgroundTint="@color/error"
             android:foreground="?attr/actionBarItemBackground"
             android:text="Logout"
+            android:textColor="@color/white"
             android:textSize="10sp"
             app:cornerRadius="50px"
             app:icon="@drawable/logout"
-            app:iconSize="20sp" />
+            app:iconSize="20sp"
+            app:iconTint="@color/white" />
 
 
     </RelativeLayout>

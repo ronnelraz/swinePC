@@ -24,6 +24,10 @@ drawable create
 drawable custom_eye
 drawable edit
 drawable edit_text_dot
+drawable edit_text_dot_form
+drawable edit_text_dot_form_even
+drawable edit_text_dot_form_odd
+drawable edit_text_dot_line
 drawable fattening
 drawable ic_eye_close
 drawable ic_eye_open
@@ -34,6 +38,7 @@ drawable ic_icons8_cancel
 drawable ic_icons8_chevron_right
 drawable ic_icons8_done
 drawable ic_icons8_error
+drawable ic_icons8_error_small
 drawable ic_icons8_export_pdf
 drawable ic_icons8_import_pdf
 drawable ic_icons8_info
@@ -41,6 +46,7 @@ drawable ic_icons8_key
 drawable ic_icons8_menu_vertical
 drawable ic_icons8_multiply
 drawable ic_icons8_ok
+drawable ic_icons8_ok_small
 drawable ic_icons8_report_file
 drawable ic_icons8_search
 drawable ic_icons8_sync
@@ -56,6 +62,7 @@ drawable icons8_smart_home_checked
 drawable logout
 drawable next
 drawable nodata
+drawable nofiles
 drawable pfd_heade_filter
 drawable play_1024
 drawable play_store
@@ -67,6 +74,7 @@ font cpf_imm_sook_bold
 font cpf_imm_sook_regular
 font cpf_imm_sook_semibold
 font cpf_mm_sook_bold
+id Confirm
 id FarmSetup
 id Menu
 id a1_form
@@ -80,6 +88,8 @@ id audit_date
 id audit_dateA1
 id audit_date_filter
 id audit_no
+id auditdate
+id auditno
 id back
 id barangay
 id barangayLoading
@@ -97,8 +107,10 @@ id business_farmname
 id business_type
 id cancel
 id card
+id checkedall
 id checklist
 id checklistA
+id checklist_t
 id checlist_data
 id clerkcode
 id clerkcontact
@@ -206,9 +218,12 @@ id title
 id toastip
 id total
 id types
+id upload
 id username
 id username_layout
+id verison
 id zipcode
+layout activity_confirm
 layout activity_edit_pdf
 layout activity_edit_tab_form
 layout activity_farm_categories
@@ -220,9 +235,11 @@ layout activity_main
 layout activity_pdf_record_list
 layout activity_tab_from
 layout address_area_layout
+layout breeder_demo
 layout business_area_layout
 layout checklist_header
 layout clerk_area_layout
+layout confirm_list
 layout custom_confirmation
 layout custom_loading
 layout custom_toast
@@ -237,6 +254,7 @@ layout fragment_contract
 layout fragment_feed
 layout fragment_med
 layout item_breeder_header
+layout item_breeder_header_tl
 layout item_breeder_items
 layout item_farm
 layout item_farm_list_detials
@@ -244,6 +262,7 @@ layout item_feed_header
 layout item_feed_items
 layout item_header
 layout list_checklist_items
+layout loading_generate_pdf
 layout loading_shimmer
 layout loading_shimmer_checklist
 layout main_topic

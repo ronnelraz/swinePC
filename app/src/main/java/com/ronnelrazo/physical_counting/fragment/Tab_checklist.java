@@ -72,6 +72,7 @@ public class Tab_checklist extends Fragment {
         adapter = new Adapter_Checklist(items,getActivity());
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setItemAnimator(null);
         recyclerView.setLayoutManager(linearLayoutManager);
         loading.setVisibility(View.VISIBLE);
         LoadFarmlist(str_bu_Type);

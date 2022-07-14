@@ -3,6 +3,7 @@ package com.ronnelrazo.physical_counting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextWatcher;
@@ -54,6 +55,9 @@ public class Login extends AppCompatActivity {
     @BindView(R.id.login)
     MaterialButton login;
 
+    @BindView(R.id.verison)
+    TextView version;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 //        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
@@ -63,6 +67,12 @@ public class Login extends AppCompatActivity {
         data = new Globalfunction(this);
         sharedPref = new SharedPref(this);
         permission();
+
+        try {
+            version.setText("Version : "+this.getPackageManager().getPackageInfo(this.getPackageName(), 0).versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
         if(sharedPref.checkAuto_login_auth().equals("true")){
             Log.d("swine",sharedPref.checkAuto_login_auth() + " ");

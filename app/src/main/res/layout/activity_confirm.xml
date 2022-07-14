@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="back"
+        android:text="Back"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/icons8_back" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Confirm"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/shimmer_placeholder"
+        android:enabled="false"
+        android:onClick="back"
+        android:padding="10dp"
+        android:text="Confirm"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_icons8_done" />
+
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/checkedall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:buttonTint="@color/purple_500"
+        android:text="Select All"
+        android:textStyle="bold"
+        tools:checked="true" />
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/back"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/radius_border"
+        android:backgroundTint="@color/bgEdit"
+        android:drawableLeft="@drawable/ic_icons8_search"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:hint="Search | Org Code | Farm Name | Audit No"
+        android:singleLine="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/checkedall"
+        tools:listitem="@layout/confirm_list" />
+
+</RelativeLayout>

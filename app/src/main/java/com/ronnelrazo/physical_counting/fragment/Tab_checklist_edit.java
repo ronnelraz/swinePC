@@ -68,7 +68,7 @@ public class Tab_checklist_edit extends Fragment {
         recyclerView = view.findViewById(R.id.checlist_data);
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(999999999);
-        adapter = new Adapter_Checklist_edit(items,getActivity());
+        adapter = new Adapter_Checklist_edit(items,getActivity(),AUDIT_NO);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -186,11 +186,11 @@ public class Tab_checklist_edit extends Fragment {
 
                         }
 
-                        adapter = new Adapter_Checklist_edit(items,getActivity());
+                        adapter = new Adapter_Checklist_edit(items,getActivity(),AUDIT_NO);
                         recyclerView.setAdapter(adapter);
                     }
                     else{
-                        data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        data.toast(R.raw.error,"Invalid Params checklist", Gravity.TOP|Gravity.CENTER,0,50); //50
 //                        data.loaddialog.dismiss();
                         loading.setVisibility(View.GONE);
                     }

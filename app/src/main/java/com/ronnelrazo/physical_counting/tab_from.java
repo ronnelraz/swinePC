@@ -54,7 +54,7 @@ public class tab_from extends AppCompatActivity {
     @BindView(R.id.tabs)
     TabLayout tabs;
     @BindView(R.id.pager)
-    ViewPager pager;
+    CustomViewPager pager;
 
     protected List<String> listHeader = new ArrayList<>();
 
@@ -130,8 +130,10 @@ public class tab_from extends AppCompatActivity {
 
         TabLayoutAdapter adapter = new TabLayoutAdapter(this,getSupportFragmentManager(),tabs.getTabCount());
         pager.setAdapter(adapter);
+        pager.setOffscreenPageLimit(5);
+        pager.setSaveEnabled(true);
+        pager.setPagingEnabled(false);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
-
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
 
             @Override
@@ -154,14 +156,25 @@ public class tab_from extends AppCompatActivity {
 
 
         btn_func[0].setOnClickListener(v -> {
-           String tab_contact = 0 == 0 ? "N" : "Y";
-           String tab_checklist = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_HEADER_DETAILS") == 0 ? "N" : "Y";
-           String tab_breeder = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_BREEDER_DETAILS") == 0 ? "N" : "Y";
-           String tab_feed = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_FEED_DETAILS") == 0 ? "N" : "Y";
-           String tab_med = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_MED_DETAILS") == 0 ? "N" : "Y";
-           Log.d("swine", tab_contact + " " + tab_checklist + " " + tab_breeder + " " + tab_feed + " " + tab_med);
 
-            saveHeaderChecklist();
+            data.Confirmation(v.getContext(),"Are you sure you want to submit this forms?",R.drawable.ic_icons8_info);
+            data.positive.setText("confirm");
+            data.negative.setOnClickListener(v1 ->{
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setOnClickListener(v1 -> {
+                String tab_contact = 0 == 0 ? "N" : "Y";
+                String tab_checklist = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_HEADER_DETAILS") == 0 ? "N" : "Y";
+                String tab_breeder = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_BREEDER_DETAILS") == 0 ? "N" : "Y";
+                String tab_feed = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_FEED_DETAILS") == 0 ? "N" : "Y";
+                String tab_med = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_MED_DETAILS") == 0 ? "N" : "Y";
+                Log.d("swine", tab_contact + " " + tab_checklist + " " + tab_breeder + " " + tab_feed + " " + tab_med);
+                saveHeaderChecklist();
+                data.ConfirmDialog.dismiss();
+            });
+
+
+
         });
 
 

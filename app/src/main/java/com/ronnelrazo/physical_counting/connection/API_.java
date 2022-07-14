@@ -16,12 +16,12 @@ public class API_ {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.level(HttpLoggingInterceptor.Level.BODY);
-        ConnectionPool connectionPool = new ConnectionPool(10, 10, TimeUnit.MINUTES);
+        ConnectionPool connectionPool = new ConnectionPool(150, 50, TimeUnit.MINUTES);
 
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.connectionPool(connectionPool)
-                .connectTimeout(0, TimeUnit.MINUTES)
-                .readTimeout(0, TimeUnit.MINUTES);
+                .connectTimeout(50, TimeUnit.MINUTES)
+                .readTimeout(50, TimeUnit.MINUTES);
         httpClient.interceptors().add(logging);
         httpClient.interceptors().add(chain -> {
             Request original = chain.request();
@@ -45,6 +45,7 @@ public class API_ {
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(config.URLSeparate)
+//                .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

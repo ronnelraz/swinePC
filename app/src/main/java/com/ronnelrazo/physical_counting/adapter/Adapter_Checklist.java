@@ -2,7 +2,9 @@ package com.ronnelrazo.physical_counting.adapter;
 
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -301,6 +303,7 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     protected void getA1_1Form(String BU_CODE,VHItem item){
         API.getClient().A1_1Form(BU_CODE).enqueue(new Callback<Object>() {
+//            @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -323,6 +326,19 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                     }
                     else{
                         Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+                        ((tab_from)context).btn_func[0].setEnabled(false);
+                        ((tab_from)context).btn_func[1].setEnabled(false);
+                        item.business_farmname.setTextColor(Color.parseColor("#e74c3c"));
+                        item.businessAddress.setTextColor(Color.parseColor("#e74c3c"));
+                        item.farmManager.setTextColor(Color.parseColor("#e74c3c"));
+                        item.headAnimalHusbandman.setTextColor(Color.parseColor("#e74c3c"));
+                        item.contact.setTextColor(Color.parseColor("#e74c3c"));
+
+                        item.business_farmname.setText("Business/Farm Name:   *");
+                        item.businessAddress.setText("Business address:  *");
+                        item.farmManager.setText("Farm Manager:   *");
+                        item.headAnimalHusbandman.setText("Head Animal Husbandman: *");
+                        item.contact.setText("Contact Number:   *");
                     }
 
                 } catch (JSONException e) {
@@ -331,10 +347,25 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                 }
             }
 
+
+//            @SuppressLint("SetTextI18n")
             @Override
             public void onFailure(Call<Object> call, Throwable t) {
                 if (t instanceof IOException) {
-                    Globalfunction.getInstance(context).toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                    Globalfunction.getInstance(context).toast(R.raw.error,"Please Setup Farm Information first to continue this form. Thank you [Error Code A1.1]", Gravity.TOP|Gravity.CENTER,0,50);
+                    ((tab_from)context).btn_func[0].setEnabled(false);
+                    ((tab_from)context).btn_func[1].setEnabled(false);
+                    item.business_farmname.setTextColor(Color.parseColor("#e74c3c"));
+                    item.businessAddress.setTextColor(Color.parseColor("#e74c3c"));
+                    item.farmManager.setTextColor(Color.parseColor("#e74c3c"));
+                    item.headAnimalHusbandman.setTextColor(Color.parseColor("#e74c3c"));
+                    item.contact.setTextColor(Color.parseColor("#e74c3c"));
+
+                    item.business_farmname.setText("Business/Farm Name:   *");
+                    item.businessAddress.setText("Business address:  *");
+                    item.farmManager.setText("Farm Manager:   *");
+                    item.headAnimalHusbandman.setText("Head Animal Husbandman: *");
+                    item.contact.setText("Contact Number:   *");
                 }
             }
         });

@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,6 +50,8 @@ import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.modal_pdf_report;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -73,6 +77,7 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
     RemotePDFViewPager remotePDF;
     PDFPagerAdapter adapter;
 
+    AlertDialog alertDialogPDF;
 
 
     public Adapter_PDFReport(List<modal_pdf_report> list, Context context, ItemClickListener itemClickListener) {
@@ -90,15 +95,41 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
         return viewHolder;
     }
 
+    protected void Checker(String urls,TextView textView,String title){
+        try{
+            URL url = new URL(urls);
+            executeReq(url);
+            textView.setText(title);
+            textView.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_icons8_ok_small, 0);
+
+        }
+        catch(Exception e){
+            textView.setText(title);
+            textView.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_icons8_error_small, 0);
+        }
+
+
+    }
+
+    private void executeReq(URL urlObject) throws IOException{
+        HttpURLConnection conn = null;
+        conn = (HttpURLConnection) urlObject.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setDoInput(true);
+        conn.connect();
+        InputStream response =conn.getInputStream();
+        Log.d("Response:", response.toString());
+    }
+
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         final modal_pdf_report getData = newsList.get(position);
 
-        holder.org_name.setText(getData.getOrg_name() + " - " + getData.getOrg_code());
-        holder.farm_name.setText(getData.getFarm_name() + " - " + getData.getFarm_code());
-        holder.audi_No.setText("Audit No. : "+getData.getAudit_no());
-        holder.audi_date.setText("Audit Date : "+getData.getAudit_date());
+        holder.org_name.setText(String.format("%s - %s", getData.getOrg_name(), getData.getOrg_code()));
+        holder.farm_name.setText(String.format("%s - %s", getData.getFarm_name(), getData.getFarm_code()));
+        holder.audi_No.setText(String.format("Audit No. : %s", getData.getAudit_no()));
+        holder.audi_date.setText(String.format("Audit Date : %s", getData.getAudit_date()));
 
 
         Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF?ORG_CODE="+getData.getOrg_code()+"&AUDIT_NO="+getData.getAudit_no()+"&FARM_ORG=","checklistPDF backup");
@@ -112,131 +143,49 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
             String getFarmCode = getData.getFarm_code();
             String getauditNo = getData.getAudit_no();
 
+            MaterialAlertDialogBuilder GEneratingPDF = new MaterialAlertDialogBuilder(v.getContext());
+            View viewPDF = LayoutInflater.from(v.getContext()).inflate(R.layout.loading_generate_pdf,null);
+            TextView checklist_t = viewPDF.findViewById(R.id.checklist_t);
 
 
+            String message[] = {
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Please wait PDF File Generating...",
+                    "Generate File"
+            };
 
-            MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(v.getContext(),R.style.full_screen_dialog);
-            View view = LayoutInflater.from(v.getContext()).inflate(R.layout.pdf_modal,null);
-            TabLayout tabs = view.findViewById(R.id.tab);
+            Handler handler1 = new Handler();
+            for(int i = 0; i < 8; i++){
+                int finalI = i;
+             handler1.postDelayed(new Runnable() {
+                 @Override
+                 public void run() {
 
-            try {
-                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"checklist.pdf");
-                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"breeder.pdf");
-                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"feed.pdf");
-                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"med.pdf");
-            }catch (Exception e){
-                Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+                     if(finalI == 8-1){
+                         alertDialogPDF.dismiss();
+                         generatePDF(viewPDF, getData);
+                     }
+                     else{
+                         checklist_t.setText(message[finalI]);
+                     }
+
+                 }
+             },3000 * i);
             }
 
-            root = view.findViewById(R.id.remote_pdf_root);
-            MaterialButton downloadPDF = view.findViewById(R.id.downloadPDF);
-            MaterialButton moreOption = view.findViewById(R.id.moreOption);
-            downloadPDF.setOnClickListener(v2-> {
-                try {
-//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"checklist.pdf",v2);
-//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"breeder.pdf",v2);
-//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"feed.pdf",v2);
-//                    Globalfunction.getInstance(v2.getContext()).PDFURLCHECKER(getData.getPath()+"med.pdf",v2);
-//
-
-                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"checklist.pdf");
-                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"breeder.pdf");
-                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"feed.pdf");
-                    Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"med.pdf");
-                }catch (Exception e){
-                    Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
-            //default open more option
-            MenuOption(moreOption,getData.getPath()+"checklist.pdf");
-
-
-
-
-
-
-            tabs.addTab(tabs.newTab().setText("Checklist"));
-            tabs.addTab(tabs.newTab().setText("Breeder"));
-            tabs.addTab(tabs.newTab().setText("Feed"));
-            tabs.addTab(tabs.newTab().setText("Med"));
-            tabs.setTabGravity(TabLayout.GRAVITY_FILL);
-
-
-
-            ImageView closeModal = view.findViewById(R.id.close);
-
-            //CHECKLIST
-            String PDF_Path = getData.getUrl()+getData.getPath()+"checklist.pdf";
-            Log.d("Swine","URL : ->" + PDF_Path.trim());
-            setDownload(PDF_Path,R.id.datapdf);
-//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"checklist.pdf",v1);
-//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"breeder.pdf",v1);
-//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"feed.pdf",v1);
-//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"med.pdf",v1);
-
-
-            tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
-
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {
-
-                    if(tab.getPosition() == 0){
-                        String PDF_Path = getData.getUrl()+getData.getPath()+"checklist.pdf";
-                        Log.d("Swine","URL : ->" + PDF_Path.trim());
-                        setDownload(PDF_Path,R.id.datapdf);
-                        MenuOption(moreOption,getData.getPath()+"checklist.pdf");
-
-                    }
-                    else if(tab.getPosition() == 1){
-                        String PDF_Path = getData.getUrl()+getData.getPath()+"breeder.pdf";
-//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Breeder");
-                        Log.d("Swine","URL : ->" + PDF_Path.trim());
-                        setDownload(PDF_Path,R.id.datapdf);
-                        MenuOption(moreOption,getData.getPath()+"breeder.pdf");
-
-                    }
-                    else if(tab.getPosition() == 2){
-                        String PDF_Path = getData.getUrl()+getData.getPath()+"feed.pdf";
-//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Feed");
-                        Log.d("Swine","URL : ->" + PDF_Path.trim());
-                        setDownload(PDF_Path,R.id.datapdf);
-                        MenuOption(moreOption,getData.getPath()+"feed.pdf");
-                    }
-                    else if(tab.getPosition() == 3){
-                        String PDF_Path = getData.getUrl()+getData.getPath()+"med.pdf";
-//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Med");
-                        Log.d("Swine","URL : ->" + PDF_Path.trim());
-                        setDownload(PDF_Path,R.id.datapdf);
-                        MenuOption(moreOption,getData.getPath()+"med.pdf");
-
-                    }
-
-                }
-
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {
-
-                }
-
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {
-
-                }
-            });
-
-
-
-            dialogBuilder.setView(view);
-
-            AlertDialog alertDialog = dialogBuilder.create();
-            alertDialog.setCanceledOnTouchOutside(false);
-            alertDialog.setCancelable(false);
-            closeModal.setOnClickListener(v2 -> {
-                alertDialog.dismiss();
-            });
-            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            BounceView.addAnimTo(alertDialog);
-            alertDialog.show();
+            GEneratingPDF.setView(viewPDF);
+            alertDialogPDF = GEneratingPDF.create();
+            alertDialogPDF.setCanceledOnTouchOutside(false);
+            alertDialogPDF.setCancelable(false);
+            alertDialogPDF.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            BounceView.addAnimTo(alertDialogPDF);
+            alertDialogPDF.show();
 
         });
 
@@ -257,6 +206,127 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
 
     }
 
+
+    public void generatePDF(View v, modal_pdf_report getData){
+        MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(v.getContext(),R.style.full_screen_dialog);
+        View view = LayoutInflater.from(v.getContext()).inflate(R.layout.pdf_modal,null);
+        TabLayout tabs = view.findViewById(R.id.tab);
+
+        try {
+            Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"checklist.pdf");
+            Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"breeder.pdf");
+            Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"feed.pdf");
+            Globalfunction.getInstance(v.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"med.pdf");
+        }catch (Exception e){
+            Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        root = view.findViewById(R.id.remote_pdf_root);
+        MaterialButton downloadPDF = view.findViewById(R.id.downloadPDF);
+        MaterialButton moreOption = view.findViewById(R.id.moreOption);
+        downloadPDF.setOnClickListener(v2-> {
+            try {
+
+                Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"checklist.pdf");
+                Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"breeder.pdf");
+                Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"feed.pdf");
+                Globalfunction.getInstance(v2.getContext()).DownloadPDFURL(config.URLDownload+getData.getPath()+"med.pdf");
+            }catch (Exception e){
+                Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        //default open more option
+        MenuOption(moreOption,getData.getPath()+"checklist.pdf");
+
+
+
+
+
+
+        tabs.addTab(tabs.newTab().setText("Checklist"));
+        tabs.addTab(tabs.newTab().setText("Breeder"));
+        tabs.addTab(tabs.newTab().setText("Feed"));
+        tabs.addTab(tabs.newTab().setText("Med"));
+        tabs.setTabGravity(TabLayout.GRAVITY_FILL);
+
+
+
+        ImageView closeModal = view.findViewById(R.id.close);
+
+        //CHECKLIST
+        String PDF_Path = getData.getUrl()+getData.getPath()+"checklist.pdf";
+        Log.d("Swine","URL : ->" + PDF_Path.trim());
+        setDownload(PDF_Path,R.id.datapdf);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"checklist.pdf",v1);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"breeder.pdf",v1);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"feed.pdf",v1);
+//                Globalfunction.getInstance(v1.getContext()).ViewPDFView(getData.getPath()+"med.pdf",v1);
+
+
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+                if(tab.getPosition() == 0){
+                    String PDF_Path = getData.getUrl()+getData.getPath()+"checklist.pdf";
+                    Log.d("Swine","URL : ->" + PDF_Path.trim());
+                    setDownload(PDF_Path,R.id.datapdf);
+                    MenuOption(moreOption,getData.getPath()+"checklist.pdf");
+
+                }
+                else if(tab.getPosition() == 1){
+                    String PDF_Path = getData.getUrl()+getData.getPath()+"breeder.pdf";
+//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Breeder");
+                    Log.d("Swine","URL : ->" + PDF_Path.trim());
+                    setDownload(PDF_Path,R.id.datapdf);
+                    MenuOption(moreOption,getData.getPath()+"breeder.pdf");
+
+                }
+                else if(tab.getPosition() == 2){
+                    String PDF_Path = getData.getUrl()+getData.getPath()+"feed.pdf";
+//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Feed");
+                    Log.d("Swine","URL : ->" + PDF_Path.trim());
+                    setDownload(PDF_Path,R.id.datapdf);
+                    MenuOption(moreOption,getData.getPath()+"feed.pdf");
+                }
+                else if(tab.getPosition() == 3){
+                    String PDF_Path = getData.getUrl()+getData.getPath()+"med.pdf";
+//                        ErrorhandlingPDF(PDF_Path,pdfViewPager,v,"Med");
+                    Log.d("Swine","URL : ->" + PDF_Path.trim());
+                    setDownload(PDF_Path,R.id.datapdf);
+                    MenuOption(moreOption,getData.getPath()+"med.pdf");
+
+                }
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
+
+        dialogBuilder.setView(view);
+
+        AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        alertDialog.setCancelable(false);
+        closeModal.setOnClickListener(v2 -> {
+            alertDialog.dismiss();
+        });
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        BounceView.addAnimTo(alertDialog);
+        alertDialog.show();
+
+    }
 
     protected void SysPDFEditor(View v,String path){
         File file=new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/"+path);

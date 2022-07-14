@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-44:/values-si/values-si.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-46:/values-si/values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\800aa833efbf0224974ab853a1c0784f\\transformed\\preference-1.2.0\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,181,264,339,482,651,743",
-                        "endColumns": "75,82,74,142,168,91,86",
-                        "endOffsets": "176,259,334,477,646,738,825"
-                    },
-                    "to": {
-                        "startLines": "37,39,88,90,93,94,95",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3368,3508,7328,7483,7809,7978,8070",
-                        "endColumns": "75,82,74,142,168,91,86",
-                        "endOffsets": "3439,3586,7398,7621,7973,8065,8152"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\d719c211d28576cf41164fe387cd83b0\\transformed\\material-1.5.0\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\bfec8dfcaf6c34e166a516bbd7a3f400\\transformed\\material-1.6.1\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -37,6 +20,23 @@
                         "endLines": "5,33,34,35,36,38,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,89",
                         "endColumns": "12,77,101,114,82,63,88,66,59,93,62,55,69,66,54,118,56,63,53,72,121,82,84,101,77,79,85,66,65,69,72,81,71,76,71,69,92,72,89,92,73,71,90,53,65,83,84,61,63,62,104,99,94,99,79",
                         "endOffsets": "269,3063,3165,3280,3363,3503,3675,3742,3802,3896,3959,4015,4085,4152,4207,4326,4383,4447,4501,4574,4696,4779,4864,4966,5044,5124,5210,5277,5343,5413,5486,5568,5640,5717,5789,5859,5952,6025,6115,6208,6282,6354,6445,6499,6565,6649,6734,6796,6860,6923,7028,7128,7223,7323,7478"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\800aa833efbf0224974ab853a1c0784f\\transformed\\preference-1.2.0\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,181,264,339,482,651,743",
+                        "endColumns": "75,82,74,142,168,91,86",
+                        "endOffsets": "176,259,334,477,646,738,825"
+                    },
+                    "to": {
+                        "startLines": "37,39,88,90,93,94,95",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3368,3508,7328,7483,7809,7978,8070",
+                        "endColumns": "75,82,74,142,168,91,86",
+                        "endOffsets": "3439,3586,7398,7621,7973,8065,8152"
                     }
                 },
                 {
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\69592bd19cec1de513dd3643bec51fc2\\transformed\\appcompat-1.4.1\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\f053ca72a4906620f9d7f529c412475e\\transformed\\appcompat-1.4.2\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/nodata"/>
+            android:src="@drawable/nofiles"/>
 
         <TextView
             android:textSize="18sp"

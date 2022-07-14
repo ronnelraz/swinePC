@@ -82,7 +82,7 @@ public class Adapter_Breeder extends RecyclerView.Adapter<Adapter_Breeder.ViewHo
 
 
                 boolean updateBreederList = Globalfunction.getInstance(mContext)
-                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),count,holder.remark.getText().toString());
+                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),count,holder.remark.getText().toString(),"","","");
                 if(updateBreederList){
                     Log.d("swine","update breeder details" + position);
                 }
@@ -106,7 +106,8 @@ public class Adapter_Breeder extends RecyclerView.Adapter<Adapter_Breeder.ViewHo
             @Override
             public void afterTextChanged(Editable s) {
                 boolean updateBreederList = Globalfunction.getInstance(mContext)
-                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),holder.counting.getText().toString(),s.toString());
+                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),holder.counting.getText().toString(),s.toString(),"","","");
+
                 if(updateBreederList){
                     Log.d("swine","update breeder details" + position);
                 }
@@ -129,6 +130,9 @@ public class Adapter_Breeder extends RecyclerView.Adapter<Adapter_Breeder.ViewHo
                         getData.getMale_Stock().replace(",",""),
                         getData.getStock_Balance().replace(",",""),
                         "0",
+                        "",
+                        "",
+                        "",
                         ""
                 );
         if(save_breeder_details){

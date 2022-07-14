@@ -17,6 +17,9 @@ public class TABLE_BREEDER_DETAILS {
     public String TOTAL_STOCK = "TOTAL_STOCK";
     public String COUNTING_STOCK = "COUNTING_STOCK";
     public String REMARK = "REMARK";
+    public String VARIANCE = "VARIANCE";
+    public String UNPOST = "UNPOST";
+    public String ACTIVE_VAR = "ACTIVE_VAR";
 
 
 

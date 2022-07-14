@@ -68,6 +68,7 @@ public class Adapter_editPDF extends RecyclerView.Adapter<Adapter_editPDF.ViewHo
              Globalfunction.getInstance(v.getContext()).intent(edit_TabForm.class,v.getContext());
             edit_TabForm.Getorg_code = getData.getOrg_code();
             edit_TabForm.Getfarm_code = getData.getFarm_code();
+            edit_TabForm.getAudit_no = getData.getAudit_no();
             Tab_checklist_edit.AUDIT_NO = getData.getAudit_no();
             Tab_checklist_edit.str_orgcode = getData.getOrg_code();
             Tab_checklist_edit.str_audit_date = getData.getAudit_date();
