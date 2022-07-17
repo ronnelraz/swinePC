@@ -102,7 +102,7 @@ public class FeedTab_adapter extends RelativeLayout {
                     JSONArray result = jsonResponse.getJSONArray("data");
 
                     if(success){
-                        for (int i = 1; i < result.length(); i++) {
+                        for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
                             model_feed sampleObject = new model_feed(
                                     object.getString("orgCode"),
@@ -317,9 +317,9 @@ public class FeedTab_adapter extends RelativeLayout {
                             getData.getStockUnit(),
                             "0",
                             null,
-                            "",
-                            "",
-                            "");
+                            "0",
+                            "0",
+                            "0");
             if(savefeed){
                 Log.d("cebu_feed","feed save : " + i);
             }

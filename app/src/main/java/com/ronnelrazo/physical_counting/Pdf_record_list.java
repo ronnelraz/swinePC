@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
@@ -61,6 +62,7 @@ public class Pdf_record_list extends AppCompatActivity {
     AutoCompleteTextView org_code_filter;
     @BindView(R.id.audit_date_filter)
     TextInputEditText audit_date_filter;
+
 
 
     List<String> autocompletelist = new ArrayList<>();
@@ -234,7 +236,7 @@ public class Pdf_record_list extends AppCompatActivity {
 
     private void AutoCompleteCode(String user) {
         autocompletelist.clear();
-        API.getClient().autoCompleteOrg_code(user).enqueue(new Callback<Object>() {
+        API.getClient().autoCompleteOrg_code_generate(user).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

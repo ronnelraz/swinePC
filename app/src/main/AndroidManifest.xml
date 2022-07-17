@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
-        tools:replace="android:allowBackup"
         android:allowBackup="false"
         android:allowClearUserData="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +18,14 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Physical_counting">
+        android:theme="@style/Theme.Physical_counting"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".upload_file"
+            android:exported="false" />
+        <activity
+            android:name=".Cancel"
+            android:exported="false" />
         <activity
             android:name=".Confirm"
             android:exported="false" />

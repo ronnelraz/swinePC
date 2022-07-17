@@ -20,28 +20,70 @@
         app:cornerRadius="20dp"
         app:icon="@drawable/icons8_back" />
 
-
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_below="@+id/back"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/radius_border"
-        android:backgroundTint="@color/bgEdit"
-        android:drawableLeft="@drawable/ic_icons8_search"
-        android:drawablePadding="10dp"
-        android:drawableTint="@color/black"
-        android:hint="Search | Org Code | Farm Name | Audit No"
-        android:singleLine="true" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:id="@+id/search"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="@color/bgEdit"
+            android:paddingLeft="10dp"
+            android:layout_column="1"
+            android:hint="Org Code"
+            android:textSize="18sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/searchdate"
+            android:layout_height="55dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="@color/bgEdit"
+            android:drawableLeft="@drawable/calendar"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/black"
+            android:layout_column="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:hint="Audit Date"
+            android:textSize="18sp"
+            tools:text="12/02/2020"
+            android:singleLine="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_height="55dp"
+            android:layout_weight="2.1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/searchbtn"
+            app:icon="@drawable/ic_icons8_search"
+            app:iconGravity="textStart"
+            android:layout_width="0dp"
+            android:text="Search"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"
+            />
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="5dp"
         android:id="@+id/data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/search"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="5dp"
         tools:listitem="@layout/edit_pdf_list_detials" />
 
 </RelativeLayout>

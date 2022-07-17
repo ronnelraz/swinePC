@@ -156,7 +156,7 @@ public class Adapter_Feed_edit extends RecyclerView.Adapter<Adapter_Feed_edit.Vi
 
     protected void updateChanges(String counting,String remark,String org_code,String audit_no,String farm_org,String feed_code){
 
-        API.getClient().update_feed(counting,remark,org_code,audit_no,farm_org,feed_code).enqueue(new Callback<Object>() {
+        API.getClient().update_feed(counting,remark,org_code,audit_no,farm_org,feed_code,"","","","").enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

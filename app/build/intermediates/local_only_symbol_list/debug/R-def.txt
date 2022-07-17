@@ -147,6 +147,7 @@ id feed_data
 id female
 id freeText
 id headAnimalHusbandman
+id header
 id headerAnnex
 id header_title
 id icon
@@ -206,6 +207,8 @@ id role
 id save
 id search
 id searchFarmlist
+id searchbtn
+id searchdate
 id shimmerLayout
 id status
 id step_view
@@ -223,6 +226,7 @@ id username
 id username_layout
 id verison
 id zipcode
+layout activity_cancel
 layout activity_confirm
 layout activity_edit_pdf
 layout activity_edit_tab_form

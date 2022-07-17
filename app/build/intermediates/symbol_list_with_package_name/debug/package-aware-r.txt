@@ -4004,6 +4004,7 @@ id groups
 id guideline
 id hardware
 id headAnimalHusbandman
+id header
 id headerAnnex
 id header_title
 id hideable
@@ -4774,6 +4775,8 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id searchbtn
+id searchdate
 id seekbar
 id seekbar_value
 id select_dialog_listview
@@ -5014,6 +5017,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_cancel
 layout activity_confirm
 layout activity_edit_pdf
 layout activity_edit_tab_form

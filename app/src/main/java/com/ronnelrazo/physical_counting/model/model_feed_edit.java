@@ -2,9 +2,9 @@ package com.ronnelrazo.physical_counting.model;
 
 public class model_feed_edit {
 
-    public String orgCode,period,projectCode,farmCode,farmOrg,FarnName,productCode,productName,stockUnit,stockQty,stockWgh,counting,remark;
+    public String orgCode,period,projectCode,farmCode,farmOrg,FarnName,productCode,productName,stockUnit,stockQty,stockWgh,counting,remark,variance,unpost,actual;
 
-    public model_feed_edit(String orgCode, String period, String projectCode, String farmCode, String farmOrg, String farnName, String productCode, String productName, String stockUnit, String stockQty, String stockWgh, String counting, String remark) {
+    public model_feed_edit(String orgCode, String period, String projectCode, String farmCode, String farmOrg, String farnName, String productCode, String productName, String stockUnit, String stockQty, String stockWgh, String counting, String remark, String variance, String unpost, String actual) {
         this.orgCode = orgCode;
         this.period = period;
         this.projectCode = projectCode;
@@ -18,8 +18,10 @@ public class model_feed_edit {
         this.stockWgh = stockWgh;
         this.counting = counting;
         this.remark = remark;
+        this.variance = variance;
+        this.unpost = unpost;
+        this.actual = actual;
     }
-
 
     public String getOrgCode() {
         return orgCode;
@@ -123,5 +125,29 @@ public class model_feed_edit {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getVariance() {
+        return variance;
+    }
+
+    public void setVariance(String variance) {
+        this.variance = variance;
+    }
+
+    public String getUnpost() {
+        return unpost;
+    }
+
+    public void setUnpost(String unpost) {
+        this.unpost = unpost;
+    }
+
+    public String getActual() {
+        return actual;
+    }
+
+    public void setActual(String actual) {
+        this.actual = actual;
     }
 }

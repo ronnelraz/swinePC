@@ -1,23 +1,14 @@
 package com.ronnelrazo.physical_counting.adapter;
 
-import static android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.text.Editable;
-import android.text.InputType;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ronnelrazo.physical_counting.R;
@@ -28,8 +19,6 @@ import com.ronnelrazo.physical_counting.fragment.Tab_feed_edit;
 import com.ronnelrazo.physical_counting.fragment.Tab_med_edit;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.model_edit_list;
-import com.ronnelrazo.physical_counting.model.model_feed;
-import com.ronnelrazo.physical_counting.tab_from;
 
 import java.util.List;
 

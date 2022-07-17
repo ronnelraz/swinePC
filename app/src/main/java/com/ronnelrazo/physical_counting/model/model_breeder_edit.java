@@ -2,9 +2,9 @@ package com.ronnelrazo.physical_counting.model;
 
 public class model_breeder_edit {
 
-    public String location_Code,location_Name,org_Code,org_Name,farm_Org,farm_Name,female_Stock,Male_Stock,stock_Balance,bu_code,bu_type,farm_code,counting,remark;
+    public String location_Code,location_Name,org_Code,org_Name,farm_Org,farm_Name,female_Stock,Male_Stock,stock_Balance,bu_code,bu_type,farm_code,counting,remark,varience,unpost,active_var;
 
-    public model_breeder_edit(String location_Code, String location_Name, String org_Code, String org_Name, String farm_Org, String farm_Name, String female_Stock, String male_Stock, String stock_Balance, String bu_code, String bu_type, String farm_code, String counting, String remark) {
+    public model_breeder_edit(String location_Code, String location_Name, String org_Code, String org_Name, String farm_Org, String farm_Name, String female_Stock, String male_Stock, String stock_Balance, String bu_code, String bu_type, String farm_code, String counting, String remark, String varience, String unpost, String active_var) {
         this.location_Code = location_Code;
         this.location_Name = location_Name;
         this.org_Code = org_Code;
@@ -19,6 +19,9 @@ public class model_breeder_edit {
         this.farm_code = farm_code;
         this.counting = counting;
         this.remark = remark;
+        this.varience = varience;
+        this.unpost = unpost;
+        this.active_var = active_var;
     }
 
     public String getLocation_Code() {
@@ -131,5 +134,29 @@ public class model_breeder_edit {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getVarience() {
+        return varience;
+    }
+
+    public void setVarience(String varience) {
+        this.varience = varience;
+    }
+
+    public String getUnpost() {
+        return unpost;
+    }
+
+    public void setUnpost(String unpost) {
+        this.unpost = unpost;
+    }
+
+    public String getActive_var() {
+        return active_var;
+    }
+
+    public void setActive_var(String active_var) {
+        this.active_var = active_var;
     }
 }

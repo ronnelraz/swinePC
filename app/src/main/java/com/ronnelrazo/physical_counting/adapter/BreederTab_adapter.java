@@ -33,6 +33,7 @@ import com.ronnelrazo.physical_counting.R;
 import com.ronnelrazo.physical_counting.connection.API_;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.model_breeder;
+import com.ronnelrazo.physical_counting.model.model_med;
 import com.ronnelrazo.physical_counting.tab_from;
 
 import org.json.JSONArray;
@@ -111,7 +112,7 @@ public class BreederTab_adapter extends RelativeLayout {
                     JSONArray result = jsonResponse.getJSONArray("data");
 
                     if(success){
-                        for (int i = 1; i < result.length(); i++) {
+                        for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
                             Log.d("putangina", object.getString("femaleQty") + " " + i);
                             model_breeder sampleObject = new model_breeder(
@@ -333,9 +334,9 @@ public class BreederTab_adapter extends RelativeLayout {
                             getData.getStock_Balance().replace(",",""),
                             "0",
                             "",
-                            "",
-                            "",
-                            ""
+                            "0",
+                            "0",
+                            "0"
                     );
             if(save_breeder_details){
                 Log.d("cebu","save breeder details" + i);
@@ -381,6 +382,7 @@ public class BreederTab_adapter extends RelativeLayout {
 
 
     TableRow taleRowForTableD(model_breeder sampleObject,int position){
+        final model_breeder getData = dana.get(position);
         int backgroundColor = position%2==0 ? R.color.even : R.color.odd;
         int backgroundColorEdit = position%2==0 ? R.drawable.edit_text_dot_form_even : R.drawable.edit_text_dot_form_odd;
         TableRow taleRowForTableD = new TableRow(this.context);
@@ -410,7 +412,7 @@ public class BreederTab_adapter extends RelativeLayout {
 
         for(int x=0 ; x<loopCount; x++){
 
-            final model_breeder getData = dana.get(x);
+
 
             TableRow.LayoutParams params = new TableRow.LayoutParams( headerCellsWidth[x+1],LayoutParams.MATCH_PARENT);
             params.setMargins(2, 2, 0, 0);
@@ -547,43 +549,43 @@ public class BreederTab_adapter extends RelativeLayout {
                         }
                         else{
                             if (s.length() > 0) {
-                                try{
-                                    int varience = Integer.parseInt(textview_variance.getText().toString());
-                                    int counts = Integer.parseInt(s.toString());
-                                    int active_varience_total = varience - counts;
-                                    activeVar.setText(String.valueOf(active_varience_total));
+
+                                last_text_edit = System.currentTimeMillis();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (System.currentTimeMillis() > (last_text_edit + delay - 500)) {
+                                            try{
+                                                int varience = Integer.parseInt(textview_variance.getText().toString());
+                                                int counts = Integer.parseInt(s.toString());
+                                                int active_varience_total = varience - counts;
+                                                activeVar.setText(String.valueOf(active_varience_total));
 
 
 
-                                    String count = editTextCount.getText().toString();
-                                    String getRemarks = Remarks.getText().toString();
-                                    String getunpost = s.toString().isEmpty() ? "0" : s.toString();
-                                    String getvariance = textview_variance.getText().toString();
-                                    String getactiveVaR = activeVar.getText().toString();
+                                                String count = editTextCount.getText().toString();
+                                                String getRemarks = Remarks.getText().toString();
+                                                String getunpost = s.toString().isEmpty() ? "0" : s.toString();
+                                                String getvariance = textview_variance.getText().toString();
+                                                String getactiveVaR = activeVar.getText().toString();
 
-                                    boolean updateBreederList = Globalfunction.getInstance(context)
-                                            .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),count,getRemarks,getvariance,getunpost,getactiveVaR);
-                                    if(updateBreederList){
-                                        Log.d("swine","update breeder details" + position);
+                                                boolean updateBreederList = Globalfunction.getInstance(context)
+                                                        .updatebreederlist(position,getData.getOrg_Code(),getData.getFarm_code(),count,getRemarks,getvariance,getunpost,getactiveVaR);
+                                                if(updateBreederList){
+                                                    Log.d("swine","update breeder details" + position);
+                                                }
+                                                else{
+                                                    Log.d("swine","update breeder details" + position);
+                                                }
+
+                                            } catch(NumberFormatException ex){
+                                                Log.d("swine","error number");
+                                            }
+                                        }
                                     }
-                                    else{
-                                        Log.d("swine","update breeder details" + position);
-                                    }
 
-                                } catch(NumberFormatException ex){
-                                    Log.d("swine","error number");
-                                }
-//                                last_text_edit = System.currentTimeMillis();
-//                                handler.postDelayed(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        if (System.currentTimeMillis() > (last_text_edit + delay - 500)) {
-//
-//                                        }
-//                                    }
-//
-//
-//                                }, delay);
+
+                                }, delay);
                             }
                         }
 

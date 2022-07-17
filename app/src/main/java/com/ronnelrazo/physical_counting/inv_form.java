@@ -82,4 +82,12 @@ public class inv_form extends AppCompatActivity {
     public void confirm(View view) {
         data.intent(Confirm.class,view.getContext());
     }
+
+    public void cancel(View view) {
+        data.intent(Cancel.class,view.getContext());
+    }
+
+    public void upload(View view) {
+        data.intent(upload_file.class,view.getContext());
+    }
 }

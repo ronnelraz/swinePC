@@ -34,6 +34,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Physical_counting" >
         <activity
+            android:name="com.ronnelrazo.physical_counting.Cancel"
+            android:exported="false" />
+        <activity
             android:name="com.ronnelrazo.physical_counting.Confirm"
             android:exported="false" />
         <activity

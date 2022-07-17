@@ -156,7 +156,7 @@ public class Adapter_Med_edit extends RecyclerView.Adapter<Adapter_Med_edit.View
 
     protected void updateChanges(String counting,String remark,String org_code,String audit_no,String farm_org,String med_code){
 
-        API.getClient().update_med(counting,remark,org_code,audit_no,farm_org,med_code).enqueue(new Callback<Object>() {
+        API.getClient().update_med(counting,remark,org_code,audit_no,farm_org,med_code,"","","","").enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

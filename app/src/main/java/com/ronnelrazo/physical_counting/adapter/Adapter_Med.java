@@ -83,7 +83,7 @@ public class Adapter_Med extends RecyclerView.Adapter<Adapter_Med.ViewHolder> {
             @Override
             public void afterTextChanged(Editable s) {
                 boolean update = Globalfunction.getInstance(mContext)
-                        .updateMedlist(position,getData.getOrgCode(),getData.getFarmCode(),s.toString(),holder.remark.getText().toString());
+                        .updateMedlist(position,getData.getOrgCode(),getData.getFarmCode(),s.toString(),holder.remark.getText().toString(),"","","");
                 if(update){
                     Log.d("swine","med updated postion : " + position);
                 }
@@ -109,7 +109,7 @@ public class Adapter_Med extends RecyclerView.Adapter<Adapter_Med.ViewHolder> {
             public void afterTextChanged(Editable s) {
                 String counting = holder.counting.getText().toString().isEmpty() ? "0" : holder.counting.getText().toString();
                 boolean update = Globalfunction.getInstance(mContext)
-                        .updateMedlist(position,getData.getOrgCode(),getData.getFarmCode(),counting,s.toString());
+                        .updateMedlist(position,getData.getOrgCode(),getData.getFarmCode(),counting,s.toString(),"","","");
                 if(update){
                     Log.d("swine","med updated postion : " + position);
                 }
@@ -135,7 +135,10 @@ public class Adapter_Med extends RecyclerView.Adapter<Adapter_Med.ViewHolder> {
                         getSYSStocks_W,
                         getData.getStockUnit(),
                         "0",
-                        null);
+                        null,
+                        "",
+                        "",
+                        "");
         if(saveMed){
             Log.d("swine","med save : " + position);
         }

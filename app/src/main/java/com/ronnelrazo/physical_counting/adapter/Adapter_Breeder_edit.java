@@ -144,7 +144,7 @@ public class Adapter_Breeder_edit extends RecyclerView.Adapter<Adapter_Breeder_e
 
     protected void updateChanges(String counting,String remark,String org_code,String audit_no,String farm_org){
 
-        API.getClient().update_breeder_idana(counting,remark,org_code,audit_no,farm_org).enqueue(new Callback<Object>() {
+        API.getClient().update_breeder_idana(counting,remark,org_code,audit_no,farm_org,"","","","").enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

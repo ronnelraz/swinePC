@@ -2,29 +2,19 @@ package com.ronnelrazo.physical_counting.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.ronnelrazo.physical_counting.R;
-import com.ronnelrazo.physical_counting.edit_TabForm;
-import com.ronnelrazo.physical_counting.fragment.Tab_breeder_edit;
-import com.ronnelrazo.physical_counting.fragment.Tab_checklist_edit;
-import com.ronnelrazo.physical_counting.fragment.Tab_feed_edit;
-import com.ronnelrazo.physical_counting.fragment.Tab_med_edit;
-import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.model_confirm_list;
-import com.ronnelrazo.physical_counting.model.model_edit_list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,27 +60,6 @@ public class Adapter_Confirm_list extends RecyclerView.Adapter<Adapter_Confirm_l
             holder.checkBox.setChecked(true);
         }
 
-//        holder.card.setOnClickListener(v -> {
-//            if(getData.isSelected){
-//                getData.isSelected = false;
-//                if(getSelected().size() == 0){
-//                    confirm.setEnabled(false);
-//                    holder.checkBox.setChecked(false);
-//
-//                }
-//                else{
-//                    confirm.setEnabled(true);
-//                    holder.checkBox.setChecked(true);
-//                }
-//                holder.checkBox.setChecked(false);
-//
-//            }
-//            else{
-//                getData.isSelected = true;
-//                confirm.setEnabled(true);
-//                holder.checkBox.setChecked(true);
-//            }
-//        });
 
          holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
           @Override

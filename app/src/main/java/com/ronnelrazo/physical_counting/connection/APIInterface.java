@@ -128,7 +128,10 @@ public interface APIInterface {
             @Field("SYS_TOTAL_STOCK") String SYS_TOTAL_STOCK,
             @Field("COUNTING_STOCK") String COUNTING_STOCK,
             @Field("REMARK") String REMARK,
-            @Field("USER_CREATE") String USER_CREATE
+            @Field("USER_CREATE") String USER_CREATE,
+            @Field("VARIANCE") String variance,
+            @Field("UNPOST") String unpost,
+            @Field("ACTIVE_VAR") String active_var
     );
 
 
@@ -153,7 +156,10 @@ public interface APIInterface {
             @Field("STOCK_UNIT") String STOCK_UNIT,
             @Field("COUNTING_STOCK") String COUNTING_STOCK,
             @Field("REMARK") String REMARK,
-            @Field("USER_CREATE") String USER_CREATE
+            @Field("USER_CREATE") String USER_CREATE,
+            @Field("VARIANCE") String variance,
+            @Field("UNPOST") String unpost,
+            @Field("ACTIVE_VAR") String active_var
     );
 
 
@@ -178,7 +184,10 @@ public interface APIInterface {
             @Field("STOCK_UNIT") String STOCK_UNIT,
             @Field("COUNTING_STOCK") String COUNTING_STOCK,
             @Field("REMARK") String REMARK,
-            @Field("USER_CREATE") String USER_CREATE
+            @Field("USER_CREATE") String USER_CREATE,
+            @Field("VARIANCE") String VARIANCE,
+            @Field("UNPOST") String UNPOST,
+            @Field("ACTIVE_VAR") String ACTIVE_VAR
     );
 
 
@@ -200,6 +209,19 @@ public interface APIInterface {
     @FormUrlEncoded
     @POST("autoComplete_org_code")
     Call<Object> autoCompleteOrg_code(
+            @Field("username") String username
+    );
+
+
+    @FormUrlEncoded
+    @POST("autoComplete_org_code_cancel")
+    Call<Object> autoCompleteOrg_code_cancel(
+            @Field("username") String username
+    );
+
+    @FormUrlEncoded
+    @POST("autoComplete_org_code_generate")
+    Call<Object> autoCompleteOrg_code_generate(
             @Field("username") String username
     );
 
@@ -302,7 +324,9 @@ public interface APIInterface {
     @FormUrlEncoded
     @POST("edit_pdf_list")
     Call<Object> edit_pdf_list(
-            @Field("username") String username
+            @Field("username") String username,
+            @Field("org_code") String orgcode,
+            @Field("date") String date
     );
 
 
@@ -358,9 +382,11 @@ public interface APIInterface {
             @Field("remark") String remark,
             @Field("org_code") String org_code,
             @Field("audit_no") String audit_no,
-//            @Field("farm_code") String farm_code,
-//            @Field("locs") String locs,
-            @Field("farm_org") String farm_org
+            @Field("farm_org") String farm_org,
+            @Field("variance") String variance,
+            @Field("unpost") String unpost,
+            @Field("actual") String actual,
+            @Field("user") String user
     );
 
     @FormUrlEncoded
@@ -371,7 +397,12 @@ public interface APIInterface {
             @Field("org_code") String org_code,
             @Field("audit_no") String audit_no,
             @Field("farm_org") String farm_org,
-            @Field("feed_code") String feed_code
+            @Field("feed_code") String feed_code,
+            @Field("variance") String variance,
+            @Field("unpost") String unpost,
+            @Field("actual") String actual,
+            @Field("user") String user
+
     );
 
     @FormUrlEncoded
@@ -382,20 +413,36 @@ public interface APIInterface {
             @Field("org_code") String org_code,
             @Field("audit_no") String audit_no,
             @Field("farm_org") String farm_org,
-            @Field("med_code") String med_code
+            @Field("med_code") String med_code,
+            @Field("variance") String variance,
+            @Field("unpost") String unpost,
+            @Field("actual") String actual,
+            @Field("user") String user
     );
 
     @FormUrlEncoded
     @POST("confirm_list")
     Call<Object> confirm_list(
-            @Field("user") String user
+            @Field("user") String user,
+            @Field("org_code") String org_code,
+            @Field("audit") String audit
+    );
+
+
+    @FormUrlEncoded
+    @POST("cancel_list")
+    Call<Object> cancel_list(
+            @Field("user") String user,
+            @Field("org_code") String org_code,
+            @Field("audit") String audit
     );
 
     @FormUrlEncoded
     @POST("flag")
     Call<Object> flag(
             @Field("audit_no") String audit_no,
-            @Field("flag") String flag
+            @Field("flag") String flag,
+            @Field("user") String user
     );
 
 

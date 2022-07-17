@@ -123,6 +123,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Org Name"
+                    tools:text="saaasasasasasasasasasasasas"
+                    android:singleLine="true"
                     android:fontFamily="@font/cpf_imm_sook_bold"
                     android:textColor="@color/white"/>
 
@@ -154,6 +156,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Org Name"
+                    tools:text="saaasasasasasasasasasasasas"
+                    android:singleLine="true"
                     android:fontFamily="@font/cpf_imm_sook_bold"
                     android:textColor="@color/white"/>
 

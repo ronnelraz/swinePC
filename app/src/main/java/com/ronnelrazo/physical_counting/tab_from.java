@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.database.Cursor;
+import android.database.sqlite.SQLiteConstraintException;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -34,6 +35,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import butterknife.BindView;
 import butterknife.BindViews;
@@ -289,7 +291,10 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(9),
                     cursor.getString(10),
                     cursor.getString(11),
-                    cursor.getString(12)
+                    cursor.getString(12),
+                    cursor.getString(13),
+                    cursor.getString(14),
+                    cursor.getString(15)
                     );
             if (RowCounter == totalRow) {
                 data.toast(R.raw.checked,"[Breeder] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
@@ -321,7 +326,10 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(10),
                     cursor.getString(11),
                     cursor.getString(12),
-                    cursor.getString(13)
+                    cursor.getString(13),
+                    cursor.getString(14),
+                    cursor.getString(15),
+                    cursor.getString(16)
             );
             if (RowCounter == totalRow) {
                 data.toast(R.raw.checked,"[Feed] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
@@ -335,10 +343,29 @@ public class tab_from extends AppCompatActivity {
         String getorg_Code = str_orgcode;
         String getfarm_Code = str_farmcode;
 
+//        Toast.makeText(this, getorg_Code + " " + getfarm_Code, Toast.LENGTH_SHORT).show();
+
         Cursor cursor = data.getMedListDetails(getorg_Code,getfarm_Code);
         int totalRow = cursor.getCount();
         while(cursor.moveToNext()){
             RowCounter++;
+//            Log.d("putangina", cursor.getString(1) + "\n" +
+//                    audit_no + "\n" +
+//                    cursor.getString(2) + "\n" +
+//                    cursor.getString(3) + "\n" +
+//                    cursor.getString(4) + "\n" +
+//                    cursor.getString(5) + "\n" +
+//                    cursor.getString(6) + "\n" +
+//                    cursor.getString(7) + "\n" +
+//                    cursor.getString(8) + "\n" +
+//                    cursor.getString(9) + "\n" +
+//                    cursor.getString(10) + "\n" +
+//                    cursor.getString(11) + "\n" +
+//                    cursor.getString(12) + "\n" +
+//                    cursor.getString(13) + "\n" +
+//                    cursor.getString(14) + "\n" +
+//                    cursor.getString(15) + "\n" +
+//                    cursor.getString(16));
             saveMed_count_OnineDB(
                     cursor.getString(1),
                     audit_no,
@@ -353,7 +380,10 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(10),
                     cursor.getString(11),
                     cursor.getString(12),
-                    cursor.getString(13)
+                    cursor.getString(13),
+                    cursor.getString(14),
+                    cursor.getString(15),
+                    cursor.getString(16)
             );
             if (RowCounter == totalRow) {
                 data.toast(R.raw.checked,"[Med] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
@@ -447,13 +477,13 @@ public class tab_from extends AppCompatActivity {
         });
     }
 
-    protected void saveBreeder_count_OnineDB(String ORG_CODE,String AUDIT_NO, String BUSINESS_GROUP_CODE, String BUSINESS_TYPE_CODE,String LOCATION,String FARM_CODE, String FARM_ORG,String FARM_NAME, String SYS_FEMALE_STOCK,String SYS_MALE_STOCK,String SYS_TOTAL_STOCK,String COUNTING_STOCK,String REMARK){
+    protected void saveBreeder_count_OnineDB(String ORG_CODE,String AUDIT_NO, String BUSINESS_GROUP_CODE, String BUSINESS_TYPE_CODE,String LOCATION,String FARM_CODE, String FARM_ORG,String FARM_NAME, String SYS_FEMALE_STOCK,String SYS_MALE_STOCK,String SYS_TOTAL_STOCK,String COUNTING_STOCK,String REMARK,String variance,String unpost,String active_var){
         String ADuser = sharedPref.getUser();
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
 
         API.getClient().Header_BreederCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,LOCATION,
-                FARM_CODE,FARM_ORG,FARM_NAME,SYS_FEMALE_STOCK,SYS_MALE_STOCK,SYS_TOTAL_STOCK,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
+                FARM_CODE,FARM_ORG,FARM_NAME,SYS_FEMALE_STOCK,SYS_MALE_STOCK,SYS_TOTAL_STOCK,COUNTING_STOCK,REMARK,ADuser,variance,unpost,active_var).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -496,12 +526,12 @@ public class tab_from extends AppCompatActivity {
                                           String SYS_FEED_STOCK_WGH,
                                           String STOCK_UNIT,
                                           String COUNTING_STOCK,
-                                          String REMARK){
+                                          String REMARK,String variance,String unpost,String actual_var){
         String ADuser = sharedPref.getUser();
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
 
-        API.getClient().Header_FeedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,FEED_CODE,FEED_NAME,SYS_FFED_STOCK_QTY,SYS_FEED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
+        API.getClient().Header_FeedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,FEED_CODE,FEED_NAME,SYS_FFED_STOCK_QTY,SYS_FEED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser,variance,unpost,actual_var).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -539,12 +569,61 @@ public class tab_from extends AppCompatActivity {
                                           String SYS_MED_STOCK_WGH,
                                           String STOCK_UNIT,
                                           String COUNTING_STOCK,
-                                          String REMARK){
+                                          String REMARK,
+                                          String variance,
+                                          String unpost,
+                                          String actual_var){
         String ADuser = sharedPref.getUser();
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
 
-        API.getClient().Header_MedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,MED_CODE,MED_NAME,SYS_MED_STOCK_QTY,SYS_MED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser).enqueue(new Callback<Object>() {
+//       Log.d("danadana",
+//               ORG_CODE + "\n"+
+//               AUDIT_NO + "\n"+
+//               getDoc_date + "\n"+
+//               getDoc_date + "\n"+
+//               getAudit_date + "\n"+
+//               BUSINESS_GROUP_CODE + "\n"+
+//               BUSINESS_TYPE_CODE + "\n"+
+//               FARM_CODE + "\n"+
+//               FARM_ORG + "\n"+
+//               FARM_NAME + "\n"+
+//               MED_CODE + "\n"+
+//               MED_NAME + "\n"+
+//               SYS_MED_STOCK_QTY + "\n"+
+//               SYS_MED_STOCK_WGH + "\n"+
+//               STOCK_UNIT + "\n"+
+//               COUNTING_STOCK + "\n"+
+//               REMARK + "\n"+
+//               ADuser + "\n"+
+//               variance + "\n"+
+//               unpost + "\n"+
+//               actual_var);
+
+        API.getClient().Header_MedCountList(
+                ORG_CODE,
+                AUDIT_NO,
+                getDoc_date,
+                getDoc_date,
+                getAudit_date,
+                BUSINESS_GROUP_CODE,
+                BUSINESS_TYPE_CODE,
+                FARM_CODE,
+                FARM_ORG,
+                FARM_NAME,
+                MED_CODE,
+                MED_NAME,
+                SYS_MED_STOCK_QTY,
+                SYS_MED_STOCK_WGH,
+                STOCK_UNIT,
+                COUNTING_STOCK,
+                REMARK,
+                ADuser,
+                variance,
+                unpost,
+                actual_var
+
+        ).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

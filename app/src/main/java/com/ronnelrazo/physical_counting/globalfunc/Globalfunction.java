@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -485,26 +486,33 @@ public class Globalfunction {
 
     //set header
     public boolean ADD_CHECKLIST_HEADER(String str_orgcode, String str_farmcode,String str_orgname,String str_farmname,String doc_date,String audit_date,String str_types,String bu_Type,String bu_code,String bu_name,String bu_type_name){
-        TABLE_HEADER column = new TABLE_HEADER();
-        SQLiteDatabase db = databaseHelper.getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put(column.ORG_CODE, str_orgcode);
-        cv.put(column.FARM_CODE,str_farmcode);
-        cv.put(column.ORG_NAME,str_orgname);
-        cv.put(column.FARM_NAME,str_farmname);
-        cv.put(column.DOC_DATE, doc_date);
-        cv.put(column.AUDIT_DATE, audit_date);
-        cv.put(column.TYPE, str_types);
-        cv.put(column.BU_TYPE,bu_Type);
-        cv.put(column.BU_CODE,bu_code);
-        cv.put(column.BU_NAME,bu_name);
-        cv.put(column.BU_TYPE_NAME,bu_type_name);
-        long result = db.insert(column.TABLE_CHECKLIST_HEADER,null, cv);
-        if(result == -1){
+
+        try{
+            TABLE_HEADER column = new TABLE_HEADER();
+            SQLiteDatabase db = databaseHelper.getWritableDatabase();
+            ContentValues cv = new ContentValues();
+            cv.put(column.ORG_CODE, str_orgcode);
+            cv.put(column.FARM_CODE,str_farmcode);
+            cv.put(column.ORG_NAME,str_orgname);
+            cv.put(column.FARM_NAME,str_farmname);
+            cv.put(column.DOC_DATE, doc_date);
+            cv.put(column.AUDIT_DATE, audit_date);
+            cv.put(column.TYPE, str_types);
+            cv.put(column.BU_TYPE,bu_Type);
+            cv.put(column.BU_CODE,bu_code);
+            cv.put(column.BU_NAME,bu_name);
+            cv.put(column.BU_TYPE_NAME,bu_type_name);
+            long result = db.insert(column.TABLE_CHECKLIST_HEADER,null, cv);
+            if(result == -1){
+                return false;
+            }else{
+                return true;
+            }
+        }catch (SQLiteConstraintException e){
+            Log.d("swine",e.getMessage());
             return false;
-        }else{
-            return true;
         }
+
     }
 
     //save header_details
@@ -785,7 +793,7 @@ public class Globalfunction {
                                     String bu_type,String farm_code,
                                     String farm_org,String farm_name,String med_code,String med_name,
                                     String med_stock_qty,String med_stock_wgh,String stock_unit,String counting_Stock,
-                                    String remark){
+                                    String remark,String variance,String unpost,String active_var){
         TABLE_MED_DETAILS column = new TABLE_MED_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -803,6 +811,9 @@ public class Globalfunction {
         cv.put(column.STOCK_UNIT, stock_unit);
         cv.put(column.COUNTING_STOCK,counting_Stock);
         cv.put(column.REMARK, remark);
+        cv.put(column.VARIANCE, variance);
+        cv.put(column.UNPOST,unpost);
+        cv.put(column.ACTIVE_VAR, active_var);
         long result = db.insert(column.TABLE_MED_DETAILS,null, cv);
         if(result == -1){
             return false;
@@ -811,12 +822,15 @@ public class Globalfunction {
         }
     }
 
-    public boolean updateMedlist(int pos,String org_code,String farm_code,String counting,String remark){
+    public boolean updateMedlist(int pos,String org_code,String farm_code,String counting,String remark,String varience,String unpost,String active_var){
         TABLE_MED_DETAILS column = new TABLE_MED_DETAILS();
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(column.COUNTING_STOCK,counting);
         cv.put(column.REMARK,remark);
+        cv.put(column.VARIANCE,varience);
+        cv.put(column.UNPOST,unpost);
+        cv.put(column.ACTIVE_VAR,active_var);
         int save = db.update(
                 column.TABLE_MED_DETAILS,
                 cv,
@@ -836,9 +850,10 @@ public class Globalfunction {
         String query = "SELECT *  FROM table_med_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
         SQLiteDatabase db = databaseHelper.getReadableDatabase();
         Cursor cursor = null;
-        if(db != null){
-            cursor = db.rawQuery(query, null);
-        }
+//        if(db != null){
+//
+//        }
+        cursor = db.rawQuery(query, null);
         return cursor;
     }
 
@@ -852,9 +867,9 @@ public class Globalfunction {
     }
 
 
-    public void flag(String audit,String flag){
+    public void flag(String audit,String flag,String user){
 
-        API.getClient().flag(audit,flag).enqueue(new Callback<Object>() {
+        API.getClient().flag(audit,flag,user).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -865,7 +880,7 @@ public class Globalfunction {
                        Log.d("swine","updated");
                     }
                     else{
-                        Toast.makeText(cont, "error", Toast.LENGTH_SHORT).show();
+
                     }
 
                 } catch (JSONException e) {

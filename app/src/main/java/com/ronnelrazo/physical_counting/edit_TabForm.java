@@ -168,8 +168,8 @@ public class edit_TabForm extends AppCompatActivity {
         });
         data.positive.setOnClickListener(v1 -> {
             data.ConfirmDialog.dismiss();
-           data.flag(getAudit_no,"C");
-            data.toast(R.raw.checked,"Transaction NO : " + getAudit_no + " has been Cancelled.", Gravity.TOP|Gravity.CENTER,0,50);
+//           data.flag(getAudit_no,"C");
+//            data.toast(R.raw.checked,"Transaction NO : " + getAudit_no + " has been Cancelled.", Gravity.TOP|Gravity.CENTER,0,50);
             data.intent(inv_form.class,v1.getContext());
             finish();
         });
