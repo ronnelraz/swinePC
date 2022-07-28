@@ -67,6 +67,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_material_demo">materialDemo</string>
     <string name="title_login">Please, login into your account</string>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+
+    </style>
     <style name="Theme.Physical_counting" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
@@ -79,6 +83,9 @@
         
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_corners_bottom</item>
     </style>
     <style name="full_screen_dialog" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>

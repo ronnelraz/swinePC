@@ -97,7 +97,7 @@ public class Globalfunction {
 
     //confirm
     public AlertDialog ConfirmDialog;
-    public MaterialButton positive,negative;
+    public MaterialButton positive,negative,breeder,feed,med;
 
     //audit dialog
     public MaterialAlertDialogBuilder AuditDialog;
@@ -398,6 +398,27 @@ public class Globalfunction {
         TextView content = v.findViewById(R.id.content);
         ImageView icon = v.findViewById(R.id.icon);
         positive = v.findViewById(R.id.positive);
+        negative = v.findViewById(R.id.negative);
+        icon.setImageResource(resicon);
+        content.setText(msg);
+        content.setText(msg);
+        Materialdialog.setView(v);
+
+        ConfirmDialog = Materialdialog.create();
+        ConfirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        BounceView.addAnimTo(ConfirmDialog);
+        ConfirmDialog.show();
+    }
+
+    //custom alert dialog confirmation
+    public void Confirmation_upload(Context context,String msg,int resicon){
+        Materialdialog = new MaterialAlertDialogBuilder(context);
+        View v = LayoutInflater.from(context).inflate(R.layout.custom_uploadmodal,null);
+        TextView content = v.findViewById(R.id.content);
+        ImageView icon = v.findViewById(R.id.icon);
+        breeder = v.findViewById(R.id.breeder);
+        feed = v.findViewById(R.id.feed);
+        med = v.findViewById(R.id.med);
         negative = v.findViewById(R.id.negative);
         icon.setImageResource(resicon);
         content.setText(msg);

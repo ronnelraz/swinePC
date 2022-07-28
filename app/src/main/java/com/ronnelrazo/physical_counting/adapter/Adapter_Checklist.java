@@ -116,7 +116,7 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                 item.checklistA.setVisibility(View.GONE);
                 item.freeText.setVisibility(View.GONE);
                 getA1_1Form(tab_from.str_orgcode,item);
-                item.audit_date.setText("Date of Audit:   " + tab_from.audit_date);
+                item.audit_date.setText(Html.fromHtml(" <strong>Date of Audit : </strong>" + tab_from.audit_date));
 
                 boolean save_details = Globalfunction.getInstance(context)
                         .ADD_CHECKLIST_HEADER_DETAILS(
@@ -280,7 +280,6 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
                         String getCheckedvalue =  item.itemGroup.getCheckedRadioButtonId() == R.id.item_na ? "N/A" :
                                 (item.itemGroup.getCheckedRadioButtonId() == R.id.item_yes ? "Y" :
                                         (item.itemGroup.getCheckedRadioButtonId() == R.id.item_no ? "N" : "N/A"));
-//                    Log.d("swine",getRemark + " position:" +position + " checked :" + getCheckedvalue);
                         boolean update_postion =  Globalfunction.getInstance(context).updatechecklist(position,tab_from.str_orgcode,tab_from.str_farmcode,getCheckedvalue,getRemark);
                         if(update_postion){
                             Log.d("swine","update position:" +position + " value : " + getCheckedvalue + " remake: " + getRemark);
@@ -302,8 +301,8 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
 
     protected void getA1_1Form(String BU_CODE,VHItem item){
+        Log.d("A1_form",BU_CODE);
         API.getClient().A1_1Form(BU_CODE).enqueue(new Callback<Object>() {
-//            @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -316,11 +315,11 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
                         for (int i = 0; i < data.length(); i++) {
                             JSONObject object = data.getJSONObject(i);
-                            item.business_farmname.setText("Business/Farm Name:   "+Html.fromHtml("<b>"+object.getString("ORG_NAME")+"</b>"));
-                            item.businessAddress.setText("Business address:   " +object.getString("ADDRESS"));
-                            item.farmManager.setText("Farm Manager:   " +object.getString("FARM_MANAGER_NAME"));
-                            item.headAnimalHusbandman.setText("Head Animal Husbandman:  " +object.getString("FARM_CLERK_NAME"));
-                            item.contact.setText("Contact Number:   " +object.getString("FARM_MANAGER_CONTACT_NO"));
+                            item.business_farmname.setText(Html.fromHtml("<strong>Business/Farm Name : </strong>" +object.getString("ORG_NAME")));
+                            item.businessAddress.setText(Html.fromHtml("<strong>Business address :  </strong>" +object.getString("ADDRESS")));
+                            item.farmManager.setText(Html.fromHtml("<strong>Farm Manager :  </strong>" +object.getString("FARM_MANAGER_NAME")));
+                            item.headAnimalHusbandman.setText(Html.fromHtml("<strong>Head Animal Husbandman :  </strong>" +object.getString("FARM_CLERK_NAME")));
+                            item.contact.setText(Html.fromHtml("<strong>Contact Number :   </strong>" +object.getString("FARM_MANAGER_CONTACT_NO")));
                         }
 
                     }

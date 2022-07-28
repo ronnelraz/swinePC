@@ -21,7 +21,7 @@ public class inv_form extends AppCompatActivity {
     private Globalfunction data;
     private SharedPref sharedPref;
 
-    @BindViews({R.id.create,R.id.edit,R.id.pdf,R.id.FarmSetup,R.id.report,R.id.confirm})
+    @BindViews({R.id.create,R.id.edit,R.id.pdf,R.id.FarmSetup,R.id.report,R.id.confirm,R.id.trasaction_list})
     MaterialButton[] menus;
 
     @BindViews({R.id.username,R.id.role})
@@ -43,6 +43,7 @@ public class inv_form extends AppCompatActivity {
         BounceView.addAnimTo(menus[3]);
         BounceView.addAnimTo(menus[4]);
         BounceView.addAnimTo(menus[5]);
+        BounceView.addAnimTo(menus[6]);
 
         JWTauth[0].setText("User : " +sharedPref.getUser());
         JWTauth[1].setText("Role : " +sharedPref.getRole() + " - " + sharedPref.getBU());
@@ -89,5 +90,9 @@ public class inv_form extends AppCompatActivity {
 
     public void upload(View view) {
         data.intent(upload_file.class,view.getContext());
+    }
+
+    public void transactionlist(View view) {
+        data.intent(transaction.class,view.getContext());
     }
 }

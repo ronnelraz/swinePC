@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp">
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Orgcode"
+            tools:text="Org name (org code)"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/FarmOrg"
+            tools:text="Farm name (farm code)"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/auditNo"
+            tools:text="audit No"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Document_date"
+            tools:text="Audit Date"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_eye_open"
+                app:iconGravity="textStart"
+                android:backgroundTint="@color/odd"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:text="View PDF"/>
+
+<!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_icons8_print_file"
+                app:iconGravity="textStart"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:backgroundTint="@color/odd"
+                android:text="PRINT PDF"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

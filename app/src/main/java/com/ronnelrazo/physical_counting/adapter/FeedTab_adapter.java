@@ -57,7 +57,7 @@ public class FeedTab_adapter extends RelativeLayout {
             "      Count      ",
             " Variance ",
             "      Unpost     ",
-            "Active Var.",
+            "Actual Var.",
             "              Remark             "
     };
 
@@ -626,7 +626,9 @@ public class FeedTab_adapter extends RelativeLayout {
     TextView variance(String label){
         TextView bodyTextView = new TextView(this.context);
         bodyTextView.setBackgroundColor(Color.WHITE);
+        bodyTextView.setTextColor(Color.parseColor("#c0392b"));
         bodyTextView.setText(label);
+        bodyTextView.setTypeface(bodyTextView.getTypeface(), Typeface.BOLD);
         bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER);
         bodyTextView.setSingleLine(true);
         bodyTextView.setGravity(Gravity.CENTER);
@@ -637,6 +639,8 @@ public class FeedTab_adapter extends RelativeLayout {
     TextView activeVar(String label){
         TextView bodyTextView = new TextView(this.context);
         bodyTextView.setBackgroundColor(Color.WHITE);
+        bodyTextView.setTextColor(Color.parseColor("#c0392b"));
+        bodyTextView.setTypeface(bodyTextView.getTypeface(), Typeface.BOLD);
         bodyTextView.setText(label);
         bodyTextView.setGravity(Gravity.CENTER);
         bodyTextView.setPadding(5, 5, 5, 5);
@@ -658,6 +662,8 @@ public class FeedTab_adapter extends RelativeLayout {
         EditText bodyTextView = new EditText(this.context);
         bodyTextView.setGravity(Gravity.CENTER);
         bodyTextView.setBackgroundColor(Color.parseColor("#ffffff"));
+        bodyTextView.setTextColor(Color.parseColor("#c0392b"));
+        bodyTextView.setTypeface(bodyTextView.getTypeface(), Typeface.BOLD);
         bodyTextView.setTextSize(13);
         bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER);
         bodyTextView.setBackgroundResource(R.drawable.edit_text_dot_form);
@@ -678,6 +684,7 @@ public class FeedTab_adapter extends RelativeLayout {
         EditText bodyTextView = new EditText(this.context);
         bodyTextView.setGravity(Gravity.CENTER);
         bodyTextView.setBackgroundColor(Color.parseColor("#ffffff"));
+        bodyTextView.setTextColor(Color.parseColor("#6ab04c"));
         bodyTextView.setTextSize(13);
         bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER);
         bodyTextView.setBackgroundResource(R.drawable.edit_text_dot_form);

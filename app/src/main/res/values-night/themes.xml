@@ -14,6 +14,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_corners_bottom</item>
+    </style>
+
     <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily">@font/cpf_imm_sook_semibold</item>
         <item name="android:textSize">20sp</item>

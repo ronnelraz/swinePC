@@ -1345,6 +1345,10 @@ attr roundPercent
 attr rowCount
 attr rowOrderPreserved
 attr saturation
+attr sb_handlerColor
+attr sb_horizontal
+attr sb_indicatorColor
+attr sb_indicatorTextColor
 attr scale
 attr scaleFromTextSize
 attr scrimAnimationDuration
@@ -3350,6 +3354,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable attachfile
 drawable avd_hide_password
 drawable avd_show_password
 drawable blue_button_background
@@ -3368,6 +3373,10 @@ drawable create
 drawable curved_shape
 drawable curved_shape2
 drawable custom_eye
+drawable default_scroll_handle_bottom
+drawable default_scroll_handle_left
+drawable default_scroll_handle_right
+drawable default_scroll_handle_top
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3397,10 +3406,14 @@ drawable ic_icons8_back
 drawable ic_icons8_calendar
 drawable ic_icons8_cancel
 drawable ic_icons8_chevron_right
+drawable ic_icons8_document
+drawable ic_icons8_documents_folder
 drawable ic_icons8_done
 drawable ic_icons8_error
 drawable ic_icons8_error_small
 drawable ic_icons8_export_pdf
+drawable ic_icons8_image
+drawable ic_icons8_import_file
 drawable ic_icons8_import_pdf
 drawable ic_icons8_info
 drawable ic_icons8_key
@@ -3408,8 +3421,12 @@ drawable ic_icons8_menu_vertical
 drawable ic_icons8_multiply
 drawable ic_icons8_ok
 drawable ic_icons8_ok_small
+drawable ic_icons8_pdf
+drawable ic_icons8_print_file
+drawable ic_icons8_remove_image
 drawable ic_icons8_report_file
 drawable ic_icons8_search
+drawable ic_icons8_sort_down_1
 drawable ic_icons8_sync
 drawable ic_icons8_warning
 drawable ic_jwt_role
@@ -3427,6 +3444,7 @@ drawable ic_pdfviewpager
 drawable ic_username
 drawable icons8_back
 drawable icons8_cancel_1
+drawable icons8_horizontal_line
 drawable icons8_pdf_1
 drawable icons8_smart_home_checked
 drawable logout
@@ -3664,6 +3682,8 @@ drawable pspdf__uvv_star_play_progress_seek
 drawable pspdf__uvv_stop_btn
 drawable radius_border
 drawable red_button_background
+drawable rounded_corners_bottom
+drawable sample
 drawable success_bow
 drawable success_circle
 drawable swine_logo
@@ -3692,9 +3712,11 @@ id ChasingDots
 id Circle
 id Confirm
 id CubeGrid
+id Document_date
 id DoubleBounce
 id FUNCTION
 id FadingCircle
+id FarmOrg
 id FarmSetup
 id FoldingCube
 id Line
@@ -3704,6 +3726,7 @@ id MultiplePulse
 id MultiplePulseRing
 id NO_DEBUG
 id None
+id Orgcode
 id Pulse
 id PulseRing
 id RotatingCircle
@@ -3797,7 +3820,9 @@ id asConfigured
 id async
 id audi_No
 id audi_date
+id audit
 id auditDate
+id auditNo
 id audit_date
 id audit_dateA1
 id audit_date_filter
@@ -3806,6 +3831,7 @@ id auditdate
 id auditno
 id auto
 id autoComplete
+id autoCompleteItem
 id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
@@ -3987,9 +4013,11 @@ id fitXY
 id fixed
 id flip
 id floating
+id folder
 id forever
 id fragment_container_view_tag
 id freeText
+id from
 id frost
 id fullscreen_header
 id ghost_view
@@ -4007,6 +4035,7 @@ id headAnimalHusbandman
 id header
 id headerAnnex
 id header_title
+id headercontroller
 id hideable
 id home
 id homeAsUp
@@ -4016,11 +4045,13 @@ id horizontal_only
 id icon
 id icon_frame
 id icon_group
+id idPDFView
 id ifRoom
 id ignore
 id ignoreRequest
 id image
 id imageView
+id img
 id immediateStop
 id included
 id info
@@ -4749,6 +4780,7 @@ id right_icon
 id right_side
 id right_to_left
 id role
+id root
 id rounded
 id row_index_key
 id rtl
@@ -4832,6 +4864,7 @@ id subsamplingImageView
 id success_frame
 id success_tick
 id supportScrollUp
+id swipe
 id switchWidget
 id tab
 id tabMode
@@ -4874,6 +4907,9 @@ id title
 id titleDividerNoCustom
 id title_template
 id title_text
+id titlebar
+id titlem
+id to
 id toastip
 id toggle
 id top
@@ -4888,13 +4924,17 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trasaction_list
 id triangle
 id types
 id unchecked
 id uniform
 id unlabeled
 id up
+id update
 id upload
+id uploadimg
+id uploadpdf
 id useLogo
 id username
 id username_layout
@@ -5029,8 +5069,11 @@ layout activity_login
 layout activity_main
 layout activity_pdf_record_list
 layout activity_tab_from
+layout activity_transaction
+layout activity_upload_file
 layout address_area_layout
 layout alert_dialog
+layout bottomsheet_items
 layout breeder_demo
 layout business_area_layout
 layout checklist_header
@@ -5040,6 +5083,7 @@ layout custom_confirmation
 layout custom_dialog
 layout custom_loading
 layout custom_toast
+layout custom_uploadmodal
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -5055,11 +5099,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dropdown_item
 layout edit_pdf_list_detials
 layout expand_button
 layout fancygifdialog
 layout farm_detials_list
 layout farm_manager_area_layout
+layout fileviewer
 layout form_area_layout
 layout fragment_breeder
 layout fragment_checklist
@@ -5076,6 +5122,7 @@ layout item_farm_list_detials
 layout item_feed_header
 layout item_feed_items
 layout item_header
+layout item_list
 layout list_checklist_items
 layout loading_generate_pdf
 layout loading_shimmer
@@ -5288,6 +5335,9 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout transaction_list
+layout upload_list_item
+layout uploadfile_modal
 layout view_pdf_page
 menu example_menu
 menu example_menu2
@@ -6111,6 +6161,7 @@ style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
 style BasePreferenceThemeOverlay
+style BottomSheetDialog
 style CardView
 style CardView_Dark
 style CardView_Light
@@ -7088,6 +7139,7 @@ style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style alert_dialog_dark
 style alert_dialog_light
+style bottomSheetStyleWrapper
 style dialog_blue_button
 style full_screen_dialog
 style picker
@@ -7232,6 +7284,7 @@ styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable Rotate3dAnimation customPivotX customPivotY fromDeg rollType toDeg
 styleable ScrimInsetsFrameLayout insetForeground
+styleable ScrollBar sb_handlerColor sb_horizontal sb_indicatorColor sb_indicatorTextColor
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable SearchableSpinner hintText

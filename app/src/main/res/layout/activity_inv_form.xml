@@ -82,11 +82,35 @@
     </RelativeLayout>
 
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_below="@+id/menuheader"
+        android:id="@+id/trasaction_list"
+        android:onClick="transactionlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="fill_horizontal"
+        android:background="@drawable/radius_border"
+        app:backgroundTint="@color/shimmer_placeholder"
+        app:iconTint="@color/tabBackgroundColor"
+        app:icon="@drawable/ic_icons8_document"
+        app:iconGravity="textTop"
+        app:elevation="10dp"
+        app:iconSize="70sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cpf_imm_sook_bold"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Transaction List" />
+
+
 
 
         <GridLayout
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/menuheader"
+            android:layout_below="@+id/trasaction_list"
             android:background="@drawable/radius_border"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
@@ -215,7 +239,7 @@
                 app:backgroundTint="@color/shimmer_placeholder"
                 app:iconTint="@color/tabBackgroundColor"
                 app:elevation="10dp"
-                app:icon="@drawable/ic_icons8_import_pdf"
+                app:icon="@drawable/ic_icons8_import_file"
                 app:iconGravity="textTop"
                 app:iconSize="70sp"
                 android:textSize="20sp"

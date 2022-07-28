@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ronnelrazo.physical_counting.DisallowInterceptView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:background="@color/button_text_color">
+
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/headercontroller"
+            android:layout_marginTop="-15dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/button_text_color"
+            android:layout_width="match_parent"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center|top"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icons8_horizontal_line"
+                android:backgroundTint="@color/black"/>
+
+            <LinearLayout
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Back"
+                    app:icon="@drawable/icons8_back"
+                    app:iconTint="#0288D1"
+                    app:iconGravity="textStart"
+                    app:iconSize="30dp"
+                    android:textColor="#0288D1"
+                    android:id="@+id/back"
+                    app:cornerRadius="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Add more Attach File"
+                    app:icon="@drawable/create"
+                    app:iconTint="#0288D1"
+                    app:iconGravity="textStart"
+                    app:iconSize="30dp"
+                    android:textColor="#0288D1"
+                    android:id="@+id/update"
+                    app:cornerRadius="20dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:drawablePadding="5dp"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search Product"/>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_marginBottom="25dp"
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headercontroller"
+            android:layout_marginTop="-10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_list" />
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</com.ronnelrazo.physical_counting.DisallowInterceptView>

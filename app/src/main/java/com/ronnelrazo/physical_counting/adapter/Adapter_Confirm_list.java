@@ -97,6 +97,8 @@ public class Adapter_Confirm_list extends RecyclerView.Adapter<Adapter_Confirm_l
         return selected;
     }
 
+
+
     @Override
     public int getItemCount() {
         return newsList.size();

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ronnelrazo.physical_counting.DisallowInterceptView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/container"
+app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+android:background="@color/button_text_color">
+
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_icons8_error_small"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"/>
+
+
+<LinearLayout
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/idPDFView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:src="@tools:sample/avatars"
+        android:scaleType="fitCenter"
+        />
+
+
+</LinearLayout>
+
+
+
+
+</com.ronnelrazo.physical_counting.DisallowInterceptView>

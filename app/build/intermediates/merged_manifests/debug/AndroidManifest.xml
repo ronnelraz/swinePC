@@ -34,6 +34,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Physical_counting" >
         <activity
+            android:name="com.ronnelrazo.physical_counting.transaction"
+            android:exported="false" />
+        <activity
+            android:name="com.ronnelrazo.physical_counting.upload_file"
+            android:exported="false" />
+        <activity
             android:name="com.ronnelrazo.physical_counting.Cancel"
             android:exported="false" />
         <activity
@@ -127,6 +133,10 @@
             android:exported="false" >
         </service>
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.ronnelrazo.physical_counting.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.ronnelrazo.physical_counting.androidx-startup"

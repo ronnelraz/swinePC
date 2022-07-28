@@ -25,6 +25,7 @@ import com.ronnelrazo.physical_counting.fragment.Tab_breeder;
 import com.ronnelrazo.physical_counting.fragment.Tab_feed;
 import com.ronnelrazo.physical_counting.fragment.Tab_med;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
+import com.ronnelrazo.physical_counting.model.model_confirm_list;
 import com.ronnelrazo.physical_counting.model.model_feed;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
@@ -42,6 +43,7 @@ import butterknife.BindViews;
 import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class tab_from extends AppCompatActivity {
 
@@ -59,6 +61,7 @@ public class tab_from extends AppCompatActivity {
     CustomViewPager pager;
 
     protected List<String> listHeader = new ArrayList<>();
+    List<Boolean> successPost = new ArrayList<>();
 
     @BindViews({R.id.types,R.id.orgcode,R.id.orgname,R.id.farmcode,R.id.farmname,R.id.docDate,R.id.auditDate})
     TextView[] headerDetails;
@@ -68,6 +71,9 @@ public class tab_from extends AppCompatActivity {
 
 
     private int RowCounter = 0;
+    private int RowCounter2 = 0;
+    private int RowCounter3 = 0;
+    private  int RowCounter4 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,17 +83,50 @@ public class tab_from extends AppCompatActivity {
         data = new Globalfunction(this);
         sharedPref = new SharedPref(this);
 
-        //clear data first before fetch save all datas
-//        data.clearAll(str_orgcode,str_farmcode);
-
-//        Toast.makeText(this, str_orgname + " " + str_farmname, Toast.LENGTH_SHORT).show();
         Log.d("swine",str_orgname + " " + str_farmname);
 
         headerDetails[0].setText(str_types);
         headerDetails[1].setText(str_orgcode);
         headerDetails[2].setText(str_orgname);
         headerDetails[3].setText(str_farmcode);
-        headerDetails[4].setText(str_farmname);
+
+        API.getClient().getfarmname_header(str_orgcode).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    JSONArray result = jsonResponse.getJSONArray("data");
+                    if(success){
+                        for (int i = 0; i < result.length(); i++) {
+                            JSONObject object = result.getJSONObject(i);
+                            headerDetails[4].setText(object.getString("FARM_NAME")); //HERE
+
+                        }
+
+                    }
+                    else{
+                        Toast.makeText(tab_from.this, "Connection error", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                }
+            }
+        });
+
+
+
         headerDetails[5].setText(doc_date);
         headerDetails[6].setText(audit_date);
 
@@ -171,6 +210,8 @@ public class tab_from extends AppCompatActivity {
                 String tab_feed = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_FEED_DETAILS") == 0 ? "N" : "Y";
                 String tab_med = Globalfunction.getInstance(v.getContext()).tabUsed("TABLE_MED_DETAILS") == 0 ? "N" : "Y";
                 Log.d("swine", tab_contact + " " + tab_checklist + " " + tab_breeder + " " + tab_feed + " " + tab_med);
+//                data.Preloader(v1.getContext(),"Please Wait...");
+                successPost.clear();
                 saveHeaderChecklist();
                 data.ConfirmDialog.dismiss();
             });
@@ -264,6 +305,9 @@ public class tab_from extends AppCompatActivity {
             if (RowCounter == totalRow) {
                data.toast(R.raw.checked,"[Checklist] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
                RowCounter = 0;
+               Log.d("putanginamo","[Checklist] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")");
+                successPost.add(true);
+//                data.loaddialog.dismiss();
             }
         }
 
@@ -271,13 +315,14 @@ public class tab_from extends AppCompatActivity {
 
     //LOCALDATA BREEDER COUNT
     protected  void saveBreederCount_details(String audit_no){
+        //data.Preloader(getApplicationContext(), "Please wait...");
         String getorg_Code = str_orgcode;
         String getfarm_Code = str_farmcode;
 
         Cursor cursor = data.getBreederDetails(getorg_Code,getfarm_Code);
         int totalRow = cursor.getCount();
         while(cursor.moveToNext()){
-            RowCounter++;
+            RowCounter2++;
             saveBreeder_count_OnineDB(
                     cursor.getString(1),
                     audit_no,
@@ -296,22 +341,26 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(14),
                     cursor.getString(15)
                     );
-            if (RowCounter == totalRow) {
-                data.toast(R.raw.checked,"[Breeder] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
-                RowCounter = 0;
+            if (RowCounter2 == totalRow) {
+                data.toast(R.raw.checked,"[Breeder] Uploaded successfully! (" + totalRow +"/"+ RowCounter2 +")",Gravity.TOP|Gravity.CENTER,0,50);
+                RowCounter2 = 0;
+                Log.d("putanginamo","[Breeder] Uploaded successfully! (" + totalRow +"/"+ RowCounter2 +")");
+                successPost.add(true);
+//                data.loaddialog.dismiss();
             }
         }
 
     }
 
     protected  void saveFeedCount_details(String audit_no){
+       // data.Preloader(getApplicationContext(), "Please wait...");
         String getorg_Code = str_orgcode;
         String getfarm_Code = str_farmcode;
 
         Cursor cursor = data.getFeedListDetails(getorg_Code,getfarm_Code);
         int totalRow = cursor.getCount();
         while(cursor.moveToNext()){
-            RowCounter++;
+            RowCounter3++;
             saveFeed_count_OnineDB(
                     cursor.getString(1),
                     audit_no,
@@ -331,15 +380,19 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(15),
                     cursor.getString(16)
             );
-            if (RowCounter == totalRow) {
-                data.toast(R.raw.checked,"[Feed] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
-                RowCounter = 0;
+            if (RowCounter3 == totalRow) {
+                data.toast(R.raw.checked,"[Feed] Uploaded successfully! (" + totalRow +"/"+ RowCounter3 +")",Gravity.TOP|Gravity.CENTER,0,50);
+                RowCounter3 = 0;
+                Log.d("putanginamo","[FEED] Uploaded successfully! (" + totalRow +"/"+ RowCounter3 +")");
+                successPost.add(true);
+//                data.loaddialog.dismiss();
             }
         }
     }
 
 
     protected  void saveMedCount_details(String audit_no){
+      //  data.Preloader(getApplicationContext(), "Please wait...");
         String getorg_Code = str_orgcode;
         String getfarm_Code = str_farmcode;
 
@@ -348,24 +401,7 @@ public class tab_from extends AppCompatActivity {
         Cursor cursor = data.getMedListDetails(getorg_Code,getfarm_Code);
         int totalRow = cursor.getCount();
         while(cursor.moveToNext()){
-            RowCounter++;
-//            Log.d("putangina", cursor.getString(1) + "\n" +
-//                    audit_no + "\n" +
-//                    cursor.getString(2) + "\n" +
-//                    cursor.getString(3) + "\n" +
-//                    cursor.getString(4) + "\n" +
-//                    cursor.getString(5) + "\n" +
-//                    cursor.getString(6) + "\n" +
-//                    cursor.getString(7) + "\n" +
-//                    cursor.getString(8) + "\n" +
-//                    cursor.getString(9) + "\n" +
-//                    cursor.getString(10) + "\n" +
-//                    cursor.getString(11) + "\n" +
-//                    cursor.getString(12) + "\n" +
-//                    cursor.getString(13) + "\n" +
-//                    cursor.getString(14) + "\n" +
-//                    cursor.getString(15) + "\n" +
-//                    cursor.getString(16));
+            RowCounter4++;
             saveMed_count_OnineDB(
                     cursor.getString(1),
                     audit_no,
@@ -385,9 +421,13 @@ public class tab_from extends AppCompatActivity {
                     cursor.getString(15),
                     cursor.getString(16)
             );
-            if (RowCounter == totalRow) {
-                data.toast(R.raw.checked,"[Med] Uploaded successfully! (" + totalRow +"/"+ RowCounter +")",Gravity.TOP|Gravity.CENTER,0,50);
-                RowCounter = 0;
+            if (RowCounter4 == totalRow) {
+                data.toast(R.raw.checked,"[Med] Uploaded successfully! (" + totalRow +"/"+ RowCounter4 +")",Gravity.TOP|Gravity.CENTER,0,50);
+                RowCounter4 = 0;
+                Log.d("putanginamo","[Med] Uploaded successfully! (" + totalRow +"/"+ RowCounter4 +")");
+                successPost.add(true);
+//                data.loaddialog.dismiss();
+
             }
         }
 
@@ -410,9 +450,17 @@ public class tab_from extends AppCompatActivity {
                     String audit_no = jsonResponse.getString("audit_no");
                     if(success){
                         data.toast(R.raw.checked,"Generate Audit No. " + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
+
+//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveHeaderChecklist_details(audit_no);
+
+//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveBreederCount_details(audit_no);
+
+//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveFeedCount_details(audit_no);
+
+//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveMedCount_details(audit_no);
 
                     }

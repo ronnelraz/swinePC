@@ -131,11 +131,10 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
         holder.audi_No.setText(String.format("Audit No. : %s", getData.getAudit_no()));
         holder.audi_date.setText(String.format("Audit Date : %s", getData.getAudit_date()));
 
-
-        Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF?ORG_CODE="+getData.getOrg_code()+"&AUDIT_NO="+getData.getAudit_no()+"&FARM_ORG=","checklistPDF backup");
-        Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF?ORG_CODE="+getData.getOrg_code()+"&AUDIT_NO="+getData.getAudit_no()+"&FARM_ORG=","BreederPDF backup");
-        Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF?ORG_CODE="+getData.getOrg_code()+"&AUDIT_NO="+getData.getAudit_no()+"&FARM_ORG=","FeedPDF backup");
-        Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF?ORG_CODE="+getData.getOrg_code()+"&AUDIT_NO="+getData.getAudit_no()+"&FARM_ORG=","MedPDF backup");
+        Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF","checklistPDF backup");
+        Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF","BreederPDF backup");
+        Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF","FeedPDF backup");
+        Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF","MedPDF backup");
 
 
         holder.pdfbtn.setOnClickListener(v-> {
@@ -150,24 +149,17 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
 
             String message[] = {
                     "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
-                    "Please wait PDF File Generating...",
                     "Generate File"
             };
 
             Handler handler1 = new Handler();
-            for(int i = 0; i < 8; i++){
+            for(int i = 0; i < 1; i++){
                 int finalI = i;
              handler1.postDelayed(new Runnable() {
                  @Override
                  public void run() {
 
-                     if(finalI == 8-1){
+                     if(finalI == 1-1){
                          alertDialogPDF.dismiss();
                          generatePDF(viewPDF, getData);
                      }

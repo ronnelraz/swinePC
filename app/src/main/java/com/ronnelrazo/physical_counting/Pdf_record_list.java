@@ -67,6 +67,8 @@ public class Pdf_record_list extends AppCompatActivity {
 
     List<String> autocompletelist = new ArrayList<>();
 
+
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,10 +158,10 @@ public class Pdf_record_list extends AppCompatActivity {
 
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","checklistPDF");
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","BreederPDF");
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","FeedPDF");
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF?ORG_CODE="+object.getString("org_code")+"&AUDIT_NO="+ object.getString("audit_no")+"&FARM_ORG=","MedPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF","checklistPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF","BreederPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF","FeedPDF");
+                            Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF","MedPDF");
                             modal_pdf_report item = new modal_pdf_report(
                                     object.getString("org_name"),
                                     object.getString("farm_name"),
@@ -287,5 +289,10 @@ public class Pdf_record_list extends AppCompatActivity {
         String getAudit_date = audit_date_filter.getText().toString();
         PDFReport(sharedPref.getUser(),getorg_code,getAudit_date);
 
+    }
+
+    public void back(View view) {
+        data.intent(inv_form.class,view.getContext());
+        finish();
     }
 }

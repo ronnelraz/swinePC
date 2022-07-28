@@ -1,9 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".upload_file">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="5dp"
+        android:elevation="5dp"
+        android:background="@drawable/pfd_heade_filter"
+        android:backgroundTint="@color/purple_500"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/back"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/menubtn_text"
+                        android:onClick="back"
+                        android:text="Back"
+                        android:textColor="@color/white"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/icons8_back"
+                        app:iconTint="@color/white" />
+
+
+
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:visibility="gone"
+                    android:id="@+id/checkedall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/purple_500"
+                    android:text="Select All"
+                    android:textStyle="bold"
+                    tools:checked="true" />
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/back"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/radius_border"
+                    android:backgroundTint="@color/bgEdit"
+                    android:drawableLeft="@drawable/ic_icons8_search"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Search | Org Code | Farm Name | Audit No"
+                    android:singleLine="true" />
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:textSize="15sp"
+                        android:text="Farm Name"
+                        android:drawableTint="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:editable="false"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.9"
+                        android:layout_height="wrap_content"
+                        android:text="Audit Date"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="5dp"/>
+
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/org_code_filter"
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
+                        android:textSize="15sp"
+                        android:background="@drawable/radius_border"
+                        android:hint="Farm Name"
+                        android:paddingLeft="10dp"
+                        android:drawableTint="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/audit_date_filter"
+                        android:singleLine="true"
+                        android:editable="false"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/radius_border"
+                        android:hint="Audit Date"
+                        android:textSize="15sp"
+                        android:paddingLeft="10dp"
+                        android:drawableTint="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:onClick="search"
+                        android:elevation="5dp"
+                        app:elevation="5dp"
+                        android:layout_weight="1"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:icon="@drawable/ic_icons8_search"
+                        android:backgroundTint="@color/black"
+                        app:iconTint="@color/bgEdit"
+                        app:iconGravity="textStart"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:onClick="clear"
+                        android:elevation="5dp"
+                        app:elevation="5dp"
+                        android:layout_weight="1"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Clear"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:icon="@drawable/ic_icons8_error_small"
+                        android:backgroundTint="#D15F53"
+                        app:iconTint="@null"
+                        app:iconGravity="textStart"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="uplaod"
+        android:text="Upload File"
+        app:cornerRadius="20dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/upload"
+        android:layout_marginTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/upload_list_item" />
+
+</RelativeLayout>

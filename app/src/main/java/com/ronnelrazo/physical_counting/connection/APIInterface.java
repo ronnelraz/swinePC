@@ -446,5 +446,62 @@ public interface APIInterface {
     );
 
 
+    @FormUrlEncoded
+    @POST("UploadPDFFile")
+    Call<Object> uploadPDFFiles(
+            @Field("audit_no") String audit_no,
+            @Field("pdfname") String pdfname,
+            @Field("pdffile") String flag,
+            @Field("user") String user,
+            @Field("type") String type
+    );
+
+
+    @FormUrlEncoded
+    @POST("autoComplete_audit")
+    Call<Object> autoComplete_audit(
+            @Field("user") String user,
+            @Field("filter") String filter
+    );
+
+    @FormUrlEncoded
+    @POST("LoadUploadFile")
+    Call<Object> LoadUploadFile(
+            @Field("user") String user,
+            @Field("audit") String audit,
+            @Field("date") String date
+    );
+
+    @FormUrlEncoded
+    @POST("ViewFiles")
+    Call<Object> ViewFiles(
+            @Field("audit") String audit
+    );
+
+
+    @FormUrlEncoded
+    @POST("getfarmname_header")
+    Call<Object> getfarmname_header(
+            @Field("org_code") String audit
+    );
+
+
+    @FormUrlEncoded
+    @POST("transaction_org_code")
+    Call<Object> transaction_org_code(
+            @Field("user") String user
+    );
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

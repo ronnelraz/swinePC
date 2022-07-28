@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -63,6 +64,8 @@ public class Cancel extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private List<model_cancel_list> list =  new ArrayList<>();
     private ArrayList<CheckBox> checkBoxes = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -263,5 +266,6 @@ public class Cancel extends AppCompatActivity {
         getFarmList(getorg_code,getAudit_date);
 
     }
+
 
 }
