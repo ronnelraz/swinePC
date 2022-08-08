@@ -170,7 +170,7 @@
                         android:onClick="search"
                         android:elevation="5dp"
                         app:elevation="5dp"
-                        android:layout_weight="1"
+                        android:layout_weight="2"
                         style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -188,15 +188,14 @@
                         android:elevation="5dp"
                         app:elevation="5dp"
                         android:layout_weight="1"
-                        style="@style/Widget.Material3.Button.TextButton"
+                        style="@style/Widget.Material3.Button.TextButton.Icon"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Clear"
                         android:layout_marginRight="15dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13sp"
-                        app:icon="@drawable/ic_icons8_error_small"
-                        android:backgroundTint="#D15F53"
+                        android:backgroundTint="@color/shimmer_placeholder"
                         app:iconTint="@null"
                         app:iconGravity="textStart"/>
                 </LinearLayout>
@@ -207,6 +206,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
         android:id="@+id/upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -227,8 +227,39 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/upload"
         android:layout_marginTop="5dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
         tools:listitem="@layout/upload_list_item" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="450dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_renderMode="automatic" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/uploadimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="upload"
+        android:text="Upload File"
+        android:textColor="@color/white"
+        app:fabSize="auto"
+        app:icon="@drawable/ic_icons8_import_file"
+        app:iconTint="@color/white" />
 
 </RelativeLayout>

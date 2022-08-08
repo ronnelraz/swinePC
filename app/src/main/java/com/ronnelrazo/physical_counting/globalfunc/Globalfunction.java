@@ -97,7 +97,7 @@ public class Globalfunction {
 
     //confirm
     public AlertDialog ConfirmDialog;
-    public MaterialButton positive,negative,breeder,feed,med;
+    public MaterialButton positive,negative,breeder,feed,med,checklist;
 
     //audit dialog
     public MaterialAlertDialogBuilder AuditDialog;
@@ -358,12 +358,49 @@ public class Globalfunction {
             request.allowScanningByMediaScanner();
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         }
+        isFileExists(fileName);
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
         DownloadManager dm = (DownloadManager) cont.getSystemService(DOWNLOAD_SERVICE);
         dm.enqueue(request);
 
-
     }
+
+//    public boolean DownloadPrintPDF(String URL){
+//        boolean flag = true;
+//        boolean downloading =true;
+//        try {
+//            url = new URL(URL);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
+//        fileName = url.getPath();
+//        fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
+//
+//        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+//        String fileNamex = folder.getPath() + "/" + fileName;
+//        File myFile = new File(fileNamex);
+//        if(myFile.exists()) {
+//            System.out.println("exists");
+//            myFile.delete();
+//        }
+//
+//        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(URL + ""));
+//        request.setTitle(fileName);
+//        request.setMimeType("applcation/pdf");
+//        request.allowScanningByMediaScanner();
+//        request.setAllowedOverMetered(true);
+//        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//            request.allowScanningByMediaScanner();
+//            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+//        }
+//        isFileExists(fileName);
+//        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+//        DownloadManager dm = (DownloadManager) cont.getSystemService(DOWNLOAD_SERVICE);
+//        dm.enqueue(request);
+//
+//
+//    }
 
     private boolean isFileExists(String filename){
         File folder1 = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
@@ -416,6 +453,7 @@ public class Globalfunction {
         View v = LayoutInflater.from(context).inflate(R.layout.custom_uploadmodal,null);
         TextView content = v.findViewById(R.id.content);
         ImageView icon = v.findViewById(R.id.icon);
+        checklist = v.findViewById(R.id.checklist);
         breeder = v.findViewById(R.id.breeder);
         feed = v.findViewById(R.id.feed);
         med = v.findViewById(R.id.med);
@@ -455,6 +493,13 @@ public class Globalfunction {
     private String auditCurrentMonth(){
         Date d = new Date();
         CharSequence s  = DateFormat.format("MM/dd/yyyy ", d.getTime());
+        return String.valueOf(s);
+    }
+
+
+    public String transaction_date(){
+        Date d = new Date();
+        CharSequence s  = DateFormat.format("dd/MM/yyyy ", d.getTime());
         return String.valueOf(s);
     }
 

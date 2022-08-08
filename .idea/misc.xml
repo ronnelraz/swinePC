@@ -91,10 +91,15 @@
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/nodata.xml" value="0.18125" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/pdf_listreport.xml" value="0.2967079948696024" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/pdf_modal.xml" value="0.2967079948696024" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/pdf_modal_view.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/pdf_viewer.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/sub_details_main_header.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/transaction_list.xml" value="0.5" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/transaction_list.xml" value="0.33" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/upload_list_item.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/uploadfile_modal.xml" value="0.2967079948696024" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/view_attach_file_dialog__transaction_list_items.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/view_attach_file_dialog_items.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/layout/view_attach_file_dialog_layout.xml" value="0.2967079948696024" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/menu/more_option.xml" value="0.2967079948696024" />
         <entry key="..\:/Users/CPF Nigs/Desktop/physical_counting/app/src/main/res/xml/file_path.xml" value="0.2975630611372381" />
       </map>

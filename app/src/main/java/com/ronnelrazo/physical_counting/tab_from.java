@@ -451,21 +451,22 @@ public class tab_from extends AppCompatActivity {
                     if(success){
                         data.toast(R.raw.checked,"Generate Audit No. " + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
 
-//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveHeaderChecklist_details(audit_no);
 
-//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveBreederCount_details(audit_no);
 
-//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveFeedCount_details(audit_no);
 
-//                        data.Preloader(getApplicationContext(), "Please wait...");
                         saveMedCount_details(audit_no);
 
                     }
                     else{
-                        data.toast(R.raw.error,"Data Already Exist" + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
+                        data.toast(R.raw.error,"Data Already Exist " + audit_no,Gravity.TOP|Gravity.CENTER,0,50);
+
+                        Log.d("SAveheaderError",
+                                list.get(0) + "\n" + list.get(4)+ "\n" +list.get(5)+ "\n" +list.get(8)+ "\n" +list.get(9)+ "\n" +list.get(7)+ "\n" +list.get(10)+ "\n" +list.get(1)+ "\n" +
+                                        ADuser+ "\n" +str_orgname+ "\n" +str_farmname
+                                );
                     }
 
                 } catch (JSONException e) {

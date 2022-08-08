@@ -94,11 +94,11 @@ id Menu
 id Orgcode
 id a1_form
 id address
+id all
 id animationView
 id appbar
 id audi_No
 id audi_date
-id audit
 id auditDate
 id auditNo
 id audit_date
@@ -124,6 +124,7 @@ id business_code
 id business_farmname
 id business_type
 id cancel
+id cancelitem
 id card
 id checkedall
 id checklist
@@ -135,6 +136,7 @@ id clerkcontact
 id clerkemail
 id clerkname
 id close
+id complete
 id confirm
 id contact
 id container
@@ -145,6 +147,7 @@ id currentDate
 id custom_header
 id custom_toolbar
 id data
+id datalist
 id datapdf
 id docDate
 id downloadPDF
@@ -163,7 +166,7 @@ id farmorg
 id feed
 id feed_data
 id female
-id folder
+id filename
 id freeText
 id from
 id headAnimalHusbandman
@@ -174,6 +177,9 @@ id headercontroller
 id icon
 id idPDFView
 id img
+id imgicon
+id incomplete
+id item
 id itemDetails
 id item_group_button
 id item_na
@@ -219,6 +225,8 @@ id pdfbtn
 id permission
 id positive
 id previous
+id print
+id printpdf
 id productCode
 id productName
 id province
@@ -249,6 +257,7 @@ id to
 id toastip
 id total
 id trasaction_list
+id trash
 id types
 id update
 id upload
@@ -257,6 +266,8 @@ id uploadpdf
 id username
 id username_layout
 id verison
+id viewAttachfile
+id viewpdf
 id zipcode
 layout activity_cancel
 layout activity_confirm
@@ -312,10 +323,15 @@ layout main_topic
 layout modal_audit_dialog
 layout pdf_listreport
 layout pdf_modal
+layout pdf_modal_view
+layout pdf_viewer
 layout sub_details_main_header
 layout transaction_list
 layout upload_list_item
 layout uploadfile_modal
+layout view_attach_file_dialog__transaction_list_items
+layout view_attach_file_dialog_items
+layout view_attach_file_dialog_layout
 menu more_option
 mipmap ic_launcher
 mipmap ic_launcher_adaptive_back
@@ -326,6 +342,9 @@ mipmap ic_launcher_round_adaptive_fore
 raw checked
 raw error
 raw farm
+raw loading
+raw nodatafile
+raw npdf
 string app_name
 string first_fragment_label
 string lorem_ipsum

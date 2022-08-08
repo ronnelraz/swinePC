@@ -10,5 +10,5 @@ import java.util.List;
 
 public interface modal_interface {
 
-    void onClick(View v, String audit, String type, List<model_viewfile> list,RecyclerView.Adapter adapte);
+    void onClick(View v, String audit, String type,String Org_code);
 }

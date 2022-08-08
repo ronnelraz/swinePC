@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: io.github.hariprasanths:bounceview-android:0.2.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5b368c02b8f573d574909f2df0372f82/transformed/jetified-bounceview-android-0.2.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5b368c02b8f573d574909f2df0372f82/transformed/jetified-bounceview-android-0.2.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5b368c02b8f573d574909f2df0372f82/transformed/jetified-bounceview-android-0.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5b368c02b8f573d574909f2df0372f82/transformed/jetified-bounceview-android-0.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5b368c02b8f573d574909f2df0372f82/transformed/jetified-bounceview-android-0.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.hariprasanths/bounceview-android/0.2.0/d8529478b3330a6cb42114737183f789acdd72f3/bounceview-android-0.2.0-javadoc.jar!/" />

@@ -456,6 +456,13 @@ public interface APIInterface {
             @Field("type") String type
     );
 
+    @FormUrlEncoded
+    @POST("updatePDFFile")
+    Call<Object> updatePDFFile(
+            @Field("filename") String filename,
+            @Field("fileData") String fileData
+    );
+
 
     @FormUrlEncoded
     @POST("autoComplete_audit")
@@ -493,8 +500,31 @@ public interface APIInterface {
     );
 
 
+    @FormUrlEncoded
+    @POST("transaction_detials")
+    Call<Object> transaction_detials(
+            @Field("user") String user,
+            @Field("org_code") String org_code,
+            @Field("to") String to,
+            @Field("from") String from,
+            @Field(("types")) String types
+    );
 
 
+    @FormUrlEncoded
+    @POST("view_attach_file_")
+    Call<Object> view_attach_file_(
+            @Field("audit") String audit
+    );
+
+
+
+    @FormUrlEncoded
+    @POST("remove_attach_file")
+    Call<Object> remove_attach_file(
+            @Field("audit") String audit,
+            @Field("filename") String filename
+    );
 
 
 

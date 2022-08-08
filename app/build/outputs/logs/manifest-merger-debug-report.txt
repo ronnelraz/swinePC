@@ -20,7 +20,9 @@ MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\CPF Nigs\.gradle\cache
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.shimmer:shimmer:0.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\397100f81a6a9eed4ce67d0be6e17c54\transformed\jetified-shimmer-0.5.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.loopj.android:android-async-http:1.4.11] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c7e187ac3836d6301057a7f9ad7a38f9\transformed\jetified-android-async-http-1.4.11\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\03579fe12814b46bd7f6151922ee64d4\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\6e807e58815c2fe39cb5b437366c0c7e\transformed\gridlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.daimajia.swipelayout:library:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9d3cb4369bad4c81c6b236bf77d0f58\transformed\jetified-library-1.2.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.github.barteksc:android-pdf-viewer:2.8.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b264de1c77e893e4ca4abae77c6b751a\transformed\jetified-android-pdf-viewer-2.8.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.barteksc:pdfium-android:1.7.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c5be93152fff62c6147d1fad8f9083bf\transformed\jetified-pdfium-android-1.7.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\34c3819cee2951fdcdce0cc29fa8544c\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -75,6 +77,7 @@ MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\CPF Nigs\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\447ac85792ab993fbd7e77bf9b5c3bd7\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b85b4bf4141d507e4576f4bef4e5fa2a\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:17:1-37:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3900cabe6fcb142e8612ff736cf09189\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\4ea78e3a5300ae57948a4528ff114bdc\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:17:1-24:12
@@ -163,6 +166,8 @@ MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\t
 MERGED from [com.airbnb.android:lottie:5.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\2a73090c02f64f6e5094947b89992d0d\transformed\jetified-lottie-5.2.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:11:5-20
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c00bc0f1ec14b1a78cf9c84fff547c89\transformed\jetified-library-1.6.2\AndroidManifest.xml:11:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\03579fe12814b46bd7f6151922ee64d4\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\03579fe12814b46bd7f6151922ee64d4\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
 MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:10:5-14:19
 MERGED from [com.novoda:merlin:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c2e1e799485216bc6048dad0cbbd8176\transformed\jetified-merlin-1.2.0\AndroidManifest.xml:10:5-14:19
 MERGED from [es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9be4f26d6d58db1e51df9275c686d28\transformed\jetified-library-1.1.2\AndroidManifest.xml:11:5-16:19
@@ -370,8 +375,12 @@ MERGED from [com.facebook.shimmer:shimmer:0.5.0] C:\Users\CPF Nigs\.gradle\cache
 MERGED from [com.facebook.shimmer:shimmer:0.5.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\397100f81a6a9eed4ce67d0be6e17c54\transformed\jetified-shimmer-0.5.0\AndroidManifest.xml:5:5-44
 MERGED from [com.loopj.android:android-async-http:1.4.11] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c7e187ac3836d6301057a7f9ad7a38f9\transformed\jetified-android-async-http-1.4.11\AndroidManifest.xml:5:5-7:41
 MERGED from [com.loopj.android:android-async-http:1.4.11] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c7e187ac3836d6301057a7f9ad7a38f9\transformed\jetified-android-async-http-1.4.11\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\03579fe12814b46bd7f6151922ee64d4\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\03579fe12814b46bd7f6151922ee64d4\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\6e807e58815c2fe39cb5b437366c0c7e\transformed\gridlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\6e807e58815c2fe39cb5b437366c0c7e\transformed\gridlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.daimajia.swipelayout:library:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9d3cb4369bad4c81c6b236bf77d0f58\transformed\jetified-library-1.2.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.daimajia.swipelayout:library:1.2.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b9d3cb4369bad4c81c6b236bf77d0f58\transformed\jetified-library-1.2.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.barteksc:android-pdf-viewer:2.8.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b264de1c77e893e4ca4abae77c6b751a\transformed\jetified-android-pdf-viewer-2.8.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.barteksc:android-pdf-viewer:2.8.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b264de1c77e893e4ca4abae77c6b751a\transformed\jetified-android-pdf-viewer-2.8.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.barteksc:pdfium-android:1.7.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c5be93152fff62c6147d1fad8f9083bf\transformed\jetified-pdfium-android-1.7.1\AndroidManifest.xml:7:5-9:41
@@ -480,6 +489,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\CPF 
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\447ac85792ab993fbd7e77bf9b5c3bd7\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b85b4bf4141d507e4576f4bef4e5fa2a\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b85b4bf4141d507e4576f4bef4e5fa2a\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\280b8c662ae12c28e2c58a98b88e76a9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\CPF Nigs\.gradle\caches\transforms-3\3900cabe6fcb142e8612ff736cf09189\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41

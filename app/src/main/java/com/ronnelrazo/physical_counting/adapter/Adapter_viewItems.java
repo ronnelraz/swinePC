@@ -119,6 +119,7 @@ public class Adapter_viewItems extends RecyclerView.Adapter<Adapter_viewItems.Vi
 
         BounceView.addAnimTo(holder.card);
         holder.card.setOnClickListener(v -> {
+            Log.d("demoURL",config.URLBKFILE + getData.getFiles());
             if(getEtx.equals("pdf")){
                 bottomsheet(v,config.URLBKFILE + getData.getFiles(),"pdf");
             }
@@ -133,6 +134,7 @@ public class Adapter_viewItems extends RecyclerView.Adapter<Adapter_viewItems.Vi
 
 
     public void bottomsheet(View v,String url,String urltype){
+
         View view = LayoutInflater.from(v.getContext()).inflate(R.layout.fileviewer,null);
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(v.getContext(),R.style.BottomSheetDialog);
         LinearLayout linearLayout = view.findViewById(R.id.root);
@@ -152,7 +154,7 @@ public class Adapter_viewItems extends RecyclerView.Adapter<Adapter_viewItems.Vi
         if(urltype.equals("pdf")){
             img.setVisibility(View.GONE);
             pdfView.setVisibility(View.VISIBLE);
-            new Pdfviewer(pdfView,v.getContext()).execute(url);
+            new Pdfviewer(pdfView,v.getContext(),null,null,null).execute(url);
 
         }
         else{

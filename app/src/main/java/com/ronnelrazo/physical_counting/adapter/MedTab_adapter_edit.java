@@ -654,6 +654,7 @@ public class MedTab_adapter_edit extends RelativeLayout {
         EditText bodyTextView = new EditText(this.context);
         bodyTextView.setGravity(Gravity.CENTER);
         bodyTextView.setTextSize(13);
+        bodyTextView.setHeight(100);
         bodyTextView.setBackgroundColor(Color.parseColor("#ffffff"));
         bodyTextView.setBackgroundResource(R.drawable.edit_text_dot_form);
         return bodyTextView;

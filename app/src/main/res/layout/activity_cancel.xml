@@ -129,7 +129,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1.9"
                         android:layout_height="wrap_content"
-                        android:text="Upload Date"
+                        android:text="Audit Date"
                         android:textSize="15sp"
                         android:layout_marginBottom="5dp"/>
 
@@ -170,7 +170,7 @@
                         android:layout_height="40dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/radius_border"
-                        android:hint="Upload Date"
+                        android:hint="Audit Date"
                         android:textSize="15sp"
                         android:paddingLeft="10dp"
                         android:drawableTint="@color/black"

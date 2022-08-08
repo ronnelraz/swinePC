@@ -13,47 +13,70 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="swine" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="876e6820-cfd9-49d0-9892-864f4fe60a09" name="Default Changelist" comment="14/07/2022 cebu code">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/DisallowInterceptView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Pdfviewer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_upload_list.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_viewItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/modal_interface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_upload_list.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_viewfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/attachfile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_document.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_documents_folder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_image.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_import_file.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_pdf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_print_file.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_remove_image.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icons8_sort_down_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icons8_horizontal_line.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corners_bottom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sample.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_transaction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottomsheet_items.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_uploadmodal.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dropdown_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fileviewer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/transaction_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/upload_list_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/uploadfile_modal.xml" afterDir="false" />
+    <list default="true" id="876e6820-cfd9-49d0-9892-864f4fe60a09" name="Default Changelist" comment="transaction list added in the system">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Comman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/PdfDocumentAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Pdfviewer_single.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_transaction_details.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_view_attachfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_view_attachfile_transaction_list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_file_upload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_transaction_details.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/pdf_modal_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/pdf_viewer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_attach_file_dialog__transaction_list_items.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_attach_file_dialog_items.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_attach_file_dialog_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/loading.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/nodatafile.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/npdf.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_2_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_2_4_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_dynamicanimation_dynamicanimation_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_dynamicanimation_dynamicanimation_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_3_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_3_6_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_3_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_3_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_services_storage_1_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_services_storage_1_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_10_2_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_10_2_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_runtime_10_2_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_runtime_10_2_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_karumi_dexter_6_2_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_karumi_dexter_6_2_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_pnikosis_materialish_progress_1_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_pnikosis_materialish_progress_1_7_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_github_hariprasanths_bounceview_android_0_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_github_hariprasanths_bounceview_android_0_2_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
@@ -69,6 +92,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/Farm_categories.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/Farm_categories.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/Farm_categories_ViewBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/Farm_categories_ViewBinding.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/Integration_submenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/Integration_submenu.class" afterDir="false" />
@@ -79,27 +103,19 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/MainActivity_ViewBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/MainActivity_ViewBinding.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHHeader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHHeader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHHeader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/APIInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/APIInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/config.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/connection/config.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/fragment/Tab_checklist.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/fragment/Tab_checklist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/fragment/Tab_contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/fragment/Tab_contract.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/fragment/Tab_med.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/fragment/Tab_med.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/inv_form.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/inv_form.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from_ViewBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ronnelrazo/physical_counting/tab_from_ViewBinding.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/local_only_symbol_list/debug/R-def.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/local_only_symbol_list/debug/R-def.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/base.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/base.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_buttoncheckbox.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_buttoncheckbox.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_checked.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_checked.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_create.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_create.xml.flat" afterDir="false" />
@@ -421,11 +437,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/activity_inv_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/activity_inv_form.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/custom_confirmation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/custom_confirmation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/values-night-v8/values-night-v8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/values-night-v8/values-night-v8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/Farm_categories.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/Farm_categories.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/Farm_categories_ViewBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/Farm_categories_ViewBinding.dex" afterDir="false" />
@@ -437,21 +448,15 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/MainActivity_ViewBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/MainActivity_ViewBinding.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHHeader.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHHeader.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHItem.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm$VHItem.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHHeader.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHHeader.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHItem.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList$VHItem.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_FarmList.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHHeader.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHHeader.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHItem.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo$VHItem.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/adapter/Adapter_Farm_demo.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/APIInterface.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/APIInterface.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/config.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/connection/config.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/fragment/Tab_checklist.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/fragment/Tab_checklist.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/fragment/Tab_contract.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/fragment/Tab_contract.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/fragment/Tab_med.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/fragment/Tab_med.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/inv_form.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/inv_form.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from_ViewBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/ronnelrazo/physical_counting/tab_from_ViewBinding.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
@@ -459,33 +464,31 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Cancel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Cancel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Pdf_record_list.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Pdf_record_list.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Checklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Checklist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Confirm_list.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_Confirm_list.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_PDFReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_PDFReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/BreederTab_adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/BreederTab_adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Pdfviewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/Pdfviewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_upload_list.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_upload_list.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_viewItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_viewItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/BreederTab_adapter_edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/BreederTab_adapter_edit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/FeedTab_adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/FeedTab_adapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/FeedTab_adapter_edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/FeedTab_adapter_edit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/MedTab_adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/MedTab_adapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/MedTab_adapter_edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/MedTab_adapter_edit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/APIInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/connection/config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/edit_TabForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/edit_TabForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/globalfunc/Globalfunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/inv_form.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/inv_form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/modal_interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/modal_interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_upload_list.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/model/model_upload_list.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/tab_from.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/tab_from.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/upload_file.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/upload_file.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cancel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_pdf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_pdf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inv_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inv_form.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdf_record_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdf_record_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_transaction.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_file.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_file.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_confirmation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_confirmation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_uploadmodal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_uploadmodal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dropdown_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dropdown_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pdf_listreport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pdf_listreport.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/transaction_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/transaction_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/upload_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/upload_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/uploadfile_modal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/uploadfile_modal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -520,10 +523,10 @@
       <list>
         <option value="resourceFile" />
         <option value="valueResourceFile" />
-        <option value="Class" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Interface" />
+        <option value="layoutResourceFile_vertical" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -544,9 +547,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/BreederTab_adapter.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/upload_file.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/Adapter_upload_list.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/app/src/main/java/com/ronnelrazo/physical_counting/adapter/BreederTab_adapter.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
@@ -583,6 +586,8 @@
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.dmitryborodin/pdfview-android/1.1.0/af6aabb4008cb3072f19e632895ec1264305097c/pdfview-android-1.1.0-sources.jar!/com/pdfview/PDFView.kt_PDFView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.dmitryborodin/pdfview-android/1.1.0/af6aabb4008cb3072f19e632895ec1264305097c/pdfview-android-1.1.0-sources.jar!/com/pdfview/PDFView.kt_SELECTED" value="PDFView" />
+    <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.github.barteksc/android-pdf-viewer/2.8.2/3a6875f9abac8b069fc55194cc8aa5b3a1fcaa7c/android-pdf-viewer-2.8.2-sources.jar!/com/github/barteksc/pdfviewer/PDFView.java_PDFView_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.github.barteksc/android-pdf-viewer/2.8.2/3a6875f9abac8b069fc55194cc8aa5b3a1fcaa7c/android-pdf-viewer-2.8.2-sources.jar!/com/github/barteksc/pdfviewer/PDFView.java_SELECTED" value="PDFView" />
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.5.0/8d3b87c7463f55053836b805e014cb238f64757a/material-1.5.0-sources.jar!/com/google/android/material/tabs/TabLayout.java_SELECTED" value="TabLayout" />
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.5.0/8d3b87c7463f55053836b805e014cb238f64757a/material-1.5.0-sources.jar!/com/google/android/material/tabs/TabLayout.java_TabLayout_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/CPF Nigs/.gradle/caches/modules-2/files-2.1/com.shuhart.stepview/stepview/1.2.6/a3ff7b218b7432eca069e379dd6777e68b36eda7/stepview-1.2.6-sources.jar!/com/shuhart/stepview/StepView.java_SELECTED" value="StepView" />
@@ -600,7 +605,7 @@
     <property name="com.android.tools.idea.sqlite.queryhistory" value="select * from table_breeder_details&#10;select * from table_header_details&#10;SELECT *  FROM table_med_details where org_code = '071511SW' and farm_code = '071511SW'&#10;SELECT *  FROM table_med_details&#10;SELECT *  FROM table_med_details where med_name = 'Zoletil 50 (10ml/BT)'" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../converting-webpage-to-pdf-in-android-studio-app-master/geeksforgeeks" />
     <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.20304568" />
@@ -618,11 +623,11 @@
       <recent name="com.ronnelrazo.physical_counting" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\res\drawable" />
       <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\res\layout" />
+      <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\res\raw" />
+      <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\res\drawable" />
       <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\java\com\ronnelrazo\physical_counting\Database" />
       <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\java\com\ronnelrazo\physical_counting\adapter" />
-      <recent name="C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\java\com\ronnelrazo\physical_counting\fragment" />
     </key>
     <key name="android.template.-24154379">
       <recent name="com.ronnelrazo.physical_counting" />
@@ -1003,8 +1008,25 @@
       <option name="project" value="LOCAL" />
       <updated>1658064148444</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="transaction list added in the system">
+      <created>1658968595868</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1658968595868</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1040,6 +1062,7 @@
     <MESSAGE value="06/06/2022 SAVE NLNG SA DATABASE IDANA :3" />
     <MESSAGE value="04/07/2022 new update" />
     <MESSAGE value="14/07/2022 cebu code" />
-    <option name="LAST_COMMIT_MESSAGE" value="14/07/2022 cebu code" />
+    <MESSAGE value="transaction list added in the system" />
+    <option name="LAST_COMMIT_MESSAGE" value="transaction list added in the system" />
   </component>
 </project>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ronnelrazo.physical_counting.DisallowInterceptView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/pspdf__ic_close"
+                android:backgroundTint="@color/error" />
+
+
+            <TextView
+                android:textSize="18sp"
+                android:fontFamily="@font/cpf_imm_sook_semibold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attach File"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/datalist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/back"
+                tools:itemCount="4"
+                tools:listitem="@layout/view_attach_file_dialog_items" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loading"
+                app:lottie_renderMode="automatic" />
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.ronnelrazo.physical_counting.DisallowInterceptView>

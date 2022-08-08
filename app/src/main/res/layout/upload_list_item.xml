@@ -1,30 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="5dp"
+    app:cardMaxElevation="4dp"
+    app:cardElevation="4dp"
+    android:id="@+id/card"
+    android:foreground="?attr/selectableItemBackground"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:layout_centerInParent="true"
-        android:id="@+id/folder"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/attachfile"/>\
-
-
-    <TextView
-        android:id="@+id/audit"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/folder"
-        android:layout_marginTop="35dp"
-        android:gravity="center"
-        android:textSize="13sp"
-        tools:text="@tools:sample/lorem" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Orgcode"
+                tools:text="Org name (org code)"/>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/FarmOrg"
+                tools:text="Farm name (farm code)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/auditNo"
+                tools:text="audit No"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Document_date"
+                tools:text="Audit Date"/>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11sp"
+                    android:id="@+id/checklist"
+                    android:backgroundTint="@color/odd"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:text="Check list"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11sp"
+                    android:id="@+id/breeder"
+                    android:backgroundTint="@color/odd"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:text="Breeder"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11sp"
+                    android:id="@+id/feed"
+                    android:backgroundTint="@color/odd"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:text="Feed"/>
+
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11sp"
+                    android:id="@+id/med"
+                    android:backgroundTint="@color/odd"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:text="Med"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:enabled="true"
+                    app:cornerRadius="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11sp"
+                    app:iconGravity="textStart"
+                    android:id="@+id/viewAttachfile"
+                    app:icon="@drawable/ic_eye_open"
+                    android:backgroundTint="@color/odd"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:text="View Attach File"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    app:icon="@drawable/ic_icons8_import_file"
+                    app:cornerRadius="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:iconGravity="textStart"
+                    android:layout_marginRight="15dp"
+                    android:textSize="11sp"
+                    android:id="@+id/upload"
+                    android:backgroundTint="@color/odd"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:text="Upload Attach File"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            app:icon="@drawable/ic_icons8_import_file"-->
+<!--            app:cornerRadius="20dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:textSize="11sp"-->
+<!--            android:id="@+id/upload"-->
+<!--            android:backgroundTint="@color/odd"-->
+<!--            style="@style/Widget.Material3.Button.TextButton.Icon"-->
+<!--            android:text="Upload Attach File"/>-->
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

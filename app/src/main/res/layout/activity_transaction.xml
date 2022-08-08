@@ -74,10 +74,10 @@
                         android:editable="false"
                         android:layout_width="0dp"
                         android:layout_weight="1.4"
-                        android:text="Audit Date To"
+                        android:text="Audit Date From"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
-                        android:hint="Audit Date To"
+                        android:hint="Audit Date From"
                         android:textSize="15sp"
                         android:drawableTint="@color/black"
                         android:layout_marginBottom="5dp"/>
@@ -91,7 +91,7 @@
                         android:text="Audit Date To"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
-                        android:hint="Audit Date From"
+                        android:hint="Audit Date To"
                         android:textSize="15sp"
                         android:textColor="@color/white"
                         android:drawableTint="@color/black"
@@ -115,7 +115,7 @@
                         android:layout_height="40dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/radius_border"
-                        android:hint="Audit Date To"
+                        android:hint="Audit Date From"
                         android:textSize="15sp"
                         android:paddingLeft="10dp"
                         android:drawableTint="@color/black"
@@ -131,7 +131,7 @@
                         android:layout_height="40dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/radius_border"
-                        android:hint="audit Date To From"
+                        android:hint="audit Date To"
                         android:textSize="15sp"
                         android:paddingLeft="10dp"
                         android:drawableTint="@color/black"
@@ -140,12 +140,56 @@
 
                 </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RadioGroup
+                    android:id="@+id/types"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/all"
+                    android:layout_weight="2">
+
+                    <RadioButton
+                        android:id="@+id/all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All"
+                        android:buttonTint="@color/bgEdit"
+                        android:textColor="@color/white"/>
+
+                    <RadioButton
+                        android:id="@+id/complete"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Complete"
+                        android:buttonTint="@color/bgEdit"
+                        android:textColor="@color/white"/>
+
+                    <RadioButton
+                        android:id="@+id/incomplete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Incomplete"
+                        android:buttonTint="@color/bgEdit"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/white"/>
+
+                </RadioGroup>
+
+
                 <com.google.android.material.button.MaterialButton
                     android:onClick="search"
                     android:elevation="5dp"
                     app:elevation="5dp"
                     style="@style/Widget.Material3.Button.TextButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Search"
@@ -157,13 +201,32 @@
                     app:iconTint="@color/bgEdit"
                     app:iconGravity="textStart"/>
 
+
+            </LinearLayout>
+
+
+
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="450dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_renderMode="automatic" />
+
+
     <androidx.recyclerview.widget.RecyclerView
+        tools:visibility="gone"
         android:id="@+id/data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

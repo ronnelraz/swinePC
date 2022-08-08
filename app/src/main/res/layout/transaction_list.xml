@@ -16,6 +16,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            tools:text="Status : Complete"/>
+
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,11 +53,24 @@
             tools:text="Audit Date"/>
 
 
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textSize="11sp"
+            app:icon="@drawable/pspdf__ic_edit_annotations"
+            app:iconGravity="textStart"
+            android:id="@+id/edit"
+            android:backgroundTint="@color/odd"
+            style="@style/Widget.Material3.Button.TextButton.Icon"
+            android:text="Edit"/>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
 
             <com.google.android.material.button.MaterialButton
                 app:cornerRadius="20dp"
@@ -59,11 +81,11 @@
                 android:textSize="11sp"
                 app:icon="@drawable/ic_eye_open"
                 app:iconGravity="textStart"
+                android:id="@+id/viewpdf"
                 android:backgroundTint="@color/odd"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                android:text="View PDF"/>
+                android:text="View Attach File"/>
 
-<!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
 
             <com.google.android.material.button.MaterialButton
                 app:cornerRadius="20dp"
@@ -74,9 +96,10 @@
                 android:textSize="11sp"
                 app:icon="@drawable/ic_icons8_print_file"
                 app:iconGravity="textStart"
+                android:id="@+id/printpdf"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:backgroundTint="@color/odd"
-                android:text="PRINT PDF"/>
+                android:text="Print Attach File"/>
 
         </LinearLayout>
 

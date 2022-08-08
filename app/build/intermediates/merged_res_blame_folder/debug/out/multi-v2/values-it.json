@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-47:/values-it/values-it.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-48:/values-it/values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\8eda020925d17559ab38241867825bff\\transformed\\jetified-pspdfkit-8.2.1\\res\\values-it\\values-it.xml",

@@ -16,28 +16,13 @@
 
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/titlem"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Farm"/>
 
-
-        <AutoCompleteTextView
-            android:paddingLeft="10dp"
-            android:gravity="center|left"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:singleLine="false"
-            android:hint="Select Farm"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textAppearance="?android:attr/textAppearanceListItemSmall"
-            android:id="@+id/audit_no"
-            android:drawableRight="@drawable/ic_icons8_sort_down_1"
-            android:paddingRight="10dp"
-            android:background="@drawable/edit_text_dot"
-            />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/uploadimg"
@@ -59,7 +44,6 @@
             android:layout_gravity="center"/>
 
         <com.google.android.material.button.MaterialButton
-            android:visibility="gone"
             android:id="@+id/uploadpdf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

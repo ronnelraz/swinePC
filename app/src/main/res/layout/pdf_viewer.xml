@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/radius_border"
+    android:layout_margin="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/close"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icons8_cancel_1"
+                android:backgroundTint="@color/error"/>
+
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/idPDFView"
+                android:layout_width="match_parent"
+                android:layout_height="800dp" />
+
+
+        </LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_renderMode="automatic" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

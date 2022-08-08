@@ -197,6 +197,7 @@ attr borderRoundPercent
 attr borderWidth
 attr borderlessButtonStyle
 attr bottomAppBarStyle
+attr bottomEdgeSwipeOffset
 attr bottomInsetScrimEnabled
 attr bottomNavigationStyle
 attr bottomSheetDialogTheme
@@ -291,6 +292,7 @@ attr circularflow_viewCenter
 attr clearTop
 attr clearsTag
 attr clickAction
+attr clickToClose
 attr clockFaceBackgroundColor
 attr clockHandColor
 attr clockIcon
@@ -448,6 +450,7 @@ attr dividerVertical
 attr dragDirection
 attr dragScale
 attr dragThreshold
+attr drag_edge
 attr drawPath
 attr drawableBottomCompat
 attr drawableEndCompat
@@ -754,6 +757,7 @@ attr layout_scrollEffect
 attr layout_scrollFlags
 attr layout_scrollInterpolator
 attr layout_wrapBehaviorInParent
+attr leftEdgeSwipeOffset
 attr liftOnScroll
 attr liftOnScrollTargetViewId
 attr limitBoundsTo
@@ -1337,6 +1341,7 @@ attr region_heightMoreThan
 attr region_widthLessThan
 attr region_widthMoreThan
 attr reverseLayout
+attr rightEdgeSwipeOffset
 attr rippleColor
 attr rollType
 attr rotationCenterId
@@ -1404,6 +1409,7 @@ attr showPaths
 attr showSeekBarValue
 attr showText
 attr showTitle
+attr show_mode
 attr shrinkMotionSpec
 attr simpleItemLayout
 attr simpleItems
@@ -1669,6 +1675,7 @@ attr tooltipForegroundColor
 attr tooltipFrameBackground
 attr tooltipStyle
 attr tooltipText
+attr topEdgeSwipeOffset
 attr topInsetScrimEnabled
 attr touchAnchorId
 attr touchAnchorSide
@@ -3820,7 +3827,6 @@ id asConfigured
 id async
 id audi_No
 id audi_date
-id audit
 id auditDate
 id auditNo
 id audit_date
@@ -3869,6 +3875,7 @@ id callMeasure
 id cancel
 id cancel_action
 id cancel_button
+id cancelitem
 id card
 id card_view
 id carryVelocity
@@ -3905,6 +3912,7 @@ id clockwise
 id close
 id closest
 id collapseActionView
+id complete
 id compress
 id confirm
 id confirm_button
@@ -3931,6 +3939,7 @@ id custom_toolbar
 id custom_view_container
 id cut
 id data
+id datalist
 id datapdf
 id date_picker_actions
 id decelerate
@@ -4001,6 +4010,7 @@ id farmorg
 id feed
 id feed_data
 id female
+id filename
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4013,7 +4023,6 @@ id fitXY
 id fixed
 id flip
 id floating
-id folder
 id forever
 id fragment_container_view_tag
 id freeText
@@ -4052,12 +4061,15 @@ id ignoreRequest
 id image
 id imageView
 id img
+id imgicon
 id immediateStop
 id included
+id incomplete
 id info
 id invisible
 id inward
 id italic
+id item
 id item1
 id item2
 id item3
@@ -4075,6 +4087,7 @@ id jumpToStart
 id keepme
 id labeled
 id lati
+id lay_down
 id layout
 id layout1
 id layout2
@@ -4234,6 +4247,8 @@ id preferences_detail
 id preferences_header
 id preferences_sliding_pane_layout
 id previous
+id print
+id printpdf
 id productCode
 id productName
 id progressWheel
@@ -4760,6 +4775,7 @@ id pspdf__view_pager_tab_view
 id pspdf__youtube_player
 id pspdf__youtube_progressbar
 id pspsdf__style_header_container
+id pull_out
 id radial
 id radio
 id radio_btn
@@ -4925,6 +4941,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id trasaction_list
+id trash
 id triangle
 id types
 id unchecked
@@ -4941,11 +4958,13 @@ id username_layout
 id verison
 id vertical
 id vertical_only
+id viewAttachfile
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id viewpdf
 id visible
 id visible_removing_fragment_view_tag
 id warning_frame
@@ -5194,6 +5213,8 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout pdf_listreport
 layout pdf_modal
+layout pdf_modal_view
+layout pdf_viewer
 layout powerspinner_item_default_power
 layout powerspinner_layout_body
 layout powerspinner_layout_preference
@@ -5338,6 +5359,9 @@ layout text_view_without_line_height
 layout transaction_list
 layout upload_list_item
 layout uploadfile_modal
+layout view_attach_file_dialog__transaction_list_items
+layout view_attach_file_dialog_items
+layout view_attach_file_dialog_layout
 layout view_pdf_page
 menu example_menu
 menu example_menu2
@@ -5360,6 +5384,9 @@ plurals pspdf__search_results_found
 raw checked
 raw error
 raw farm
+raw loading
+raw nodatafile
+raw npdf
 string LOADING
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -7306,6 +7333,7 @@ styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
 styleable StepView sv_animationDuration sv_animationType sv_background sv_doneCircleColor sv_doneCircleRadius sv_doneStepLineColor sv_doneStepMarkColor sv_doneTextColor sv_nextStepCircleColor sv_nextStepCircleEnabled sv_nextStepLineColor sv_nextTextColor sv_selectedCircleColor sv_selectedCircleRadius sv_selectedStepNumberColor sv_selectedTextColor sv_stepLineWidth sv_stepNumberTextSize sv_stepPadding sv_stepViewStyle sv_steps sv_stepsNumber sv_textPadding sv_textSize sv_typeface
 styleable SubsamplingScaleImageView assetName panEnabled quickScaleEnabled src tileBackgroundColor zoomEnabled
+styleable SwipeLayout bottomEdgeSwipeOffset clickToClose drag_edge leftEdgeSwipeOffset rightEdgeSwipeOffset show_mode topEdgeSwipeOffset
 styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors

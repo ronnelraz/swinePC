@@ -1,6 +1,10 @@
 package com.ronnelrazo.physical_counting;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
@@ -11,12 +15,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
+import com.ronnelrazo.physical_counting.adapter.Adapter_PDFReport;
+import com.ronnelrazo.physical_counting.adapter.Adapter_transaction_details;
 import com.ronnelrazo.physical_counting.connection.API;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
+import com.ronnelrazo.physical_counting.model.modal_pdf_report;
+import com.ronnelrazo.physical_counting.model.model_transaction_details;
 import com.ronnelrazo.physical_counting.model.model_viewfile;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
@@ -50,6 +61,18 @@ public class transaction extends AppCompatActivity {
 
     @BindViews({R.id.to,R.id.from}) TextInputEditText[] datefilter;
 
+    RecyclerView recyclerView;
+    RecyclerView.Adapter adapter;
+    private List<model_transaction_details> list;
+
+    @BindView(R.id.loading)
+    LottieAnimationView loading;
+    @BindView(R.id.types)
+    RadioGroup types;
+    int selectedid;
+    RadioButton radioButton;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,11 +81,24 @@ public class transaction extends AppCompatActivity {
         data = new Globalfunction(this);
         sharedPref = new SharedPref(this);
 
+        list = new ArrayList<>();
+        recyclerView = findViewById(R.id.data);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setItemViewCacheSize(999999999);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new Adapter_transaction_details(list,this);
+        recyclerView.setAdapter(adapter);
+
+        datefilter[0].setText(data.transaction_date());
+        datefilter[1].setText(data.transaction_date());
+
+        transactionList(sharedPref.getUser(),"",data.transaction_date(),data.transaction_date(),"All");
 
         AutoCompleteCode(sharedPref.getUser());
-        org_code.setOnTouchListener((v, event) -> {
-            org_code.showDropDown();
-            return false;
+            org_code.setOnTouchListener((v, event) -> {
+                org_code.showDropDown();
+                return false;
         });
 
         datefilter[0].setOnClickListener(v -> {
@@ -73,8 +109,81 @@ public class transaction extends AppCompatActivity {
             datemodal(datefilter[1]);
         });
 
+
+
+
     }
 
+
+
+    private void transactionList(String user,String org_code,String to,String from,String types) {
+        list.clear();
+
+        loading.setVisibility(View.VISIBLE);
+        loading.setAnimation(R.raw.loading);
+        loading.loop(true);
+        loading.playAnimation();
+        API.getClient().transaction_detials(user,org_code,to,from,types).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    JSONArray result = jsonResponse.getJSONArray("data");
+
+                    if(success){
+                        loading.setVisibility(View.GONE);
+                        loading.loop(true);
+                        loading.playAnimation();
+                        for (int i = 0; i < result.length(); i++) {
+                            JSONObject object = result.getJSONObject(i);
+                            model_transaction_details item = new model_transaction_details(
+                                    object.getString("title"),
+                                    object.getString("org_code"),
+                                    object.getString("audit_no"),
+                                    object.getString("farm_name"),
+                                    object.getString("audit_date"),
+                                    object.getString("status"),
+                                    object.getString("farm_code")
+
+                            );
+
+                            list.add(item);
+
+
+                        }
+
+                        adapter = new Adapter_transaction_details(list,getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                    }
+                    else{
+                        loading.setAnimation(R.raw.nodatafile);
+                        loading.setVisibility(View.VISIBLE);
+                        loading.loop(true);
+                        loading.playAnimation();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage() + " Error");
+                    loading.setAnimation(R.raw.nodatafile);
+                    loading.setVisibility(View.VISIBLE);
+                    loading.loop(true);
+                    loading.playAnimation();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+
+                }
+            }
+        });
+    }
 
     private  void datemodal(TextInputEditText s){
         new DatePickerDialog(this,R.style.picker,getDateto(s), data.calendar
@@ -121,6 +230,7 @@ public class transaction extends AppCompatActivity {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage() + " Error");
 
+
                 }
             }
 
@@ -143,7 +253,7 @@ public class transaction extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String[] getFarm = autocomplete_list.get(position).split(" \\(" )[1].split("\\)");
                 str_org_code = getFarm[0];
-                Toast.makeText(transaction.this, str_org_code, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(transaction.this, str_org_code, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -161,7 +271,12 @@ public class transaction extends AppCompatActivity {
      String to = datefilter[0].getText().toString();
      String from = datefilter[1].getText().toString();
 
-        Toast.makeText(this, String.format("%s %s %s", to,from,getOrg_code), Toast.LENGTH_SHORT).show();
+     selectedid = types.getCheckedRadioButtonId();
+     radioButton = (types).findViewById(selectedid);
+     String getTypes = radioButton.getText().toString();
+
+     transactionList(sharedPref.getUser(),getOrg_code, to, from,getTypes);
+
 
     }
 }

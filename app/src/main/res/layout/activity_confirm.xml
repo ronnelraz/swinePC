@@ -47,23 +47,27 @@ tools:context=".Confirm">
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Confirm"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:enabled="false"
+                app:cornerRadius="20dp"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="17sp"
+                app:icon="@drawable/ic_icons8_done"
+                app:iconGravity="textStart"
+                android:id="@+id/Confirm"
+                android:backgroundTint="@color/odd"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                android:backgroundTint="@color/shimmer_placeholder"
-                android:enabled="false"
-                android:onClick="back"
-                android:padding="10dp"
-                android:text="Confirm"
-                app:cornerRadius="20dp"
-                app:icon="@drawable/ic_icons8_done" />
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:text="Confirm"/>
+
+
+
 
         </RelativeLayout>
 

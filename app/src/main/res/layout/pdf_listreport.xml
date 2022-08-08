@@ -19,43 +19,43 @@
 
 
     <LinearLayout
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentLeft="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/org_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="orgname"
-            android:textStyle="bold"
             android:textSize="18sp"
-            android:id="@+id/org_name"/>
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/farm_name"
             android:layout_width="300dp"
-            android:singleLine="false"
             android:layout_height="wrap_content"
+            android:singleLine="false"
             android:text="farm_name"
-            android:textSize="15sp"
-            android:id="@+id/farm_name"/>
+            android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/audi_No"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Audit No."
-            android:textSize="15sp"
-            android:id="@+id/audi_No"/>
+            android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/audi_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Audit date"
-            android:textSize="15sp"
-            android:id="@+id/audi_date"/>
+            android:textSize="15sp" />
 
     </LinearLayout>
 

@@ -55,6 +55,8 @@ public class edit_TabForm extends AppCompatActivity {
     public static String Getorg_code,Getfarm_code;
     public static String getAudit_no;
 
+    public static int intentType = 0;
+
     private Globalfunction data;
     private SharedPref sharedPref;
 
@@ -228,40 +230,49 @@ public class edit_TabForm extends AppCompatActivity {
     }
 
     public void savechanges(View view) {
-
-        data.Confirmation_upload(view.getContext(),"Do you want to upload Attach Files?",R.drawable.ic_icons8_warning);
-        data.negative.setOnClickListener(v1 ->{
-            data.ConfirmDialog.dismiss();
-        });
-        data.breeder.setOnClickListener(v1 -> {
-            Attach_Type = "breeder";
-            Intent intent = new Intent( );
-            intent.setType("image/*");
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-            startActivityForResult(Intent.createChooser(intent,"select multiple images"), REQ_CODE_IMG);
-        });
-        data.feed.setOnClickListener(v1 -> {
-            Attach_Type = "feed";
-            Intent intent = new Intent( );
-            intent.setType("image/*");
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-            startActivityForResult(Intent.createChooser(intent,"select multiple images"), REQ_CODE_IMG);
-        });
-        data.med.setOnClickListener(v1 -> {
-            Attach_Type = "med";
-            Intent intent = new Intent( );
-            intent.setType("image/*");
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-            startActivityForResult(Intent.createChooser(intent,"select multiple images"), REQ_CODE_IMG);
-        });
-        data.negative.setText("No");
-        data.negative.setOnClickListener(v1 -> {
+        if(intentType == 1){
+            data.intent(transaction.class,view.getContext());
+            finish();
+        }
+        else{
             data.intent(Edit_pdf.class,view.getContext());
             finish();
-        });
+        }
+
+
+//        data.Confirmation_upload(view.getContext(),"Do you want to upload Attach Files?",R.drawable.ic_icons8_warning);
+//        data.negative.setOnClickListener(v1 ->{
+//            data.ConfirmDialog.dismiss();
+//        });
+//        data.breeder.setOnClickListener(v1 -> {
+//            Attach_Type = "breeder";
+//            Intent intent = new Intent( );
+//            intent.setType("image/*");
+//            intent.setAction(Intent.ACTION_GET_CONTENT);
+//            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+//            startActivityForResult(Intent.createChooser(intent,"select multiple images"), REQ_CODE_IMG);
+//        });
+//        data.feed.setOnClickListener(v1 -> {
+//            Attach_Type = "feed";
+//            Intent intent = new Intent( );
+//            intent.setType("image/*");
+//            intent.setAction(Intent.ACTION_GET_CONTENT);
+//            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+//            startActivityForResult(Intent.createChooser(intent,"select multiple images"), REQ_CODE_IMG);
+//        });
+//        data.med.setOnClickListener(v1 -> {
+//            Attach_Type = "med";
+//            Intent intent = new Intent( );
+//            intent.setType("image/*");
+//            intent.setAction(Intent.ACTION_GET_CONTENT);
+//            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+//            startActivityForResult(Intent.createChooser(intent,"select multiple images"), REQ_CODE_IMG);
+//        });
+//        data.negative.setText("No");
+//        data.negative.setOnClickListener(v1 -> {
+//            data.intent(Edit_pdf.class,view.getContext());
+//            finish();
+//        });
     }
 
 
@@ -374,19 +385,46 @@ public class edit_TabForm extends AppCompatActivity {
         return result;
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(intentType == 1){
+            Globalfunction.getInstance(this).intent(transaction.class,this);
+            finish();
+        }
+    }
+
     public void cancel(View view) {
 
-        data.Confirmation(view.getContext(),"Are you sure you want to cancel this Transaction?",R.drawable.ic_icons8_warning);
-        data.positive.setText(" Yes");
-        data.negative.setOnClickListener(v1 ->{
-            data.ConfirmDialog.dismiss();
-        });
-        data.positive.setOnClickListener(v1 -> {
-            data.ConfirmDialog.dismiss();
+        if(intentType == 1){
+            data.Confirmation(view.getContext(),"Are you sure you want to exit this Transaction?",R.drawable.ic_icons8_warning);
+            data.positive.setText(" Yes");
+            data.negative.setOnClickListener(v1 ->{
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setOnClickListener(v1 -> {
+                data.ConfirmDialog.dismiss();
+                data.intent(transaction.class,this);
+                finish();
+            });
+
+        }
+        else{
+            data.Confirmation(view.getContext(),"Are you sure you want to exit this Transaction?",R.drawable.ic_icons8_warning);
+            data.positive.setText(" Yes");
+            data.negative.setOnClickListener(v1 ->{
+                data.ConfirmDialog.dismiss();
+            });
+            data.positive.setOnClickListener(v1 -> {
+                data.ConfirmDialog.dismiss();
 //           data.flag(getAudit_no,"C");
 //            data.toast(R.raw.checked,"Transaction NO : " + getAudit_no + " has been Cancelled.", Gravity.TOP|Gravity.CENTER,0,50);
-            data.intent(inv_form.class,v1.getContext());
-            finish();
-        });
+                data.intent(inv_form.class,v1.getContext());
+                finish();
+            });
+        }
+
+
     }
 }
