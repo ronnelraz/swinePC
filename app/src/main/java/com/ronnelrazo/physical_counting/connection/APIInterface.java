@@ -20,8 +20,13 @@ public interface APIInterface {
             @Field("password") String password
     );
 
+    @FormUrlEncoded
     @POST("farmOrg.php")
-    Call<Object> farmAPI();
+    Call<Object> farmAPI(
+            @Field("role") String role,
+            @Field("org_code") String org_code,
+            @Field("farm_code") String farm_code
+    );
 
 
     @FormUrlEncoded
@@ -526,6 +531,49 @@ public interface APIInterface {
             @Field("filename") String filename
     );
 
+
+    @POST("org_code_list")
+    Call<Object> org_code_list();
+
+
+    @POST("role_type")
+    Call<Object> role_type();
+
+    @FormUrlEncoded
+    @POST("adduser_master")
+    Call<Object> adduser_master(
+            @Field("AD") String AD,
+            @Field("ROLE") String ROLE,
+            @Field("ORG_CODE") String ORG_CODE,
+            @Field("USER") String USER
+    );
+
+
+    @FormUrlEncoded
+    @POST("menu_map_setup")
+    Call<Object> menu_map_setup(
+            @Field("AD") String AD,
+            @Field("MENUs") String MENUs,
+            @Field("USER") String USER,
+            @Field("ROLEID") String ROLEID
+    );
+
+
+    @FormUrlEncoded
+    @POST("list_users_map")
+    Call<Object> list_users_map(
+            @Field("ad") String ad,
+            @Field("role") String role,
+            @Field("type") String type
+    );
+
+    @FormUrlEncoded
+    @POST(" update_status")
+    Call<Object>  update_status(
+            @Field("status") String status,
+            @Field("users") String users,
+            @Field("AD") String ad
+    );
 
 
 

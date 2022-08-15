@@ -16,7 +16,19 @@
         android:maxSdkVersion="29" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="application/pdf" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:mimeType="application/pdf" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="false"
@@ -33,6 +45,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Physical_counting" >
+        <activity
+            android:name="com.ronnelrazo.physical_counting.user_setup"
+            android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.transaction"
             android:exported="false" />

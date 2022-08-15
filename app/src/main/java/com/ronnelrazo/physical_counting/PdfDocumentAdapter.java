@@ -3,6 +3,7 @@ package com.ronnelrazo.physical_counting;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.CancellationSignal;
+import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.print.PageRange;
 import android.print.PrintAttributes;
@@ -22,24 +23,27 @@ import java.net.URL;
 public class PdfDocumentAdapter extends PrintDocumentAdapter {
 
     Context context;
-    String inputStream;
-    String name;
+    String path;
 
     InputStream input = null;
     OutputStream output = null;
 
-    public PdfDocumentAdapter(Context context, String inputStream,String name){
+    public PdfDocumentAdapter(Context context,String path){
         this.context = context;
-        this.inputStream = inputStream;
-        this.name = name;
+        this.path = path;
     }
 
 
     @Override
     public void onWrite(PageRange[] pages, final ParcelFileDescriptor destination, CancellationSignal cancellationSignal, final WriteResultCallback callback) {
 
+        InputStream input = null;
+        OutputStream output = null;
+        String filePath = null;
+
         try {
-            input = new URL(inputStream).openStream();
+            File file=new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/"+path);
+            input = new FileInputStream(file);
             output = new FileOutputStream(destination.getFileDescriptor());
 
             byte[] buf = new byte[1024];
@@ -51,14 +55,16 @@ public class PdfDocumentAdapter extends PrintDocumentAdapter {
 
             callback.onWriteFinished(new PageRange[]{PageRange.ALL_PAGES});
 
-        } catch (FileNotFoundException ee) {
-            //TODO Handle Exception
+        } catch (FileNotFoundException ee){
+
         } catch (Exception e) {
-            //TODO Handle Exception
+
         } finally {
             try {
-                input.close();
-                output.close();
+                if(input!=null)
+                    input.close();
+                if(output!=null)
+                    output.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -72,7 +78,7 @@ public class PdfDocumentAdapter extends PrintDocumentAdapter {
             callback.onLayoutCancelled();
             return;
         }
-        PrintDocumentInfo pdi = new PrintDocumentInfo.Builder(name).setContentType(PrintDocumentInfo.CONTENT_TYPE_DOCUMENT).build();
+        PrintDocumentInfo pdi = new PrintDocumentInfo.Builder("Document").setContentType(PrintDocumentInfo.CONTENT_TYPE_DOCUMENT).build();
         callback.onLayoutFinished(pdi, true);
     }
 

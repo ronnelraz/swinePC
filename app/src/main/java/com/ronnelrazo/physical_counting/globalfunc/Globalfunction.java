@@ -3,6 +3,7 @@ package com.ronnelrazo.physical_counting.globalfunc;
 
 import static android.content.Context.DOWNLOAD_SERVICE;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.DownloadManager;
 import android.content.ContentValues;
@@ -26,6 +27,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.TranslateAnimation;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,10 +63,12 @@ import com.ronnelrazo.physical_counting.R;
 import com.ronnelrazo.physical_counting.connection.API;
 import com.ronnelrazo.physical_counting.connection.API_GET;
 import com.ronnelrazo.physical_counting.connection.config;
+import com.ronnelrazo.physical_counting.model.model_transaction_details;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
 import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -72,9 +77,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -125,6 +132,31 @@ public class Globalfunction {
             application = new Globalfunction(context);
         }
         return application;
+    }
+
+
+    public void slideUp(View view){
+        view.setVisibility(View.VISIBLE);
+        TranslateAnimation animate = new TranslateAnimation(
+                0,                 // fromXDelta
+                0,                 // toXDelta
+                view.getHeight(),  // fromYDelta
+                0);                // toYDelta
+        animate.setDuration(500);
+        animate.setFillAfter(true);
+        view.startAnimation(animate);
+    }
+
+    // slide the view from its current position to below itself
+    public void slideDown(View view){
+        TranslateAnimation animate = new TranslateAnimation(
+                0,                 // fromXDelta
+                0,                 // toXDelta
+                0,                 // fromYDelta
+                view.getHeight()); // toYDelta
+        animate.setDuration(500);
+        animate.setFillAfter(true);
+        view.startAnimation(animate);
     }
 
 
@@ -280,9 +312,32 @@ public class Globalfunction {
                 JSONObject dataobj = new JSONObject(jsonResponse.getString("data"));
                 String username = dataobj.getString("username");
                 String role = dataobj.getString("role");
+                String role_id = dataobj.getString("role_id");
                 String buisness = dataobj.getString("business");
+                String menu_access = dataobj.getString("menu_access");
+                JSONArray master = dataobj.getJSONArray("master");
 
-                sharedPref.setJWTData(username,role,buisness);
+                List<String> org_code_arr = new ArrayList<>();
+                List<String> farm_code_arr = new ArrayList<>();
+
+
+                for (int i = 0; i < master.length(); i++) {
+                    JSONObject object = master.getJSONObject(i);
+                    org_code_arr.add(object.getString("org_code_arr"));
+                    farm_code_arr.add(object.getString("farm_code_arr"));
+                }
+
+                String str_org_code = org_code_arr.toString().replaceAll("\\[", "'").replaceAll("\\]","'").replaceAll(",","','").replaceAll(" ","");
+                String str_farm_code = farm_code_arr.toString().replaceAll("\\[", "'").replaceAll("\\]","'").replaceAll(",","','").replaceAll(" ","");
+
+                Log.d("inaaa",str_org_code);
+                Log.d("inaaa",str_farm_code);
+
+
+                sharedPref.setJWTData(username,role,buisness, str_org_code,str_farm_code,role_id,menu_access);
+
+
+
 
 
                 Log.d("swine", "role: " + sharedPref.getRole() + " buisness: " + sharedPref.getBU() + " user: " + sharedPref.getUser());
@@ -363,44 +418,77 @@ public class Globalfunction {
         DownloadManager dm = (DownloadManager) cont.getSystemService(DOWNLOAD_SERVICE);
         dm.enqueue(request);
 
+
+
     }
 
-//    public boolean DownloadPrintPDF(String URL){
-//        boolean flag = true;
-//        boolean downloading =true;
-//        try {
-//            url = new URL(URL);
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//        fileName = url.getPath();
-//        fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
-//
-//        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-//        String fileNamex = folder.getPath() + "/" + fileName;
-//        File myFile = new File(fileNamex);
-//        if(myFile.exists()) {
-//            System.out.println("exists");
-//            myFile.delete();
-//        }
-//
-//        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(URL + ""));
-//        request.setTitle(fileName);
-//        request.setMimeType("applcation/pdf");
-//        request.allowScanningByMediaScanner();
-//        request.setAllowedOverMetered(true);
-//        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-//            request.allowScanningByMediaScanner();
+
+
+    boolean ifdownloadtrue = false;
+    public boolean DownloadPrintPDF(String URL){
+
+        try {
+            url = new URL(URL);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        fileName = url.getPath();
+        fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
+
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        String fileNamex = folder.getPath() + "/" + fileName;
+        File myFile = new File(fileNamex);
+        if(myFile.exists()) {
+            System.out.println("exists");
+            myFile.delete();
+        }
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(URL + ""));
+        request.setTitle(fileName);
+        request.setMimeType("applcation/pdf");
+        request.allowScanningByMediaScanner();
+        request.setVisibleInDownloadsUi(false);
+        request.setAllowedOverMetered(true);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            request.allowScanningByMediaScanner();
 //            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-//        }
-//        isFileExists(fileName);
-//        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
-//        DownloadManager dm = (DownloadManager) cont.getSystemService(DOWNLOAD_SERVICE);
-//        dm.enqueue(request);
+        }
+        isFileExists(fileName);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+        DownloadManager dm = (DownloadManager) cont.getSystemService(DOWNLOAD_SERVICE);
+        dm.enqueue(request);
+
+        long downloadId = 100;
+
+        Cursor cursor = dm.query(new DownloadManager.Query().setFilterById(downloadId));
+
+        if (cursor != null && cursor.moveToNext()) {
+            int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+            cursor.close();
 //
-//
-//    }
+//            if (status == DownloadManager.STATUS_FAILED) {
+//                // do something when failed
+//                ifdownloadtrue =  false;
+//            }
+//            else if (status == DownloadManager.STATUS_PENDING || status == DownloadManager.STATUS_PAUSED) {
+//                // do something pending or paused
+//                ifdownloadtrue =  false;
+//            }
+//            else if (status == DownloadManager.STATUS_SUCCESSFUL) {
+//                // do something when successful
+//                ifdownloadtrue = true;
+//            }
+//            else if (status == DownloadManager.STATUS_RUNNING) {
+//                // do something when running
+//            }
+            if (status == DownloadManager.STATUS_SUCCESSFUL) {
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+            }
+        }
+        return true;
+
+    }
 
     private boolean isFileExists(String filename){
         File folder1 = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
@@ -420,6 +508,9 @@ public class Globalfunction {
         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_GRANT_READ_URI_PERMISSION);
         v.getContext().startActivity(i);
     }
+
+
+
 
 
 

@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-48:/values-nb/values-nb.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-51:/values-nb/values-nb.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\800aa833efbf0224974ab853a1c0784f\\transformed\\preference-1.2.0\\res\\values-nb\\values-nb.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,175,262,340,482,651,730",
-                        "endColumns": "69,86,77,141,168,78,75",
-                        "endOffsets": "170,257,335,477,646,725,801"
-                    },
-                    "to": {
-                        "startLines": "37,39,88,90,93,94,95",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3285,3419,7202,7358,7681,7850,7929",
-                        "endColumns": "69,86,77,141,168,78,75",
-                        "endOffsets": "3350,3501,7275,7495,7845,7924,8000"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\0c734a8f9451ded3159b05d46fc9a23a\\transformed\\core-1.7.0\\res\\values-nb\\values-nb.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "92",
-                        "startColumns": "4",
-                        "startOffsets": "7580",
-                        "endColumns": "100",
-                        "endOffsets": "7676"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\f053ca72a4906620f9d7f529c412475e\\transformed\\appcompat-1.4.2\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\4d669feee3bbcaf630ded0ac4934be61\\transformed\\appcompat-1.4.2\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\bfec8dfcaf6c34e166a516bbd7a3f400\\transformed\\material-1.6.1\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\d43e3521778d978d0b5ae04569a0c85e\\transformed\\preference-1.2.0\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,175,262,340,482,651,730",
+                        "endColumns": "69,86,77,141,168,78,75",
+                        "endOffsets": "170,257,335,477,646,725,801"
+                    },
+                    "to": {
+                        "startLines": "37,39,88,90,93,94,95",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3285,3419,7202,7358,7681,7850,7929",
+                        "endColumns": "69,86,77,141,168,78,75",
+                        "endOffsets": "3350,3501,7275,7495,7845,7924,8000"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -71,6 +54,23 @@
                         "endLines": "5,33,34,35,36,38,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,89",
                         "endColumns": "12,86,98,118,81,63,91,67,59,86,61,63,67,64,53,108,57,61,53,74,119,81,79,103,77,79,87,66,65,67,73,89,70,77,69,69,88,77,87,89,71,71,83,50,65,80,82,61,63,62,99,97,92,97,77",
                         "endOffsets": "261,2980,3079,3198,3280,3414,3593,3661,3721,3808,3870,3934,4002,4067,4121,4230,4288,4350,4404,4479,4599,4681,4761,4865,4943,5023,5111,5178,5244,5312,5386,5476,5547,5625,5695,5765,5854,5932,6020,6110,6182,6254,6338,6389,6455,6536,6619,6681,6745,6808,6908,7006,7099,7197,7353"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\c61287263f7ce0bc369b924eb1beec7d\\transformed\\core-1.7.0\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "92",
+                        "startColumns": "4",
+                        "startOffsets": "7580",
+                        "endColumns": "100",
+                        "endOffsets": "7676"
                     }
                 }
             ]

@@ -5,6 +5,12 @@ import android.content.SharedPreferences;
 
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class SharedPref {
 
     public static final String TAG = "Swine";
@@ -19,7 +25,12 @@ public class SharedPref {
     private static final String SHARED_KEEP_SIGNED_IN = "false";
     private static final String JWT_USERNAME = "JWT_USERNAME";
     private static final String JWT_ROLE = "JWT_ROLE";
+    private static final String JWT_ORG_CODE = "JWT_ORG_CODE";
+    private static final String JWT_FARM_CODE = "JWT_FARM_CODE";
     private static final String JWT_BU = "JWT_BU";
+    private static final String JWT_ROLE_ID = "JWT_ROLE_ID";
+    private static final String JWT_MENU_ACCESS = "JWT_MENU_ACCESS";
+
 
 
     public SharedPref(Context context){
@@ -34,14 +45,24 @@ public class SharedPref {
     }
 
 
-    public boolean setJWTData(String username,String role,String bu){
+    public boolean setJWTData(String username, String role, String bu, String org_code, String farm_code,String role_id,String menu_access){
         sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         editor.putString(JWT_USERNAME,username);
         editor.putString(JWT_ROLE,role);
         editor.putString(JWT_BU,bu);
+        editor.putString(JWT_ORG_CODE, org_code);
+        editor.putString(JWT_FARM_CODE, farm_code);
+        editor.putString(JWT_ROLE_ID,role_id);
+        editor.putString(JWT_MENU_ACCESS,menu_access);
         editor.apply();
         return true;
+    }
+
+    protected Set<String> arr (String item){
+        Set<String> hs = sharedPreferences.getStringSet(item, new HashSet<String>());
+        Set<String> in = new HashSet<String>(hs);
+        return in;
     }
 
     public boolean signout(String logout){
@@ -65,6 +86,26 @@ public class SharedPref {
     public String getRole(){
         sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
         return sharedPreferences.getString(JWT_ROLE, "");
+    }
+
+    public String getRole_id(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_ROLE_ID, "");
+    }
+
+    public String getJwtMenuAccess(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_MENU_ACCESS, "");
+    }
+
+    public String getOrg_code(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_ORG_CODE, "");
+    }
+
+    public String getFarm_code(){
+        sharedPreferences = cont.getSharedPreferences(SHARED_DATA,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(JWT_FARM_CODE, "");
     }
 
     public String getBU(){

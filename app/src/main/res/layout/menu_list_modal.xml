@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <CheckBox
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/ALL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:buttonTint="@color/teal_700"
+            android:text="CHECK ALL" />
+
+
+        <ListView
+            android:layout_below="@+id/ALL"
+            android:id="@+id/listData"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            tools:listitem="@layout/menu_list_item" />
+
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/listData"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_icons8_multiply"
+                app:iconGravity="textStart"
+                android:id="@+id/cancel"
+                android:backgroundTint="#E3DBDA"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:text="Cancel"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:enabled="false"
+                app:cornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_icons8_done"
+                app:iconGravity="textStart"
+                android:id="@+id/done"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:backgroundTint="@color/odd"
+                android:text="Done"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

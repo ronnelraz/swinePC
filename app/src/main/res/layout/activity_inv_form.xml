@@ -79,222 +79,44 @@
             android:textSize="18sp"
             tools:text="Role : IT - IT Department" />
 
+        <TextView
+            android:id="@+id/org_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/role"
+            android:drawableLeft="@drawable/ic_jwt_role"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/purple_200"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:gravity="center|left"
+            android:textSize="18sp"
+            tools:text="Role : IT - IT Department" />
+
+        <TextView
+            android:id="@+id/farm_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/org_code"
+            android:drawableLeft="@drawable/ic_jwt_role"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/purple_200"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:gravity="center|left"
+            android:textSize="18sp"
+            tools:text="Role : IT - IT Department" />
+
+
     </RelativeLayout>
 
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_below="@+id/menuheader"
-        android:id="@+id/trasaction_list"
-        android:onClick="transactionlist"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="fill_horizontal"
-        android:background="@drawable/radius_border"
-        app:backgroundTint="@color/shimmer_placeholder"
-        app:iconTint="@color/tabBackgroundColor"
-        app:icon="@drawable/ic_icons8_document"
-        app:iconGravity="textTop"
-        app:elevation="10dp"
-        app:iconSize="70sp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/cpf_imm_sook_bold"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="Transaction List" />
-
-
-
-
-        <GridLayout
-            android:layout_below="@+id/trasaction_list"
-            android:background="@drawable/radius_border"
-            android:layout_centerInParent="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:useDefaultMargins="true"
-            android:columnCount="2">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/create"
-                android:onClick="create"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/tabBackgroundColor"
-                app:icon="@drawable/create"
-                app:iconGravity="textTop"
-                app:elevation="10dp"
-                app:iconSize="70sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:text="Create" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/edit"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/purple_200"
-                app:elevation="10dp"
-                app:icon="@drawable/edit"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:onClick="edit"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Edit" />
-
-            <com.google.android.material.button.MaterialButton
-                android:onClick="confirm"
-                android:id="@+id/confirm"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/purple_200"
-                app:elevation="10dp"
-                app:icon="@drawable/checked"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Confirm" />
-
-            <com.google.android.material.button.MaterialButton
-                android:onClick="cancel"
-                android:id="@+id/cancel"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/purple_200"
-                app:elevation="10dp"
-                app:icon="@drawable/ic_icons8_cancel"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Cancel" />
-
-
-
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/pdf"
-                android:onClick="pdf"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/tabBackgroundColor"
-                app:elevation="10dp"
-                app:icon="@drawable/icons8_pdf_1"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Generate PDF" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/upload"
-                android:onClick="upload"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/tabBackgroundColor"
-                app:elevation="10dp"
-                app:icon="@drawable/ic_icons8_import_file"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="UPLOAD File" />
-
-
-
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/FarmSetup"
-                android:onClick="FarmSetup"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/tabBackgroundColor"
-                app:elevation="10dp"
-                app:icon="@drawable/icons8_smart_home_checked"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Farm setup" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/report"
-                android:fontFamily="@font/cpf_imm_sook_bold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center"
-                android:layout_gravity="fill_horizontal"
-                android:background="@drawable/radius_border"
-                app:backgroundTint="@color/shimmer_placeholder"
-                app:iconTint="@color/purple_200"
-                app:elevation="10dp"
-                app:icon="@drawable/ic_icons8_report_file"
-                app:iconGravity="textTop"
-                app:iconSize="70sp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Report" />
-
-
-
-        </GridLayout>
-
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menuheader"
+        tools:listitem="@layout/menu_list_items"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="10" />
 
 
 

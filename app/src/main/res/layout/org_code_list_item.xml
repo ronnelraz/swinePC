@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <CheckBox
+        tools:text="0000000SW"
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:buttonTint="@color/purple_500"
+        android:paddingBottom="18dp"/>
+
+    <LinearLayout
+        android:gravity="center|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/org_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_code"
+            android:textSize="15sp" />
+
+        <TextView
+            android:textColor="#000"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farm Name"
+            android:id="@+id/farmName"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

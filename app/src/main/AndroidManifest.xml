@@ -21,6 +21,9 @@
         android:theme="@style/Theme.Physical_counting"
         tools:replace="android:allowBackup">
         <activity
+            android:name=".user_setup"
+            android:exported="false" />
+        <activity
             android:name=".transaction"
             android:exported="false" />
         <activity

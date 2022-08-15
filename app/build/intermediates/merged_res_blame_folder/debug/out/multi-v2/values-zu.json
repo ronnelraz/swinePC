@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-48:/values-zu/values-zu.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-51:/values-zu/values-zu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\800aa833efbf0224974ab853a1c0784f\\transformed\\preference-1.2.0\\res\\values-zu\\values-zu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,176,270,347,485,654,735",
-                        "endColumns": "70,93,76,137,168,80,77",
-                        "endOffsets": "171,265,342,480,649,730,808"
-                    },
-                    "to": {
-                        "startLines": "37,39,88,90,93,94,95",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3358,3496,7508,7667,7988,8157,8238",
-                        "endColumns": "70,93,76,137,168,80,77",
-                        "endOffsets": "3424,3585,7580,7800,8152,8233,8311"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\f053ca72a4906620f9d7f529c412475e\\transformed\\appcompat-1.4.2\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\4d669feee3bbcaf630ded0ac4934be61\\transformed\\appcompat-1.4.2\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\bfec8dfcaf6c34e166a516bbd7a3f400\\transformed\\material-1.6.1\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\c61287263f7ce0bc369b924eb1beec7d\\transformed\\core-1.7.0\\res\\values-zu\\values-zu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "92",
+                        "startColumns": "4",
+                        "startOffsets": "7887",
+                        "endColumns": "100",
+                        "endOffsets": "7983"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,20 +57,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\0c734a8f9451ded3159b05d46fc9a23a\\transformed\\core-1.7.0\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\d43e3521778d978d0b5ae04569a0c85e\\transformed\\preference-1.2.0\\res\\values-zu\\values-zu.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,176,270,347,485,654,735",
+                        "endColumns": "70,93,76,137,168,80,77",
+                        "endOffsets": "171,265,342,480,649,730,808"
                     },
                     "to": {
-                        "startLines": "92",
-                        "startColumns": "4",
-                        "startOffsets": "7887",
-                        "endColumns": "100",
-                        "endOffsets": "7983"
+                        "startLines": "37,39,88,90,93,94,95",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3358,3496,7508,7667,7988,8157,8238",
+                        "endColumns": "70,93,76,137,168,80,77",
+                        "endOffsets": "3424,3585,7580,7800,8152,8233,8311"
                     }
                 }
             ]

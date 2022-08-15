@@ -155,7 +155,7 @@ public class Login extends AppCompatActivity {
         }
         else{
           data.Preloader(this,"Please wait...");
-            API.getClient().loginAPI(getusername,getPassword).enqueue(new Callback<Object>() {
+            API.getClient().loginAPI(getusername.toLowerCase(),getPassword).enqueue(new Callback<Object>() {
                 @Override
                 public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                     try {

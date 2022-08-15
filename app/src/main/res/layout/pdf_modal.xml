@@ -59,15 +59,15 @@
                <com.google.android.material.button.MaterialButton
                    android:id="@+id/moreOption"
                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                   app:cornerRadius="20dp"
-                   android:backgroundTint="@color/odd"
                    android:layout_width="0dp"
                    android:layout_height="wrap_content"
-                   android:layout_weight="0.4"
-                   android:text="more"
                    android:layout_marginLeft="10dp"
+                   android:layout_weight="0.4"
+                   android:backgroundTint="@color/odd"
+                   android:text="more"
+                   app:cornerRadius="20dp"
                    app:icon="@drawable/ic_icons8_menu_vertical"
-                   app:iconGravity="textStart"/>
+                   app:iconGravity="textStart" />
 
            </LinearLayout>
 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="@color/bgEdit"
+            android:drawableLeft="@drawable/pspdf__ic_search"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/black"
+            android:hint="Search Org code | Farm Name"
+            android:singleLine="true" />
+
+
+        <ListView
+            android:id="@+id/listData"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@+id/search"
+            tools:listitem="@layout/org_code_list_item" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_renderMode="automatic" />
+
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/listData"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_icons8_multiply"
+                app:iconGravity="textStart"
+                android:id="@+id/cancel"
+                android:backgroundTint="#E3DBDA"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:text="Cancel"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:enabled="false"
+                app:cornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_icons8_done"
+                app:iconGravity="textStart"
+                android:id="@+id/done"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:backgroundTint="@color/odd"
+                android:text="Done"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

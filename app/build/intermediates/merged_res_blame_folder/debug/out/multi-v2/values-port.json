@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-48:/values-port/values-port.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-51:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\f053ca72a4906620f9d7f529c412475e\\transformed\\appcompat-1.4.2\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\4d669feee3bbcaf630ded0ac4934be61\\transformed\\appcompat-1.4.2\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

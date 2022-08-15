@@ -8,4 +8,10 @@
         <item>Farm Manager</item>
         <item>Clerk Manager</item>
     </string-array>
+
+
+    <string-array name="AdminList">
+        <item>CLERK</item>
+        <item>ACCOUNTING</item>
+    </string-array>
 </resources>

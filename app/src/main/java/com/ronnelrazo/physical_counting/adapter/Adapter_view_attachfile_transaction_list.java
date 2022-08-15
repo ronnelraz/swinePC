@@ -44,6 +44,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.List;
 
 import retrofit2.Call;
@@ -101,16 +102,22 @@ public class Adapter_view_attachfile_transaction_list extends RecyclerView.Adapt
             @Override
             public void onClick(View v) {
                 String PDF =  config.URLBKFILE+getData.getFile();
-                Globalfunction.getInstance(v.getContext()).DownloadPDFURL(PDF);
-//                PrintManager printManager = (PrintManager) v.getContext().getSystemService(Context.PRINT_SERVICE);
-//                try {
-//                    PrintDocumentAdapter printDocumentAdapter = new PdfDocumentAdapter(v.getContext(),PDF,getData.getFile().split("/")[1]);
-//                    printManager.print("Document",printDocumentAdapter,new PrintAttributes.Builder().build());
-//                }catch (Exception ex){
-//                    Log.e("swine",""+ex.getMessage());
-//                    Toast.makeText(v.getContext(), "Can't read pdf file", Toast.LENGTH_SHORT).show();
+                boolean dl = Globalfunction.getInstance(v.getContext()).DownloadPrintPDF(PDF);
+                if(dl){
+                    PrintManager printManager = (PrintManager) v.getContext().getSystemService(Context.PRINT_SERVICE);
+                    try {
+                        PrintDocumentAdapter printDocumentAdapter = new PdfDocumentAdapter(v.getContext(),getData.getFile().split("/")[1]);
+                        printManager.print("Document",printDocumentAdapter,new PrintAttributes.Builder().build());
+                    }catch (Exception ex){
+                        Log.e("swine",""+ex.getMessage());
+                        Toast.makeText(v.getContext(), "Can't read pdf file", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+                else{
+                    Toast.makeText(mContext, "error", Toast.LENGTH_SHORT).show();
+                }
 //
-//                }
             }
         });
 

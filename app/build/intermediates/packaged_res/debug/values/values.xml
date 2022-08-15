@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="AdminList">
+        <item>CLERK</item>
+        <item>ACCOUNTING</item>
+    </string-array>
     <string-array name="stepLabels">
         <item>Business Area</item>
         <item>Form</item>
@@ -22,6 +26,7 @@
     <color name="tabBackgroundColor">#3E9ED3</color>
     <color name="teal_200">#2980b9</color>
     <color name="teal_700">#3498db</color>
+    <color name="unchecked">#bdc3c7</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Swine Physical Counting</string>
     <string name="first_fragment_label">First Fragment</string>

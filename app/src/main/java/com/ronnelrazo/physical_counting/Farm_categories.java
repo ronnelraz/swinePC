@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
@@ -70,7 +71,7 @@ public class Farm_categories extends AppCompatActivity {
             }
         });
         recyclerView.setLayoutManager(gd);
-        LoadFarmlist();
+        LoadFarmlist(sharedPref.getRole(), sharedPref.getOrg_code(), sharedPref.getFarm_code());
 
 
         logout.setOnClickListener(v -> {
@@ -89,10 +90,11 @@ public class Farm_categories extends AppCompatActivity {
 
     }
 
-    private void LoadFarmlist() {
+    private void LoadFarmlist(String role,String org_code,String farm_code) {
+        Log.d("org_code_list",org_code);
         data.Preloader(this,"Please wait...");
         items.clear();
-        API_.getClient().farmAPI().enqueue(new Callback<Object>() {
+        API_.getClient().farmAPI(role,org_code,farm_code).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

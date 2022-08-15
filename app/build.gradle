@@ -66,7 +66,7 @@ dependencies {
     implementation 'com.auth0:java-jwt:4.0.0'
     //pdf viewer
     implementation 'es.voghdev.pdfviewpager:library:1.1.2'
-    implementation 'com.pspdfkit:pspdfkit:8.2.1'
+    implementation 'com.pspdfkit:pspdfkit:8.3.0'
     implementation 'com.ixuea:android-downloader:3.0.0'
     implementation 'com.shuhart.stepview:stepview:1.5.1'
     implementation 'com.github.skydoves:powerspinner:1.2.3'
@@ -77,6 +77,10 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'com.daimajia.swipelayout:library:1.2.0'
+//    implementation 'com.wefika:flowlayout:0.4.1'
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'com.github.mahimrocky:TagView:1.0.3'
+    implementation 'co.lujun:androidtagview:1.1.7'
 
 
 }

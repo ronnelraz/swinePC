@@ -20,4 +20,6 @@
     <color name="shimmer_placeholder">#dddddd</color>
     <color name="munibtn_color">#BEF1EC</color>
     <color name="menubtn_text">#365471</color>
+
+    <color name="unchecked">#bdc3c7</color>
 </resources>
