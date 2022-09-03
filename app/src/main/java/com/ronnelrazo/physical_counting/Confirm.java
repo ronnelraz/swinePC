@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
@@ -66,6 +67,10 @@ public class Confirm extends AppCompatActivity {
     private List<model_confirm_list> list =  new ArrayList<>();
     private ArrayList<CheckBox> checkBoxes = new ArrayList<>();
 
+
+    @BindView(R.id.loading)
+    LottieAnimationView loading;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,10 +116,16 @@ public class Confirm extends AppCompatActivity {
                     data.flag(selectedItemlist.get(i).getAudit_no(),"Y",sharedPref.getUser());
                     confirm.setEnabled(false);
                     getFarmList(getorg_code,getAudit_date);
+                    adapter.notifyDataSetChanged();
+                    adapter.notifyItemRemoved(i);
+                    list.clear();
+                    list.clear();
                 }
                 else{
+                    adapter.notifyDataSetChanged();
+                    adapter.notifyItemRemoved(i);
                     data.flag(selectedItemlist.get(i).getAudit_no(),"Y",sharedPref.getUser());
-                    getFarmList(getorg_code,getAudit_date);
+//                    getFarmList(getorg_code,getAudit_date);
 
                 }
 
@@ -201,6 +212,10 @@ public class Confirm extends AppCompatActivity {
 
     public void getFarmList(String org_code,String date) {
         list.clear();
+        loading.setVisibility(View.VISIBLE);
+        loading.setAnimation(R.raw.loading);
+        loading.loop(true);
+        loading.playAnimation();
         API.getClient().confirm_list(sharedPref.getUser(),org_code,date).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -211,6 +226,9 @@ public class Confirm extends AppCompatActivity {
                     JSONArray result = jsonResponse.getJSONArray("data");
 
                     if(success){
+                        loading.setVisibility(View.GONE);
+                        loading.loop(true);
+                        loading.playAnimation();
                         for (int i = 0; i < result.length(); i++) {
 
                             JSONObject object = result.getJSONObject(i);
@@ -235,12 +253,19 @@ public class Confirm extends AppCompatActivity {
                     }
                     else{
                         list.clear();
-                        Toast.makeText(getApplicationContext(), "No Record Found!", Toast.LENGTH_SHORT).show();
+                        loading.setAnimation(R.raw.nodatafile);
+                        loading.setVisibility(View.VISIBLE);
+                        loading.loop(true);
+                        loading.playAnimation();
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage() + " Error");
+                    loading.setAnimation(R.raw.nodatafile);
+                    loading.setVisibility(View.VISIBLE);
+                    loading.loop(true);
+                    loading.playAnimation();
 
                 }
             }
@@ -249,6 +274,10 @@ public class Confirm extends AppCompatActivity {
             public void onFailure(Call<Object> call, Throwable t) {
                 if (t instanceof IOException) {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                    loading.setAnimation(R.raw.nodatafile);
+                    loading.setVisibility(View.VISIBLE);
+                    loading.loop(true);
+                    loading.playAnimation();
 
                 }
             }

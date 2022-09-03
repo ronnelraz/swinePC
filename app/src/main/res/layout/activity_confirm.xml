@@ -208,12 +208,23 @@ tools:context=".Confirm">
 </com.google.android.material.appbar.AppBarLayout>
 
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/data"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/appbar"
-    android:layout_marginTop="5dp"
-    tools:listitem="@layout/confirm_list" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_renderMode="automatic" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_marginTop="5dp"
+        tools:listitem="@layout/confirm_list" />
 
 </RelativeLayout>

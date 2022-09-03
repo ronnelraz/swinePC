@@ -4209,6 +4209,7 @@ id loading_text
 id locale
 id location
 id login
+id loginlocal
 id logo
 id logout
 id longti
@@ -6061,6 +6062,7 @@ string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
 string title_activity_material_demo
 string title_login
+string titlebar
 string v7_preference_off
 string v7_preference_on
 style AlertDialog_AppCompat

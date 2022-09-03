@@ -72,6 +72,7 @@
                 android:layout_height="wrap_content"
                 tools:text="Org_name :"/>
             <TextView
+                android:layout_marginLeft="10dp"
                 android:id="@+id/farmname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

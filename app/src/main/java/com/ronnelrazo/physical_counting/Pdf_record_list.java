@@ -25,6 +25,7 @@ import com.ronnelrazo.physical_counting.adapter.Adapter_Feed;
 import com.ronnelrazo.physical_counting.adapter.Adapter_PDFReport;
 import com.ronnelrazo.physical_counting.connection.API;
 import com.ronnelrazo.physical_counting.connection.API_;
+import com.ronnelrazo.physical_counting.connection.config;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.model.modal_pdf_report;
 import com.ronnelrazo.physical_counting.model.model_feed;
@@ -158,10 +159,10 @@ public class Pdf_record_list extends AppCompatActivity {
 
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF","checklistPDF");
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF","BreederPDF");
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF","FeedPDF");
-                            Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF","MedPDF");
+                            Webhook(config.URL+"checklistPDF","checklistPDF");
+                            Webhook(config.URL+"BreederPDF","BreederPDF");
+                            Webhook(config.URL+"FeedPDF","FeedPDF");
+                            Webhook(config.URL+"MedPDF","MedPDF");
                             modal_pdf_report item = new modal_pdf_report(
                                     object.getString("org_name"),
                                     object.getString("farm_name"),

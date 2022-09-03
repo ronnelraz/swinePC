@@ -536,6 +536,13 @@ public interface APIInterface {
     Call<Object> org_code_list();
 
 
+    @POST("get_offline_authorize")
+    Call<Object> get_offline_authorize();
+
+
+
+
+
     @POST("role_type")
     Call<Object> role_type();
 

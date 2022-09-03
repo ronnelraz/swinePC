@@ -144,14 +144,42 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/login"
             android:onClick="login"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="400dp"
             android:layout_height="0.4in"
-            android:layout_margin="2mm"
-            android:text="Login"
-            android:textSize="30px"
+            android:layout_marginLeft="2mm"
+            android:layout_marginRight="2mm"
+            android:text="Login online"
+            android:textSize="20px"
+            app:icon="@drawable/ic_icons8_key"
+            android:backgroundTint="@color/purple_200"
+            app:iconGravity="textStart"
+            app:cornerRadius="50dp"
+            app:elevation="10px"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginBottom="30dp"
+            android:id="@+id/loginlocal"
+            android:onClick="loginlocal"
+            android:layout_gravity="center"
+            android:layout_width="400dp"
+            android:layout_height="0.4in"
+            android:layout_marginLeft="2mm"
+            android:layout_marginRight="2mm"
+            android:text="Login offline"
+            android:textSize="20px"
+            android:backgroundTint="@color/material_dynamic_neutral50"
             app:icon="@drawable/ic_icons8_key"
             app:iconGravity="textStart"
-            app:cornerRadius="10dp"
+            app:cornerRadius="50dp"
             app:elevation="10px"/>
 
 

@@ -53,6 +53,7 @@ import com.google.gson.Gson;
 import com.novoda.merlin.Merlin;
 import com.pspdfkit.configuration.activity.PdfActivityConfiguration;
 import com.pspdfkit.ui.PdfActivity;
+import com.ronnelrazo.physical_counting.Database.AUDIT_USER_AUTHORIZE_OFFLINE;
 import com.ronnelrazo.physical_counting.Database.MyDatabaseHelper;
 import com.ronnelrazo.physical_counting.Database.TABLE_BREEDER_DETAILS;
 import com.ronnelrazo.physical_counting.Database.TABLE_FEED_DETAILS;
@@ -809,6 +810,36 @@ public class Globalfunction {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
+    }
+
+    public Cursor offline_authorize_checker(String username,String password){
+        String query = "SELECT *  FROM AUDIT_USER_AUTHORIZE_OFFLINE where USERNAME = '"+username+"' and PASSWORD = '"+password+"'";
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    public boolean Save_offline_authorize(String username,String password,String group,String login,String role,String role_id,String business,String menu_access){
+        AUDIT_USER_AUTHORIZE_OFFLINE column = new AUDIT_USER_AUTHORIZE_OFFLINE();
+        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(column.USERNAME, username);
+        cv.put(column.PASSWORD, password);
+        cv.put(column.GROUP, group);
+        cv.put(column.LOGIN, login);
+        cv.put(column.ROLE, role);
+        cv.put(column.ROLE_ID, role_id);
+        cv.put(column.BUSINESS, business);
+        cv.put(column.MENU_ACCESS, menu_access);
+        long result = db.insert(column.AUDIT_USER_AUTHORIZE_OFFLINE,null, cv);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
     }
 
 

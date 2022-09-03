@@ -219,6 +219,7 @@ id listData
 id loading
 id location
 id login
+id loginlocal
 id logo
 id logout
 id longti
@@ -397,6 +398,7 @@ string sampleURL
 string second_fragment_label
 string title_activity_material_demo
 string title_login
+string titlebar
 style BottomSheetDialog
 style Theme.Physical_counting
 style bottomSheetStyleWrapper

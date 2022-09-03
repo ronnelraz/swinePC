@@ -389,31 +389,44 @@ public class user_setup extends AppCompatActivity {
             save.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(roleType.equals("0")){
-                        Toast.makeText(user_setup.this, "Please Select Role Type", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(tagview.size() == 0){
-                        Toast.makeText(user_setup.this, "Please Select Org Code", Toast.LENGTH_SHORT).show();
-                        btnorg_code.performClick();
+
+
+                    if(roleType.equals("RL003")){
+                        String getuserAD = ad.getText().toString().trim();
+                        String org_code = roleType;
+                        String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
+                        save_map_menu(getuserAD,getMenus,org_code);
+                        Add_user_setup(getuserAD,org_code,"0000",0);
                     }
                     else{
-                        for(int i = 0; i < tagview.size(); i++){
-                            String getuserAD = ad.getText().toString().trim();
-                            String org_code = roleType;
-                            String getOrg_code = tagview.getTagText(i);
+                        if(roleType.equals("0")){
+                            Toast.makeText(user_setup.this, "Please Select Role Type", Toast.LENGTH_SHORT).show();
+                        }
+                        else if(tagview.size() == 0){
+                            Toast.makeText(user_setup.this, "Please Select Org Code", Toast.LENGTH_SHORT).show();
+                            btnorg_code.performClick();
+                        }
+                        else{
+                            for(int i = 0; i < tagview.size(); i++){
+                                String getuserAD = ad.getText().toString().trim();
+                                String org_code = roleType;
+                                String getOrg_code = tagview.getTagText(i);
 //                            Toast.makeText(user_setup.this, org_code, Toast.LENGTH_SHORT).show();
-                            if(!(i + 1 < tagview.size())){
-                                String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
-                                save_map_menu(getuserAD,getMenus,org_code);
-                                Add_user_setup(getuserAD,org_code,getOrg_code,0);
-                            }
-                            else{
-                                Add_user_setup(getuserAD,org_code,getOrg_code,1);
-                            }
+                                if(!(i + 1 < tagview.size())){
+                                    String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
+                                    save_map_menu(getuserAD,getMenus,org_code);
+                                    Add_user_setup(getuserAD,org_code,getOrg_code,0);
+                                }
+                                else{
+                                    Add_user_setup(getuserAD,org_code,getOrg_code,1);
+                                }
 
 
+                            }
                         }
                     }
+
+
 
                 }
             });
@@ -615,7 +628,8 @@ public class user_setup extends AppCompatActivity {
 
                     if(success){
                         if(last == 0){
-                            data.toast(R.raw.checked,"Added Successfully!" , Gravity.BOTTOM|Gravity.CENTER,0,50);
+                            data.toast(R.raw.checked,"Added Successfully!\nEmail Send to " + ad + "@cpf-phil.com" , Gravity.BOTTOM|Gravity.CENTER,0,50);
+                            loaduserlist("","","all");
                             ConfirmDialog.dismiss();
                         }
                     }
@@ -643,6 +657,9 @@ public class user_setup extends AppCompatActivity {
     protected  void roleType(Spinner role){
         role_id.clear();
         role_name.clear();
+        role_id.clear();
+        role_name.clear();
+
         API.getClient().role_type().enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {

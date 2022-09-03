@@ -212,5 +212,7 @@ public class Login extends AppCompatActivity {
     }
 
 
-
+    public void loginlocal(View view) {
+        Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT).show();
+    }
 }

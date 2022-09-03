@@ -225,6 +225,9 @@
         app:lottie_renderMode="automatic" />
 
 
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         tools:visibility="gone"
         android:id="@+id/data"

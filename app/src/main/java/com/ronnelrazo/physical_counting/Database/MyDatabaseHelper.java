@@ -18,6 +18,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private TABLE_BREEDER_DETAILS BREEDER_DETAILS = new TABLE_BREEDER_DETAILS();
     private TABLE_FEED_DETAILS FEED_DETAILS = new TABLE_FEED_DETAILS();
     private TABLE_MED_DETAILS MED_DETAILS = new TABLE_MED_DETAILS();
+    private AUDIT_USER_AUTHORIZE_OFFLINE offline_authorize = new AUDIT_USER_AUTHORIZE_OFFLINE();
+    private AUDIT_USER_MENU_MAP_OFFLINE offline_user_menu = new AUDIT_USER_MENU_MAP_OFFLINE();
 
 
 
@@ -28,6 +30,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         String header = "CREATE TABLE " + CHECKLIST_HEADER.TABLE_CHECKLIST_HEADER +
                         " (" + CHECKLIST_HEADER.ORG_CODE + " TEXT, " +
                                CHECKLIST_HEADER.FARM_CODE + " TEXT, " +
@@ -141,6 +144,25 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(med_details);
 
 
+        String off_line_authorize = "CREATE TABLE " + offline_authorize.AUDIT_USER_AUTHORIZE_OFFLINE +
+                " (" + offline_authorize.USERNAME + " TEXT, " +
+                offline_authorize.PASSWORD + " TEXT, " +
+                offline_authorize.GROUP + " TEXT, " +
+                offline_authorize.LOGIN + " TEXT, " +
+                offline_authorize.ROLE + " TEXT, " +
+                offline_authorize.ROLE_ID + " TEXT, " +
+                offline_authorize.BUSINESS + " TEXT," +
+                offline_authorize.MENU_ACCESS + " TEXT," +
+                "PRIMARY KEY(USERNAME, PASSWORD)  ); ";
+        db.execSQL(off_line_authorize);
+
+        String off_line_menu_access = "CREATE TABLE " + offline_user_menu.AUDIT_USER_MENU_MAP_OFFLINE +
+                " (" + offline_user_menu.org_code_arr + " TEXT, " +
+                offline_user_menu.farm_code_arr + " TEXT, " +
+                "PRIMARY KEY(org_code_arr, farm_code_arr)  ); ";
+        db.execSQL(off_line_menu_access);
+
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
@@ -157,6 +179,12 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
         db.execSQL("DROP TABLE IF EXISTS " + MED_DETAILS.TABLE_MED_DETAILS );
+        onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS " + offline_authorize.AUDIT_USER_AUTHORIZE_OFFLINE);
+        onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS " + offline_user_menu.AUDIT_USER_MENU_MAP_OFFLINE);
         onCreate(db);
 
     }

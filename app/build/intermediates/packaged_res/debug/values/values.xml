@@ -72,6 +72,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_material_demo">materialDemo</string>
     <string name="title_login">Please, login into your account</string>
+    <string name="titlebar">UAT-Swine Physical Count Menu</string>
     <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
 
