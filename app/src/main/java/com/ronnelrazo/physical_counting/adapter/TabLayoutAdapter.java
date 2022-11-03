@@ -29,15 +29,15 @@ public class TabLayoutAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
+//            case 0:
+//                return new Tab_contract();
             case 0:
-                return new Tab_contract();
-            case 1:
                 return new Tab_checklist();
-            case 2:
+            case 1:
                 return new Tab_breeder();
-            case 3:
+            case 2:
                 return new Tab_feed();
-            case 4:
+            case 3:
                 return new Tab_med();
             default:
                 return null;

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-51:/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-52:/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\c61287263f7ce0bc369b924eb1beec7d\\transformed\\core-1.7.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\5586099dc2be2a001572cf14c2426ba8\\transformed\\core-1.7.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\4d669feee3bbcaf630ded0ac4934be61\\transformed\\appcompat-1.4.2\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\8f5135f7ed417f5db736173dfc248e9c\\transformed\\appcompat-1.4.2\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\f135425267c911d6dc1cd95dbb25d72d\\transformed\\preference-1.2.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,176,263,343,495,664,751",
+                        "endColumns": "70,86,79,151,168,86,82",
+                        "endOffsets": "171,258,338,490,659,746,829"
+                    },
+                    "to": {
+                        "startLines": "38,40,89,91,94,95,96",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3447,3584,7485,7645,7985,8154,8241",
+                        "endColumns": "70,86,79,151,168,86,82",
+                        "endOffsets": "3513,3666,7560,7792,8149,8236,8319"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\bd4a99450df9efa1e9019504ea56c77f\\transformed\\material-1.6.1\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -54,23 +71,6 @@
                         "endLines": "6,34,35,36,37,39,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,90",
                         "endColumns": "12,79,93,131,80,65,92,67,62,102,65,55,70,59,53,111,56,60,53,75,124,86,82,108,81,82,87,66,65,73,77,88,75,75,74,71,89,72,91,95,71,75,95,52,66,86,86,61,63,62,104,103,95,106,79",
                         "endOffsets": "324,3135,3229,3361,3442,3579,3759,3827,3890,3993,4059,4115,4186,4246,4300,4412,4469,4530,4584,4660,4785,4872,4955,5064,5146,5229,5317,5384,5450,5524,5602,5691,5767,5843,5918,5990,6080,6153,6245,6341,6413,6489,6585,6638,6705,6792,6879,6941,7005,7068,7173,7277,7373,7480,7640"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\d43e3521778d978d0b5ae04569a0c85e\\transformed\\preference-1.2.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,176,263,343,495,664,751",
-                        "endColumns": "70,86,79,151,168,86,82",
-                        "endOffsets": "171,258,338,490,659,746,829"
-                    },
-                    "to": {
-                        "startLines": "38,40,89,91,94,95,96",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3447,3584,7485,7645,7985,8154,8241",
-                        "endColumns": "70,86,79,151,168,86,82",
-                        "endOffsets": "3513,3666,7560,7792,8149,8236,8319"
                     }
                 }
             ]

@@ -153,16 +153,19 @@ public class tab_from extends AppCompatActivity {
         //breeder
         Tab_breeder.orgCode = str_orgcode;
         Tab_breeder.farmOrg = str_farmcode;
+        Tab_breeder.cutoffDate = doc_date;
         //feed
         Tab_feed.orgCode = str_orgcode;
         Tab_feed.farmOrg = str_farmcode;
+        Tab_feed.cutoffDate = doc_date;
 
         //Med
         Tab_med.orgCode = str_orgcode;
         Tab_med.farmOrg = str_farmcode;
+        Tab_med.cutoffDate = doc_date;
 
 
-        tabs.addTab(tabs.newTab().setText("Contact"));
+//        tabs.addTab(tabs.newTab().setText("Contact"));
         tabs.addTab(tabs.newTab().setText("Checklist"));
         tabs.addTab(tabs.newTab().setText("Breeder"));
         tabs.addTab(tabs.newTab().setText("Feed"));
@@ -225,8 +228,9 @@ public class tab_from extends AppCompatActivity {
 
 
         btn_func[1].setOnClickListener(v -> {
-            data.Confirmation(v.getContext(),"Are you sure you want to cancel " + str_farmname + "?",R.drawable.ic_icons8_warning);
-            data.positive.setText("confirm");
+            data.Confirmation(v.getContext(),"Are you sure you want to exit?",R.drawable.ic_icons8_info);
+            data.positive.setText("Yes");
+            data.negative.setText("No");
             data.negative.setOnClickListener(v1 ->{
                 data.ConfirmDialog.dismiss();
             });

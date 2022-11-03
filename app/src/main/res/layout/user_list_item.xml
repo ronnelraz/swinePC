@@ -141,12 +141,11 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/view_menu_access"
-                        style="@style/Widget.Material3.Button.TextButton.Icon"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:backgroundTint="@color/odd"
+                        android:backgroundTint="@color/black"
                         android:text="View Access Menu"
                         android:textSize="11sp"
                         app:cornerRadius="20dp"
@@ -155,12 +154,11 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/farm_access"
-                        style="@style/Widget.Material3.Button.TextButton.Icon"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:backgroundTint="@color/odd"
+                        android:backgroundTint="#E4393965"
                         android:text="View Access Farm"
                         android:textSize="11sp"
                         app:cornerRadius="20dp"
@@ -213,12 +211,11 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/remove"
-                            style="@style/Widget.Material3.Button.TextButton.Icon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="5dp"
-                            android:backgroundTint="#F8EDED"
+                            app:backgroundTint="@color/white"
                             android:enabled="false"
                             android:text="remove"
                             android:textSize="11sp"

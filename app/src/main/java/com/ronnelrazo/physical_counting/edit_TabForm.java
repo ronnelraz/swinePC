@@ -90,7 +90,7 @@ public class edit_TabForm extends AppCompatActivity {
         getHeader(Getorg_code,Getfarm_code);
 
 
-        tabs.addTab(tabs.newTab().setText("Contact"));
+//        tabs.addTab(tabs.newTab().setText("Contact"));
         tabs.addTab(tabs.newTab().setText("Checklist"));
         tabs.addTab(tabs.newTab().setText("Breeder"));
         tabs.addTab(tabs.newTab().setText("Feed"));

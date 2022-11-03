@@ -51,7 +51,7 @@ public class Adapter_editPDF extends RecyclerView.Adapter<Adapter_editPDF.ViewHo
         holder.org_name.setText(String.format("%s (%s)", getData.getOrg_name(), getData.getOrg_code()));
         holder.farm_name.setText(String.format("%s (%s)", getData.getFarm_name(), getData.getFarm_code()));
         holder.audit_no.setText(getData.getAudit_no());
-        holder.audit_date.setText(getData.getDoc_date());
+        holder.audit_date.setText(getData.getAudit_date());
         holder.card.setOnClickListener(v -> {
           Log.d("swine",getData.getOrg_code() + " " + getData.getFarm_code());
              Globalfunction.getInstance(v.getContext()).intent(edit_TabForm.class,v.getContext());

@@ -1,327 +1,359 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.ronnelrazo.physical_counting"
-4    android:versionCode="1"
-5    android:versionName="1.0" >
+4    android:versionCode="2"
+5    android:versionName="1.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="25"
-8-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
+8-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml
+9-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:5-67
-11-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:22-64
+11-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-12-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:5-76
-12-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:22-73
+12-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:5-76
+12-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:6:22-73
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:5-79
-13-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:22-76
+13-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission
-14-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:5-81
+14-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:5-81
 15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-15-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:22-78
+15-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:8:22-78
 16        android:maxSdkVersion="29" />
-16-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:24:9-35
+16-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:24:9-35
 17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-17-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:5-80
-17-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:22-77
+17-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:5-80
+17-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:9:22-77
 18    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-18-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:5-82
-18-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:11:22-79
+18-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:5-82
+18-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:10:22-79
 19
 20    <queries>
-20-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:28:5-39:15
+20-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:28:5-39:15
 21        <intent>
-21-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:29:9-33:18
+21-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:29:9-33:18
 22            <action android:name="android.intent.action.SEND" />
-22-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:30:13-65
-22-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:30:21-62
+22-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:30:13-65
+22-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:30:21-62
 23
 24            <data android:mimeType="application/pdf" />
-24-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:13-56
-24-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:19-53
+24-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:13-56
+24-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:19-53
 25        </intent>
 26        <intent>
-26-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:34:9-38:18
+26-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:34:9-38:18
 27            <action android:name="android.intent.action.VIEW" />
-27-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:35:13-65
-27-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:35:21-62
+27-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:35:13-65
+27-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:35:21-62
 28
 29            <data android:mimeType="application/pdf" />
-29-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:13-56
-29-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:19-53
+29-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:13-56
+29-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:32:19-53
 30        </intent>
 31    </queries>
 32
 33    <application
-33-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:5-91:19
+33-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:12:5-106:19
 34        android:allowBackup="false"
-34-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:14:9-36
+34-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:14:9-36
 35        android:allowClearUserData="true"
-35-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-42
+35-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:15:9-42
 36        android:allowNativeHeapPointerTagging="false"
-36-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:42:9-54
+36-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:42:9-54
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.7.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\c61287263f7ce0bc369b924eb1beec7d\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-38        android:debuggable="true"
-39        android:extractNativeLibs="false"
-40        android:icon="@mipmap/ic_launcher"
-40-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:16:9-43
-41        android:label="@string/app_name"
-41-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:17:9-41
-42        android:largeHeap="true"
-42-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:43:9-33
-43        android:requestLegacyExternalStorage="true"
-43-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:18:9-52
-44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:19:9-54
-45        android:supportsRtl="true"
-45-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:9-35
-46        android:testOnly="true"
-47        android:theme="@style/Theme.Physical_counting" >
-47-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:9-55
-48        <activity
-48-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:9-25:40
-49            android:name="com.ronnelrazo.physical_counting.user_setup"
-49-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:13-39
-50            android:exported="false" />
-50-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:13-37
-51        <activity
-51-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:9-28:40
-52            android:name="com.ronnelrazo.physical_counting.transaction"
-52-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:13-40
-53            android:exported="false" />
-53-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-37
-54        <activity
-54-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:9-31:40
-55            android:name="com.ronnelrazo.physical_counting.upload_file"
-55-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-40
+37-->[androidx.core:core:1.7.0] C:\Users\RAZO\.gradle\caches\transforms-3\5586099dc2be2a001572cf14c2426ba8\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+38        android:configChanges="orientation|screenSize"
+38-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:13:9-55
+39        android:debuggable="true"
+40        android:extractNativeLibs="false"
+41        android:icon="@mipmap/ic_launcher"
+41-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:16:9-43
+42        android:label="@string/app_name"
+42-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:17:9-41
+43        android:largeHeap="true"
+43-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:43:9-33
+44        android:requestLegacyExternalStorage="true"
+44-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:18:9-52
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:19:9-54
+46        android:supportsRtl="true"
+46-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:20:9-35
+47        android:testOnly="true"
+48        android:theme="@style/Theme.Physical_counting" >
+48-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:21:9-55
+49        <activity
+49-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:23:9-26:40
+50            android:name="com.ronnelrazo.physical_counting.user_setup"
+50-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:25:13-39
+51            android:configChanges="orientation|screenSize"
+51-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:24:13-59
+52            android:exported="false" />
+52-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:26:13-37
+53        <activity
+53-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:27:9-30:40
+54            android:name="com.ronnelrazo.physical_counting.transaction"
+54-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:29:13-40
+55            android:configChanges="orientation|screenSize"
+55-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:28:13-59
 56            android:exported="false" />
-56-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:13-37
+56-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:30:13-37
 57        <activity
-57-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:9-34:40
-58            android:name="com.ronnelrazo.physical_counting.Cancel"
-58-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-35
-59            android:exported="false" />
-59-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-37
-60        <activity
-60-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:9-37:40
-61            android:name="com.ronnelrazo.physical_counting.Confirm"
-61-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:13-36
-62            android:exported="false" />
-62-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:13-37
-63        <activity
-63-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:9-40:40
-64            android:name="com.ronnelrazo.physical_counting.edit_TabForm"
-64-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:13-41
-65            android:exported="false" />
-65-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:40:13-37
-66        <activity
-66-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:9-43:40
-67            android:name="com.ronnelrazo.physical_counting.Edit_pdf"
-67-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:13-37
+57-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:31:9-34:40
+58            android:name="com.ronnelrazo.physical_counting.upload_file"
+58-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:33:13-40
+59            android:configChanges="orientation|screenSize"
+59-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:32:13-59
+60            android:exported="false" />
+60-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:34:13-37
+61        <activity
+61-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:35:9-38:40
+62            android:name="com.ronnelrazo.physical_counting.Cancel"
+62-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:37:13-35
+63            android:configChanges="orientation|screenSize"
+63-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:36:13-59
+64            android:exported="false" />
+64-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:38:13-37
+65        <activity
+65-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:39:9-42:40
+66            android:name="com.ronnelrazo.physical_counting.Confirm"
+66-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:41:13-36
+67            android:configChanges="orientation|screenSize"
+67-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:40:13-59
 68            android:exported="false" />
-68-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:13-37
+68-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:42:13-37
 69        <activity
-69-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:44:9-46:40
-70            android:name="com.ronnelrazo.physical_counting.Farm_setup"
-70-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:13-39
-71            android:exported="false" />
-71-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-37
-72        <activity
-72-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:47:9-49:40
-73            android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
-73-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:48:13-44
-74            android:exported="false" />
-74-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:13-37
-75        <activity
-75-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:50:9-52:40
-76            android:name="com.ronnelrazo.physical_counting.Integration_submenu"
-76-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:13-48
-77            android:exported="false" />
-77-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:52:13-37
-78        <activity
-78-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:53:9-55:40
-79            android:name="com.ronnelrazo.physical_counting.tab_from"
-79-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:54:13-37
+69-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:43:9-46:40
+70            android:name="com.ronnelrazo.physical_counting.edit_TabForm"
+70-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:45:13-41
+71            android:configChanges="orientation|screenSize"
+71-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:44:13-59
+72            android:exported="false" />
+72-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:46:13-37
+73        <activity
+73-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:47:9-50:40
+74            android:name="com.ronnelrazo.physical_counting.Edit_pdf"
+74-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:49:13-37
+75            android:configChanges="orientation|screenSize"
+75-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:48:13-59
+76            android:exported="false" />
+76-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:50:13-37
+77        <activity
+77-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:51:9-54:40
+78            android:name="com.ronnelrazo.physical_counting.Farm_setup"
+78-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:53:13-39
+79            android:configChanges="orientation|screenSize"
+79-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:52:13-59
 80            android:exported="false" />
-80-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:55:13-37
+80-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:54:13-37
 81        <activity
-81-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:9-58:40
-82            android:name="com.ronnelrazo.physical_counting.inv_form"
-82-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:57:13-37
-83            android:exported="false" />
-83-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:58:13-37
-84        <activity
-84-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:59:9-61:40
-85            android:name="com.ronnelrazo.physical_counting.Farm_categories"
-85-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:60:13-44
-86            android:exported="false" />
-86-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:61:13-37
-87        <activity
-87-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:62:9-70:20
-88            android:name="com.ronnelrazo.physical_counting.Login"
-88-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:63:13-34
-89            android:exported="true" >
-89-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:64:13-36
-90            <intent-filter>
-90-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:65:13-69:29
-91                <action android:name="android.intent.action.MAIN" />
-91-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:17-69
-91-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:25-66
-92
-93                <category android:name="android.intent.category.LAUNCHER" />
-93-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:68:17-77
-93-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:68:27-74
-94            </intent-filter>
-95        </activity>
-96        <activity
-96-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:71:9-73:40
-97            android:name="com.ronnelrazo.physical_counting.MainActivity"
-97-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:72:13-41
-98            android:exported="false" />
-98-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:73:13-37
-99        <activity
-99-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:74:9-76:59
-100            android:name="com.pspdfkit.ui.PdfActivity"
-100-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:75:13-55
-101            android:windowSoftInputMode="adjustNothing" />
-101-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:76:13-56
-102
-103        <provider
-103-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:78:9-86:20
-104            android:name="androidx.core.content.FileProvider"
-104-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:79:13-62
-105            android:authorities="com.ronnelrazo.physical_counting.provider"
-105-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:80:13-76
-106            android:exported="false"
-106-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:81:13-37
-107            android:grantUriPermissions="true" >
-107-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:82:13-47
-108            <meta-data
-108-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:83:13-85:53
-109                android:name="android.support.FILE_PROVIDER_PATHS"
-109-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:84:17-67
-110                android:resource="@xml/file_path" />
-110-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:85:17-50
-111        </provider>
-112
-113        <service
-113-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:88:9-90:40
-114            android:name="com.novoda.merlin.MerlinService"
-114-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:89:13-59
-115            android:exported="false" />
-115-->C:\Users\CPF Nigs\Desktop\physical_counting\app\src\main\AndroidManifest.xml:90:13-37
-116
-117        <activity
-117-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f3fefd1fd1a2f959f0ae3561be4096c4\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:27:9-29:72
-118            android:name="com.karumi.dexter.DexterActivity"
-118-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f3fefd1fd1a2f959f0ae3561be4096c4\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:28:13-60
-119            android:theme="@style/Dexter.Internal.Theme.Transparent" /> <!-- Printing pdf documents -->
-119-->[com.karumi:dexter:6.2.3] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f3fefd1fd1a2f959f0ae3561be4096c4\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:29:13-69
-120        <activity
-120-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:47:9-51:40
-121            android:name="com.pspdfkit.document.printing.PrintActivity"
-121-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:48:13-72
-122            android:configChanges="orientation|screenSize"
-122-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:49:13-59
-123            android:excludeFromRecents="true"
-123-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:50:13-46
-124            android:exported="false" /> <!-- Content provider used for initializing the library. -->
-124-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:51:13-37
-125        <provider
-125-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:54:9-57:40
-126            android:name="com.pspdfkit.PSPDFKitInitializationProvider"
-126-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:55:13-71
-127            android:authorities="com.ronnelrazo.physical_counting.com.pspdfkit.PSPDFKitInitializationProvider"
-127-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:56:13-95
-128            android:exported="false" />
-128-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:57:13-37
-129        <provider
-129-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:58:9-61:40
-130            android:name="com.pspdfkit.media.AssetsContentProvider"
-130-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:59:13-68
-131            android:authorities="com.ronnelrazo.physical_counting.pdf.assets"
-131-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:60:13-62
-132            android:exported="false" />
-132-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:61:13-37
-133        <provider
-133-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:62:9-67:54
-134            android:name="com.pspdfkit.document.sharing.DocumentSharingProvider"
-134-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:63:13-81
-135            android:authorities="com.ronnelrazo.physical_counting.pdf.share"
-135-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:64:13-61
-136            android:exported="true"
-136-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:65:13-36
-137            android:grantUriPermissions="true" />
-137-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d872a846a1828cb27f8dfe55b3b3d83b\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:66:13-47
-138
-139        <service
-139-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d161454a408b573d686d5d9e01c64d6f\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:10:9-16:19
-140            android:name="com.ixuea.android.downloader.DownloadService"
-140-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d161454a408b573d686d5d9e01c64d6f\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:11:13-72
-141            android:exported="true" >
-141-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d161454a408b573d686d5d9e01c64d6f\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:12:13-36
-142            <intent-filter>
-142-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d161454a408b573d686d5d9e01c64d6f\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:13:13-15:29
-143                <action android:name="com.ixuea.android.downloader.DOWNLOAD_SERVICE" />
-143-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d161454a408b573d686d5d9e01c64d6f\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:17-88
-143-->[com.ixuea:android-downloader:3.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\d161454a408b573d686d5d9e01c64d6f\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:25-85
-144            </intent-filter>
-145        </service>
-146        <service
-146-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\4c809ab7b46b613456317606a5a5cb4b\transformed\jetified-library-1.1.2\AndroidManifest.xml:12:9-15:19
-147            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
-147-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\4c809ab7b46b613456317606a5a5cb4b\transformed\jetified-library-1.1.2\AndroidManifest.xml:13:13-84
-148            android:exported="false" >
-148-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\CPF Nigs\.gradle\caches\transforms-3\4c809ab7b46b613456317606a5a5cb4b\transformed\jetified-library-1.1.2\AndroidManifest.xml:14:13-37
-149        </service>
-150
-151        <provider
-151-->[com.squareup.picasso:picasso:2.71828] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f70247c6e19e52f3b6ad7c9bd0baee4e\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-152            android:name="com.squareup.picasso.PicassoProvider"
-152-->[com.squareup.picasso:picasso:2.71828] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f70247c6e19e52f3b6ad7c9bd0baee4e\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-153            android:authorities="com.ronnelrazo.physical_counting.com.squareup.picasso"
-153-->[com.squareup.picasso:picasso:2.71828] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f70247c6e19e52f3b6ad7c9bd0baee4e\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-154            android:exported="false" />
-154-->[com.squareup.picasso:picasso:2.71828] C:\Users\CPF Nigs\.gradle\caches\transforms-3\f70247c6e19e52f3b6ad7c9bd0baee4e\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-155        <provider
-155-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-156            android:name="androidx.startup.InitializationProvider"
-156-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-157            android:authorities="com.ronnelrazo.physical_counting.androidx-startup"
-157-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-158            android:exported="false" >
-158-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-159            <meta-data
-159-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-160                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-160-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-161                android:value="androidx.startup" />
-161-->[androidx.emoji2:emoji2:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\55166facbbf2a1313baa8ab94e05819f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-162            <meta-data
-162-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b17b9092229c57f60fdbffb1af622591\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-163                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-163-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b17b9092229c57f60fdbffb1af622591\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-164                android:value="androidx.startup" />
-164-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\b17b9092229c57f60fdbffb1af622591\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-165        </provider>
+81-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:55:9-58:40
+82            android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
+82-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:57:13-44
+83            android:configChanges="orientation|screenSize"
+83-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:56:13-59
+84            android:exported="false" />
+84-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:58:13-37
+85        <activity
+85-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:59:9-62:40
+86            android:name="com.ronnelrazo.physical_counting.Integration_submenu"
+86-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:61:13-48
+87            android:configChanges="orientation|screenSize"
+87-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:60:13-59
+88            android:exported="false" />
+88-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:62:13-37
+89        <activity
+89-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:63:9-66:40
+90            android:name="com.ronnelrazo.physical_counting.tab_from"
+90-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:65:13-37
+91            android:configChanges="orientation|screenSize"
+91-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:64:13-59
+92            android:exported="false" />
+92-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:66:13-37
+93        <activity
+93-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:67:9-70:40
+94            android:name="com.ronnelrazo.physical_counting.inv_form"
+94-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:69:13-37
+95            android:configChanges="orientation|screenSize"
+95-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:68:13-59
+96            android:exported="false" />
+96-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:70:13-37
+97        <activity
+97-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:71:9-74:40
+98            android:name="com.ronnelrazo.physical_counting.Farm_categories"
+98-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:73:13-44
+99            android:configChanges="orientation|screenSize"
+99-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:72:13-59
+100            android:exported="false" />
+100-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:74:13-37
+101        <activity
+101-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:75:9-84:20
+102            android:name="com.ronnelrazo.physical_counting.Login"
+102-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:77:13-34
+103            android:configChanges="orientation|screenSize"
+103-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:76:13-59
+104            android:exported="true" >
+104-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:78:13-36
+105            <intent-filter>
+105-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:79:13-83:29
+106                <action android:name="android.intent.action.MAIN" />
+106-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:80:17-69
+106-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:80:25-66
+107
+108                <category android:name="android.intent.category.LAUNCHER" />
+108-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:82:17-77
+108-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:82:27-74
+109            </intent-filter>
+110        </activity>
+111        <activity
+111-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:85:9-88:40
+112            android:name="com.ronnelrazo.physical_counting.MainActivity"
+112-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:87:13-41
+113            android:configChanges="orientation|screenSize"
+113-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:86:13-59
+114            android:exported="false" />
+114-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:88:13-37
+115        <activity
+115-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:89:9-91:59
+116            android:name="com.pspdfkit.ui.PdfActivity"
+116-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:90:13-55
+117            android:windowSoftInputMode="adjustNothing" />
+117-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:91:13-56
+118
+119        <provider
+119-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:93:9-101:20
+120            android:name="androidx.core.content.FileProvider"
+120-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:94:13-62
+121            android:authorities="com.ronnelrazo.physical_counting.provider"
+121-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:95:13-76
+122            android:exported="false"
+122-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:96:13-37
+123            android:grantUriPermissions="true" >
+123-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:97:13-47
+124            <meta-data
+124-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:98:13-100:53
+125                android:name="android.support.FILE_PROVIDER_PATHS"
+125-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:99:17-67
+126                android:resource="@xml/file_path" />
+126-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:100:17-50
+127        </provider>
+128
+129        <service
+129-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:103:9-105:40
+130            android:name="com.novoda.merlin.MerlinService"
+130-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:104:13-59
+131            android:exported="false" />
+131-->C:\Users\RAZO\Desktop\physical_counting\app\src\main\AndroidManifest.xml:105:13-37
+132
+133        <activity
+133-->[com.karumi:dexter:6.2.3] C:\Users\RAZO\.gradle\caches\transforms-3\0d0c86aef0afd2c4eb9971af7e50a6df\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:27:9-29:72
+134            android:name="com.karumi.dexter.DexterActivity"
+134-->[com.karumi:dexter:6.2.3] C:\Users\RAZO\.gradle\caches\transforms-3\0d0c86aef0afd2c4eb9971af7e50a6df\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:28:13-60
+135            android:theme="@style/Dexter.Internal.Theme.Transparent" /> <!-- Printing pdf documents -->
+135-->[com.karumi:dexter:6.2.3] C:\Users\RAZO\.gradle\caches\transforms-3\0d0c86aef0afd2c4eb9971af7e50a6df\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:29:13-69
+136        <activity
+136-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:47:9-51:40
+137            android:name="com.pspdfkit.document.printing.PrintActivity"
+137-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:48:13-72
+138            android:configChanges="orientation|screenSize"
+138-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:49:13-59
+139            android:excludeFromRecents="true"
+139-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:50:13-46
+140            android:exported="false" /> <!-- Content provider used for initializing the library. -->
+140-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:51:13-37
+141        <provider
+141-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:54:9-57:40
+142            android:name="com.pspdfkit.PSPDFKitInitializationProvider"
+142-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:55:13-71
+143            android:authorities="com.ronnelrazo.physical_counting.com.pspdfkit.PSPDFKitInitializationProvider"
+143-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:56:13-95
+144            android:exported="false" />
+144-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:57:13-37
+145        <provider
+145-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:58:9-61:40
+146            android:name="com.pspdfkit.media.AssetsContentProvider"
+146-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:59:13-68
+147            android:authorities="com.ronnelrazo.physical_counting.pdf.assets"
+147-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:60:13-62
+148            android:exported="false" />
+148-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:61:13-37
+149        <provider
+149-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:62:9-67:54
+150            android:name="com.pspdfkit.document.sharing.DocumentSharingProvider"
+150-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:63:13-81
+151            android:authorities="com.ronnelrazo.physical_counting.pdf.share"
+151-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:64:13-61
+152            android:exported="true"
+152-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:65:13-36
+153            android:grantUriPermissions="true" />
+153-->[com.pspdfkit:pspdfkit:8.3.0] C:\Users\RAZO\.gradle\caches\transforms-3\3f6a673c466ec24e49597700fcd4961d\transformed\jetified-pspdfkit-8.3.0\AndroidManifest.xml:66:13-47
+154
+155        <service
+155-->[com.ixuea:android-downloader:3.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\23ebb4fe43174e233755c23a2ecde085\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:10:9-16:19
+156            android:name="com.ixuea.android.downloader.DownloadService"
+156-->[com.ixuea:android-downloader:3.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\23ebb4fe43174e233755c23a2ecde085\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:11:13-72
+157            android:exported="true" >
+157-->[com.ixuea:android-downloader:3.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\23ebb4fe43174e233755c23a2ecde085\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:12:13-36
+158            <intent-filter>
+158-->[com.ixuea:android-downloader:3.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\23ebb4fe43174e233755c23a2ecde085\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:13:13-15:29
+159                <action android:name="com.ixuea.android.downloader.DOWNLOAD_SERVICE" />
+159-->[com.ixuea:android-downloader:3.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\23ebb4fe43174e233755c23a2ecde085\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:17-88
+159-->[com.ixuea:android-downloader:3.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\23ebb4fe43174e233755c23a2ecde085\transformed\jetified-android-downloader-3.0.0\AndroidManifest.xml:14:25-85
+160            </intent-filter>
+161        </service>
+162        <service
+162-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\RAZO\.gradle\caches\transforms-3\367d4661c63a159e6d5a54816c5d7136\transformed\jetified-library-1.1.2\AndroidManifest.xml:12:9-15:19
+163            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
+163-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\RAZO\.gradle\caches\transforms-3\367d4661c63a159e6d5a54816c5d7136\transformed\jetified-library-1.1.2\AndroidManifest.xml:13:13-84
+164            android:exported="false" >
+164-->[es.voghdev.pdfviewpager:library:1.1.2] C:\Users\RAZO\.gradle\caches\transforms-3\367d4661c63a159e6d5a54816c5d7136\transformed\jetified-library-1.1.2\AndroidManifest.xml:14:13-37
+165        </service>
 166
-167        <uses-library
-167-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\667a55a46d542d987d1cb5838a22b5f6\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-168            android:name="androidx.window.extensions"
-168-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\667a55a46d542d987d1cb5838a22b5f6\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-169            android:required="false" />
-169-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\667a55a46d542d987d1cb5838a22b5f6\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-170        <uses-library
-170-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\667a55a46d542d987d1cb5838a22b5f6\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-171            android:name="androidx.window.sidecar"
-171-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\667a55a46d542d987d1cb5838a22b5f6\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-172            android:required="false" />
-172-->[androidx.window:window:1.0.0] C:\Users\CPF Nigs\.gradle\caches\transforms-3\667a55a46d542d987d1cb5838a22b5f6\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-173    </application>
-174
-175</manifest>
+167        <provider
+167-->[com.squareup.picasso:picasso:2.71828] C:\Users\RAZO\.gradle\caches\transforms-3\b2742a4452b99cb41b524099e5c70d85\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+168            android:name="com.squareup.picasso.PicassoProvider"
+168-->[com.squareup.picasso:picasso:2.71828] C:\Users\RAZO\.gradle\caches\transforms-3\b2742a4452b99cb41b524099e5c70d85\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+169            android:authorities="com.ronnelrazo.physical_counting.com.squareup.picasso"
+169-->[com.squareup.picasso:picasso:2.71828] C:\Users\RAZO\.gradle\caches\transforms-3\b2742a4452b99cb41b524099e5c70d85\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+170            android:exported="false" />
+170-->[com.squareup.picasso:picasso:2.71828] C:\Users\RAZO\.gradle\caches\transforms-3\b2742a4452b99cb41b524099e5c70d85\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+171        <provider
+171-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+172            android:name="androidx.startup.InitializationProvider"
+172-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+173            android:authorities="com.ronnelrazo.physical_counting.androidx-startup"
+173-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+174            android:exported="false" >
+174-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+175            <meta-data
+175-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+176                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+176-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+177                android:value="androidx.startup" />
+177-->[androidx.emoji2:emoji2:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\5dbdaa682f4eeb76a4b98d88db77476b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+178            <meta-data
+178-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\RAZO\.gradle\caches\transforms-3\567bfa830a03972b3944320e0a4a107e\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+179                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+179-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\RAZO\.gradle\caches\transforms-3\567bfa830a03972b3944320e0a4a107e\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+180                android:value="androidx.startup" />
+180-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\RAZO\.gradle\caches\transforms-3\567bfa830a03972b3944320e0a4a107e\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+181        </provider>
+182
+183        <uses-library
+183-->[androidx.window:window:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\e75272f0fd83aabd0d26e22c1f051d6d\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+184            android:name="androidx.window.extensions"
+184-->[androidx.window:window:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\e75272f0fd83aabd0d26e22c1f051d6d\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+185            android:required="false" />
+185-->[androidx.window:window:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\e75272f0fd83aabd0d26e22c1f051d6d\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+186        <uses-library
+186-->[androidx.window:window:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\e75272f0fd83aabd0d26e22c1f051d6d\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+187            android:name="androidx.window.sidecar"
+187-->[androidx.window:window:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\e75272f0fd83aabd0d26e22c1f051d6d\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+188            android:required="false" />
+188-->[androidx.window:window:1.0.0] C:\Users\RAZO\.gradle\caches\transforms-3\e75272f0fd83aabd0d26e22c1f051d6d\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+189    </application>
+190
+191</manifest>

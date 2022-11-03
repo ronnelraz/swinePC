@@ -1,5 +1,11 @@
 R_DEF: Internal format may change without notice
 local
+anim hide_to_bottom
+anim jump_from_down
+anim jump_to_down
+anim scale_down
+anim scale_up
+anim show_from_bottom
 array AdminList
 array stepLabels
 color bgEdit
@@ -31,6 +37,7 @@ drawable edit_text_dot_form
 drawable edit_text_dot_form_even
 drawable edit_text_dot_form_odd
 drawable edit_text_dot_line
+drawable fab_label_background
 drawable fattening
 drawable ic_eye_close
 drawable ic_eye_open
@@ -134,6 +141,7 @@ id breadcrumb_orgname
 id breeder
 id breeder_data
 id btnorg_code
+id bu_type
 id businessAddress
 id business_code
 id business_farmname
@@ -170,6 +178,8 @@ id done
 id downloadPDF
 id edit
 id error
+id fab_role
+id fab_user
 id farm
 id farmManager
 id farmName
@@ -231,6 +241,7 @@ id menu
 id menu_access
 id menu_access_btn
 id menu_item
+id menu_yellow
 id menuheader
 id moreOption
 id municipality
@@ -245,6 +256,7 @@ id org_code_btn
 id org_code_filter
 id org_codelist
 id org_name
+id org_name_text
 id orgcode
 id orgname
 id pager
@@ -389,17 +401,29 @@ raw farm
 raw loading
 raw nodatafile
 raw npdf
+string ad_user
+string add_new_user_authorize
 string app_name
+string close
 string first_fragment_label
+string jose_del
 string lorem_ipsum
+string menu_access
 string next
+string okay
+string org_code
 string previous
+string role_type
 string sampleURL
 string second_fragment_label
+string select_menu
+string select_org_code
 string title_activity_material_demo
 string title_login
 string titlebar
 style BottomSheetDialog
+style MenuButtonsStyle
+style MenuLabelsStyle
 style Theme.Physical_counting
 style bottomSheetStyleWrapper
 style full_screen_dialog

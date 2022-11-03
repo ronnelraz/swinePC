@@ -69,11 +69,28 @@
     </RelativeLayout>
 
 
+    <EditText
+        android:id="@+id/searchFarmlist"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/custom_toolbar"
+        android:background="@drawable/radius_border"
+        android:backgroundTint="#FFFFFF"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:elevation="10dp"
+        android:hint="Search..."
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:drawableRight="@drawable/ic_icons8_cancel"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/farmlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/custom_toolbar"
+        android:layout_below="@+id/searchFarmlist"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         tools:itemCount="10"

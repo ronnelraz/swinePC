@@ -20,7 +20,7 @@ import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 
 import java.util.ArrayList;
 import java.util.List;
-
+ 
 import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
@@ -52,7 +52,7 @@ public class inv_form extends AppCompatActivity {
             "EDIT",
             "CONFIRM",
             "CANCEL",
-            "GENERATE PFG",
+            "GENERATE PDF",
             "UPLOAD FILE",
             "FARM SETUP",
             "USER SETUP",

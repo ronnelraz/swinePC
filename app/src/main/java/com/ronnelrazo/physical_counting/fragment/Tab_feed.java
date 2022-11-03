@@ -16,7 +16,7 @@ import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
 public class Tab_feed extends Fragment {
 
 
-    public static String orgCode,farmOrg;
+    public static String orgCode,farmOrg,cutoffDate;
 
     private Globalfunction data;
     private SharedPref sharedPref;
@@ -32,7 +32,7 @@ public class Tab_feed extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-        View view =  new FeedTab_adapter(getContext(),orgCode,farmOrg);//inflater.inflate(R.layout.fragment_feed,parent,false);
+        View view =  new FeedTab_adapter(getContext(),orgCode,farmOrg,cutoffDate);//inflater.inflate(R.layout.fragment_feed,parent,false);
 //        ButterKnife.bind(this,view);
 //        data = new Globalfunction(getActivity());
 //        sharedPref = new SharedPref(getActivity());

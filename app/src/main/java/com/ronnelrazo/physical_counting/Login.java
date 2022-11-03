@@ -45,7 +45,7 @@ import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
-
+ 
 public class Login extends AppCompatActivity {
 
     private Globalfunction data;

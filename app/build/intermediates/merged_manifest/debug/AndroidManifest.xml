@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ronnelrazo.physical_counting"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="25"
@@ -35,6 +35,7 @@
         android:allowClearUserData="true"
         android:allowNativeHeapPointerTagging="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:configChanges="orientation|screenSize"
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
@@ -47,45 +48,59 @@
         android:theme="@style/Theme.Physical_counting" >
         <activity
             android:name="com.ronnelrazo.physical_counting.user_setup"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.transaction"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.upload_file"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Cancel"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Confirm"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.edit_TabForm"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Edit_pdf"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Farm_setup"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Pdf_record_list"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Integration_submenu"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.tab_from"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.inv_form"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Farm_categories"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.ronnelrazo.physical_counting.Login"
+            android:configChanges="orientation|screenSize"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -95,6 +110,7 @@
         </activity>
         <activity
             android:name="com.ronnelrazo.physical_counting.MainActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.pspdfkit.ui.PdfActivity"

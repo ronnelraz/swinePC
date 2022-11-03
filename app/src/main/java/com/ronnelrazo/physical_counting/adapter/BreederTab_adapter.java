@@ -54,6 +54,10 @@ public class BreederTab_adapter extends RelativeLayout {
     long last_text_edit = 0;
     Handler handler = new Handler();
 
+    int final_variance = 0;
+    int final_unpost = 0;
+    int final_actual_var = 0;
+
     public List<String> variancePos = new ArrayList<>();
 
     // set the header titles
@@ -83,15 +87,17 @@ public class BreederTab_adapter extends RelativeLayout {
     Context context;
     String str_orgCode;
     String str_farmOrg;
+    String str_cut_off_date;
     public List<model_breeder> dana = new ArrayList<>();
 
     int headerCellsWidth[] = new int[headers.length];
 
-    public BreederTab_adapter(Context context,String str_orgCode,String str_farmOrg) {
+    public BreederTab_adapter(Context context,String str_orgCode,String str_farmOrg, String str_cut_off_date) {
         super(context);
         this.context = context;
         this.str_orgCode = str_orgCode;
         this.str_farmOrg = str_farmOrg;
+        this.str_cut_off_date = str_cut_off_date;
         this.putangina();
         // initialize the main components (TableLayouts, HorizontalScrollView, ScrollView)
     }
@@ -102,7 +108,7 @@ public class BreederTab_adapter extends RelativeLayout {
     private void putangina(){
 
 
-        API_.getClient().Breeder(str_orgCode,str_farmOrg).enqueue(new Callback<Object>() {
+        API_.getClient().Breeder(str_orgCode,str_farmOrg,str_cut_off_date).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -459,8 +465,19 @@ public class BreederTab_adapter extends RelativeLayout {
                                 try{
                                     int stocks = Integer.parseInt(info[2].replace(",",""));
                                     int counts = Integer.parseInt(s.toString());
-                                    int varience_total = stocks - counts;
+//                                    int varience_total = stocks - counts;
+                                    int varience_total = counts > stocks ? (counts - stocks) : (counts - stocks) ;
+
+                                    final_variance  = varience_total;
                                     textview_variance.setText(String.valueOf(varience_total));
+
+//                                    if(stocks > counts){
+//                                        textview_variance.setText("-"+String.valueOf(varience_total));
+//                                    }
+//                                    else{
+//                                        textview_variance.setText(String.valueOf(varience_total).replace("-","+"));
+//                                    }
+
 
                                     String count = s.toString().isEmpty() ? "0" : s.toString();
                                     String getRemarks = Remarks.getText().toString();
@@ -518,12 +535,14 @@ public class BreederTab_adapter extends RelativeLayout {
 
                     @Override
                     public void afterTextChanged(Editable s) {
-                        String dash = "[ -]+";
-                        if(s.toString().matches(dash)){
-                            Log.d("swine","error dash");
-                            activeVar.setText("0");
-                        }
-                        else if(s.toString().isEmpty()){
+//                        String dash = "[ -]+";
+//                        if(s.toString().matches(dash)){
+//                            Log.d("swine","error dash");
+//                            activeVar.setText("0");
+//                        }
+//                        else
+
+                            if(s.toString().isEmpty()){
                             Log.d("swine","error dash");
                             activeVar.setText("0");
                         }
@@ -545,8 +564,10 @@ public class BreederTab_adapter extends RelativeLayout {
                                         if (System.currentTimeMillis() > (last_text_edit + delay - 500)) {
                                             try{
                                                 int varience = Integer.parseInt(textview_variance.getText().toString());
-                                                int counts = Integer.parseInt(s.toString());
-                                                int active_varience_total = varience - counts;
+                                                int unpost = Integer.parseInt(s.toString());
+
+//                                                int active_varience_total = (varience) - (unpost);
+                                                int active_varience_total = unpost > varience ? (unpost + varience) : (varience - unpost);
                                                 activeVar.setText(String.valueOf(active_varience_total));
 
 
@@ -686,7 +707,7 @@ public class BreederTab_adapter extends RelativeLayout {
         bodyTextView.setTextColor(Color.parseColor("#c0392b"));
         bodyTextView.setTypeface(bodyTextView.getTypeface(), Typeface.BOLD);
         bodyTextView.setTextSize(13);
-        bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER);
+        bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED);
         bodyTextView.setBackgroundResource(R.drawable.edit_text_dot_form);
         return bodyTextView;
     }

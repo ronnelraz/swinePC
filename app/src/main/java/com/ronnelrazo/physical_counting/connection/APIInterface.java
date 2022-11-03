@@ -48,7 +48,8 @@ public interface APIInterface {
     @POST("swineBreederCount.php")
     Call<Object> Breeder(
             @Field("orgCode") String orgCode,
-            @Field("farmCode") String farmCode
+            @Field("farmCode") String farmCode,
+            @Field("cutOffDate") String cutoff
     );
 
 
@@ -58,7 +59,8 @@ public interface APIInterface {
     Call<Object> Feed(
             @Field("orgCode") String orgCode,
             @Field("farmCode") String farmCode,
-            @Field("period") String period
+            @Field("period") String period,
+            @Field("cutOffDate") String cutoff
     );
 
     //physical count breeder
@@ -67,7 +69,8 @@ public interface APIInterface {
     Call<Object> Med(
             @Field("orgCode") String orgCode,
             @Field("farmCode") String farmCode,
-            @Field("period") String period
+            @Field("period") String period,
+            @Field("cutOffDate") String cutoff
     );
 
 
@@ -236,6 +239,9 @@ public interface APIInterface {
 
     @POST("getFarm_org")
     Call<Object> getFarm_org();
+
+    @POST("getAUDIT_BUSINESS_TYPE")
+    Call<Object> getAUDIT_BUSINESS_TYPE();
 
     @FormUrlEncoded
     @POST("getFarm_name")
@@ -560,7 +566,6 @@ public interface APIInterface {
     @POST("menu_map_setup")
     Call<Object> menu_map_setup(
             @Field("AD") String AD,
-            @Field("MENUs") String MENUs,
             @Field("USER") String USER,
             @Field("ROLEID") String ROLEID
     );
@@ -581,6 +586,14 @@ public interface APIInterface {
             @Field("users") String users,
             @Field("AD") String ad
     );
+
+
+    @FormUrlEncoded
+    @POST("CONTACT_TAB")
+    Call<Object> CONTACT_TAB(
+            @Field("orgCode") String orgCode
+    );
+
 
 
 

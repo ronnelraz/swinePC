@@ -28,7 +28,6 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/back"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_alignParentLeft="true"
@@ -185,10 +184,10 @@
 
 
                 <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="20dp"
                     android:onClick="search"
                     android:elevation="5dp"
                     app:elevation="5dp"
-                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"

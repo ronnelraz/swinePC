@@ -2,6 +2,7 @@
 package com.ronnelrazo.physical_counting;
 
 import android.view.View;
+import android.widget.EditText;
 import androidx.annotation.CallSuper;
 import androidx.annotation.UiThread;
 import butterknife.Unbinder;
@@ -22,6 +23,7 @@ public class Farm_categories_ViewBinding implements Unbinder {
   public Farm_categories_ViewBinding(Farm_categories target, View source) {
     this.target = target;
 
+    target.search = Utils.findRequiredViewAsType(source, R.id.searchFarmlist, "field 'search'", EditText.class);
     target.logout = Utils.findRequiredViewAsType(source, R.id.logout, "field 'logout'", MaterialButton.class);
   }
 
@@ -32,6 +34,7 @@ public class Farm_categories_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
+    target.search = null;
     target.logout = null;
   }
 }

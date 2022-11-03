@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clerk Manager Code"/>
+            android:text="Clerk Code"/>
 
 
         <EditText
@@ -31,14 +31,14 @@
             android:layout_height="45dp"
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
-            android:hint="Clerk Manager Code"/>
+            android:hint="Clerk Code"/>
 
 
         <TextView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clerk Manager Name"/>
+            android:text="Clerk Name"/>
 
         <EditText
             android:id="@+id/clerkname"
@@ -51,14 +51,14 @@
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
             android:inputType="textCapWords"
-            android:hint="Clerk Manager Name"/>
+            android:hint="Clerk Name"/>
 
 
         <TextView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clerk Manager Contact"/>
+            android:text="Clerk Contact"/>
 
 
         <EditText
@@ -73,14 +73,14 @@
             android:backgroundTint="#F4F3F3"
             android:inputType="number"
             android:maxLength="11"
-            android:hint="Clerk Manager Contact"/>
+            android:hint="Clerk Contact"/>
 
 
         <TextView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clerk Manager Email"/>
+            android:text="Clerk Email"/>
 
         <EditText
             android:id="@+id/clerkemail"
@@ -93,7 +93,7 @@
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
             android:inputType="textEmailAddress"
-            android:hint="Clerk Manager Email"/>
+            android:hint="Clerk Email"/>
 
 
     </LinearLayout>

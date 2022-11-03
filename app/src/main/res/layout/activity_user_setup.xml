@@ -115,7 +115,6 @@
                  android:layout_height="wrap_content"
                  android:orientation="horizontal">
                  <com.google.android.material.button.MaterialButton
-                     style="@style/Widget.Material3.Button.TextButton"
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content"
                      android:layout_marginRight="15dp"
@@ -127,12 +126,12 @@
                      android:textColor="@color/white"
                      android:textSize="13sp"
                      app:elevation="5dp"
+                     app:cornerRadius="20dp"
                      app:icon="@drawable/ic_icons8_search"
                      app:iconGravity="textStart"
                      app:iconTint="@color/bgEdit" />
 
                  <com.google.android.material.button.MaterialButton
-                     style="@style/Widget.Material3.Button.TextButton"
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content"
                      android:layout_marginRight="15dp"
@@ -144,6 +143,7 @@
                      android:textColor="@color/white"
                      android:textSize="13sp"
                      app:elevation="5dp"
+                     app:cornerRadius="20dp"
                      app:icon="@drawable/icons8_clear_search"
                      app:iconGravity="textStart"
                      app:iconTint="@color/bgEdit" />
@@ -178,6 +178,7 @@
 
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:visibility="gone"
         android:id="@+id/addUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -194,6 +195,52 @@
         app:fabSize="auto"
         app:icon="@drawable/ic_icons8_add_user_male"
         app:iconTint="@color/white" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:menu_animationDelayPerItem="0"
+        app:menu_colorNormal="#689F38"
+        app:menu_colorPressed="#689F38"
+        app:menu_colorRipple="#388E3C"
+        app:menu_labels_hideAnimation="@anim/jump_to_down"
+        app:menu_labels_showAnimation="@anim/jump_from_down"
+        app:menu_labels_style="@style/MenuLabelsStyle"
+        app:menu_shadowColor="#444">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:visibility="gone"
+            android:id="@+id/fab_role"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_add"
+            app:backgroundTint="#689F38"
+            app:fab_label="Add Role"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_user"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icons8_add_user_male"
+            app:backgroundTint="#689F38"
+            app:fab_label="Add User"
+            app:fab_size="normal" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
 
 
 </RelativeLayout>

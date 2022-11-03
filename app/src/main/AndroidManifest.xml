@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.ronnelrazo.physical_counting">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -11,6 +10,7 @@
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
+        android:configChanges="orientation|screenSize"
         android:allowBackup="false"
         android:allowClearUserData="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,45 +21,59 @@
         android:theme="@style/Theme.Physical_counting"
         tools:replace="android:allowBackup">
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".user_setup"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".transaction"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".upload_file"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Cancel"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Confirm"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".edit_TabForm"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Edit_pdf"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Farm_setup"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Pdf_record_list"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Integration_submenu"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".tab_from"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".inv_form"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Farm_categories"
             android:exported="false" />
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".Login"
             android:exported="true">
             <intent-filter>
@@ -69,6 +83,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:configChanges="orientation|screenSize"
             android:name=".MainActivity"
             android:exported="false" />
         <activity

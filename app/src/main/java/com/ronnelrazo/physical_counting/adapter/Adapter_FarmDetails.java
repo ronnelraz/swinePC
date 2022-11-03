@@ -66,8 +66,9 @@ public class Adapter_FarmDetails extends RecyclerView.Adapter<Adapter_FarmDetail
 
             SearchableSpinner[] business_area = ((Farm_setup) v.getContext()).business_Area;
 
-            int position_org_Code = ((Farm_setup) v.getContext()).Org_code_list.indexOf(getData.getORG_CODE());
+            int position_org_Code = ((Farm_setup) v.getContext()).Org_code_list.indexOf(getData.getORG_CODE() + " - " + getData.getORG_NAME());
             String demo =   ((Farm_setup) v.getContext()).Org_code_list.get(position_org_Code);
+//            Toast.makeText(mContext, demo, Toast.LENGTH_SHORT).show();
             business_area[0].onSearchableItemClicked(demo,position_org_Code);
             business_area[0].setSelection(position_org_Code);
 

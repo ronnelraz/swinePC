@@ -44,7 +44,7 @@ import retrofit2.Callback;
 public class Tab_breeder extends Fragment {
 
 
-    public static String orgCode,farmOrg;
+    public static String orgCode,farmOrg,cutoffDate;
     public static String BU_CODE,BU_TYPE;
 
     private Globalfunction data;
@@ -60,10 +60,11 @@ public class Tab_breeder extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-        View view =  new BreederTab_adapter(getContext(),orgCode,farmOrg); //inflater.inflate(R.layout.breeder_demo,parent,false);
+        View view =  new BreederTab_adapter(getContext(),orgCode,farmOrg,cutoffDate); //inflater.inflate(R.layout.breeder_demo,parent,false);
         ButterKnife.bind(this,view);
         data = new Globalfunction(getActivity());
         sharedPref = new SharedPref(getActivity());
+//        Toast.makeText(getActivity(), cutoffDate, Toast.LENGTH_SHORT).show();
 
 //        list = new ArrayList<>();
 //        recyclerView = view.findViewById(R.id.breeder_data);

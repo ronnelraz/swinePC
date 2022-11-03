@@ -24,13 +24,17 @@
 
 
 
+
+
+
+
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:text="Cut Off Date"
                 android:textSize="18sp"
                 android:fontFamily="@font/cpf_imm_sook_bold"/>
 
@@ -74,6 +78,8 @@
                 android:textSize="18sp"
                 android:drawableLeft="@drawable/calendar"
                 android:drawableTint="@color/purple_500"/>
+
+
 
             <LinearLayout
                 android:layout_gravity="center"

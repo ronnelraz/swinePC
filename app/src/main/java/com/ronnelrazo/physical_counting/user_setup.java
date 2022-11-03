@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.github.clans.fab.FloatingActionButton;
 import com.github.hariprasanths.bounceview.BounceView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -68,6 +69,7 @@ import java.util.List;
 import java.util.Set;
 
 import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
 import co.lujun.androidtagview.TagContainerLayout;
 import co.lujun.androidtagview.TagView;
@@ -103,6 +105,8 @@ public class user_setup extends AppCompatActivity {
     List<String> autocomplete_list = new ArrayList<>();
     private String str_ad_user = "";
 
+    @BindViews({R.id.fab_role,R.id.fab_user})
+    FloatingActionButton[] fabs;
 
     List<modal_menu_access> menu_access_list = new ArrayList<>();
     ArrayAdapter menu_Adapter;
@@ -118,7 +122,7 @@ public class user_setup extends AppCompatActivity {
     @BindView(R.id.data)
     RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerAdapter;
-    private List<modal_user_list> list =  new ArrayList<>();
+    private final List<modal_user_list> list =  new ArrayList<>();
 
 
 
@@ -175,8 +179,157 @@ public class user_setup extends AppCompatActivity {
 
             }
         });
+        
+        
+        fabs[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AdduserFab(v);
+            }
+        });
+        
     }
 
+    
+    
+    protected void AdduserFab(View view){
+        MaterialAlertDialogBuilder Materialdialog = new MaterialAlertDialogBuilder(view.getContext());
+        View v = LayoutInflater.from(view.getContext()).inflate(R.layout.modal_add_user_dialog,null);
+        EditText ad = v.findViewById(R.id.ad);
+        Spinner role = v.findViewById(R.id.role);
+        TagContainerLayout tagview = v.findViewById(R.id.tagview);
+        MaterialButton btnorg_code = v.findViewById(R.id.btnorg_code);
+        MaterialButton cancel = v.findViewById(R.id.close);
+        MaterialButton save = v.findViewById(R.id.okay);
+        ImageView closemodal = v.findViewById(R.id.closemodal);
+        TextView menu_access_btn = v.findViewById(R.id.menu_access);
+
+        tagview.setBackgroundColor(Color.parseColor("#ffffff"));
+        tagview.setIsTagViewSelectable(true);
+        tagview.isEnableCross();
+        tagview.setEnableCross(true);
+        tagview.setCrossColor(Color.BLACK);
+        tagview.setOnTagClickListener(new TagView.OnTagClickListener() {
+            @Override
+            public void onTagClick(int position, String text) {
+
+            }
+
+            @Override
+            public void onTagLongClick(int position, String text) {
+
+            }
+
+            @Override
+            public void onSelectedTagDrag(int position, String text) {
+
+            }
+
+            @Override
+            public void onTagCrossClick(int position) {
+                tagview.removeTag(position);
+            }
+        });
+
+        closemodal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConfirmDialog.dismiss();
+            }
+        });
+
+
+
+        menu_access_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openModalMenu_access(v,menu_access_btn);
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConfirmDialog.dismiss();
+            }
+        });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if(roleType.equals("RL003")){
+                    String getuserAD = ad.getText().toString().trim();
+                    String org_code = roleType;
+//                    String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
+                    save_map_menu(getuserAD,org_code);
+                    Add_user_setup(getuserAD,org_code,"0000",0);
+                }
+                else{
+                    if(roleType.equals("0")){
+                        Toast.makeText(user_setup.this, "Please Select Role Type", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(tagview.size() == 0){
+                        Toast.makeText(user_setup.this, "Please Select Org Code", Toast.LENGTH_SHORT).show();
+                        btnorg_code.performClick();
+                    }
+                    else{
+                        for(int i = 0; i < tagview.size(); i++){
+                            String getuserAD = ad.getText().toString().trim();
+                            String org_code = roleType;
+                            String getOrg_code = tagview.getTagText(i);
+//                            Toast.makeText(user_setup.this, org_code, Toast.LENGTH_SHORT).show();
+                            if(!(i + 1 < tagview.size())){
+//                                String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
+                                save_map_menu(getuserAD,org_code);
+                                Add_user_setup(getuserAD,org_code,getOrg_code,0);
+                            }
+                            else{
+                                Add_user_setup(getuserAD,org_code,getOrg_code,1);
+                            }
+
+
+                        }
+                    }
+                }
+
+
+
+            }
+        });
+
+
+
+        roleType(role);
+        role.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String getOrg_code = role_id.get(position);
+                roleType = getOrg_code;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        tagview.setTagBackgroundColor(Color.TRANSPARENT);
+
+        btnorg_code.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chiplist.clear();
+                openAddOrgCodeModal(v,tagview);
+            }
+        });
+
+        Materialdialog.setView(v);
+        ConfirmDialog = Materialdialog.create();
+        ConfirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        BounceView.addAnimTo(ConfirmDialog);
+        ConfirmDialog.show();
+    }
 
     private void AutoCompleteCode() {
         autocomplete_list.clear();
@@ -394,8 +547,8 @@ public class user_setup extends AppCompatActivity {
                     if(roleType.equals("RL003")){
                         String getuserAD = ad.getText().toString().trim();
                         String org_code = roleType;
-                        String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
-                        save_map_menu(getuserAD,getMenus,org_code);
+//                        String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
+                        save_map_menu(getuserAD,org_code);
                         Add_user_setup(getuserAD,org_code,"0000",0);
                     }
                     else{
@@ -413,8 +566,8 @@ public class user_setup extends AppCompatActivity {
                                 String getOrg_code = tagview.getTagText(i);
 //                            Toast.makeText(user_setup.this, org_code, Toast.LENGTH_SHORT).show();
                                 if(!(i + 1 < tagview.size())){
-                                    String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
-                                    save_map_menu(getuserAD,getMenus,org_code);
+//                                    String getMenus = select_menu_list_code.toString().replaceAll("\\[", "").replaceAll("\\]","").replaceAll(",",", ");
+                                    save_map_menu(getuserAD,org_code);
                                     Add_user_setup(getuserAD,org_code,getOrg_code,0);
                                 }
                                 else{
@@ -584,8 +737,8 @@ public class user_setup extends AppCompatActivity {
     }
 
 
-    protected  void save_map_menu(String AD,String map,String role_id){
-        API.getClient().menu_map_setup(AD,map,sharedPref.getUser(),role_id).enqueue(new Callback<Object>() {
+    protected  void save_map_menu(String AD,String role_id){
+        API.getClient().menu_map_setup(AD,sharedPref.getUser(),role_id).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {

@@ -324,7 +324,7 @@ public class Adapter_Checklist extends RecyclerView.Adapter<RecyclerView.ViewHol
 
                     }
                     else{
-                        Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
+//                        Globalfunction.getInstance(context).toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
                         ((tab_from)context).btn_func[0].setEnabled(false);
                         ((tab_from)context).btn_func[1].setEnabled(false);
                         item.business_farmname.setTextColor(Color.parseColor("#e74c3c"));

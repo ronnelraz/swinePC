@@ -50,7 +50,6 @@ public class FeedTab_adapter extends RelativeLayout {
 
     // set the header titles
     String headers[] = {
-            "                   Farm                   ",
             "                             Product                               ",
             " Unit ",
             "   Stock  ",
@@ -75,15 +74,17 @@ public class FeedTab_adapter extends RelativeLayout {
     Context context;
     String str_orgCode;
     String str_farmOrg;
+    String cutoffDate;
     public List<model_feed> dana = new ArrayList<>();
 
     int headerCellsWidth[] = new int[headers.length];
 
-    public FeedTab_adapter(Context context, String str_orgCode, String str_farmOrg) {
+    public FeedTab_adapter(Context context, String str_orgCode, String str_farmOrg,String cutoffDate) {
         super(context);
         this.context = context;
         this.str_orgCode = str_orgCode;
         this.str_farmOrg = str_farmOrg;
+        this.cutoffDate = cutoffDate;
         this.putangina();
         // initialize the main components (TableLayouts, HorizontalScrollView, ScrollView)
     }
@@ -92,7 +93,7 @@ public class FeedTab_adapter extends RelativeLayout {
 
 
     private void putangina(){
-        API_.getClient().Feed(str_orgCode,str_farmOrg,Globalfunction.getInstance(context).getMonth()).enqueue(new Callback<Object>() {
+        API_.getClient().Feed(str_orgCode,str_farmOrg,Globalfunction.getInstance(context).getMonth(),cutoffDate).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -338,7 +339,7 @@ public class FeedTab_adapter extends RelativeLayout {
         params.setMargins(0, 2, 0, 0);
 
         TableRow tableRowForTableC = new TableRow(this.context);
-        TextView textView = this.bodyTextView(sampleObject.getFarmOrg());
+        TextView textView = this.bodyTextView( sampleObject.getProductCode() + "\n" + sampleObject.getProductName());
 //        textView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         textView.setBackgroundColor(ContextCompat.getColor(context,backgroundColor));
         textView.setGravity(Gravity.LEFT);
@@ -365,7 +366,6 @@ public class FeedTab_adapter extends RelativeLayout {
         int loopCount = ((TableRow)tableB.getChildAt(0)).getChildCount();
 
         String info[] = {
-                sampleObject.getProductCode() + "\n" + sampleObject.getProductName(),
                 sampleObject.getStockUnit(),
                 sampleObject.getStockUnit().equals("Q") ? sampleObject.getStockQty() : sampleObject.getStockWgh(),
                 "",
@@ -385,7 +385,7 @@ public class FeedTab_adapter extends RelativeLayout {
 
             if(x == 0){
                 TextView textViewB = this.bodyTextView(info[x]);
-                textViewB.setGravity(Gravity.LEFT);
+                textViewB.setGravity(Gravity.CENTER);
                 textViewB.setBackgroundColor(ContextCompat.getColor(context,backgroundColor));
                 taleRowForTableD.addView(textViewB,params);
             }
@@ -395,16 +395,13 @@ public class FeedTab_adapter extends RelativeLayout {
                 taleRowForTableD.addView(textViewB,params);
             }
             else if(x == 2){
-                TextView textViewB = this.bodyTextView(info[x]);
-                textViewB.setBackgroundColor(ContextCompat.getColor(context,backgroundColor));
-                taleRowForTableD.addView(textViewB,params);
-            }
-            else if(x == 3){
+//                TextView textViewB = this.bodyTextView(info[x]);
+//                textViewB.setBackgroundColor(ContextCompat.getColor(context,backgroundColor));
+//                taleRowForTableD.addView(textViewB,params);
                 editTextCount.setBackgroundResource(backgroundColorEdit);
                 taleRowForTableD.addView(editTextCount,params);
             }
-
-            else if(x == 4){
+            else if(x == 3){
                 textview_variance.setBackgroundColor(ContextCompat.getColor(context,backgroundColor));
                 editTextCount.setWidth(200);
                 taleRowForTableD.addView(textview_variance,params);
@@ -443,9 +440,9 @@ public class FeedTab_adapter extends RelativeLayout {
                         else{
                             if (s.length() > 0) {
                                 try{
-                                    int stocks = Integer.parseInt(info[2].replace(",",""));
+                                    int stocks = Integer.parseInt(info[1].replace(",",""));
                                     int counts = Integer.parseInt(s.toString());
-                                    int varience_total = stocks - counts;
+                                    int varience_total = counts > stocks ? (counts - stocks) : (counts - stocks) ;
                                     textview_variance.setText(String.valueOf(varience_total));
 
                                     String count = s.toString().isEmpty() ? "0" : s.toString();
@@ -486,10 +483,10 @@ public class FeedTab_adapter extends RelativeLayout {
 
                     }
                 });
-
             }
 
-            else if(x == 5){
+            else if(x == 4){
+
                 unpostEditText.setBackgroundResource(backgroundColorEdit);
                 taleRowForTableD.addView(unpostEditText,params);
                 unpostEditText.addTextChangedListener(new TextWatcher() {
@@ -527,8 +524,8 @@ public class FeedTab_adapter extends RelativeLayout {
                             if (s.length() > 0) {
                                 try{
                                     int varience = Integer.parseInt(textview_variance.getText().toString());
-                                    int counts = Integer.parseInt(s.toString());
-                                    int active_varience_total = varience - counts;
+                                    int unpost = Integer.parseInt(s.toString());
+                                    int active_varience_total = unpost > varience ? (unpost + varience) : (varience - unpost);
                                     activeVar.setText(String.valueOf(active_varience_total));
 
 
@@ -570,14 +567,14 @@ public class FeedTab_adapter extends RelativeLayout {
 
                     }
                 });
-
             }
-            else if(x == 6){
+
+            else if(x == 5){
+
                 activeVar.setBackgroundColor(ContextCompat.getColor(context,backgroundColor));
                 taleRowForTableD.addView(activeVar,params);
             }
-
-            else if(x == 7){
+            else if(x == 6){
                 Remarks.setBackgroundResource(backgroundColorEdit);
                 taleRowForTableD.addView(Remarks,params);
                 Remarks.addTextChangedListener(new TextWatcher() {
@@ -617,6 +614,10 @@ public class FeedTab_adapter extends RelativeLayout {
                     }
                 });
             }
+
+//            else if(x == 7){
+//
+//            }
         }
 
         return taleRowForTableD;
@@ -665,7 +666,7 @@ public class FeedTab_adapter extends RelativeLayout {
         bodyTextView.setTextColor(Color.parseColor("#c0392b"));
         bodyTextView.setTypeface(bodyTextView.getTypeface(), Typeface.BOLD);
         bodyTextView.setTextSize(13);
-        bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER);
+        bodyTextView.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED);
         bodyTextView.setBackgroundResource(R.drawable.edit_text_dot_form);
         return bodyTextView;
     }

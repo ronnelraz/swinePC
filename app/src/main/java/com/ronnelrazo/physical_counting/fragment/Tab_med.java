@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -38,7 +39,7 @@ import retrofit2.Callback;
 
 public class Tab_med extends Fragment {
 
-    public static String orgCode,farmOrg;
+    public static String orgCode,farmOrg,cutoffDate;
 
     private Globalfunction data;
     private SharedPref sharedPref;
@@ -56,32 +57,7 @@ public class Tab_med extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-        View view =  new MedTab_adapter(getContext(),orgCode,farmOrg);//inflater.inflate(R.layout.fragment_med,parent,false);
-//        ButterKnife.bind(this,view);
-
-
-
-
-//        data = new Globalfunction(getActivity());
-//        sharedPref = new SharedPref(getActivity());
-//
-//        list = new ArrayList<>();
-//        recyclerView = view.findViewById(R.id.med_data);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setItemViewCacheSize(999999999);
-//
-//        list = new ArrayList<>();
-//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-//        adapter = new Adapter_Med(list,getActivity());
-//        recyclerView.setAdapter(adapter);
-//        list.clear();
-//        loading.setVisibility(View.VISIBLE);
-//        loadMedData(orgCode,farmOrg);
-//
-//        Log.d("swine", " ->breeder " + orgCode);
-//        Log.d("swine", " ->breeder " + farmOrg);
-//        Log.d("swine",data.getMonth());
-
+        View view =  new MedTab_adapter(getContext(),orgCode,farmOrg,cutoffDate);//inflater.inflate(R.layout.fragment_med,parent,false);
         return view;
 
     }

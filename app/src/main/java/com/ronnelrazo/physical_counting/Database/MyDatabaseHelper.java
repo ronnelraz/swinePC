@@ -144,23 +144,23 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(med_details);
 
 
-        String off_line_authorize = "CREATE TABLE " + offline_authorize.AUDIT_USER_AUTHORIZE_OFFLINE +
-                " (" + offline_authorize.USERNAME + " TEXT, " +
-                offline_authorize.PASSWORD + " TEXT, " +
-                offline_authorize.GROUP + " TEXT, " +
-                offline_authorize.LOGIN + " TEXT, " +
-                offline_authorize.ROLE + " TEXT, " +
-                offline_authorize.ROLE_ID + " TEXT, " +
-                offline_authorize.BUSINESS + " TEXT," +
-                offline_authorize.MENU_ACCESS + " TEXT," +
-                "PRIMARY KEY(USERNAME, PASSWORD)  ); ";
-        db.execSQL(off_line_authorize);
+//        String off_line_authorize = "CREATE TABLE " + offline_authorize.AUDIT_USER_AUTHORIZE_OFFLINE +
+//                " (" + offline_authorize.USERNAME + " TEXT, " +
+//                offline_authorize.PASSWORD + " TEXT, " +
+//                offline_authorize.GROUP + " TEXT, " +
+//                offline_authorize.LOGIN + " TEXT, " +
+//                offline_authorize.ROLE + " TEXT, " +
+//                offline_authorize.ROLE_ID + " TEXT, " +
+//                offline_authorize.BUSINESS + " TEXT," +
+//                offline_authorize.MENU_ACCESS + " TEXT," +
+//                "PRIMARY KEY(USERNAME, PASSWORD)  ); ";
+//        db.execSQL(off_line_authorize);
 
-        String off_line_menu_access = "CREATE TABLE " + offline_user_menu.AUDIT_USER_MENU_MAP_OFFLINE +
-                " (" + offline_user_menu.org_code_arr + " TEXT, " +
-                offline_user_menu.farm_code_arr + " TEXT, " +
-                "PRIMARY KEY(org_code_arr, farm_code_arr)  ); ";
-        db.execSQL(off_line_menu_access);
+//        String off_line_menu_access = "CREATE TABLE " + offline_user_menu.AUDIT_USER_MENU_MAP_OFFLINE +
+//                " (" + offline_user_menu.org_code_arr + " TEXT, " +
+//                offline_user_menu.farm_code_arr + " TEXT, " +
+//                "PRIMARY KEY(org_code_arr, farm_code_arr)  ); ";
+//        db.execSQL(off_line_menu_access);
 
 
     }
@@ -181,11 +181,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + MED_DETAILS.TABLE_MED_DETAILS );
         onCreate(db);
 
-        db.execSQL("DROP TABLE IF EXISTS " + offline_authorize.AUDIT_USER_AUTHORIZE_OFFLINE);
-        onCreate(db);
+//        db.execSQL("DROP TABLE IF EXISTS " + offline_authorize.AUDIT_USER_AUTHORIZE_OFFLINE);
+//        onCreate(db);
 
-        db.execSQL("DROP TABLE IF EXISTS " + offline_user_menu.AUDIT_USER_MENU_MAP_OFFLINE);
-        onCreate(db);
+//        db.execSQL("DROP TABLE IF EXISTS " + offline_user_menu.AUDIT_USER_MENU_MAP_OFFLINE);
+//        onCreate(db);
 
     }
 

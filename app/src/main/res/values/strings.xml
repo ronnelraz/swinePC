@@ -46,4 +46,14 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="titlebar">UAT-Swine Physical Count Menu</string>
+    <string name="select_menu">Select Menu</string>
+    <string name="add_new_user_authorize">Add new User Authorize</string>
+    <string name="jose_del">jose.del</string>
+    <string name="ad_user">AD User</string>
+    <string name="okay">Okay</string>
+    <string name="close">Close</string>
+    <string name="select_org_code">Select Org Code</string>
+    <string name="org_code">Org Code</string>
+    <string name="menu_access">Menu Access</string>
+    <string name="role_type">Role Type</string>
 </resources>

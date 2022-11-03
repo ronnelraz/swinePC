@@ -16,24 +16,31 @@ import com.github.hariprasanths.bounceview.BounceView;
 import com.ronnelrazo.physical_counting.Integration_submenu;
 import com.ronnelrazo.physical_counting.ListItem;
 import com.ronnelrazo.physical_counting.R;
+import com.ronnelrazo.physical_counting.filter_interface;
 import com.ronnelrazo.physical_counting.fragment.Tab_breeder;
 import com.ronnelrazo.physical_counting.fragment.Tab_checklist;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
 import com.ronnelrazo.physical_counting.inv_form;
+import com.ronnelrazo.physical_counting.model.model_edit_list;
 import com.ronnelrazo.physical_counting.model.model_farm;
 import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.tab_from;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
     private ArrayList<ListItem> items;
+    filter_interface search;
+    public ArrayList<model_farm> list;
 
-    public Adapter_Farm(ArrayList<ListItem> items) {
+    public Adapter_Farm(ArrayList<ListItem> items,filter_interface search,ArrayList<model_farm> list) {
         this.items = items;
+        this.search = search;
+        this.list = list;
     }
 
     @Override
@@ -48,6 +55,12 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         throw new RuntimeException("there is no type that matches the type " + viewType + " + make sure your using types correctly");
     }
 
+
+    public void filterList(ArrayList<ListItem> filterlist) {
+        items = filterlist;
+        notifyDataSetChanged();
+    }
+
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof VHHeader) {
@@ -55,11 +68,13 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             VHHeader VHheader = (VHHeader)holder;
             VHheader.tvName.setText(header.getHeader());
         } else if(holder instanceof VHItem) {
-            model_farm orgData = (model_farm) items.get(position);
+//            model_farm orgData = (model_farm) items.get(position);
+            model_farm orgData =  list.get(position);
             VHItem VHitem = (VHItem)holder;
             BounceView.addAnimTo(VHitem.card);
             VHitem.org_code.setText(orgData.getOrgcode());
             VHitem.org_name.setText(orgData.getOrgname());
+            search.SearchItem(VHitem.card,position,orgData,VHitem,items,list);
             VHitem.card.setOnClickListener(v -> {
 
                 if(orgData.getCompanyType().equals("0")){
@@ -125,9 +140,10 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
+
     @Override
     public int getItemCount() {
-        return items.size();
+        return list.size();
     }
 
     @Override
@@ -143,7 +159,7 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    class VHItem extends RecyclerView.ViewHolder {
+    public class VHItem extends RecyclerView.ViewHolder {
         public CardView card;
         public TextView org_code,org_name;
         public VHItem(View itemView) {

@@ -1,6 +1,5 @@
 package com.ronnelrazo.physical_counting;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -71,6 +70,14 @@ public class Farm_setup extends AppCompatActivity {
 
     private int currentSelectStepView = 0;
     public List<String> Org_code_list = new ArrayList<>();
+    public List<String> Org_code_list_master = new ArrayList<>();
+    public List<String> Selected_org_name_list = new ArrayList<>();
+    public String SelectedOrg_code = null;
+
+    @BindView(R.id.bu_type) SearchableSpinner bu_type;
+    public List<String> getbu_type_list = new ArrayList<>();
+    public List<String> Selected_bu_type_list_name = new ArrayList<>();
+
 
     public List<String> Org_name_list = new ArrayList<>();
     private List<String> Org_bu_type_list = new ArrayList<>();
@@ -87,6 +94,7 @@ public class Farm_setup extends AppCompatActivity {
     @BindViews({R.id.checklist,R.id.breeder,R.id.feed,R.id.med})
     public CheckBox[] FormArea;
 
+    @BindView(R.id.org_name_text) TextView org_code_name;
 
     @BindViews({R.id.province,R.id.municipality,R.id.barangay})
     public SearchableSpinner[] address_Area;
@@ -111,7 +119,7 @@ public class Farm_setup extends AppCompatActivity {
     @BindViews({R.id.clerkcode,R.id.clerkname,R.id.clerkcontact,R.id.clerkemail}) public EditText[] clerkManager;
 
     private int Save = 0;
-    private boolean modify = false;
+    public boolean modify = false;
 
     public AlertDialog alertDialog;
 
@@ -134,9 +142,9 @@ public class Farm_setup extends AppCompatActivity {
         ButterKnife.setDebug(true);
         data = new Globalfunction(this);
         sharedPref = new SharedPref(this);
-        modify = false;
 
         loadFarmOrg();
+        loadBuType_list();
         loadAddressProvince(); //load Province
 
 
@@ -243,8 +251,8 @@ public class Farm_setup extends AppCompatActivity {
     }
 
     protected void SaveFarmSetup(View v){
-        String getOrgcode = business_Area[0].getSelectedItem().toString();
-        String getOrgName = business_Area[1].getSelectedItem().toString();
+        String getOrgcode = SelectedOrg_code;//business_Area[0].getSelectedItem().toString();
+        String getOrgName = org_code_name.getText().toString(); //business_Area[1].getSelectedItem().toString();
         String getBu_type = Business_area_code[0].getText().toString();
         String getBu_code = Business_area_code[1].getText().toString();
         String getChecklist = FormArea[0].isChecked() ? "Y" : "N";
@@ -359,6 +367,15 @@ public class Farm_setup extends AppCompatActivity {
     protected void saveFarmSetup(String getOrgcode, String getOrgName, String getBu_type, String getBu_code, String getChecklist, String getBreeder, String getFeed, String getMed, String getProvince, String
             getMunicipal, String getBarangay, String getZipCode, String getProvinceCode, String getMunicipalCode, String getBarangayCode, String getlati, String getlongi, String getFarmcode, String getFarmName, String getFarmContact, String getFarmMail, String getClerkcode, String
                                          getClerkName, String getClerkContact, String getClerkMail){
+
+
+        Log.d("save_swine",getOrgcode + " " +getOrgName + " " +
+                getBu_code + " " +getBu_type + " " +
+                getChecklist + " " +getBreeder + " " +getFeed + " " +getMed + " " +
+                getBarangay + "  " + getMunicipal + " " + getProvince + " " +getProvinceCode + " " +getMunicipalCode + " " +getBarangayCode + " " +getZipCode + " " +
+                getFarmcode + " " +getFarmName + " " +getFarmContact + " " +getFarmMail + " " +
+                getClerkcode + " " +getClerkName + " " +getClerkContact + " " +getClerkMail + " " +
+                getlongi + " " +getlati + " " + sharedPref.getUser() );
 
         data.loading("Please wait");
         API.getClient().Save_FarmSetup(getOrgcode,getOrgName,
@@ -767,11 +784,11 @@ public class Farm_setup extends AppCompatActivity {
                 Toast.makeText(this, "Please Select Org Code", Toast.LENGTH_SHORT).show();
 
             }
-            else if(business_Area[1].getSelectedItem() == null){
-                business_Area[1].performClick();
-                ErrorCode("Please Select Org Name");
-                Toast.makeText(this, "Please Select Org Name", Toast.LENGTH_SHORT).show();
-            }
+//            else if(business_Area[1].getSelectedItem() == null){
+//                business_Area[1].performClick();
+//                ErrorCode("Please Select Org Name");
+//                Toast.makeText(this, "Please Select Org Name", Toast.LENGTH_SHORT).show();
+//            }
             else{
                 step(1);
                 currentSelectStepView++;
@@ -803,7 +820,7 @@ public class Farm_setup extends AppCompatActivity {
         layoutView[position].setVisibility(v);
     }
 
-
+    //razo
     private void loadFarmOrg(){
         data.Preloader(this,"Please wait...");
         Org_code_list.clear();
@@ -819,7 +836,10 @@ public class Farm_setup extends AppCompatActivity {
                     if(success){
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
-                            Org_code_list.add(object.getString("org_code"));
+                            Org_code_list.add(object.getString("org_code") + " - " + object.getString("org_name"));
+                            Org_code_list_master.add(object.getString("org_code"));
+                            Selected_org_name_list.add(object.getString("org_name"));
+
                         }
                         adapter_org_code = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,Org_code_list);
                         SpinnerSetup(business_Area[0],adapter_org_code,"Please Select Org Code");
@@ -847,10 +867,72 @@ public class Farm_setup extends AppCompatActivity {
     }
 
 
+    private void loadBuType_list(){
+        getbu_type_list.clear();
+        Selected_bu_type_list_name.clear();
+        API.getClient().getAUDIT_BUSINESS_TYPE().enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean success = jsonResponse.getBoolean("success");
+                    JSONArray result = jsonResponse.getJSONArray("data");
+
+                    if(success){
+                        for (int i = 0; i < result.length(); i++) {
+                            JSONObject object = result.getJSONObject(i);
+                            getbu_type_list.add(object.getString("code") + " - " + object.getString("name"));
+                            Selected_bu_type_list_name.add(object.getString("code"));
+
+                        }
+                        adapter_org_code = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,getbu_type_list);
+                        SpinnerSetup(bu_type,adapter_org_code,"Please Select Org Code");
+                    }
+                    else{
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+
+                }
+            }
+        });
+    }
+
+
     private void SpinnerSetup(SearchableSpinner spinner,ArrayAdapter adapter,String Title){
         spinner.setTitle(Title);
         spinner.setAdapter(adapter);
         OrgOnclick();
+        OrgOnclick_butype();
+    }
+
+    private void OrgOnclick_butype(){
+        bu_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(Farm_setup.this, Selected_bu_type_list_name.get(position), Toast.LENGTH_SHORT).show();
+                Business_area_code[0].setText(Selected_bu_type_list_name.get(position));
+//                getOrgNameListAPI(Org_code_list_master.get(position));
+//                org_code_name.setText(Selected_org_name_list.get(position));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void OrgOnclick(){
@@ -861,7 +943,9 @@ public class Farm_setup extends AppCompatActivity {
                 business_Area[1].setAdapter(null);
                 Business_area_code[0].setText(null);
                 Business_area_code[1].setText(null);
-                getOrgNameListAPI(Org_code_list.get(position));
+                SelectedOrg_code = Org_code_list_master.get(position);
+                getOrgNameListAPI(Org_code_list_master.get(position));
+                org_code_name.setText(Selected_org_name_list.get(position));
             }
 
             @Override
@@ -869,8 +953,6 @@ public class Farm_setup extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     private void getOrgNameListAPI(String org_code){

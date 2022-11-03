@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-51:/values-ky/values-ky.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-52:/values-ky/values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\4d669feee3bbcaf630ded0ac4934be61\\transformed\\appcompat-1.4.2\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\8f5135f7ed417f5db736173dfc248e9c\\transformed\\appcompat-1.4.2\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\c61287263f7ce0bc369b924eb1beec7d\\transformed\\core-1.7.0\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\5586099dc2be2a001572cf14c2426ba8\\transformed\\core-1.7.0\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\f135425267c911d6dc1cd95dbb25d72d\\transformed\\preference-1.2.0\\res\\values-ky\\values-ky.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,176,268,347,488,657,738",
+                        "endColumns": "70,91,78,140,168,80,78",
+                        "endOffsets": "171,263,342,483,652,733,812"
+                    },
+                    "to": {
+                        "startLines": "37,39,88,90,93,94,95",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3393,3528,7402,7563,7887,8056,8137",
+                        "endColumns": "70,91,78,140,168,80,78",
+                        "endOffsets": "3459,3615,7476,7699,8051,8132,8211"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\bd4a99450df9efa1e9019504ea56c77f\\transformed\\material-1.6.1\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -54,23 +71,6 @@
                         "endLines": "5,33,34,35,36,38,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,89",
                         "endColumns": "12,84,100,140,83,63,93,69,60,86,63,58,73,61,53,116,57,60,53,73,121,83,95,101,77,77,88,66,65,68,76,86,71,75,81,72,84,78,89,91,73,84,89,51,64,82,84,61,63,62,116,93,99,94,81",
                         "endOffsets": "265,3062,3163,3304,3388,3523,3709,3779,3840,3927,3991,4050,4124,4186,4240,4357,4415,4476,4530,4604,4726,4810,4906,5008,5086,5164,5253,5320,5386,5455,5532,5619,5691,5767,5849,5922,6007,6086,6176,6268,6342,6427,6517,6569,6634,6717,6802,6864,6928,6991,7108,7202,7302,7397,7558"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\CPF Nigs\\.gradle\\caches\\transforms-3\\d43e3521778d978d0b5ae04569a0c85e\\transformed\\preference-1.2.0\\res\\values-ky\\values-ky.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,176,268,347,488,657,738",
-                        "endColumns": "70,91,78,140,168,80,78",
-                        "endOffsets": "171,263,342,483,652,733,812"
-                    },
-                    "to": {
-                        "startLines": "37,39,88,90,93,94,95",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3393,3528,7402,7563,7887,8056,8137",
-                        "endColumns": "70,91,78,140,168,80,78",
-                        "endOffsets": "3459,3615,7476,7699,8051,8132,8211"
                     }
                 }
             ]

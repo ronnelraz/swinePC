@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="20dp">
@@ -15,95 +15,104 @@
 
 
         <ImageView
+            android:contentDescription="@string/pspdf__unnamed_image_document"
             android:id="@+id/closemodal"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/pspdf__ic_close"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:backgroundTint="@color/error"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add new User Authorize"/>
+            android:text="@string/add_new_user_authorize"/>
 
 
         <TextView
-            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             android:textSize="18sp"
             android:fontFamily="@font/cpf_imm_sook_semibold"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AD User"/>
+            android:text="@string/ad_user"/>
 
         <EditText
             android:id="@+id/ad"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:hint="jose.del"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:autofillHints="name"
             android:background="@drawable/radius_border"
-            android:backgroundTint="@color/odd"/>
+            android:backgroundTint="@color/odd"
+            android:hint="@string/jose_del"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
 
         <TextView
-            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             android:textSize="18sp"
             android:fontFamily="@font/cpf_imm_sook_semibold"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Role Type"/>
+            android:text="@string/role_type"/>
 
 
         <Spinner
             android:id="@+id/role"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/radius_border"
-            android:backgroundTint="@color/odd" />
-
-        <TextView
-            android:paddingLeft="10dp"
-            android:textSize="18sp"
-            android:fontFamily="@font/cpf_imm_sook_semibold"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Menu Access"/>
-
-
-
-        <TextView
-            android:id="@+id/menu_access"
             android:backgroundTint="@color/odd"
-            android:background="@drawable/radius_border"
-            android:padding="10dp"
-            android:hint="Select Menu"
-            android:inputType="textMultiLine"
-            android:lines="8"
-            android:minLines="6"
-            android:gravity="top|start"
-            android:maxLines="10"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:scrollbars="vertical"
-        />
-
-
-
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <TextView
-            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             android:textSize="18sp"
             android:fontFamily="@font/cpf_imm_sook_semibold"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Org Code"/>
+            android:text="@string/menu_access"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/menu_access"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="@color/odd"
+            android:gravity="top|start"
+            android:hint="@string/select_menu"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+
+
+
+        <TextView
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/cpf_imm_sook_semibold"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_code"/>
 
         <co.lujun.androidtagview.TagContainerLayout
             android:layout_width="match_parent"
@@ -117,59 +126,60 @@
             android:id="@+id/tagview"
             app:tag_theme="pure_cyan" />
 
+
         <com.google.android.material.button.MaterialButton
-            app:cornerRadius="5dp"
-            android:layout_width="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:textSize="15sp"
             android:id="@+id/btnorg_code"
-            android:gravity="left|center"
-            style="@style/Widget.Material3.Button.TextButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
             android:backgroundTint="@color/odd"
-
-            android:text="Select Org Code"/>
-
+            android:gravity="start|center"
+            android:text="@string/select_org_code"
+            android:textColor="#00796B"
+            android:textSize="15sp"
+            app:cornerRadius="5dp" />
 
         <LinearLayout
-            android:layout_gravity="right"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/listData"
-            android:layout_width="350dp"
+            android:layout_gravity="end"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/okay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:text="@string/okay"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_icons8_done"
+                android:layout_marginRight="5dp"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginLeft="5dp"
                 app:cornerRadius="20dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"
                 android:textSize="15sp"
                 app:icon="@drawable/ic_icons8_multiply"
                 app:iconGravity="textStart"
                 android:id="@+id/close"
-                android:backgroundTint="#E3DBDA"
-                style="@style/Widget.Material3.Button.TextButton.Icon"
-                android:text="Close"/>
+                android:backgroundTint="#F44336"
+                android:text="@string/close"/>
 
 
-            <com.google.android.material.button.MaterialButton
-                app:cornerRadius="20dp"
-                android:layout_width="0dp"
-                android:layout_marginLeft="5dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="15sp"
-                app:icon="@drawable/ic_icons8_done"
-                app:iconGravity="textStart"
-                android:id="@+id/okay"
-                style="@style/Widget.Material3.Button.TextButton.Icon"
-                android:backgroundTint="@color/odd"
-                android:text="Okay"/>
+
 
         </LinearLayout>
+
 
 
 

@@ -180,9 +180,9 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="1"
                     android:fontFamily="@font/cpf_imm_sook_semibold"
-                    android:text="Doc Date : "
+                    android:text="Cut off Date : "
                     android:textAlignment="textStart"
                     android:textColor="#FBC02D"
                     android:textSize="19sp" />

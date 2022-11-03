@@ -101,6 +101,7 @@ public class Globalfunction {
     public MaterialAlertDialogBuilder Materialdialog;
     public AlertDialog loaddialog;
     public  TextView content;
+    public long selectedCurrentDate;
     //end dialog
 
     //confirm
@@ -235,7 +236,7 @@ public class Globalfunction {
         pDialog = new SweetAlertDialog(cont, SweetAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(R.color.purple_700);
         pDialog.setTitleText(msg);
-        pDialog.setCancelable(false);
+        pDialog.setCancelable(true);
         pDialog.show();
     }
     //sakin
@@ -582,6 +583,16 @@ public class Globalfunction {
 
     //audit dialog
 
+    private String auditCurrentMonth_plus(){
+        Date d = new Date();
+        Calendar c = Calendar.getInstance();
+        c.setTime(d);
+        c.add(Calendar.DATE, 1);
+        d = c.getTime();
+        CharSequence s  = DateFormat.format("MM/dd/yyyy ", c.getTime());
+        return String.valueOf(s);
+    }
+
     private String auditCurrentMonth(){
         Date d = new Date();
         CharSequence s  = DateFormat.format("MM/dd/yyyy ", d.getTime());
@@ -601,9 +612,14 @@ public class Globalfunction {
             calendar.set(Calendar.MONTH, monthOfYear);
             calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             Formatter(textView);
+            selectedCurrentDate = calendar.getTimeInMillis();
+
+
         };
         return date;
     }
+
+
 
     private void Formatter(TextView textView) {
         String myFormat = "MM/dd/yyyy";
@@ -611,24 +627,37 @@ public class Globalfunction {
         textView.setText(sdf.format(calendar.getTime()));
     }
 
+
+
     public void auditDialog(Context context){
         AuditDialog = new MaterialAlertDialogBuilder(context);
         View v = LayoutInflater.from(context).inflate(R.layout.modal_audit_dialog,null);
         currentDate = v.findViewById(R.id.currentDate);
         currentDate.setText(auditCurrentMonth());
         auditDate = v.findViewById(R.id.auditDate);
-        auditDate.setText(auditCurrentMonth());
+//        auditDate.setText(auditCurrentMonth_plus());
+
+
 
         auditDate.setOnClickListener(v1 -> {
-            new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(auditDate), calendar
+
+
+           DatePickerDialog datePickerDialog = new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(auditDate), calendar
                     .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-                    calendar.get(Calendar.DAY_OF_MONTH)).show();
+                    calendar.get(Calendar.DAY_OF_MONTH) + 1);
+           datePickerDialog.getDatePicker().setMinDate(selectedCurrentDate);
+           datePickerDialog.show();
+
+
         });
 
+
+
         currentDate.setOnClickListener(v1 -> {
-            new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(currentDate), calendar
+            DatePickerDialog datePickerDialog =  new DatePickerDialog(v1.getContext(),R.style.picker,getDateto(currentDate), calendar
                     .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-                    calendar.get(Calendar.DAY_OF_MONTH)).show();
+                    calendar.get(Calendar.DAY_OF_MONTH));
+            datePickerDialog.show();
         });
         audit_save = v.findViewById(R.id.positive);
         audit_cancel = v.findViewById(R.id.negative);
@@ -640,6 +669,8 @@ public class Globalfunction {
         BounceView.addAnimTo(Auditalert);
         Auditalert.show();
     }
+
+
 
 
     //set header

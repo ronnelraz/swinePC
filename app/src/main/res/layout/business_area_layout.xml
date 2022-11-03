@@ -43,6 +43,7 @@
         android:orientation="horizontal">
 
         <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:layout_marginTop="1dp"
             android:id="@+id/org_code"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -53,6 +54,7 @@
             android:layout_marginRight="10dp"/>
 
         <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:visibility="gone"
             android:id="@+id/org_name"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -61,6 +63,18 @@
             android:background="@drawable/radius_border"
             android:backgroundTint="#F4F3F3"
             android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/org_name_text"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/radius_border"
+            android:backgroundTint="#DCDCDC"
+            android:text=""/>
 
 
     </LinearLayout>
@@ -73,7 +87,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_weight="1"
+                android:layout_weight="5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Business Type"
@@ -83,7 +97,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Business Code"
+                android:text=""
                 android:layout_marginRight="10dp"/>
 
         </LinearLayout>
@@ -95,8 +109,19 @@
             android:orientation="horizontal">
 
 
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/bu_type"
+                android:layout_weight="4"
+                android:layout_marginTop="6dp"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                app:hintText="Business Type"
+                android:background="@drawable/radius_border"
+                android:backgroundTint="#F4F3F3"
+                android:layout_marginRight="10dp"/>
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/business_type"
                 android:layout_marginRight="10dp"
                 android:textColor="@color/black"
@@ -107,7 +132,7 @@
                 android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:background="@drawable/radius_border"
-                android:backgroundTint="#F4F3F3"
+                android:backgroundTint="#DCDCDC"
                 android:text="Business Type"/>
 
             <TextView
@@ -120,7 +145,7 @@
                 android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:background="@drawable/radius_border"
-                android:backgroundTint="#F4F3F3"
+                android:backgroundTint="#DCDCDC"
                 android:text="SW"/>
 
         </LinearLayout>

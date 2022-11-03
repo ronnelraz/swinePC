@@ -30,7 +30,16 @@ anim design_snackbar_in
 anim design_snackbar_out
 anim error_frame_in
 anim error_x_in
+anim fab_scale_down
+anim fab_scale_up
+anim fab_slide_in_from_left
+anim fab_slide_in_from_right
+anim fab_slide_out_to_left
+anim fab_slide_out_to_right
 anim fragment_fast_out_extra_slow_in
+anim hide_to_bottom
+anim jump_from_down
+anim jump_to_down
 anim modal_in
 anim modal_out
 anim mtrl_bottom_sheet_slide_in
@@ -46,6 +55,9 @@ anim powerspinner_show_up_center
 anim pspdf__fade_in
 anim pspdf__fade_out
 anim pspdf__shake_view
+anim scale_down
+anim scale_up
+anim show_from_bottom
 anim success_bow_roate
 anim success_mask_layout
 animator design_appbar_state_list_animator
@@ -539,6 +551,26 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
+attr fab_colorDisabled
+attr fab_colorNormal
+attr fab_colorPressed
+attr fab_colorRipple
+attr fab_elevationCompat
+attr fab_hideAnimation
+attr fab_label
+attr fab_progress
+attr fab_progress_backgroundColor
+attr fab_progress_color
+attr fab_progress_indeterminate
+attr fab_progress_max
+attr fab_progress_showBackground
+attr fab_shadowColor
+attr fab_shadowRadius
+attr fab_shadowXOffset
+attr fab_shadowYOffset
+attr fab_showAnimation
+attr fab_showShadow
+attr fab_size
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -896,6 +928,45 @@ attr maxWidth
 attr measureWithLargestChild
 attr menu
 attr menuGravity
+attr menu_animationDelayPerItem
+attr menu_backgroundColor
+attr menu_buttonSpacing
+attr menu_buttonToggleAnimation
+attr menu_colorNormal
+attr menu_colorPressed
+attr menu_colorRipple
+attr menu_fab_hide_animation
+attr menu_fab_label
+attr menu_fab_show_animation
+attr menu_fab_size
+attr menu_icon
+attr menu_labels_colorNormal
+attr menu_labels_colorPressed
+attr menu_labels_colorRipple
+attr menu_labels_cornerRadius
+attr menu_labels_customFont
+attr menu_labels_ellipsize
+attr menu_labels_hideAnimation
+attr menu_labels_margin
+attr menu_labels_maxLines
+attr menu_labels_padding
+attr menu_labels_paddingBottom
+attr menu_labels_paddingLeft
+attr menu_labels_paddingRight
+attr menu_labels_paddingTop
+attr menu_labels_position
+attr menu_labels_showAnimation
+attr menu_labels_showShadow
+attr menu_labels_singleLine
+attr menu_labels_style
+attr menu_labels_textColor
+attr menu_labels_textSize
+attr menu_openDirection
+attr menu_shadowColor
+attr menu_shadowRadius
+attr menu_shadowXOffset
+attr menu_shadowYOffset
+attr menu_showShadow
 attr methodName
 attr min
 attr minHeight
@@ -2751,6 +2822,8 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_size_mini
+dimen fab_size_normal
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -2764,6 +2837,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen labels_text_size
 dimen m3_alert_dialog_action_bottom_padding
 dimen m3_alert_dialog_action_top_padding
 dimen m3_alert_dialog_corner_size
@@ -3468,6 +3542,8 @@ drawable edit_text_dot_form_odd
 drawable edit_text_dot_line
 drawable error_center_x
 drawable error_circle
+drawable fab_add
+drawable fab_label_background
 drawable fattening
 drawable flaticon_pdf_dummy
 drawable gif1
@@ -3952,6 +4028,7 @@ id breadcrumb_orgname
 id breeder
 id breeder_data
 id btnorg_code
+id bu_type
 id businessAddress
 id business_code
 id business_farmname
@@ -4053,6 +4130,7 @@ id disabled
 id disjoint
 id docDate
 id done
+id down
 id downloadPDF
 id dragAnticlockwise
 id dragClockwise
@@ -4087,6 +4165,9 @@ id error_x
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_label
+id fab_role
+id fab_user
 id fade
 id farm
 id farmManager
@@ -4217,6 +4298,7 @@ id lottie_layer_name
 id ltr
 id maintopic
 id male
+id marquee
 id mask_left
 id mask_right
 id masked
@@ -4249,6 +4331,7 @@ id menu
 id menu_access
 id menu_access_btn
 id menu_item
+id menu_yellow
 id menuheader
 id message
 id middle
@@ -4321,6 +4404,7 @@ id org_code_btn
 id org_code_filter
 id org_codelist
 id org_name
+id org_name_text
 id orgcode
 id orgname
 id outline
@@ -5558,6 +5642,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string ad_user
+string add_new_user_authorize
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -5568,6 +5654,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string close
 string copy
 string default_progressbar
 string dialog_cancel
@@ -5582,6 +5669,7 @@ string first_fragment_label
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string jose_del
 string label
 string lorem_ipsum
 string m3_ref_typeface_brand_medium
@@ -5619,6 +5707,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string menu_access
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -5657,6 +5746,8 @@ string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
 string next
 string not_set
+string okay
+string org_code
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -6055,9 +6146,12 @@ string pspdf__z_index_backward
 string pspdf__z_index_forward
 string pspdf__z_index_front
 string pspdf__z_index_order
+string role_type
 string sampleURL
 string search_menu_title
 string second_fragment_label
+string select_menu
+string select_org_code
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
 string title_activity_material_demo
@@ -6361,6 +6455,8 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel
 style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
+style MenuButtonsStyle
+style MenuLabelsStyle
 style PSPDFKit
 style PSPDFKit_ActionBarIcons
 style PSPDFKit_ActionBarIcons_Dark
@@ -7380,8 +7476,9 @@ styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec 
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
 styleable FlexboxLayout alignContent alignItems dividerDrawable dividerDrawableHorizontal dividerDrawableVertical flexDirection flexWrap justifyContent maxLine showDivider showDividerHorizontal showDividerVertical
 styleable FlexboxLayout_Layout layout_alignSelf layout_flexBasisPercent layout_flexGrow layout_flexShrink layout_maxHeight layout_maxWidth layout_minHeight layout_minWidth layout_order layout_wrapBefore
-styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
+styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize fab_colorDisabled fab_colorNormal fab_colorPressed fab_colorRipple fab_elevationCompat fab_hideAnimation fab_label fab_progress fab_progress_backgroundColor fab_progress_color fab_progress_indeterminate fab_progress_max fab_progress_showBackground fab_shadowColor fab_shadowRadius fab_shadowXOffset fab_shadowYOffset fab_showAnimation fab_showShadow fab_size hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
+styleable FloatingActionMenu menu_animationDelayPerItem menu_backgroundColor menu_buttonSpacing menu_buttonToggleAnimation menu_colorNormal menu_colorPressed menu_colorRipple menu_fab_hide_animation menu_fab_label menu_fab_show_animation menu_fab_size menu_icon menu_labels_colorNormal menu_labels_colorPressed menu_labels_colorRipple menu_labels_cornerRadius menu_labels_customFont menu_labels_ellipsize menu_labels_hideAnimation menu_labels_margin menu_labels_maxLines menu_labels_padding menu_labels_paddingBottom menu_labels_paddingLeft menu_labels_paddingRight menu_labels_paddingTop menu_labels_position menu_labels_showAnimation menu_labels_showShadow menu_labels_singleLine menu_labels_style menu_labels_textColor menu_labels_textSize menu_openDirection menu_shadowColor menu_shadowRadius menu_shadowXOffset menu_shadowYOffset menu_showShadow
 styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex

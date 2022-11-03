@@ -9,8 +9,8 @@ android {
         applicationId "com.ronnelrazo.physical_counting"
         minSdk 25
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -26,6 +26,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.ronnelrazo.physical_counting'
 
 }
 
@@ -81,6 +82,7 @@ dependencies {
     implementation 'com.google.android:flexbox:1.0.0'
     implementation 'com.github.mahimrocky:TagView:1.0.3'
     implementation 'co.lujun:androidtagview:1.1.7'
+    implementation 'com.github.clans:fab:1.6.4'
 
 
 }

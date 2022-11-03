@@ -1,21 +1,27 @@
 package com.ronnelrazo.physical_counting;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
 import com.ronnelrazo.physical_counting.adapter.Adapter_Farm;
-import com.ronnelrazo.physical_counting.adapter.Adapter_Farm_demo;
+import com.ronnelrazo.physical_counting.adapter.Adapter_FarmDetails;
 import com.ronnelrazo.physical_counting.connection.API_;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
+import com.ronnelrazo.physical_counting.model.modal_Farm_setup_details;
 import com.ronnelrazo.physical_counting.model.model_farm;
 import com.ronnelrazo.physical_counting.model.model_header_farm_org;
 import com.ronnelrazo.physical_counting.sharedPref.SharedPref;
@@ -33,7 +39,7 @@ import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class Farm_categories extends AppCompatActivity {
+public class Farm_categories extends AppCompatActivity implements filter_interface {
 
 
     private  Globalfunction data;
@@ -41,14 +47,19 @@ public class Farm_categories extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
+    @BindView(R.id.searchFarmlist)
+    EditText search;
     private ArrayList<ListItem> items =  new ArrayList<>();
-//    List<model_farm> list = new ArrayList<>();
+     public model_farm item;
+    public ArrayList<model_farm> list = new ArrayList<>();
 //    List<model_header_farm_org> headerlist = new ArrayList<>();
 
 
 
     @BindView(R.id.logout)
     MaterialButton logout;
+
+    filter_interface search_filter = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +70,10 @@ public class Farm_categories extends AppCompatActivity {
         sharedPref = new SharedPref(this);
 
 
+
         recyclerView = findViewById(R.id.farmlist);
         recyclerView.setHasFixedSize(true);
-        adapter = new Adapter_Farm(items);
+        adapter = new Adapter_Farm(items,search_filter,list);
         recyclerView.setAdapter(adapter);
         GridLayoutManager gd = new GridLayoutManager(this, 2);
         gd.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -71,6 +83,25 @@ public class Farm_categories extends AppCompatActivity {
             }
         });
         recyclerView.setLayoutManager(gd);
+
+        search.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if(event.getAction() == MotionEvent.ACTION_UP) {
+                    if(event.getRawX() >= (search.getRight() - search.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        search.setText("");
+                        LoadFarmlist(sharedPref.getRole(), sharedPref.getOrg_code(), sharedPref.getFarm_code());
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         LoadFarmlist(sharedPref.getRole(), sharedPref.getOrg_code(), sharedPref.getFarm_code());
 
 
@@ -88,12 +119,15 @@ public class Farm_categories extends AppCompatActivity {
             });
         });
 
+
+
     }
 
     private void LoadFarmlist(String role,String org_code,String farm_code) {
         Log.d("org_code_list",org_code);
         data.Preloader(this,"Please wait...");
         items.clear();
+        list.clear();
         API_.getClient().farmAPI(role,org_code,farm_code).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -121,7 +155,7 @@ public class Farm_categories extends AppCompatActivity {
                         items.add(new model_header_farm_org(getTYpeCompany));
                         for (int i = 0; i < company_data.length(); i++) {
                             JSONObject object = company_data.getJSONObject(i);
-                            model_farm item = new model_farm(
+                            item = new model_farm(
                                     object.getString("orgcode"),
                                     object.getString("orgname"),
                                     "0",
@@ -133,14 +167,14 @@ public class Farm_categories extends AppCompatActivity {
                             );
 
                             items.add(item);
-
+                            list.add(item);
 
                         }
 
                         items.add(new model_header_farm_org(getTYpeIntegration));
                         for (int i = 0; i < integration_data.length(); i++) {
                             JSONObject object = integration_data.getJSONObject(i);
-                            model_farm item = new model_farm(
+                            item = new model_farm(
                                     object.getString("orgcode"),
                                     object.getString("orgname"),
                                     "1",
@@ -151,10 +185,15 @@ public class Farm_categories extends AppCompatActivity {
                             );
 
                             items.add(item);
+                            list.add(item);
                         }
 
-                        adapter = new Adapter_Farm(items);
+                        adapter = new Adapter_Farm(items,search_filter,list);
                         recyclerView.setAdapter(adapter);
+
+
+
+
                     }
                     else{
                         data.toast(R.raw.error,"Invalid Params", Gravity.TOP|Gravity.CENTER,0,50); //50
@@ -173,6 +212,52 @@ public class Farm_categories extends AppCompatActivity {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
                     data.loaddialog.dismiss();
                 }
+            }
+        });
+
+
+
+
+
+    }
+
+
+
+    @Override
+    public void SearchItem(CardView cardview, int position, model_farm orgData, Adapter_Farm.VHItem holder, ArrayList<ListItem> items, List<model_farm> orgdata) {
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(start == 0){
+//                    search.setText("1");
+//                    search.setText("");
+                }
+                else{
+                    ArrayList<model_farm> newList = new ArrayList<>();
+                    for (model_farm sub : list)
+                    {
+                        String code = sub.getOrgcode().toLowerCase();
+                        String name = sub.getOrgname().toLowerCase();
+                        if(name.contains(s) || code.contains(s)){
+                            newList.add(sub);
+                        }
+                        adapter = new Adapter_Farm(items, search_filter,newList);
+                        recyclerView.setAdapter(adapter);
+
+                    }
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
     }
