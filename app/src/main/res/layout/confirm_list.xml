@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="10sp"
-    app:cardCornerRadius="20dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="4dp"
     app:cardMaxElevation="10dp"
     android:id="@+id/card"
@@ -18,7 +18,7 @@
             android:id="@+id/checklist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_marginLeft="10dp"
             android:buttonTint="@color/purple_500"
@@ -26,7 +26,6 @@
 
         <LinearLayout
             android:padding="10dp"
-            android:layout_marginLeft="50dp"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
@@ -43,23 +42,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Farm Name :"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Audit No. : "/>
+
             <TextView
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Audit Date :"/>
-            <TextView
-                android:textStyle="bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Audit NO. : "/>
 
         </LinearLayout>
 
 
         <LinearLayout
             android:padding="10dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="78dp"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
@@ -77,16 +78,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="farm_name :"/>
-            <TextView
-                android:id="@+id/auditdate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="audit_date :"/>
+
             <TextView
                 android:id="@+id/auditno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="audit_no : "/>
+
+            <TextView
+                android:id="@+id/auditdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="audit_date :"/>
 
         </LinearLayout>
 

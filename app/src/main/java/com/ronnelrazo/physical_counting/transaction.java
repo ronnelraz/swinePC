@@ -118,7 +118,6 @@ public class transaction extends AppCompatActivity {
 
     private void transactionList(String user,String org_code,String to,String from,String types) {
         list.clear();
-
         loading.setVisibility(View.VISIBLE);
         loading.setAnimation(R.raw.loading);
         loading.loop(true);

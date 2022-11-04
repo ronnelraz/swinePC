@@ -535,7 +535,7 @@ public class tab_from extends AppCompatActivity {
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
 
-        API.getClient().Header_BreederCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,LOCATION,
+        API.getClient().Header_BreederCountList(ORG_CODE,AUDIT_NO,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,LOCATION,
                 FARM_CODE,FARM_ORG,FARM_NAME,SYS_FEMALE_STOCK,SYS_MALE_STOCK,SYS_TOTAL_STOCK,COUNTING_STOCK,REMARK,ADuser,variance,unpost,active_var).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -584,7 +584,7 @@ public class tab_from extends AppCompatActivity {
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
 
-        API.getClient().Header_FeedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,FEED_CODE,FEED_NAME,SYS_FFED_STOCK_QTY,SYS_FEED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser,variance,unpost,actual_var).enqueue(new Callback<Object>() {
+        API.getClient().Header_FeedCountList(ORG_CODE,AUDIT_NO,getDoc_date,getAudit_date,BUSINESS_GROUP_CODE,BUSINESS_TYPE_CODE,FARM_CODE,FARM_ORG,FARM_NAME,FEED_CODE,FEED_NAME,SYS_FFED_STOCK_QTY,SYS_FEED_STOCK_WGH,STOCK_UNIT,COUNTING_STOCK,REMARK,ADuser,variance,unpost,actual_var).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
                 try {
@@ -656,7 +656,6 @@ public class tab_from extends AppCompatActivity {
         API.getClient().Header_MedCountList(
                 ORG_CODE,
                 AUDIT_NO,
-                getDoc_date,
                 getDoc_date,
                 getAudit_date,
                 BUSINESS_GROUP_CODE,

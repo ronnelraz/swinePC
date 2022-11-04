@@ -15,6 +15,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
@@ -65,7 +66,8 @@ public class Cancel extends AppCompatActivity {
     private List<model_cancel_list> list =  new ArrayList<>();
     private ArrayList<CheckBox> checkBoxes = new ArrayList<>();
 
-
+    @BindView(R.id.loading)
+    LottieAnimationView loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -203,6 +205,10 @@ public class Cancel extends AppCompatActivity {
     private void getFarmList(String org_code,String date) {
         list.clear();
         adapter.notifyDataSetChanged();
+        loading.setVisibility(View.VISIBLE);
+        loading.setAnimation(R.raw.loading);
+        loading.loop(true);
+        loading.playAnimation();
         API.getClient().cancel_list(sharedPref.getUser(),org_code,date).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -213,6 +219,9 @@ public class Cancel extends AppCompatActivity {
                     JSONArray result = jsonResponse.getJSONArray("data");
 
                     if(success){
+                        loading.setVisibility(View.GONE);
+                        loading.loop(true);
+                        loading.playAnimation();
                         for (int i = 0; i < result.length(); i++) {
 
                             JSONObject object = result.getJSONObject(i);
@@ -239,6 +248,10 @@ public class Cancel extends AppCompatActivity {
                     else{
                         list.clear();
                         Toast.makeText(getApplicationContext(), "No Record Found!", Toast.LENGTH_SHORT).show();
+                        loading.setAnimation(R.raw.nodatafile);
+                        loading.setVisibility(View.VISIBLE);
+                        loading.loop(true);
+                        loading.playAnimation();
                     }
 
                 } catch (JSONException e) {

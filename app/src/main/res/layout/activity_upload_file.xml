@@ -30,14 +30,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/ic_icons8_import_file"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/cpf_mm_sook_bold"
+                        android:text="Upload File Menu"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/back"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/menubtn_text"
                         android:onClick="back"
                         android:text="Back"
                         android:textColor="@color/white"
@@ -112,7 +127,6 @@
                         android:layout_width="0dp"
                         android:layout_weight="1.9"
                         android:layout_height="wrap_content"
-                        android:text="Audit Date"
                         android:textSize="15sp"
                         android:layout_marginBottom="5dp"/>
 
@@ -131,33 +145,38 @@
 
                     <AutoCompleteTextView
                         android:id="@+id/org_code_filter"
-                        android:singleLine="true"
                         android:layout_width="0dp"
-                        android:layout_weight="4"
                         android:layout_height="40dp"
                         android:layout_marginRight="15dp"
-                        android:textSize="15sp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
                         android:background="@drawable/radius_border"
+                        android:drawableTint="@color/black"
                         android:hint="Farm Name"
                         android:paddingLeft="10dp"
-                        android:drawableTint="@color/black"
-                        android:layout_marginBottom="5dp"/>
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/audit_date_filter"
-                        android:singleLine="true"
-                        android:editable="false"
                         android:layout_width="0dp"
-                        android:layout_weight="1.4"
                         android:layout_height="40dp"
                         android:layout_marginRight="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1.4"
+                        android:text="Audit Date"
+                        android:drawableLeft="@drawable/calendar"
+                        android:drawablePadding="3dp"
                         android:background="@drawable/radius_border"
-                        android:hint="Audit Date"
-                        android:textSize="15sp"
-                        android:paddingLeft="10dp"
                         android:drawableTint="@color/black"
-                        android:layout_marginBottom="5dp"/>
+                        android:editable="false"
+                        android:hint="Audit Date"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
 
                 </LinearLayout>
 
@@ -170,8 +189,8 @@
                         android:onClick="search"
                         android:elevation="5dp"
                         app:elevation="5dp"
+                        app:cornerRadius="20dp"
                         android:layout_weight="2"
-                        style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Search"
@@ -187,8 +206,8 @@
                         android:onClick="clear"
                         android:elevation="5dp"
                         app:elevation="5dp"
+                        app:cornerRadius="20dp"
                         android:layout_weight="1"
-                        style="@style/Widget.Material3.Button.TextButton.Icon"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Clear"
@@ -206,7 +225,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:visibility="gone"
         android:id="@+id/upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -218,7 +236,9 @@
         android:backgroundTint="@color/purple_200"
         android:onClick="uplaod"
         android:text="Upload File"
-        app:cornerRadius="20dp" />
+        android:visibility="gone"
+        app:cornerRadius="20dp"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
 
     <androidx.recyclerview.widget.RecyclerView

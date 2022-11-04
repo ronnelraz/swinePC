@@ -16,6 +16,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
@@ -68,7 +69,8 @@ public class Pdf_record_list extends AppCompatActivity {
 
     List<String> autocompletelist = new ArrayList<>();
 
-
+    @BindView(R.id.loading)
+    LottieAnimationView loading;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -146,6 +148,10 @@ public class Pdf_record_list extends AppCompatActivity {
 
     private void PDFReport(String user,String org_code,String audit_date) {
         list.clear();
+        loading.setVisibility(View.VISIBLE);
+        loading.setAnimation(R.raw.loading);
+        loading.loop(true);
+        loading.playAnimation();
         API.getClient().ReportPDF(user,org_code,audit_date).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
@@ -156,6 +162,9 @@ public class Pdf_record_list extends AppCompatActivity {
                     JSONArray result = jsonResponse.getJSONArray("data");
 
                     if(success){
+                        loading.setVisibility(View.GONE);
+                        loading.loop(true);
+                        loading.playAnimation();
 
                         for (int i = 0; i < result.length(); i++) {
                             JSONObject object = result.getJSONObject(i);
@@ -185,12 +194,20 @@ public class Pdf_record_list extends AppCompatActivity {
                         recyclerView.setAdapter(adapter);
                     }
                     else{
-                        Toast.makeText(Pdf_record_list.this, "error", Toast.LENGTH_SHORT).show();
+                        list.clear();
+                        loading.setAnimation(R.raw.nodatafile);
+                        loading.setVisibility(View.VISIBLE);
+                        loading.loop(true);
+                        loading.playAnimation();
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("swine",e.getMessage() + " Error");
+                    loading.setAnimation(R.raw.nodatafile);
+                    loading.setVisibility(View.VISIBLE);
+                    loading.loop(true);
+                    loading.playAnimation();
 
                 }
             }
@@ -199,6 +216,10 @@ public class Pdf_record_list extends AppCompatActivity {
             public void onFailure(Call<Object> call, Throwable t) {
                 if (t instanceof IOException) {
                     data.toast(R.raw.error,t.getMessage(), Gravity.TOP|Gravity.CENTER,0,50);
+                    loading.setAnimation(R.raw.nodatafile);
+                    loading.setVisibility(View.VISIBLE);
+                    loading.loop(true);
+                    loading.playAnimation();
 
                 }
             }

@@ -140,8 +140,8 @@ public class upload_file extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         String getorg_codes = org_code_filter.getText().toString();
         String getAudit_dates = audit_date_filter.getText().toString();
-        LoadFolders(getorg_codes,getAudit_dates);
-
+//        LoadFolders(getorg_codes,getAudit_dates);
+        LoadFolders("","");
 
         AutoCompleteCode(sharedPref.getUser());
         org_code_filter.setOnTouchListener((v, event) -> {
@@ -339,12 +339,13 @@ public class upload_file extends AppCompatActivity {
                         recyclerView.setAdapter(adapter);
                     }
                     else{
+
+                        list.clear();
+                        Toast.makeText(getApplicationContext(), "No Record Found!", Toast.LENGTH_SHORT).show();
                         loading.setAnimation(R.raw.nodatafile);
                         loading.setVisibility(View.VISIBLE);
                         loading.loop(true);
                         loading.playAnimation();
-                        list.clear();
-                        Toast.makeText(getApplicationContext(), "No Record Found!", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
