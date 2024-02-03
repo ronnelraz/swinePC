@@ -139,7 +139,7 @@ public class Adapter_user_list extends RecyclerView.Adapter<Adapter_user_list.Vi
         });
 
         if(getData.getRole_type().equals("ADMIN")){
-            holder.farm_access.setVisibility(View.GONE);
+            holder.farm_access.setVisibility(View.VISIBLE);
         }
 
 

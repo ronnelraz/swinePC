@@ -1,6 +1,8 @@
 package com.ronnelrazo.physical_counting.adapter;
 
 
+import static com.loopj.android.http.AsyncHttpClient.log;
+
 import android.app.DatePickerDialog;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -84,6 +86,7 @@ public class Adapter_FarmList extends RecyclerView.Adapter<RecyclerView.ViewHold
                     }
                     else{
                         Globalfunction.getInstance(v1.getContext()).Auditalert.dismiss();
+                          log.w("Swine",orgData.getFarmcode());
                         Globalfunction.getInstance(v.getContext()).intent(tab_from.class,v.getContext());
                         tab_from.str_types = "Integration";
                         Tab_checklist.str_bu_Type = "SWINT_1";

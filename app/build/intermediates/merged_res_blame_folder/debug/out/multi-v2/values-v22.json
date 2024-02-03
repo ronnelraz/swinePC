@@ -1,19 +1,11 @@
 {
     "logs": [
         {
-            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-52:/values-v22/values-v22.xml",
+            "outputFile": "com.ronnelrazo.physical_counting.app-mergeDebugResources-65:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\8f5135f7ed417f5db736173dfc248e9c\\transformed\\appcompat-1.4.2\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\RAZO\\.gradle\\caches\\transforms-3\\927ad125e69e972e9092553ce794a205\\transformed\\appcompat-1.7.0-alpha02\\res\\values-v22\\values-v22.xml",
                     "from": {
-                        "startLines": "2,3,4,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,553",
-                        "endLines": "2,3,8,13",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,548,896"
-                    },
-                    "to": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,130,217,487",

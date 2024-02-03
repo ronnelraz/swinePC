@@ -1,6 +1,8 @@
 package com.ronnelrazo.physical_counting.adapter;
 
 
+import static com.loopj.android.http.AsyncHttpClient.log;
+
 import android.app.DatePickerDialog;
 import android.util.Log;
 import android.view.Gravity;
@@ -8,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,20 +37,25 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 
     private ArrayList<ListItem> items;
-    filter_interface search;
     public ArrayList<model_farm> list;
+    public ArrayList<model_header_farm_org> header;
+    public ArrayList<model_farm> filteredList; // Add a filtered list
 
-    public Adapter_Farm(ArrayList<ListItem> items,filter_interface search,ArrayList<model_farm> list) {
+
+
+    public Adapter_Farm(ArrayList<ListItem> items, ArrayList<model_farm> list, ArrayList<model_header_farm_org> header) {
         this.items = items;
-        this.search = search;
+//        this.search = search;
         this.list = list;
+        this.header = header;
+        this.filteredList = new ArrayList<>(list); // Initialize the filtered list with all items
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(viewType == ListItem.TYPE_HEADER) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_header, parent, false);
-            return  new VHHeader(v);
+            return new VHHeader(v);
         } else if(viewType == ListItem.TYPE_ITEM) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_farm, parent, false);
             return new VHItem(v);
@@ -56,11 +64,6 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
 
-    public void filterList(ArrayList<ListItem> filterlist) {
-        items = filterlist;
-        notifyDataSetChanged();
-    }
-
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof VHHeader) {
@@ -68,13 +71,12 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             VHHeader VHheader = (VHHeader)holder;
             VHheader.tvName.setText(header.getHeader());
         } else if(holder instanceof VHItem) {
-//            model_farm orgData = (model_farm) items.get(position);
-            model_farm orgData =  list.get(position);
+            model_farm orgData = (model_farm) items.get(position);
             VHItem VHitem = (VHItem)holder;
             BounceView.addAnimTo(VHitem.card);
             VHitem.org_code.setText(orgData.getOrgcode());
             VHitem.org_name.setText(orgData.getOrgname());
-            search.SearchItem(VHitem.card,position,orgData,VHitem,items,list);
+
             VHitem.card.setOnClickListener(v -> {
 
                 if(orgData.getCompanyType().equals("0")){
@@ -84,7 +86,7 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                                 String getCurrentDate = Globalfunction.getInstance(v1.getContext()).currentDate.getText().toString();
                                 String getAuditDate = Globalfunction.getInstance(v1.getContext()).auditDate.getText().toString();
 
-
+ 
                                 if(getCurrentDate.isEmpty()){
 //                                    Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Date", Gravity.TOP|Gravity.CENTER,0,50); //50
                                     Globalfunction.getInstance(v1.getContext()).toast(R.raw.error,"Invalid Audit Date", Gravity.TOP|Gravity.CENTER,0,50); //50
@@ -127,7 +129,7 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 
                         }
-                        else{
+                        else if(orgData.getCompanyType().equals("1")){
                             Globalfunction.getInstance(v.getContext()).intent(Integration_submenu.class,v.getContext());
                             Integration_submenu.Integration = "integration";
                             Integration_submenu.orgname = orgData.getOrgname();
@@ -143,7 +145,7 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return filteredList.size();
     }
 
     @Override
@@ -168,5 +170,11 @@ public class Adapter_Farm extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             this.org_code = itemView.findViewById(R.id.org_code);
             this.org_name = itemView.findViewById(R.id.org_name);
         }
+    }
+
+    // Add a method to update the filtered list
+    public void filterListSearch(ArrayList<model_farm> filteredList) {
+        this.filteredList = filteredList;
+        notifyDataSetChanged();
     }
 }

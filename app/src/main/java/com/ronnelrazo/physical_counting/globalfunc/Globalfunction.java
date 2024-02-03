@@ -466,7 +466,7 @@ public class Globalfunction {
         Cursor cursor = dm.query(new DownloadManager.Query().setFilterById(downloadId));
 
         if (cursor != null && cursor.moveToNext()) {
-            int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+            @SuppressLint("Range") int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
             cursor.close();
 //
 //            if (status == DownloadManager.STATUS_FAILED) {
@@ -1065,16 +1065,33 @@ public class Globalfunction {
     }
 
 
-    public Cursor getMedListDetails(String org_code,String farm_code){
-        String query = "SELECT *  FROM table_med_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+//    public Cursor getMedListDetails(String org_code,String farm_code){
+//        String query = "SELECT *  FROM table_med_details where org_code = '"+org_code+"' and farm_code = '"+farm_code+"'";
+//        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+//        Cursor cursor = null;
+//        if(db != null){
+//            cursor = db.rawQuery(query, null);
+//        }
+//        return cursor;
+//    }
+    public Cursor getMedListDetails(String org_code, String farm_code) {
+        String query = "SELECT * FROM table_med_details WHERE org_code = '" + org_code + "' AND farm_code = '" + farm_code + "'";
         SQLiteDatabase db = databaseHelper.getReadableDatabase();
         Cursor cursor = null;
-//        if(db != null){
-//
-//        }
-        cursor = db.rawQuery(query, null);
+
+        if (db != null) {
+            cursor = db.rawQuery(query, null);
+
+            if (cursor == null || cursor.getCount() == 0) {
+                // First query returned no results, perform the second query here
+                String secondQuery = "SELECT * FROM table_med_details WHERE org_code = '" + org_code + "' AND farm_code = '" + org_code + "'";
+                cursor = db.rawQuery(secondQuery, null);
+            }
+        }
+
         return cursor;
     }
+
 
 
 

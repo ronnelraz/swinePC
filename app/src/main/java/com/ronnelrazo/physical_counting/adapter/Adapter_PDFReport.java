@@ -1,5 +1,7 @@
 package com.ronnelrazo.physical_counting.adapter;
 
+import static com.loopj.android.http.AsyncHttpClient.log;
+
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.Context;
@@ -37,17 +39,26 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.tabs.TabLayout;
 
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.pspdfkit.configuration.activity.PdfActivityConfiguration;
 import com.pspdfkit.ui.PdfActivity;
 import com.ronnelrazo.physical_counting.ItemClickListener;
 
+import com.ronnelrazo.physical_counting.Login;
 import com.ronnelrazo.physical_counting.R;
 
+import com.ronnelrazo.physical_counting.connection.API;
 import com.ronnelrazo.physical_counting.connection.config;
 import com.ronnelrazo.physical_counting.globalfunc.Globalfunction;
+import com.ronnelrazo.physical_counting.inv_form;
 import com.ronnelrazo.physical_counting.model.modal_pdf_report;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -64,6 +75,8 @@ import es.voghdev.pdfviewpager.library.adapter.PDFPagerAdapter;
 import es.voghdev.pdfviewpager.library.adapter.PdfErrorHandler;
 import es.voghdev.pdfviewpager.library.remote.DownloadFile;
 import es.voghdev.pdfviewpager.library.util.FileUtil;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 
 public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.ViewHolder> implements DownloadFile.Listener {
@@ -131,10 +144,46 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
         holder.audi_No.setText(String.format("Audit No. : %s", getData.getAudit_no()));
         holder.audi_date.setText(String.format("Audit Date : %s", getData.getAudit_date()));
 
-        Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF","checklistPDF backup");
-        Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF","BreederPDF backup");
-        Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF","FeedPDF backup");
-        Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF","MedPDF backup");
+//        Webhook("https://agro.cpf-phil.com/swinePC/api/checklistPDF","checklistPDF backup");
+//        Webhook("https://agro.cpf-phil.com/swinePC/api/BreederPDF","BreederPDF backup");
+//        Webhook("https://agro.cpf-phil.com/swinePC/api/FeedPDF","FeedPDF backup");
+//        Webhook("https://agro.cpf-phil.com/swinePC/api/MedPDF","MedPDF backup");
+
+        API.getClient().generate_pdf_All(getData.getOrg_code(),getData.getAudit_no()).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                    boolean SUCCESS = jsonResponse.getBoolean("success");
+                    JSONArray responses = jsonResponse.getJSONArray("responses");
+                    String msg = jsonResponse.getString("msg");
+
+                    if(SUCCESS){
+                        log.w("swine",msg);
+                        for (int i = 0; i < responses.length(); i++) {
+                            String responseText = responses.getString(i);
+                            // Now you can work with each responseText element
+                            log.w("swine",responseText);
+                        }
+                    }
+                    else{
+                        Toast.makeText(mContext, "No Data Found", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("swine",e.getMessage());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                if (t instanceof IOException) {
+                    Toast.makeText(mContext, "No Data Found", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
         holder.pdfbtn.setOnClickListener(v-> {
@@ -142,35 +191,48 @@ public class Adapter_PDFReport extends RecyclerView.Adapter<Adapter_PDFReport.Vi
             String getFarmCode = getData.getFarm_code();
             String getauditNo = getData.getAudit_no();
 
+            log.w("swine",getOrgCode + " " + getauditNo);
+
+
             MaterialAlertDialogBuilder GEneratingPDF = new MaterialAlertDialogBuilder(v.getContext());
             View viewPDF = LayoutInflater.from(v.getContext()).inflate(R.layout.loading_generate_pdf,null);
             TextView checklist_t = viewPDF.findViewById(R.id.checklist_t);
 
+            checklist_t.setText("Please wait PDF Generating");
+            API.getClient().generate_pdf_All(getOrgCode,getauditNo).enqueue(new Callback<Object>() {
+                @Override
+                public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {
+                    try {
+                        JSONObject jsonResponse = new JSONObject(new Gson().toJson(response.body()));
+                        boolean SUCCESS = jsonResponse.getBoolean("success");
+                        JSONArray responses = jsonResponse.getJSONArray("responses");
+                        String msg = jsonResponse.getString("msg");
 
-            String message[] = {
-                    "Please wait PDF File Generating...",
-                    "Generate File"
-            };
+                        if(SUCCESS){
 
-            Handler handler1 = new Handler();
-            for(int i = 0; i < 1; i++){
-                int finalI = i;
-             handler1.postDelayed(new Runnable() {
-                 @Override
-                 public void run() {
 
-                     if(finalI == 1-1){
-                         alertDialogPDF.dismiss();
-                         generatePDF(viewPDF, getData);
-                     }
-                     else{
-                         checklist_t.setText(message[finalI]);
-                     }
+                            checklist_t.setText(msg);
+                            alertDialogPDF.dismiss();
+                            generatePDF(viewPDF, getData);
+                        }
+                        else{
+                            Toast.makeText(mContext, "No Data Found", Toast.LENGTH_SHORT).show();
+                        }
 
-                 }
-             },3000 * i);
-            }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Log.d("swine",e.getMessage());
 
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Object> call, Throwable t) {
+                    if (t instanceof IOException) {
+                        Toast.makeText(mContext, t.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
             GEneratingPDF.setView(viewPDF);
             alertDialogPDF = GEneratingPDF.create();
             alertDialogPDF.setCanceledOnTouchOutside(false);

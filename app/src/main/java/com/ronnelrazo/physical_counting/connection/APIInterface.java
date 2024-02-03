@@ -21,11 +21,11 @@ public interface APIInterface {
     );
 
     @FormUrlEncoded
-    @POST("farmOrg.php")
+    @POST("farmOrgv2.php")
     Call<Object> farmAPI(
             @Field("role") String role,
             @Field("org_code") String org_code,
-            @Field("farm_code") String farm_code
+            @Field("user") String farm_code
     );
 
 
@@ -210,6 +210,17 @@ public interface APIInterface {
             @Field("org_code") String org_code,
             @Field("audit_date") String audit_date
     );
+
+
+    @FormUrlEncoded
+    @POST("generate_pdf_All")
+    Call<Object> generate_pdf_All(
+            @Field("org_code") String org_code,
+            @Field("audit_no") String audit_no
+    );
+
+
+
 
     @FormUrlEncoded
     @POST("autoComplete_org_code")

@@ -74,17 +74,17 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_below="@+id/custom_toolbar"
+        android:layout_marginTop="-1dp"
         android:background="@drawable/radius_border"
         android:backgroundTint="#FFFFFF"
         android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawableRight="@drawable/ic_icons8_cancel"
         android:drawablePadding="10dp"
         android:drawableTint="@color/black"
         android:elevation="10dp"
         android:hint="Search..."
         android:paddingLeft="10dp"
-        android:singleLine="true"
-        android:drawableRight="@drawable/ic_icons8_cancel"/>
-
+        android:singleLine="true" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/farmlist"

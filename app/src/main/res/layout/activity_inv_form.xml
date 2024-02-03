@@ -32,7 +32,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/logout"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+            style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -40,15 +40,14 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="50dp"
             android:layout_marginRight="20px"
-            android:backgroundTint="@color/error"
-            android:foreground="?attr/actionBarItemBackground"
+            android:foreground="?attr/selectableItemBackground"
             android:text="Logout"
-            android:textColor="@color/white"
+            android:textColor="@color/error"
             android:textSize="10sp"
             app:cornerRadius="50px"
             app:icon="@drawable/logout"
             app:iconSize="20sp"
-            app:iconTint="@color/white" />
+            app:iconTint="@color/error" />
 
 
         <TextView

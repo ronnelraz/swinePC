@@ -270,6 +270,7 @@ id print
 id printpdf
 id productCode
 id productName
+id progressBar
 id province
 id radio_btn
 id remark
@@ -295,6 +296,8 @@ id swipe
 id tab
 id tabs
 id tagview
+id textViewMessage
+id textViewPercentage
 id title
 id titlebar
 id titlem
@@ -339,6 +342,7 @@ layout clerk_area_layout
 layout confirm_list
 layout custom_confirmation
 layout custom_loading
+layout custom_progress_dialog
 layout custom_toast
 layout custom_uploadmodal
 layout dropdown_item
@@ -429,4 +433,5 @@ style bottomSheetStyleWrapper
 style full_screen_dialog
 style picker
 style tab_text
+xml app_installer
 xml file_path

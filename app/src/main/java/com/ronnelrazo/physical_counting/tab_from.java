@@ -399,6 +399,8 @@ public class tab_from extends AppCompatActivity {
       //  data.Preloader(getApplicationContext(), "Please wait...");
         String getorg_Code = str_orgcode;
         String getfarm_Code = str_farmcode;
+        Log.w("Swine",getorg_Code);
+        Log.w("Swine",getfarm_Code);
 
 //        Toast.makeText(this, getorg_Code + " " + getfarm_Code, Toast.LENGTH_SHORT).show();
 
@@ -630,28 +632,28 @@ public class tab_from extends AppCompatActivity {
         String getDoc_date = doc_date;
         String getAudit_date = audit_date;
 
-//       Log.d("danadana",
-//               ORG_CODE + "\n"+
-//               AUDIT_NO + "\n"+
-//               getDoc_date + "\n"+
-//               getDoc_date + "\n"+
-//               getAudit_date + "\n"+
-//               BUSINESS_GROUP_CODE + "\n"+
-//               BUSINESS_TYPE_CODE + "\n"+
-//               FARM_CODE + "\n"+
-//               FARM_ORG + "\n"+
-//               FARM_NAME + "\n"+
-//               MED_CODE + "\n"+
-//               MED_NAME + "\n"+
-//               SYS_MED_STOCK_QTY + "\n"+
-//               SYS_MED_STOCK_WGH + "\n"+
-//               STOCK_UNIT + "\n"+
-//               COUNTING_STOCK + "\n"+
-//               REMARK + "\n"+
-//               ADuser + "\n"+
-//               variance + "\n"+
-//               unpost + "\n"+
-//               actual_var);
+       Log.d("Swine",
+               ORG_CODE + "\n"+
+               AUDIT_NO + "\n"+
+               getDoc_date + "\n"+
+               getDoc_date + "\n"+
+               getAudit_date + "\n"+
+               BUSINESS_GROUP_CODE + "\n"+
+               BUSINESS_TYPE_CODE + "\n"+
+               FARM_CODE + "\n"+
+               FARM_ORG + "\n"+
+               FARM_NAME + "\n"+
+               MED_CODE + "\n"+
+               MED_NAME + "\n"+
+               SYS_MED_STOCK_QTY + "\n"+
+               SYS_MED_STOCK_WGH + "\n"+
+               STOCK_UNIT + "\n"+
+               COUNTING_STOCK + "\n"+
+               REMARK + "\n"+
+               ADuser + "\n"+
+               variance + "\n"+
+               unpost + "\n"+
+               actual_var);
 
         API.getClient().Header_MedCountList(
                 ORG_CODE,

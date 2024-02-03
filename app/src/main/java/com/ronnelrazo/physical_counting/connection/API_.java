@@ -1,5 +1,8 @@
 package com.ronnelrazo.physical_counting.connection;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.ConnectionPool;
@@ -16,12 +19,12 @@ public class API_ {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.level(HttpLoggingInterceptor.Level.BODY);
-        ConnectionPool connectionPool = new ConnectionPool(150, 50, TimeUnit.MINUTES);
+        ConnectionPool connectionPool = new ConnectionPool(10, 10, TimeUnit.MINUTES);
 
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.connectionPool(connectionPool)
-                .connectTimeout(50, TimeUnit.MINUTES)
-                .readTimeout(50, TimeUnit.MINUTES);
+                .connectTimeout(30, TimeUnit.MINUTES)
+                .readTimeout(30, TimeUnit.MINUTES);
         httpClient.interceptors().add(logging);
         httpClient.interceptors().add(chain -> {
             Request original = chain.request();
@@ -34,19 +37,24 @@ public class API_ {
 
             if (!response.isSuccessful() || response.code()==503) {
                 connectionPool.evictAll();
+                response.close();
                 return chain.proceed(request);
             } else {
                 // Customize or return the response
                 return response;
             }
         });
-        OkHttpClient client = httpClient.build();
 
+        OkHttpClient client = httpClient.build();
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .serializeNulls()
+                .create();
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(config.URLSeparate)
-//                .addConverterFactory(new NullOnEmptyConverterFactory())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(new NullOnEmptyConverterFactory())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build();
         APIInterface apiInterface = retrofit.create(APIInterface.class);
